@@ -94,6 +94,15 @@ const Layout: FC<Props> = ({
         data-framer-components={ssrCssComponents}
         dangerouslySetInnerHTML={{ __html: ssrCss }}
       />
+      {/* Reset Framer animations — no JS hydration */}
+      <style>{`
+        [data-framer-appear-id],
+        [style*="opacity: 0;"],
+        [style*="opacity:0.001"] {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      `}</style>
       {/* Hotjar */}
       <script dangerouslySetInnerHTML={{ __html: hotjarScript }} />
     </head>
