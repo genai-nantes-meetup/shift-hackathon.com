@@ -1,0 +1,7 @@
+{
+  "hydrateV2": "{\"routeId\":\"qP_c96aKH\",\"localeId\":\"default\",\"breakpoints\":[{\"hash\":\"9brr6f\",\"mediaQuery\":\"(min-width: 1240px)\"},{\"hash\":\"pmzee1\",\"mediaQuery\":\"(min-width: 768px) and (max-width: 1239.98px)\"},{\"hash\":\"17j2mkx\",\"mediaQuery\":\"(max-width: 767.98px)\"}]}",
+  "releasedAt": "2026-05-12T14:28:04.547Z",
+  "optimizedAt": "2026-05-16T15:11:55.246Z",
+  "htmlStyle": "html body { background: var(--token-47e60ac2-bf54-46d5-b335-1a25fa14d0c2, rgb(14, 2, 24)); }",
+  "rootClass": "framer-0Sc7d framer-h4WkX framer-WkFoA framer-Av4mF framer-Dk0KU framer-9brr6f"
+}

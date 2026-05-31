@@ -1,4 +1,4 @@
-import type { FC } from 'react';
+import type { FC, ReactNode } from 'react';
 import fontCssRaw from '../framer/font-css.html?raw';
 import { extractFontCss } from '../lib/framer';
 
@@ -37,7 +37,7 @@ interface Props {
   breakpointCss: string;
   ssrCss: string;
   ssrCssComponents: string;
-  rawBody: string;
+  children: ReactNode;
 }
 
 const Layout: FC<Props> = ({
@@ -45,7 +45,7 @@ const Layout: FC<Props> = ({
   breakpointCss,
   ssrCss,
   ssrCssComponents,
-  rawBody,
+  children,
 }) => (
   <html lang="fr">
     <head>
@@ -110,7 +110,7 @@ const Layout: FC<Props> = ({
           style={{ display: 'none', visibility: 'hidden' }}
         />
       </noscript>
-      <div dangerouslySetInnerHTML={{ __html: rawBody }} />
+      {children}
     </body>
   </html>
 );
