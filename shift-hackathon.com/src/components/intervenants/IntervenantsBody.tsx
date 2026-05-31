@@ -1,10 +1,4 @@
 import type { FC } from 'react';
-import IntervenantsHeader from './IntervenantsHeader';
-import IntervenantsHero from './IntervenantsHero';
-import IntervenantsTeam from './IntervenantsTeam';
-import IntervenantsFooter from './IntervenantsFooter';
-import IntervenantsContact from './IntervenantsContact';
-
 import navScript from '../../framer/shared/nav-script.js?raw';
 import animatorScript from '../../framer/shared/animator-script.js?raw';
 import appearAnimations from '../../framer/intervenants/appear-animations.json?raw';
@@ -13,9 +7,18 @@ import appearRunner from '../../framer/shared/appear-runner.js?raw';
 import preloadLinks from '../../framer/intervenants/preload-links.html?raw';
 import htmlStyle from '../../framer/intervenants/html-style.css?raw';
 
+import headerHtml from '../../framer/intervenants/header.html?raw';
+import heroHtml from '../../framer/intervenants/hero.html?raw';
+import teamHtml from '../../framer/intervenants/team.html?raw';
+import footerHtml from '../../framer/intervenants/footer.html?raw';
+import contactHtml from '../../framer/intervenants/contact.html?raw';
+
 const HYDRATE_V2 =
   '{"routeId":"KmjIc40Lu","localeId":"default","breakpoints":[{"hash":"i1521","mediaQuery":"(min-width: 1240px)"},{"hash":"tbx75b","mediaQuery":"(min-width: 768px) and (max-width: 1239.98px)"},{"hash":"1yhlmg7","mediaQuery":"(max-width: 767.98px)"}]}';
 const ROOT_CLASS = 'framer-l8i7n framer-h4WkX framer-Av4mF framer-i1521';
+
+const rootHtml =
+  headerHtml + heroHtml + teamHtml + footerHtml + contactHtml + '<div id="overlay"></div>';
 
 const IntervenantsBody: FC = () => (
   <>
@@ -26,22 +29,13 @@ const IntervenantsBody: FC = () => (
       data-framer-page-optimized-at="2026-05-16T15:11:55.269Z"
       data-framer-generated-page=""
     >
-      <style
-        data-framer-html-style
-        dangerouslySetInnerHTML={{ __html: htmlStyle }}
-      />
+      <style data-framer-html-style dangerouslySetInnerHTML={{ __html: htmlStyle }} />
       <div
         data-framer-root
         className={ROOT_CLASS}
         style={{ minHeight: '100vh', width: 'auto' }}
-      >
-        <IntervenantsHeader />
-        <IntervenantsHero />
-        <IntervenantsTeam />
-        <IntervenantsFooter />
-        <IntervenantsContact />
-        <div id="overlay" />
-      </div>
+        dangerouslySetInnerHTML={{ __html: rootHtml }}
+      />
     </div>
     <script dangerouslySetInnerHTML={{ __html: navScript }} />
     <script dangerouslySetInnerHTML={{ __html: animatorScript }} />
