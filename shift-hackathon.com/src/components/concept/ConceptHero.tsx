@@ -11,56 +11,32 @@ export default function ConceptHero() {
     <section
       style={{
         position: 'relative',
-        minHeight: '90vh',
         display: 'flex',
-        alignItems: 'center',
+        flexDirection: 'row',
+        backgroundColor: 'rgb(0, 0, 0)',
+        color: 'rgb(255, 255, 255)',
         overflow: 'hidden',
-        background: '#000',
+        minHeight: '843px',
       }}
     >
-      {/* Dot-grid texture — upper-right quadrant */}
-      <div
+      {/* Background image (faint, full section) */}
+      <img
+        src={`${CDN}/wa9oVNjleDQIbBtztqNGal6M.png`}
+        alt=""
         style={{
+          display: 'block',
           position: 'absolute',
           top: 0,
-          right: 0,
-          width: '45%',
-          height: '60%',
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          opacity: 0.1,
           zIndex: 0,
-          backgroundImage: 'radial-gradient(rgba(255,255,255,0.18) 1.5px, transparent 1.5px)',
-          backgroundSize: '22px 22px',
-          maskImage: 'radial-gradient(ellipse 80% 80% at 100% 0%, rgba(0,0,0,0.6) 0%, transparent 70%)',
-          WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 100% 0%, rgba(0,0,0,0.6) 0%, transparent 70%)',
         }}
       />
 
-      {/* Background image (faint) */}
-      <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
-        <img
-          src={`${CDN}/wa9oVNjleDQIbBtztqNGal6M.png`}
-          alt=""
-          style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.1 }}
-        />
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            background:
-              'radial-gradient(ellipse 55% 65% at 8% 80%, rgba(15,90,0,0.65) 0%, rgba(0,50,0,0.2) 50%, transparent 70%)',
-          }}
-        />
-        <div
-          style={{
-            position: 'absolute',
-            bottom: 0,
-            left: 0,
-            right: 0,
-            height: '35%',
-            background: 'linear-gradient(to top, #000, transparent)',
-          }}
-        />
-      </div>
-
+      {/* Content layout */}
       <div
         style={{
           position: 'relative',
@@ -88,12 +64,12 @@ export default function ConceptHero() {
                 fontSize: '64px',
                 fontWeight: 800,
                 color: '#fff',
-                lineHeight: 0.9,
+                lineHeight: '57.6px',
                 margin: '0 0 4px',
                 textTransform: 'uppercase',
               }}
             >
-              Shift,
+              Shift
             </p>
             <p
               style={{
@@ -101,26 +77,25 @@ export default function ConceptHero() {
                 fontSize: '22px',
                 fontWeight: 800,
                 color: '#fff',
-                lineHeight: 1.1,
-                margin: '0 0 2px',
+                lineHeight: '24.2px',
+                margin: 0,
                 textTransform: 'uppercase',
               }}
             >
-              C&apos;est quoi ?
+              Le Hackathon Gen AI n°1
             </p>
             <p
               style={{
                 fontFamily: AGRANDIR_ITALIC,
                 fontSize: '20px',
                 fontWeight: 100,
-                color: '#9ff839',
-                lineHeight: 1.2,
+                color: '#fff',
+                lineHeight: '24px',
                 margin: '0 0 28px',
-                fontStyle: 'italic',
                 textTransform: 'uppercase',
               }}
             >
-              Le Hackathon Gen AI n°1
+              pour les Designers, Devs &amp; Product Lovers
             </p>
           </motion.div>
 
@@ -130,14 +105,14 @@ export default function ConceptHero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             style={{ marginBottom: '24px' }}
           >
-            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: 0, lineHeight: 1.55 }}>
-              Shift — Time To Custom, c&apos;est 48 heures pour hacker ton outil préféré.
+            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: 0, lineHeight: '27.9px' }}>
+              Crée des produits Gen AI game-changer en 48h.
             </p>
-            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '15px', margin: 0, lineHeight: 1.55 }}>
-              Créer une vraie feature Gen AI utile pour ton usage.
+            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: 0, lineHeight: '27.9px' }}>
+              Édition &ldquo;Time to Custom&rdquo; → Hack ton outil préféré.
             </p>
-            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '15px', lineHeight: 1.55, marginTop: '14px', marginBottom: 0 }}>
-              🔥 Produire aux côtés des <strong style={{ fontWeight: 700 }}>meilleurs experts tech</strong>.
+            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', lineHeight: '27.9px', marginTop: '14px', marginBottom: 0 }}>
+              🔥 Event all-inclusive - coaching, food &amp; drinks inclus.
             </p>
           </motion.div>
 
@@ -145,29 +120,29 @@ export default function ConceptHero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.35 }}
-            style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', alignItems: 'flex-start' }}
           >
             <a
               href={TICKET_URL}
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                display: 'inline-block',
-                background: '#9ff839',
-                color: 'rgb(25,5,50)',
-                padding: '0.7rem 1.75rem',
+                display: 'block',
+                background: 'rgb(159, 248, 57)',
+                color: 'rgb(25, 5, 50)',
+                padding: '11.2px 28px',
                 fontFamily: AGRANDIR,
                 fontWeight: 400,
-                fontSize: '0.75rem',
+                fontSize: '12px',
                 textDecoration: 'none',
                 textTransform: 'uppercase',
-                letterSpacing: '0.04em',
+                letterSpacing: '0.48px',
                 borderRadius: '4px',
                 whiteSpace: 'nowrap',
-                boxShadow: 'rgba(159,248,57,0.5) 0px 5px 0px 0px',
+                boxShadow: 'rgba(159, 248, 57, 0.5) 0px 5px 0px 0px',
+                width: 'fit-content',
               }}
             >
-              Take my money 🤘
+              Je suis chaud pour 2027 !
             </a>
           </motion.div>
         </div>

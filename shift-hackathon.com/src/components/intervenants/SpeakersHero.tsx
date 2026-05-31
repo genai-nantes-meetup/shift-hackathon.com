@@ -45,8 +45,7 @@ export default function SpeakersHero() {
           style={{
             position: 'absolute',
             inset: 0,
-            background:
-              'radial-gradient(ellipse 55% 65% at 8% 80%, rgba(15,90,0,0.65) 0%, rgba(0,50,0,0.2) 50%, transparent 70%)',
+            background: 'transparent',
           }}
         />
         <div
@@ -85,14 +84,15 @@ export default function SpeakersHero() {
             <p
               style={{
                 fontFamily: AGRANDIR,
-                fontSize: '64px',
+                fontSize: '56px',
                 fontWeight: 800,
                 color: '#fff',
-                lineHeight: 0.9,
+                lineHeight: '50.4px',
+                textTransform: 'uppercase',
                 margin: '0 0 4px',
               }}
             >
-              Shift
+              Shift,
             </p>
             <p
               style={{
@@ -100,23 +100,25 @@ export default function SpeakersHero() {
                 fontSize: '22px',
                 fontWeight: 800,
                 color: '#fff',
-                lineHeight: 1.1,
+                lineHeight: '24.2px',
+                textTransform: 'uppercase',
                 margin: '0 0 2px',
               }}
             >
-              Les Intervenants
+              C&apos;est quoi ?
             </p>
             <p
               style={{
                 fontFamily: AGRANDIR_ITALIC,
                 fontSize: '20px',
                 fontWeight: 100,
-                color: '#9ff839',
-                lineHeight: 1.2,
+                color: 'rgb(159, 248, 57)',
+                lineHeight: '24px',
+                textTransform: 'uppercase',
                 margin: '0 0 28px',
               }}
             >
-              Le line-up de ce hackathon d&apos;anthologie
+              Le Hackathon Gen AI n°1
             </p>
           </motion.div>
 
@@ -126,8 +128,14 @@ export default function SpeakersHero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             style={{ marginBottom: '24px' }}
           >
-            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: 0, lineHeight: 1.55 }}>
-              Attache ta ceinture et jette un œil au line-up de ce hackathon d&apos;anthologie !
+            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: '0 0 0', lineHeight: '27.9px' }}>
+              Shift — Time To Custom, c&apos;est 48 heures pour construire un projet Gen AI de A à Z.
+            </p>
+            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '15px', margin: '0', lineHeight: '23.25px' }}>
+              Créer une vraie feature Gen AI utile pour ta boîte.
+            </p>
+            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '15px', margin: '14px 0 0', lineHeight: '23.25px' }}>
+              🔥 Produire aux côtés des meilleurs experts Gen AI.
             </p>
           </motion.div>
 

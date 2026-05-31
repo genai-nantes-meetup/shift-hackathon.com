@@ -182,24 +182,23 @@ export default function IndexHero() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.35 }}
-              style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', alignItems: 'flex-start' }}
             >
-              {/* CTA Button — Agrandir Grand Heavy, dark bg, green border like live */}
+              {/* CTA Button — Agrandir Grand Heavy, dark bg, green shadow like live */}
               <a
                 href={TICKET_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
-                  display: 'inline-block',
-                  background: '#9ff839',
+                  display: 'block',
+                  background: 'rgb(159,248,57)',
                   color: 'rgb(25,5,50)',
-                  padding: '0.7rem 1.75rem',
+                  padding: '11.2px 28px',
                   fontFamily: AGRANDIR,
                   fontWeight: 400,
-                  fontSize: '0.75rem',
+                  fontSize: '12px',
                   textDecoration: 'none',
                   textTransform: 'uppercase',
-                  letterSpacing: '0.04em',
+                  letterSpacing: '0.48px',
                   borderRadius: '4px',
                   whiteSpace: 'nowrap',
                   boxShadow: 'rgba(159,248,57,0.5) 0px 5px 0px 0px',
@@ -207,18 +206,6 @@ export default function IndexHero() {
               >
                 Je suis chaud pour 2027 !
               </a>
-              {/* "Réserve ta place !!" — bigger */}
-              <em
-                style={{
-                  fontFamily: OXANIUM,
-                  fontSize: '0.9375rem',
-                  color: '#fff',
-                  fontStyle: 'italic',
-                  fontWeight: 400,
-                }}
-              >
-                Réserve ta place !!
-              </em>
             </motion.div>
           </div>
 

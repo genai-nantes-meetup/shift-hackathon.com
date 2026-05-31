@@ -23,7 +23,7 @@ export default function Experience() {
       <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
         <div>
           <Reveal>
-            <h2 style={{ fontFamily: AGRANDIR, fontSize: '50px', fontWeight: 800, color: '#fff', marginBottom: '2rem', lineHeight: 1.1 }}>
+            <h2 style={{ fontFamily: AGRANDIR, fontSize: '50px', fontWeight: 400, color: '#fff', marginBottom: '2rem', lineHeight: 1.1 }}>
               Une expérience inédite
             </h2>
           </Reveal>

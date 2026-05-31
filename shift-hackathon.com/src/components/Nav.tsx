@@ -27,10 +27,9 @@ export default function Nav() {
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
         padding: '0 1.5rem', height: '68px',
-        background: scrolled ? 'rgba(0,0,0,0.88)' : 'transparent',
-        backdropFilter: scrolled ? 'blur(16px)' : 'none',
-        borderBottom: scrolled ? '1px solid rgba(255,255,255,0.06)' : 'none',
-        transition: 'background 0.3s, backdrop-filter 0.3s, border-bottom 0.3s',
+        background: 'rgba(0,0,0,0.88)',
+        backdropFilter: 'blur(16px)',
+        borderBottom: '1px solid rgba(255,255,255,0.06)',
       }}
     >
       <a href="/" style={{ display: 'flex', alignItems: 'center' }}>
@@ -48,7 +47,7 @@ export default function Nav() {
             style={{
               color: '#fff', textDecoration: 'none',
               fontFamily: AGRANDIR, fontSize: '14px',
-              fontWeight: 400, letterSpacing: '1.4px',
+              fontWeight: 400, letterSpacing: '1.4px', textTransform: 'uppercase',
               transition: 'opacity 0.2s', opacity: 0.85,
             }}
             onMouseEnter={(e) => (e.currentTarget.style.opacity = '1')}

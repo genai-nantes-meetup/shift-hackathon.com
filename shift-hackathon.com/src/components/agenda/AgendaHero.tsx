@@ -131,7 +131,13 @@ export default function AgendaHero() {
             style={{ marginBottom: '24px' }}
           >
             <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: 0, lineHeight: 1.55 }}>
-              Crée des produits Gen AI game-changer en 48 heures
+              Crée des produits Gen AI game-changer en 48 heures.
+            </p>
+            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: 0, lineHeight: 1.55 }}>
+              Édition &quot;Time to Custom&quot; → Hack ton outil préféré.
+            </p>
+            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: '14px 0 0', lineHeight: 1.55 }}>
+              🔥 <strong>Event all-inclusive</strong> - coaching, food &amp; fun.
             </p>
           </motion.div>
 
@@ -146,22 +152,23 @@ export default function AgendaHero() {
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                display: 'inline-block',
+                display: 'block',
                 background: '#9ff839',
                 color: 'rgb(25,5,50)',
-                padding: '0.7rem 1.75rem',
+                padding: '11.2px 28px',
                 fontFamily: AGRANDIR,
                 fontWeight: 400,
-                fontSize: '0.75rem',
+                fontSize: '12px',
+                lineHeight: '18px',
                 textDecoration: 'none',
                 textTransform: 'uppercase',
-                letterSpacing: '0.04em',
+                letterSpacing: '0.48px',
                 borderRadius: '4px',
                 whiteSpace: 'nowrap',
                 boxShadow: 'rgba(159,248,57,0.5) 0px 5px 0px 0px',
               }}
             >
-              Take my money 🤘
+              Je suis chaud pour 2027 !
             </a>
           </motion.div>
         </div>
@@ -178,9 +185,6 @@ export default function AgendaHero() {
             alt="Shift Hackathon"
             style={{
               width: '100%',
-              aspectRatio: '1 / 1',
-              objectFit: 'cover',
-              objectPosition: 'right center',
               borderRadius: '6px',
               display: 'block',
               boxShadow: '0 0 60px rgba(0,180,0,0.12), 0 20px 60px rgba(0,0,0,0.5)',

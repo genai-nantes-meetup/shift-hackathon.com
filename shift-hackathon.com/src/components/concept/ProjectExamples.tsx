@@ -23,23 +23,23 @@ const EXAMPLES = [
 
 export default function ProjectExamples() {
   return (
-    <section style={{ padding: '5rem 2rem', background: '#080510' }}>
+    <section style={{ padding: '5rem 2rem', background: '#000' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <Reveal>
-          <h2 style={{ fontFamily: 'Barlow, sans-serif', fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', fontWeight: 900, color: '#fff', textTransform: 'uppercase', textAlign: 'center', marginBottom: '3rem' }}>
-            Exemples de projets à réaliser
+          <h2 style={{ fontFamily: '"Agrandir Grand Heavy", sans-serif', fontSize: '48px', fontWeight: 800, color: '#fff', textTransform: 'uppercase', textAlign: 'center', marginBottom: '3rem', lineHeight: 1 }}>
+            Exemples de <span style={{ color: '#9ff839' }}>projets</span> à réaliser
           </h2>
         </Reveal>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem' }}>
           {EXAMPLES.map((ex, i) => (
             <Reveal key={ex.tool} delay={i * 0.1}>
-              <div style={{ background: 'rgba(255,255,255,0.03)', border: `1px solid ${ex.accent}33`, borderTop: `3px solid ${ex.accent}`, borderRadius: '4px', padding: '1.75rem' }}>
-                <h3 style={{ fontFamily: 'Barlow, sans-serif', fontWeight: 900, color: ex.accent, fontSize: '1.3rem', marginBottom: '1rem', textTransform: 'uppercase' }}>{ex.tool}</h3>
-                <p style={{ color: 'rgba(255,255,255,0.55)', fontFamily: 'Barlow, sans-serif', fontSize: '0.85rem', lineHeight: 1.6, marginBottom: '1rem' }}><strong style={{ color: 'rgba(255,255,255,0.7)' }}>Problème :</strong> {ex.problem}</p>
-                <p style={{ color: 'rgba(255,255,255,0.75)', fontFamily: 'Barlow, sans-serif', fontSize: '0.9rem', lineHeight: 1.6, marginBottom: '1rem' }}>{ex.concept}</p>
+              <div style={{ background: 'rgba(255,255,255,0.04)', border: `1px solid ${ex.accent}44`, borderTop: `3px solid ${ex.accent}`, borderRadius: '4px', padding: '1.75rem' }}>
+                <h3 style={{ fontFamily: '"Agrandir Grand Heavy", sans-serif', fontWeight: 800, color: ex.accent, fontSize: '18px', marginBottom: '1rem', textTransform: 'uppercase' }}>{ex.tool}</h3>
+                <p style={{ color: 'rgba(255,255,255,0.55)', fontFamily: 'Oxanium, sans-serif', fontSize: '14px', lineHeight: 1.6, marginBottom: '1rem' }}><strong style={{ color: 'rgba(255,255,255,0.7)' }}>Problème :</strong> {ex.problem}</p>
+                <p style={{ color: 'rgba(255,255,255,0.75)', fontFamily: 'Oxanium, sans-serif', fontSize: '15px', lineHeight: 1.6, marginBottom: '1rem' }}>{ex.concept}</p>
                 <ul style={{ padding: 0, margin: 0, listStyle: 'none' }}>
                   {ex.features.map((f) => (
-                    <li key={f} style={{ color: 'rgba(255,255,255,0.55)', fontFamily: 'Barlow, sans-serif', fontSize: '0.8rem', padding: '0.2rem 0', display: 'flex', gap: '0.5rem' }}>
+                    <li key={f} style={{ color: 'rgba(255,255,255,0.55)', fontFamily: 'Oxanium, sans-serif', fontSize: '13px', padding: '0.2rem 0', display: 'flex', gap: '0.5rem' }}>
                       <span style={{ color: ex.accent }}>›</span>{f}
                     </li>
                   ))}

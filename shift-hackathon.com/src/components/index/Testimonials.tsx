@@ -6,15 +6,15 @@ const OXANIUM = 'Oxanium, sans-serif';
 
 export default function Testimonials() {
   return (
-    <section style={{ padding: '5rem 2rem', background: '#fff' }}>
+    <section style={{ padding: '80px 32px', background: '#080808' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <Reveal>
           <h2
             style={{
               fontFamily: AGRANDIR,
-              fontSize: '1.875rem',
-              fontWeight: 400,
-              color: 'rgb(51,51,51)',
+              fontSize: '50px',
+              fontWeight: 800,
+              color: 'rgb(255,255,255)',
               marginBottom: '3rem',
             }}
           >
@@ -40,8 +40,7 @@ export default function Testimonials() {
                     fontSize: '16px',
                     fontWeight: 500,
                     lineHeight: 1.65,
-                    fontStyle: 'italic',
-                    marginBottom: '1rem',
+                    marginBottom: '16px',
                   }}
                 >
                   &ldquo;{t.quote}&rdquo;

@@ -3,19 +3,51 @@ import { SPEAKERS } from '../../data/site';
 
 export default function SpeakerGrid() {
   return (
-    <section style={{ padding: '2rem 2rem 5rem' }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem' }}>
+    <section style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', padding: '100px 0px' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '100px', maxWidth: '1000px', width: '100%' }}>
         {SPEAKERS.map((s, i) => (
           <Reveal key={s.name} delay={i * 0.06}>
-            <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '8px', padding: '2rem', textAlign: 'center' }}>
-              <img
-                src={s.img} alt={s.name}
-                style={{ width: 120, height: 120, borderRadius: '50%', objectFit: 'cover', border: '3px solid rgba(247,87,135,0.4)', marginBottom: '1rem' }}
-              />
-              <h3 style={{ fontFamily: "'Agrandir Grand Heavy', sans-serif", fontWeight: 900, color: '#fff', fontSize: '16px', margin: '0 0 0.5rem', textTransform: 'uppercase', letterSpacing: '0.02em' }}>{s.name}</h3>
-              {s.roles.map((r) => (
-                <p key={r} style={{ fontFamily: 'Barlow, sans-serif', color: 'rgba(255,255,255,0.45)', fontSize: '0.78rem', margin: '0.1rem 0' }}>{r}</p>
-              ))}
+            <div style={{ display: 'flex', flexDirection: 'row', gap: '80px', width: '1000px' }}>
+              {/* Image */}
+              <div style={{ flexShrink: 0, width: '460px', height: '383px', borderRadius: '20px', overflow: 'hidden' }}>
+                <img
+                  src={s.img}
+                  alt={s.name}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+              {/* Text */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', width: '460px', justifyContent: 'center' }}>
+                <h4
+                  style={{
+                    fontFamily: '"Agrandir Grand Heavy", sans-serif',
+                    fontSize: '40px',
+                    fontWeight: '400',
+                    lineHeight: '44px',
+                    color: '#fff',
+                    margin: '0',
+                  }}
+                >
+                  {s.name}
+                </h4>
+                <div>
+                  {s.roles.map((r) => (
+                    <p
+                      key={r}
+                      style={{
+                        fontFamily: 'Oxanium, sans-serif',
+                        fontSize: '18px',
+                        fontWeight: '400',
+                        lineHeight: '27px',
+                        color: '#fff',
+                        margin: '0',
+                      }}
+                    >
+                      {r}
+                    </p>
+                  ))}
+                </div>
+              </div>
             </div>
           </Reveal>
         ))}
