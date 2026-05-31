@@ -1,0 +1,62 @@
+export const SCHEDULE = [
+  {
+    day: 'Vendredi 27 Mars',
+    color: '#2aebf5',
+    slots: [
+      { time: '18h00', title: 'Accueil' },
+      { time: '19h00', title: 'Démarrage de Shift', desc: 'Lancement du hackathon.' },
+      { time: '20h00', title: 'Pitch fire', desc: 'Présentation en 1min des idées.' },
+      { time: '20h45', title: 'Vote et repas', desc: 'Chaque participant vote pour ses projets préférés.' },
+      { time: '21h15', title: 'REX Pierre Renaudin', desc: "Retour d'expérience d'un entrepreneur dans la Gen AI.", speaker: 'Pierre Renaudin' },
+      { time: '21h45', title: 'Formation des équipes', desc: "Après l'annonce des projets retenus, les participants rejoignent une équipe." },
+      { time: '22h30', title: 'Début du travail', desc: "Les équipes découvrent leur espace et démarrent le projet." },
+      { time: '01h00', title: 'Fermeture des portes', desc: 'Les participants sont invités à rentrer chez eux.' },
+    ],
+  },
+  {
+    day: 'Samedi 28 Mars',
+    color: '#f75787',
+    slots: [
+      { time: '08h30', title: 'Petit déjeuner' },
+      { time: '08h45', title: 'Lancement de la journée', desc: 'Agenda et grandes étapes de la journée.' },
+      { time: '09h30', title: 'Coaching Session', desc: 'Les coachs commencent à passer dans les équipes.' },
+      { time: '12h30', title: 'Déjeuner' },
+      { time: '13h45', title: 'Conf User Test', desc: 'Masterclass par Pauline Corriou sur les user tests.', speaker: 'Pauline Corriou' },
+      { time: '13h45', title: 'Conf Pitch/Demo', desc: "Masterclass sur l'art du pitch par Florian Hervéou.", speaker: 'Florian Hervéou' },
+      { time: '18h00', title: 'Premier User Tests', desc: "C'est le moment des tests !" },
+      { time: '19h30', title: 'Dîner' },
+      { time: '20h30', title: 'Boulot', desc: "Jusqu'au bout de la nuit pour les plus téméraires." },
+      { time: '00h00', title: 'DJ set + Cocktails', desc: "Party !" },
+    ],
+  },
+  {
+    day: 'Dimanche 29 Mars',
+    color: '#9ff839',
+    slots: [
+      { time: '08h30', title: 'Petit déjeuner' },
+      { time: '09h00', title: 'Lancement de la journée', desc: 'Agenda et grandes étapes de la journée.' },
+      { time: '11h15', title: 'User Test #2', desc: 'Dernière session de user test.' },
+      { time: '12h30', title: 'Déjeuner' },
+      { time: '14h00', title: 'Dernière ligne droite', desc: 'On ajuste les derniers détails.' },
+      { time: '16h15', title: 'Accueil du public' },
+      { time: '17h00', title: 'Cérémonie des pitchs / démos', desc: 'Les participants présentent leur projet devant un jury prestigieux.' },
+      { time: '20h00', title: 'Annonce des gagnants', desc: 'Le jury annonce les gagnants de Shift !' },
+      { time: '20h45', title: 'Cocktail', desc: 'Cocktail final avec participants et public.' },
+      { time: '22h30', title: 'Fin de Shift', desc: 'Fin de cette édition de Shift.' },
+    ],
+  },
+];
+
+export const FAQ = [
+  { q: 'Puis-je pitcher une idée dont le projet a déjà débuté ?', a: "Pour que tous les participants soient sur le même pied d'égalité, il ne faut pas avoir commencé à travailler sur l'idée en amont." },
+  { q: "Est-ce que je peux bosser sur mon outil / l'outil de ma boite ?", a: "Bien sûr que non petit malin, l'objectif ici est de prendre un outil sur le marché." },
+  { q: 'Dois-je avoir constitué mon équipe en amont du weekend ?', a: "Pas du tout, les équipes seront créées au lancement du hackathon." },
+  { q: "J'ai combien de temps pour présenter mon idée ?", a: "1min tout pile, pas une seconde de plus." },
+  { q: 'Est-ce que je peux pitcher 2 idées ?', a: "Choisis ta préférée !" },
+  { q: 'Est-ce que je peux prévoir des objets ou des slides ?', a: "Objets oui, slides non !" },
+  { q: 'Combien de projets sont sélectionnés ?', a: "15 projets, pas un de plus." },
+  { q: "Que faire si mon idée n'est pas choisie ?", a: "Rejoins une team dont l'idée ou le porteur te parle." },
+  { q: "Qu'est-ce que je dois emmener ?", a: "Ta bonne humeur et ton PC bien sûr !" },
+  { q: 'Comment me rendre sur place ?', a: "Via le tram 1, le bus 11, en voiture au parking Graslin ou en vélo." },
+  { q: 'Est-ce que je peux rester dormir ?', a: "Le vendredi soir, non. Le samedi, oui ! Par contre prévois un duvet, un masque de nuit et des boules quies ;)" },
+];
