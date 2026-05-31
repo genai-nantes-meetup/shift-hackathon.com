@@ -2,9 +2,6 @@
   "name": "shift-hackathon",
   "type": "module",
   "scripts": {
-    "setup": "cp -R ../legacy/assets public/",
-    "predev": "npm run setup",
-    "prebuild": "npm run setup",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview"
