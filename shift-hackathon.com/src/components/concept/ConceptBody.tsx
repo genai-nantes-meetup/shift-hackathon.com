@@ -18,8 +18,10 @@ import nodeenv from '../../framer/shared/nodeenv.js?raw';
 import preloadLinks from '../../framer/concept/preload-links.html?raw';
 import htmlStyle from '../../framer/concept/html-style.css?raw';
 
-const HYDRATE_V2 = '{"routeId":"qP_c96aKH","localeId":"default","breakpoints":[{"hash":"9brr6f","mediaQuery":"(min-width: 1240px)"},{"hash":"pmzee1","mediaQuery":"(min-width: 768px) and (max-width: 1239.98px)"},{"hash":"17j2mkx","mediaQuery":"(max-width: 767.98px)"}]}';
-const ROOT_CLASS = 'framer-0Sc7d framer-h4WkX framer-WkFoA framer-Av4mF framer-Dk0KU framer-9brr6f';
+const HYDRATE_V2 =
+  '{"routeId":"qP_c96aKH","localeId":"default","breakpoints":[{"hash":"9brr6f","mediaQuery":"(min-width: 1240px)"},{"hash":"pmzee1","mediaQuery":"(min-width: 768px) and (max-width: 1239.98px)"},{"hash":"17j2mkx","mediaQuery":"(max-width: 767.98px)"}]}';
+const ROOT_CLASS =
+  'framer-0Sc7d framer-h4WkX framer-WkFoA framer-Av4mF framer-Dk0KU framer-9brr6f';
 
 const ConceptBody: FC = () => (
   <>
@@ -30,8 +32,15 @@ const ConceptBody: FC = () => (
       data-framer-page-optimized-at="2026-05-16T15:11:55.246Z"
       data-framer-generated-page=""
     >
-      <style data-framer-html-style dangerouslySetInnerHTML={{ __html: htmlStyle }} />
-      <div data-framer-root className={ROOT_CLASS} style={{ minHeight: '100vh', width: 'auto' }}>
+      <style
+        data-framer-html-style
+        dangerouslySetInnerHTML={{ __html: htmlStyle }}
+      />
+      <div
+        data-framer-root
+        className={ROOT_CLASS}
+        style={{ minHeight: '100vh', width: 'auto' }}
+      >
         <ConceptHeader />
         <ConceptHero />
         <ConceptFeaturesLarge />
@@ -56,7 +65,10 @@ const ConceptBody: FC = () => (
       id="__framer__breakpoints"
       dangerouslySetInnerHTML={{ __html: breakpoints }}
     />
-    <script data-framer-appear-animation="reduce" dangerouslySetInnerHTML={{ __html: appearRunner }} />
+    <script
+      data-framer-appear-animation="reduce"
+      dangerouslySetInnerHTML={{ __html: appearRunner }}
+    />
     <script dangerouslySetInnerHTML={{ __html: nodeenv }} />
     <div dangerouslySetInnerHTML={{ __html: preloadLinks }} />
   </>

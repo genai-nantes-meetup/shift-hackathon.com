@@ -27,8 +27,15 @@ const AgendaBody = () => (
       data-framer-page-optimized-at="2026-05-16T15:11:55.192Z"
       data-framer-generated-page=""
     >
-      <style data-framer-html-style dangerouslySetInnerHTML={{ __html: htmlStyle }} />
-      <div data-framer-root className={ROOT_CLASS} style={{ minHeight: '100vh', width: 'auto' }}>
+      <style
+        data-framer-html-style
+        dangerouslySetInnerHTML={{ __html: htmlStyle }}
+      />
+      <div
+        data-framer-root
+        className={ROOT_CLASS}
+        style={{ minHeight: '100vh', width: 'auto' }}
+      >
         <AgendaHeader />
         <AgendaHero />
         <AgendaSchedule />
@@ -50,7 +57,10 @@ const AgendaBody = () => (
       id="__framer__breakpoints"
       dangerouslySetInnerHTML={{ __html: breakpoints }}
     />
-    <script data-framer-appear-animation="reduce" dangerouslySetInnerHTML={{ __html: appearRunner }} />
+    <script
+      data-framer-appear-animation="reduce"
+      dangerouslySetInnerHTML={{ __html: appearRunner }}
+    />
     <script dangerouslySetInnerHTML={{ __html: nodeenv }} />
     <div dangerouslySetInnerHTML={{ __html: preloadLinks }} />
   </>

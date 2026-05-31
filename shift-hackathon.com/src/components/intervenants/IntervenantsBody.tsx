@@ -15,7 +15,8 @@ import nodeenv from '../../framer/shared/nodeenv.js?raw';
 import preloadLinks from '../../framer/intervenants/preload-links.html?raw';
 import htmlStyle from '../../framer/intervenants/html-style.css?raw';
 
-const HYDRATE_V2 = '{"routeId":"KmjIc40Lu","localeId":"default","breakpoints":[{"hash":"i1521","mediaQuery":"(min-width: 1240px)"},{"hash":"tbx75b","mediaQuery":"(min-width: 768px) and (max-width: 1239.98px)"},{"hash":"1yhlmg7","mediaQuery":"(max-width: 767.98px)"}]}';
+const HYDRATE_V2 =
+  '{"routeId":"KmjIc40Lu","localeId":"default","breakpoints":[{"hash":"i1521","mediaQuery":"(min-width: 1240px)"},{"hash":"tbx75b","mediaQuery":"(min-width: 768px) and (max-width: 1239.98px)"},{"hash":"1yhlmg7","mediaQuery":"(max-width: 767.98px)"}]}';
 const ROOT_CLASS = 'framer-l8i7n framer-h4WkX framer-Av4mF framer-i1521';
 
 const IntervenantsBody: FC = () => (
@@ -27,8 +28,15 @@ const IntervenantsBody: FC = () => (
       data-framer-page-optimized-at="2026-05-16T15:11:55.269Z"
       data-framer-generated-page=""
     >
-      <style data-framer-html-style dangerouslySetInnerHTML={{ __html: htmlStyle }} />
-      <div data-framer-root className={ROOT_CLASS} style={{ minHeight: '100vh', width: 'auto' }}>
+      <style
+        data-framer-html-style
+        dangerouslySetInnerHTML={{ __html: htmlStyle }}
+      />
+      <div
+        data-framer-root
+        className={ROOT_CLASS}
+        style={{ minHeight: '100vh', width: 'auto' }}
+      >
         <IntervenantsHeader />
         <IntervenantsHero />
         <IntervenantsTeam />
@@ -50,7 +58,10 @@ const IntervenantsBody: FC = () => (
       id="__framer__breakpoints"
       dangerouslySetInnerHTML={{ __html: breakpoints }}
     />
-    <script data-framer-appear-animation="reduce" dangerouslySetInnerHTML={{ __html: appearRunner }} />
+    <script
+      data-framer-appear-animation="reduce"
+      dangerouslySetInnerHTML={{ __html: appearRunner }}
+    />
     <script dangerouslySetInnerHTML={{ __html: nodeenv }} />
     <div dangerouslySetInnerHTML={{ __html: preloadLinks }} />
   </>
