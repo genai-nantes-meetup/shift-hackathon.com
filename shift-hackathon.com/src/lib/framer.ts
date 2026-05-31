@@ -7,10 +7,17 @@ export function extractCanonical(headStyles: string): string {
 }
 
 export function extractBreakpointCss(headStyles: string): string {
-  return headStyles.match(/<style data-framer-breakpoint-css>([\s\S]*?)<\/style>/)?.[1] ?? '';
+  return (
+    headStyles.match(
+      /<style data-framer-breakpoint-css>([\s\S]*?)<\/style>/
+    )?.[1] ?? ''
+  );
 }
 
-export function extractSsrCss(headStyles: string): { css: string; components: string } {
+export function extractSsrCss(headStyles: string): {
+  css: string;
+  components: string;
+} {
   const match = headStyles.match(
     /<style data-framer-css-ssr-minified data-framer-components="([^"]*)"[^>]*>([\s\S]*?)<\/style>/
   );

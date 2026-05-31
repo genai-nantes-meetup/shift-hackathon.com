@@ -28,7 +28,8 @@ const hotjarScript = `(function(h,o,t,j,a,r){
 })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`;
 
 const TITLE = 'Shift - Le Hackathon Gen AI';
-const DESCRIPTION = "Créé des produits Gen AI game-changer en 48 heures, du 27/03 au 29/03. Édition «Time to Custom» → Hack ton outil préféré.";
+const DESCRIPTION =
+  'Créé des produits Gen AI game-changer en 48 heures, du 27/03 au 29/03. Édition «Time to Custom» → Hack ton outil préféré.';
 const OG_IMAGE = '/assets/images/HINjkEIVuvTLAMTIcSPr6jing.png';
 
 interface Props {
@@ -40,7 +41,11 @@ interface Props {
 }
 
 const Layout: FC<Props> = ({
-  canonical, breakpointCss, ssrCss, ssrCssComponents, rawBody,
+  canonical,
+  breakpointCss,
+  ssrCss,
+  ssrCssComponents,
+  rawBody,
 }) => (
   <html lang="fr">
     <head>
@@ -48,14 +53,25 @@ const Layout: FC<Props> = ({
       {/* Google Tag Manager */}
       <script dangerouslySetInnerHTML={{ __html: gtmScript }} />
       {/* Google tag (gtag.js) */}
-      <script async src={`https://www.googletagmanager.com/gtag/js?id=${GTAG_ID}`} />
+      <script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${GTAG_ID}`}
+      />
       <script dangerouslySetInnerHTML={{ __html: gtagScript }} />
       <meta name="viewport" content="width=device-width" />
       <meta name="generator" content="Framer 27b79d7" />
       <title>{TITLE}</title>
       <meta name="description" content={DESCRIPTION} />
-      <link href="/assets/images/QvcpkfP4FixE8eJpQUTgNk0rIs.png" rel="icon" media="(prefers-color-scheme: light)" />
-      <link href="/assets/images/QvcpkfP4FixE8eJpQUTgNk0rIs.png" rel="icon" media="(prefers-color-scheme: dark)" />
+      <link
+        href="/assets/images/QvcpkfP4FixE8eJpQUTgNk0rIs.png"
+        rel="icon"
+        media="(prefers-color-scheme: light)"
+      />
+      <link
+        href="/assets/images/QvcpkfP4FixE8eJpQUTgNk0rIs.png"
+        rel="icon"
+        media="(prefers-color-scheme: dark)"
+      />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={TITLE} />
       <meta property="og:description" content={DESCRIPTION} />
@@ -64,13 +80,23 @@ const Layout: FC<Props> = ({
       <meta name="twitter:title" content={TITLE} />
       <meta name="twitter:description" content={DESCRIPTION} />
       <meta name="twitter:image" content={OG_IMAGE} />
-      <style data-framer-font-css dangerouslySetInnerHTML={{ __html: fontCss }} />
+      <style
+        data-framer-font-css
+        dangerouslySetInnerHTML={{ __html: fontCss }}
+      />
       <link href="https://fonts.gstatic.com" rel="preconnect" crossOrigin="" />
       <meta name="robots" content="max-image-preview:large" />
       <link rel="canonical" href={canonical} />
       <meta property="og:url" content={canonical} />
-      <style data-framer-breakpoint-css dangerouslySetInnerHTML={{ __html: breakpointCss }} />
-      <style data-framer-css-ssr-minified data-framer-components={ssrCssComponents} dangerouslySetInnerHTML={{ __html: ssrCss }} />
+      <style
+        data-framer-breakpoint-css
+        dangerouslySetInnerHTML={{ __html: breakpointCss }}
+      />
+      <style
+        data-framer-css-ssr-minified
+        data-framer-components={ssrCssComponents}
+        dangerouslySetInnerHTML={{ __html: ssrCss }}
+      />
       {/* Hotjar */}
       <script dangerouslySetInnerHTML={{ __html: hotjarScript }} />
     </head>

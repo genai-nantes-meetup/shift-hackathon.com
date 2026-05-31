@@ -1,17 +1,7 @@
 ---
-import Layout from '../layouts/Layout.tsx';
-import { extractCanonical, extractBreakpointCss, extractSsrCss } from '../lib/framer';
+import FramerPage from '../components/FramerPage.tsx';
 import main from '../framer/index.main.html?raw';
 import headStylesRaw from '../framer/index.head-styles.html?raw';
-
-const canonical = extractCanonical(headStylesRaw);
-const breakpointCss = extractBreakpointCss(headStylesRaw);
-const { css: ssrCss, components: ssrCssComponents } = extractSsrCss(headStylesRaw);
 ---
-<Layout
-  canonical={canonical}
-  breakpointCss={breakpointCss}
-  ssrCss={ssrCss}
-  ssrCssComponents={ssrCssComponents}
-  rawBody={main}
-/>
+
+<FramerPage mainHtml={main} headStylesHtml={headStylesRaw} />
