@@ -32,17 +32,16 @@ const ITEMS = [
 
 export default function Programme() {
   return (
-    <section style={{ padding: '5rem 2rem', background: '#000' }}>
+    <section style={{ padding: '100px 70px', background: 'rgb(17,17,17)' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <Reveal>
           <h4
             style={{
               fontFamily: AGRANDIR,
-              fontSize: '30px',
+              fontSize: '40px',
               fontWeight: 400,
               color: '#fff',
               marginBottom: '3rem',
-              letterSpacing: '-0.01em',
             }}
           >
             Au programme
@@ -50,7 +49,7 @@ export default function Programme() {
         </Reveal>
 
         {/* 2-column staggered grid matching live site */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', alignItems: 'start' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px', alignItems: 'start' }}>
           {ITEMS.map((item, i) => (
             <Reveal key={item.title} delay={i * 0.1}>
               <div
@@ -84,7 +83,7 @@ export default function Programme() {
                 {/* Description */}
                 <p
                   style={{
-                    color: item.color,
+                    color: '#fff',
                     fontFamily: OXANIUM,
                     fontSize: '18px',
                     lineHeight: 1.7,

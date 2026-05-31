@@ -8,10 +8,10 @@ export default function Partners() {
         <Reveal>
           <h2 style={{
             fontFamily: "'Agrandir Grand Heavy', sans-serif",
-            fontSize: '30px',
+            fontSize: '50px',
             fontWeight: 800,
             color: '#fff',
-            textTransform: 'uppercase',
+            textTransform: 'none',
             textAlign: 'center',
             marginBottom: '2.5rem',
             letterSpacing: '-0.3px',

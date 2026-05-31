@@ -90,7 +90,6 @@ export default function SpeakersHero() {
                 color: '#fff',
                 lineHeight: 0.9,
                 margin: '0 0 4px',
-                textTransform: 'uppercase',
               }}
             >
               Shift
@@ -103,7 +102,6 @@ export default function SpeakersHero() {
                 color: '#fff',
                 lineHeight: 1.1,
                 margin: '0 0 2px',
-                textTransform: 'uppercase',
               }}
             >
               Les Intervenants
@@ -116,8 +114,6 @@ export default function SpeakersHero() {
                 color: '#9ff839',
                 lineHeight: 1.2,
                 margin: '0 0 28px',
-                fontStyle: 'italic',
-                textTransform: 'uppercase',
               }}
             >
               Le line-up de ce hackathon d&apos;anthologie

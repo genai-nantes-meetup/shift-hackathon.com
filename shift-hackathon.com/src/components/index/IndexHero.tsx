@@ -168,12 +168,12 @@ export default function IndexHero() {
               <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: 0, lineHeight: 1.55 }}>
                 Crée des produits Gen AI game-changer en 48 heures.
               </p>
-              {/* Line 2 — 15px Oxanium */}
-              <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '15px', margin: 0, lineHeight: 1.55 }}>
+              {/* Line 2 — 18px Oxanium (live site value) */}
+              <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: 0, lineHeight: 1.55 }}>
                 Édition &quot;Time to Custom&quot; → Hack ton outil préféré.
               </p>
-              {/* Line 3 — 15px Oxanium + margin top + bold */}
-              <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '15px', lineHeight: 1.55, marginTop: '14px', marginBottom: 0 }}>
+              {/* Line 3 — 18px Oxanium + margin top + bold */}
+              <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', lineHeight: 1.55, marginTop: '14px', marginBottom: 0 }}>
                 🔥 <strong style={{ fontWeight: 700 }}>Event all-inclusive</strong> - coaching, food &amp; fun.
               </p>
             </motion.div>

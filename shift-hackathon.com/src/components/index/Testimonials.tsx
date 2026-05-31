@@ -6,7 +6,7 @@ const OXANIUM = 'Oxanium, sans-serif';
 
 export default function Testimonials() {
   return (
-    <section style={{ padding: '5rem 2rem', background: 'rgba(0,0,0,0)' }}>
+    <section style={{ padding: '5rem 2rem', background: '#fff' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <Reveal>
           <h2
@@ -14,7 +14,7 @@ export default function Testimonials() {
               fontFamily: AGRANDIR,
               fontSize: '1.875rem',
               fontWeight: 400,
-              color: '#fff',
+              color: 'rgb(51,51,51)',
               marginBottom: '3rem',
             }}
           >
@@ -27,7 +27,7 @@ export default function Testimonials() {
               <div
                 style={{
                   breakInside: 'avoid',
-                  background: 'rgba(0,0,0,0)',
+                  background: '#fff',
                   borderRadius: '6px',
                   padding: '1.25rem',
                   marginBottom: '30px',
@@ -35,9 +35,10 @@ export default function Testimonials() {
               >
                 <p
                   style={{
-                    color: 'rgb(255,255,255)',
+                    color: 'rgb(102,102,102)',
                     fontFamily: OXANIUM,
-                    fontSize: '18px',
+                    fontSize: '16px',
+                    fontWeight: 500,
                     lineHeight: 1.65,
                     fontStyle: 'italic',
                     marginBottom: '1rem',
@@ -56,8 +57,9 @@ export default function Testimonials() {
                       style={{
                         fontFamily: AGRANDIR,
                         fontWeight: 400,
-                        color: 'rgb(255,255,255)',
-                        fontSize: '24px',
+                        color: 'rgb(51,51,51)',
+                        fontSize: '16px',
+                        letterSpacing: '-0.8px',
                         margin: 0,
                       }}
                     >
@@ -66,8 +68,9 @@ export default function Testimonials() {
                     <p
                       style={{
                         fontFamily: OXANIUM,
-                        color: 'rgb(255,255,255)',
-                        fontSize: '18px',
+                        color: 'rgb(153,153,153)',
+                        fontSize: '14px',
+                        letterSpacing: '-0.7px',
                         margin: 0,
                       }}
                     >

@@ -4,6 +4,7 @@ const TICKET_URL = 'https://www.billetweb.fr/shift-hackathon-2026';
 const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
 const OXANIUM = 'Oxanium, sans-serif';
 const BARLOW = 'Barlow, sans-serif';
+const DELA_GOTHIC = "'Dela Gothic One', sans-serif";
 
 const TIERS = [
   {
@@ -59,13 +60,13 @@ const arrowSvg = (color: string) =>
 
 export default function Pricing() {
   return (
-    <section style={{ padding: '5rem 2rem', background: '#fff' }}>
+    <section style={{ padding: '79px 30px', background: 'rgb(255, 227, 235)' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <Reveal>
           <h2
             style={{
               fontFamily: AGRANDIR,
-              fontSize: '60px',
+              fontSize: '50px',
               fontWeight: 800,
               color: '#000',
               marginBottom: '0.5rem',
@@ -78,9 +79,9 @@ export default function Pricing() {
         <Reveal delay={0.1}>
           <p
             style={{
-              color: 'rgba(0,0,0,0.55)',
+              color: 'rgb(0,0,0)',
               fontFamily: OXANIUM,
-              fontSize: '16px',
+              fontSize: '18px',
               marginBottom: '3rem',
             }}
           >
@@ -109,10 +110,10 @@ export default function Pricing() {
                       display: 'inline-block',
                       background: t.tag.bg,
                       color: t.tag.text,
-                      fontFamily: AGRANDIR,
-                      fontSize: '12px',
+                      fontFamily: DELA_GOTHIC,
+                      fontSize: '16px',
                       fontWeight: 400,
-                      letterSpacing: '0.12em',
+                      letterSpacing: '6.4px',
                       padding: '6px 20px',
                       borderRadius: '0 0 20px 20px',
                       textTransform: 'uppercase',
@@ -127,7 +128,7 @@ export default function Pricing() {
                   <p
                     style={{
                       fontFamily: AGRANDIR,
-                      fontSize: '16px',
+                      fontSize: '24px',
                       fontWeight: 800,
                       color: '#000',
                       marginBottom: '4px',
@@ -141,7 +142,7 @@ export default function Pricing() {
                   <p
                     style={{
                       fontFamily: AGRANDIR,
-                      fontSize: t.price === 'Custom' ? '48px' : '56px',
+                      fontSize: '40px',
                       fontWeight: 800,
                       color: '#000',
                       textAlign: 'center',
@@ -217,7 +218,7 @@ export default function Pricing() {
                       textTransform: 'uppercase',
                       letterSpacing: '0.08em',
                       borderRadius: '4px',
-                      boxShadow: 'rgba(159,248,57,0.5) 0px 5px 0px 0px',
+                      boxShadow: `rgba(${t.name === 'FRIENDS' ? '252,35,61' : t.name === 'ANGELS' ? '65,105,225' : '159,248,57'},0.5) 0px 5px 0px 0px`,
                     }}
                   >
                     Je suis chaud

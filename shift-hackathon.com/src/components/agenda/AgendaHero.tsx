@@ -100,13 +100,13 @@ export default function AgendaHero() {
                 fontFamily: AGRANDIR,
                 fontSize: '22px',
                 fontWeight: 800,
-                color: '#9ff839',
+                color: '#fff',
                 lineHeight: 1.1,
                 margin: '0 0 2px',
                 textTransform: 'uppercase',
               }}
             >
-              L&apos;Agenda
+              Le Hackathon Gen AI n°1
             </p>
             <p
               style={{
@@ -120,7 +120,7 @@ export default function AgendaHero() {
                 textTransform: 'uppercase',
               }}
             >
-              48h d&apos;un hackathon épique
+              pour les Designers, Devs &amp; Product lovers
             </p>
           </motion.div>
 
@@ -131,7 +131,7 @@ export default function AgendaHero() {
             style={{ marginBottom: '24px' }}
           >
             <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: 0, lineHeight: 1.55 }}>
-              Check l&apos;agenda de ce hackathon qui s&apos;annonce épique !
+              Crée des produits Gen AI game-changer en 48 heures
             </p>
           </motion.div>
 

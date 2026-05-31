@@ -24,7 +24,7 @@ export default function SpeakersPreview() {
             Ils seront présents en 2026
           </h2>
         </Reveal>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2.5rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '32px' }}>
           {preview.map((s, i) => (
             <Reveal key={s.name} delay={i * 0.07}>
               <div>
@@ -45,7 +45,7 @@ export default function SpeakersPreview() {
                     fontFamily: DELA,
                     fontWeight: 400,
                     color: '#fff',
-                    fontSize: '1.25rem',
+                    fontSize: '24px',
                     margin: '0 0 0.25rem',
                     lineHeight: 1.15,
                   }}
@@ -57,8 +57,8 @@ export default function SpeakersPreview() {
                     key={r}
                     style={{
                       fontFamily: OXANIUM,
-                      color: 'rgba(255,255,255,0.5)',
-                      fontSize: '0.78rem',
+                      color: '#fff',
+                      fontSize: '18px',
                       margin: '0.1rem 0 0',
                       lineHeight: 1.4,
                     }}

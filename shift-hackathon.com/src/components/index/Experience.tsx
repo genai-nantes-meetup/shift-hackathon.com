@@ -47,7 +47,7 @@ export default function Experience() {
                 fontSize: '0.875rem',
                 textDecoration: 'none',
                 textTransform: 'uppercase',
-                letterSpacing: '0.04em',
+                letterSpacing: '1.4px',
                 padding: '0.6rem 1.4rem',
                 borderRadius: '4px',
                 boxShadow: 'rgba(159,248,57,0.5) 0px 5px 0px 0px',
