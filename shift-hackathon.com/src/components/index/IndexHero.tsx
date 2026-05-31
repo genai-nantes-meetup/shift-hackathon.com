@@ -3,8 +3,10 @@ import { PARTNERS } from '../../data/site';
 
 const TICKET_URL = 'https://tally.so/r/D45GKl';
 const CDN = 'https://framerusercontent.com/images';
+const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
+const AGRANDIR_ITALIC = "'Agrandir Thin Italic', sans-serif";
+const OXANIUM = 'Oxanium, sans-serif';
 
-// Same order as displayed on live site sponsor strip
 const HERO_LOGOS = [
   PARTNERS.find((p) => p.name === 'Ici Lundi')!,
   PARTNERS.find((p) => p.name === 'Reecall')!,
@@ -29,34 +31,36 @@ export default function IndexHero() {
           background: '#000',
         }}
       >
-        {/* Subtle dot-grid texture */}
+        {/* Dot-grid texture — upper-right quadrant like live site */}
         <div
           style={{
             position: 'absolute',
-            inset: 0,
+            top: 0,
+            right: 0,
+            width: '45%',
+            height: '60%',
             zIndex: 0,
-            backgroundImage:
-              'radial-gradient(rgba(255,255,255,0.07) 1px, transparent 1px)',
-            backgroundSize: '28px 28px',
-            maskImage:
-              'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.6) 20%, rgba(0,0,0,0.6) 80%, transparent 100%)',
+            backgroundImage: 'radial-gradient(rgba(255,255,255,0.18) 1.5px, transparent 1.5px)',
+            backgroundSize: '22px 22px',
+            maskImage: 'radial-gradient(ellipse 80% 80% at 100% 0%, rgba(0,0,0,0.6) 0%, transparent 70%)',
+            WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 100% 0%, rgba(0,0,0,0.6) 0%, transparent 70%)',
           }}
         />
 
-        {/* Background hero image (faint) */}
+        {/* Background image (faint) */}
         <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
           <img
             src={`${CDN}/wa9oVNjleDQIbBtztqNGal6M.png`}
             alt=""
-            style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.12 }}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.1 }}
           />
-          {/* Green glow — bottom-left like live site */}
+          {/* Green glow — bottom-left */}
           <div
             style={{
               position: 'absolute',
               inset: 0,
               background:
-                'radial-gradient(ellipse 50% 60% at 10% 75%, rgba(20,100,0,0.6) 0%, rgba(0,60,0,0.25) 45%, transparent 70%)',
+                'radial-gradient(ellipse 55% 65% at 8% 80%, rgba(15,90,0,0.65) 0%, rgba(0,50,0,0.2) 50%, transparent 70%)',
             }}
           />
           <div
@@ -65,7 +69,7 @@ export default function IndexHero() {
               bottom: 0,
               left: 0,
               right: 0,
-              height: '40%',
+              height: '35%',
               background: 'linear-gradient(to top, #000, transparent)',
             }}
           />
@@ -85,54 +89,53 @@ export default function IndexHero() {
             width: '100%',
           }}
         >
-          {/* Left */}
+          {/* Left: Text */}
           <div>
-            {/* SHIFT — huge standalone wordmark */}
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
+              {/* SHIFT */}
               <p
                 style={{
-                  fontFamily: "'Agrandir Grand Heavy', sans-serif",
+                  fontFamily: AGRANDIR,
                   fontSize: 'clamp(4rem, 8vw, 7rem)',
                   fontWeight: 800,
                   color: '#fff',
                   lineHeight: 0.9,
-                  margin: '0 0 0.2rem',
+                  margin: '0 0 0.15rem',
                   textTransform: 'uppercase',
                   letterSpacing: '-0.02em',
                 }}
               >
                 Shift
               </p>
-              {/* Green subtitle */}
+              {/* Le Hackathon Gen AI n°1 — WHITE */}
               <p
                 style={{
-                  fontFamily: "'Agrandir Grand Heavy', sans-serif",
-                  fontSize: 'clamp(1rem, 2vw, 1.4rem)',
+                  fontFamily: AGRANDIR,
+                  fontSize: 'clamp(1rem, 2vw, 1.375rem)',
                   fontWeight: 800,
-                  color: '#9ff839',
+                  color: '#fff',
                   lineHeight: 1.1,
-                  margin: '0 0 0.2rem',
+                  margin: '0 0 0.15rem',
                   textTransform: 'uppercase',
                   letterSpacing: '0.01em',
                 }}
               >
                 Le Hackathon Gen AI n°1
               </p>
-              {/* Small subtitle */}
+              {/* Italic subtitle */}
               <p
                 style={{
-                  fontFamily: 'Barlow, sans-serif',
-                  fontSize: 'clamp(0.8rem, 1.2vw, 1rem)',
-                  fontWeight: 400,
-                  color: 'rgba(255,255,255,0.6)',
+                  fontFamily: AGRANDIR_ITALIC,
+                  fontSize: 'clamp(0.85rem, 1.3vw, 1.25rem)',
+                  fontWeight: 100,
+                  color: '#fff',
                   lineHeight: 1.2,
-                  margin: '0 0 1.5rem',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.03em',
+                  margin: '0 0 1.75rem',
+                  letterSpacing: '0.01em',
                   fontStyle: 'italic',
                 }}
               >
@@ -144,39 +147,44 @@ export default function IndexHero() {
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              style={{ marginBottom: '2rem' }}
+              style={{ marginBottom: '1.5rem' }}
             >
+              {/* Line 1 */}
               <p
                 style={{
-                  color: 'rgba(255,255,255,0.75)',
-                  fontFamily: 'Barlow, sans-serif',
-                  fontSize: '0.9rem',
-                  marginBottom: '0.25rem',
-                  lineHeight: 1.5,
+                  color: '#fff',
+                  fontFamily: OXANIUM,
+                  fontSize: '0.875rem',
+                  marginBottom: '0',
+                  lineHeight: 1.55,
                 }}
               >
                 Crée des produits Gen AI game-changer en 48 heures.
               </p>
+              {/* Line 2 */}
               <p
                 style={{
-                  color: 'rgba(255,255,255,0.75)',
-                  fontFamily: 'Barlow, sans-serif',
-                  fontSize: '0.9rem',
-                  marginBottom: '0.25rem',
-                  lineHeight: 1.5,
+                  color: '#fff',
+                  fontFamily: OXANIUM,
+                  fontSize: '0.9375rem',
+                  marginBottom: '0',
+                  lineHeight: 1.55,
                 }}
               >
                 Édition &quot;Time to Custom&quot; → Hack ton outil préféré.
               </p>
+              {/* Line 3 — with margin top + bold "Event all-inclusive" */}
               <p
                 style={{
-                  color: 'rgba(255,255,255,0.75)',
-                  fontFamily: 'Barlow, sans-serif',
-                  fontSize: '0.9rem',
-                  lineHeight: 1.5,
+                  color: '#fff',
+                  fontFamily: OXANIUM,
+                  fontSize: '0.9375rem',
+                  lineHeight: 1.55,
+                  marginTop: '0.85rem',
+                  marginBottom: '0',
                 }}
               >
-                🔥 Event all-inclusive - coaching, food &amp; fun.
+                🔥 <strong style={{ fontWeight: 700 }}>Event all-inclusive</strong> - coaching, food &amp; fun.
               </p>
             </motion.div>
 
@@ -184,8 +192,9 @@ export default function IndexHero() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.35 }}
-              style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', alignItems: 'flex-start' }}
+              style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', alignItems: 'flex-start' }}
             >
+              {/* CTA Button — Agrandir Grand Heavy, dark bg, green border like live */}
               <a
                 href={TICKET_URL}
                 target="_blank"
@@ -193,45 +202,67 @@ export default function IndexHero() {
                 style={{
                   display: 'inline-block',
                   background: '#9ff839',
-                  color: '#000',
-                  padding: '0.85rem 2.2rem',
-                  fontFamily: 'Barlow, sans-serif',
-                  fontWeight: 900,
-                  fontSize: '0.9rem',
+                  color: 'rgb(25,5,50)',
+                  padding: '0.7rem 1.75rem',
+                  fontFamily: AGRANDIR,
+                  fontWeight: 400,
+                  fontSize: '0.75rem',
                   textDecoration: 'none',
                   textTransform: 'uppercase',
-                  letterSpacing: '0.05em',
-                  borderRadius: '2px',
+                  letterSpacing: '0.04em',
+                  borderRadius: '3px',
+                  whiteSpace: 'nowrap',
                 }}
               >
                 Je suis chaud pour 2027 !
               </a>
-              <span
+              {/* "Réserve ta place !!" — bigger */}
+              <em
                 style={{
-                  fontFamily: 'Barlow, sans-serif',
-                  fontSize: '0.72rem',
-                  color: 'rgba(255,255,255,0.35)',
+                  fontFamily: OXANIUM,
+                  fontSize: '0.9375rem',
+                  color: '#fff',
                   fontStyle: 'italic',
+                  fontWeight: 400,
                 }}
               >
                 Réserve ta place !!
-              </span>
+              </em>
             </motion.div>
           </div>
 
-          {/* Right: Hero image */}
+          {/* Right: Hero image — square crop */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
+            style={{ position: 'relative' }}
           >
             <img
               src={`${CDN}/Rdl8zkLOcqcng7VGIk3w5sXc38.png`}
               alt="Shift Hackathon"
               style={{
                 width: '100%',
-                borderRadius: '4px',
+                aspectRatio: '1 / 1',
+                objectFit: 'cover',
+                objectPosition: 'right center',
+                borderRadius: '6px',
+                display: 'block',
                 boxShadow: '0 0 60px rgba(0,180,0,0.12), 0 20px 60px rgba(0,0,0,0.5)',
+              }}
+            />
+            {/* Decorative dots/angel shape — bottom-left of image */}
+            <img
+              src={`${CDN}/mRZACm4BynYCqQoFUgtHbuSrdQ8.svg`}
+              alt=""
+              aria-hidden
+              style={{
+                position: 'absolute',
+                bottom: '-20px',
+                left: '-20px',
+                width: 112,
+                height: 120,
+                pointerEvents: 'none',
               }}
             />
           </motion.div>
@@ -248,19 +279,20 @@ export default function IndexHero() {
         }}
       >
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <p
+          <em
             style={{
-              fontFamily: 'Barlow, sans-serif',
-              fontSize: '0.7rem',
-              color: 'rgba(255,255,255,0.3)',
-              textTransform: 'uppercase',
-              letterSpacing: '0.12em',
+              display: 'block',
+              fontFamily: OXANIUM,
+              fontSize: '1rem',
+              color: '#fff',
               textAlign: 'center',
               marginBottom: '1rem',
+              fontStyle: 'italic',
+              fontWeight: 400,
             }}
           >
             Les complices de Shift depuis 2024
-          </p>
+          </em>
           <div
             style={{
               display: 'flex',
@@ -276,19 +308,18 @@ export default function IndexHero() {
                 href={p.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ opacity: 0.45, transition: 'opacity 0.2s' }}
+                style={{ opacity: 0.55, transition: 'opacity 0.2s' }}
                 onMouseEnter={(e) => (e.currentTarget.style.opacity = '1')}
-                onMouseLeave={(e) => (e.currentTarget.style.opacity = '0.45')}
+                onMouseLeave={(e) => (e.currentTarget.style.opacity = '0.55')}
               >
                 <img
                   src={p.logo}
                   alt={p.name}
                   style={{
-                    height: 26,
+                    height: 28,
                     width: 'auto',
-                    maxWidth: 110,
+                    maxWidth: 120,
                     objectFit: 'contain',
-                    filter: 'brightness(1.1) contrast(0.9)',
                   }}
                 />
               </a>
