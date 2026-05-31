@@ -111,48 +111,47 @@ export default function IndexHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              {/* SHIFT */}
+              {/* SHIFT — 64px exact live site value */}
               <p
                 style={{
                   fontFamily: AGRANDIR,
-                  fontSize: 'clamp(4rem, 8vw, 6rem)',
+                  fontSize: '64px',
                   fontWeight: 800,
                   color: '#fff',
                   lineHeight: 0.9,
-                  margin: '0 0 0.15rem',
+                  margin: '0 0 4px',
                   textTransform: 'uppercase',
                   letterSpacing: '-0.02em',
                 }}
               >
                 Shift
               </p>
-              {/* Le Hackathon Gen AI n°1 — WHITE */}
+              {/* Le Hackathon Gen AI n°1 — 22px exact */}
               <p
                 style={{
                   fontFamily: AGRANDIR,
-                  fontSize: 'clamp(1rem, 2vw, 1.375rem)',
+                  fontSize: '22px',
                   fontWeight: 800,
                   color: '#fff',
                   lineHeight: 1.1,
-                  margin: '0 0 0.15rem',
+                  margin: '0 0 2px',
                   textTransform: 'uppercase',
                   letterSpacing: '0.22px',
                 }}
               >
                 Le Hackathon Gen AI n°1
               </p>
-              {/* Italic subtitle */}
+              {/* Italic subtitle — 20px exact */}
               <p
                 style={{
                   fontFamily: AGRANDIR_ITALIC,
-                  fontSize: 'clamp(15.6px, 1.3vw, 20px)',
+                  fontSize: '20px',
                   fontWeight: 100,
                   color: '#fff',
                   lineHeight: 1.2,
-                  margin: '0 0 1.75rem',
-                  letterSpacing: 'normal',
-                  textTransform: 'uppercase',
+                  margin: '0 0 28px',
                   fontStyle: 'italic',
+                  textTransform: 'uppercase',
                 }}
               >
                 pour les Designers, Devs &amp; Product Lovers
@@ -163,43 +162,18 @@ export default function IndexHero() {
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              style={{ marginBottom: '1.5rem' }}
+              style={{ marginBottom: '24px' }}
             >
-              {/* Line 1 */}
-              <p
-                style={{
-                  color: '#fff',
-                  fontFamily: OXANIUM,
-                  fontSize: '0.875rem',
-                  marginBottom: '0',
-                  lineHeight: 1.55,
-                }}
-              >
+              {/* Line 1 — 14px Oxanium */}
+              <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '14px', margin: 0, lineHeight: 1.55 }}>
                 Crée des produits Gen AI game-changer en 48 heures.
               </p>
-              {/* Line 2 */}
-              <p
-                style={{
-                  color: '#fff',
-                  fontFamily: OXANIUM,
-                  fontSize: '0.9375rem',
-                  marginBottom: '0',
-                  lineHeight: 1.55,
-                }}
-              >
+              {/* Line 2 — 15px Oxanium */}
+              <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '15px', margin: 0, lineHeight: 1.55 }}>
                 Édition &quot;Time to Custom&quot; → Hack ton outil préféré.
               </p>
-              {/* Line 3 — with margin top + bold "Event all-inclusive" */}
-              <p
-                style={{
-                  color: '#fff',
-                  fontFamily: OXANIUM,
-                  fontSize: '0.9375rem',
-                  lineHeight: 1.55,
-                  marginTop: '0.85rem',
-                  marginBottom: '0',
-                }}
-              >
+              {/* Line 3 — 15px Oxanium + margin top + bold */}
+              <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '15px', lineHeight: 1.55, marginTop: '14px', marginBottom: 0 }}>
                 🔥 <strong style={{ fontWeight: 700 }}>Event all-inclusive</strong> - coaching, food &amp; fun.
               </p>
             </motion.div>
@@ -285,54 +259,55 @@ export default function IndexHero() {
         </div>
       </section>
 
-      {/* Sponsor strip */}
       {/* Scrolling sponsor marquee */}
       <div
         style={{
           background: '#000',
           borderTop: '1px solid rgba(255,255,255,0.06)',
           borderBottom: '1px solid rgba(255,255,255,0.06)',
-          padding: '1rem 0',
-          overflow: 'hidden',
+          padding: '1.25rem 0',
         }}
       >
-        <em
-          style={{
-            display: 'block',
-            fontFamily: OXANIUM,
-            fontSize: '1rem',
-            color: '#fff',
-            textAlign: 'center',
-            marginBottom: '0.875rem',
-            fontStyle: 'italic',
-            fontWeight: 400,
-          }}
-        >
-          Les complices de Shift depuis 2024
-        </em>
-        {/* Marquee track — duplicate logos for seamless loop */}
-        <div style={{ overflow: 'hidden', position: 'relative' }}>
-          <motion.div
-            animate={{ x: ['0%', '-50%'] }}
-            transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
-            style={{ display: 'flex', alignItems: 'center', gap: '3rem', width: 'max-content' }}
+        {/* Label + marquee constrained to 1200px like all sections */}
+        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 2rem' }}>
+          <em
+            style={{
+              display: 'block',
+              fontFamily: OXANIUM,
+              fontSize: '16px',
+              color: '#fff',
+              textAlign: 'left',
+              marginBottom: '1rem',
+              fontStyle: 'italic',
+              fontWeight: 400,
+            }}
           >
-            {[...ALL_COMPLICES, ...ALL_COMPLICES].map((p, i) => (
-              <img
-                key={`${p.name}-${i}`}
-                src={p.logo}
-                alt={p.name}
-                style={{
-                  height: 28,
-                  width: 'auto',
-                  maxWidth: 130,
-                  objectFit: 'contain',
-                  flexShrink: 0,
-                  opacity: 0.7,
-                }}
-              />
-            ))}
-          </motion.div>
+            Les complices de Shift depuis 2024
+          </em>
+          {/* Marquee track — overflow hidden on this container only */}
+          <div style={{ overflow: 'hidden', position: 'relative' }}>
+            <motion.div
+              animate={{ x: ['0%', '-50%'] }}
+              transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
+              style={{ display: 'flex', alignItems: 'center', gap: '2.5rem', width: 'max-content' }}
+            >
+              {[...ALL_COMPLICES, ...ALL_COMPLICES].map((p, i) => (
+                <img
+                  key={`${p.name}-${i}`}
+                  src={p.logo}
+                  alt={p.name}
+                  style={{
+                    height: 28,
+                    width: 'auto',
+                    maxWidth: 120,
+                    objectFit: 'contain',
+                    flexShrink: 0,
+                    opacity: 0.65,
+                  }}
+                />
+              ))}
+            </motion.div>
+          </div>
         </div>
       </div>
     </>
