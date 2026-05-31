@@ -30,8 +30,6 @@ const hotjarScript = `(function(h,o,t,j,a,r){
 interface Props {
   title: string;
   description: string;
-  ogTitle: string;
-  ogDescription: string;
   ogImage: string;
   twitterImage?: string;
   canonical: string;
@@ -42,7 +40,7 @@ interface Props {
 }
 
 const Layout: FC<Props> = ({
-  title, description, ogTitle, ogDescription, ogImage, twitterImage,
+  title, description, ogImage, twitterImage,
   canonical, breakpointCss, ssrCss, ssrCssComponents, rawBody,
 }) => (
   <html lang="fr">
@@ -60,12 +58,12 @@ const Layout: FC<Props> = ({
       <link href="/assets/images/QvcpkfP4FixE8eJpQUTgNk0rIs.png" rel="icon" media="(prefers-color-scheme: light)" />
       <link href="/assets/images/QvcpkfP4FixE8eJpQUTgNk0rIs.png" rel="icon" media="(prefers-color-scheme: dark)" />
       <meta property="og:type" content="website" />
-      <meta property="og:title" content={ogTitle} />
-      <meta property="og:description" content={ogDescription} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={ogTitle} />
-      <meta name="twitter:description" content={ogDescription} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={twitterImage ?? ogImage} />
       <style data-framer-font-css dangerouslySetInnerHTML={{ __html: fontCss }} />
       <link href="https://fonts.gstatic.com" rel="preconnect" crossOrigin="" />

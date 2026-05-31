@@ -7,15 +7,10 @@ import headStylesRaw from '../framer/agenda.head-styles.html?raw';
 const canonical = extractCanonical(headStylesRaw);
 const breakpointCss = extractBreakpointCss(headStylesRaw);
 const { css: ssrCss, components: ssrCssComponents } = extractSsrCss(headStylesRaw);
-
-const description = `Créé des produits Gen AI game-changer en 48 heures, du 27/03 au 29/03.
-Édition "Time to Custom" → Hack ton outil préféré.`;
 ---
 <Layout
   title="Shift - Le Hackathon Gen AI"
-  description={description}
-  ogTitle="Shift - Le Hackathon Gen AI"
-  ogDescription={description}
+  description="Créé des produits Gen AI game-changer en 48 heures, du 27/03 au 29/03. Édition «Time to Custom» → Hack ton outil préféré."
   ogImage="/assets/images/HINjkEIVuvTLAMTIcSPr6jing.png"
   canonical={canonical}
   breakpointCss={breakpointCss}
