@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import main from '../framer/agenda-2026.main.html?raw';
+import headStyles from '../framer/agenda-2026.head-styles.html?raw';
+
+const description = `Créé des produits Gen AI game-changer en 48 heures, du 27/03 au 29/03.
+Édition "Time to Custom" → Hack ton outil préféré.`;
+---
+<Layout
+  title="Shift - Le Hackathon Gen AI"
+  description={description}
+  ogTitle="Shift - Le Hackathon Gen AI"
+  ogDescription={description}
+  ogImage="/assets/images/HINjkEIVuvTLAMTIcSPr6jing.png"
+>
+  <Fragment slot="head-styles" set:html={headStyles} />
+  <Fragment set:html={main} />
+</Layout>
