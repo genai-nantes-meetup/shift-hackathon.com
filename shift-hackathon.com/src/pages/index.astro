@@ -1,7 +1,12 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/Layout.tsx';
+import { extractCanonical, extractBreakpointCss, extractSsrCss } from '../lib/framer';
 import main from '../framer/index.main.html?raw';
-import headStyles from '../framer/index.head-styles.html?raw';
+import headStylesRaw from '../framer/index.head-styles.html?raw';
+
+const canonical = extractCanonical(headStylesRaw);
+const breakpointCss = extractBreakpointCss(headStylesRaw);
+const { css: ssrCss, components: ssrCssComponents } = extractSsrCss(headStylesRaw);
 
 const description = `Créé des produits Gen AI game-changer en 48 heures, du 27/03 au 29/03
 Édition "Time to Custom" → Hack ton outil préféré.`;
@@ -12,7 +17,9 @@ const description = `Créé des produits Gen AI game-changer en 48 heures, du 27
   ogTitle="Shift, le Hackathon Gen AI"
   ogDescription={description}
   ogImage="/assets/images/HINjkEIVuvTLAMTIcSPr6jing.png"
->
-  <Fragment slot="head-styles" set:html={headStyles} />
-  <Fragment set:html={main} />
-</Layout>
+  canonical={canonical}
+  breakpointCss={breakpointCss}
+  ssrCss={ssrCss}
+  ssrCssComponents={ssrCssComponents}
+  rawBody={main}
+/>
