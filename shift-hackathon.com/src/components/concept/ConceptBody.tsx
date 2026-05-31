@@ -8,13 +8,13 @@ import ConceptFooter from './ConceptFooter';
 import ConceptContainer from './ConceptContainer';
 import ConceptContact from './ConceptContact';
 
-import navScript from '../../framer/concept/nav-script.js?raw';
-import variantScript from '../../framer/concept/variant-script.js?raw';
-import animatorScript from '../../framer/concept/animator-script.js?raw';
+import navScript from '../../framer/shared/nav-script.js?raw';
+import variantScript from '../../framer/shared/variant-script.js?raw';
+import animatorScript from '../../framer/shared/animator-script.js?raw';
 import appearAnimations from '../../framer/concept/appear-animations.json?raw';
 import breakpoints from '../../framer/concept/breakpoints.json?raw';
-import appearRunner from '../../framer/concept/appear-runner.js?raw';
-import nodeenv from '../../framer/concept/nodeenv.js?raw';
+import appearRunner from '../../framer/shared/appear-runner.js?raw';
+import nodeenv from '../../framer/shared/nodeenv.js?raw';
 import preloadLinks from '../../framer/concept/preload-links.html?raw';
 
 const HYDRATE_V2 = '{"routeId":"qP_c96aKH","localeId":"default","breakpoints":[{"hash":"9brr6f","mediaQuery":"(min-width: 1240px)"},{"hash":"pmzee1","mediaQuery":"(min-width: 768px) and (max-width: 1239.98px)"},{"hash":"17j2mkx","mediaQuery":"(max-width: 767.98px)"}]}';

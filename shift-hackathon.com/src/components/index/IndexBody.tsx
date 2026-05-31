@@ -13,13 +13,13 @@ import IndexSponsors from './IndexSponsors';
 import IndexGrid1 from './IndexGrid1';
 import IndexContact from './IndexContact';
 
-import navScript from '../../framer/index/nav-script.js?raw';
-import variantScript from '../../framer/index/variant-script.js?raw';
-import animatorScript from '../../framer/index/animator-script.js?raw';
+import navScript from '../../framer/shared/nav-script.js?raw';
+import variantScript from '../../framer/shared/variant-script.js?raw';
+import animatorScript from '../../framer/shared/animator-script.js?raw';
 import appearAnimations from '../../framer/index/appear-animations.json?raw';
 import breakpoints from '../../framer/index/breakpoints.json?raw';
-import appearRunner from '../../framer/index/appear-runner.js?raw';
-import nodeenv from '../../framer/index/nodeenv.js?raw';
+import appearRunner from '../../framer/shared/appear-runner.js?raw';
+import nodeenv from '../../framer/shared/nodeenv.js?raw';
 import preloadLinks from '../../framer/index/preload-links.html?raw';
 
 const HYDRATE_V2 = '{"routeId":"HCW6Aki3T","localeId":"default","breakpoints":[{"hash":"uosayu","mediaQuery":"(min-width: 1240px)"},{"hash":"1pmeis7","mediaQuery":"(min-width: 768px) and (max-width: 1239.98px)"},{"hash":"hn3c4o","mediaQuery":"(max-width: 767.98px)"}]}';

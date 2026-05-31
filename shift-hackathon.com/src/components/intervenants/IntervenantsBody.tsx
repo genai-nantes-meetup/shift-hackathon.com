@@ -5,13 +5,13 @@ import IntervenantsTeam from './IntervenantsTeam';
 import IntervenantsFooter from './IntervenantsFooter';
 import IntervenantsContact from './IntervenantsContact';
 
-import navScript from '../../framer/intervenants/nav-script.js?raw';
-import variantScript from '../../framer/intervenants/variant-script.js?raw';
-import animatorScript from '../../framer/intervenants/animator-script.js?raw';
+import navScript from '../../framer/shared/nav-script.js?raw';
+import variantScript from '../../framer/shared/variant-script.js?raw';
+import animatorScript from '../../framer/shared/animator-script.js?raw';
 import appearAnimations from '../../framer/intervenants/appear-animations.json?raw';
 import breakpoints from '../../framer/intervenants/breakpoints.json?raw';
-import appearRunner from '../../framer/intervenants/appear-runner.js?raw';
-import nodeenv from '../../framer/intervenants/nodeenv.js?raw';
+import appearRunner from '../../framer/shared/appear-runner.js?raw';
+import nodeenv from '../../framer/shared/nodeenv.js?raw';
 import preloadLinks from '../../framer/intervenants/preload-links.html?raw';
 
 const HYDRATE_V2 = '{"routeId":"KmjIc40Lu","localeId":"default","breakpoints":[{"hash":"i1521","mediaQuery":"(min-width: 1240px)"},{"hash":"tbx75b","mediaQuery":"(min-width: 768px) and (max-width: 1239.98px)"},{"hash":"1yhlmg7","mediaQuery":"(max-width: 767.98px)"}]}';

@@ -4,13 +4,13 @@ import AgendaHeader from './AgendaHeader';
 import AgendaHero from './AgendaHero';
 import AgendaSchedule from './AgendaSchedule';
 
-import navScript from '../../framer/agenda/nav-script.js?raw';
-import variantScript from '../../framer/agenda/variant-script.js?raw';
-import animatorScript from '../../framer/agenda/animator-script.js?raw';
+import navScript from '../../framer/shared/nav-script.js?raw';
+import variantScript from '../../framer/shared/variant-script.js?raw';
+import animatorScript from '../../framer/shared/animator-script.js?raw';
 import appearAnimations from '../../framer/agenda/appear-animations.json?raw';
 import breakpoints from '../../framer/agenda/breakpoints.json?raw';
-import appearRunner from '../../framer/agenda/appear-runner.js?raw';
-import nodeenv from '../../framer/agenda/nodeenv.js?raw';
+import appearRunner from '../../framer/shared/appear-runner.js?raw';
+import nodeenv from '../../framer/shared/nodeenv.js?raw';
 import preloadLinks from '../../framer/agenda/preload-links.html?raw';
 
 const HYDRATE_V2 =
