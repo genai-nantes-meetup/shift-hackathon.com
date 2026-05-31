@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/agenda-2026", "destination": "/agenda-2026.html" },
+    { "source": "/concept-2026", "destination": "/concept-2026.html" },
+    { "source": "/intervenants-2026", "destination": "/intervenants-2026.html" }
+  ]
+}
