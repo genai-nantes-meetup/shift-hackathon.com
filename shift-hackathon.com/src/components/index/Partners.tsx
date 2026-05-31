@@ -7,7 +7,7 @@ export default function Partners() {
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <Reveal>
           <h2 style={{
-            fontFamily: "'Agrandir', 'Barlow', sans-serif",
+            fontFamily: "'Agrandir Grand Heavy', sans-serif",
             fontSize: 'clamp(1.5rem, 2.5vw, 2rem)',
             fontWeight: 800,
             color: '#fff',
@@ -34,7 +34,7 @@ export default function Partners() {
                 <img
                   src={p.logo}
                   alt={p.name}
-                  style={{ height: 44, width: 'auto', maxWidth: 160, objectFit: 'contain', filter: 'brightness(0) invert(1)' }}
+                  style={{ height: 44, width: 'auto', maxWidth: 160, objectFit: 'contain', filter: 'brightness(1.1) contrast(0.9)' }}
                 />
               </a>
             </Reveal>

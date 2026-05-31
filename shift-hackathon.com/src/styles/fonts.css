@@ -1,15 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;0,900;1,400&family=Inter:wght@400;500;600;700&display=swap');
+/* Google Fonts — Oxanium (body), Dela Gothic One (speakers/sections), Barlow (pricing) */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;0,900;1,400&family=Dela+Gothic+One&family=Oxanium:wght@400;500;700&display=swap');
 
-/* Agrandir — local (not available on CDN) */
+/* Agrandir Grand Heavy — local (not available on CDN) */
 @font-face {
-  font-family: 'Agrandir';
+  font-family: 'Agrandir Grand Heavy';
   src: url('/fonts/agrandir-grand-heavy.woff2') format('woff2');
   font-display: swap;
   font-style: normal;
   font-weight: 800;
 }
+
+/* Agrandir Thin Italic — local */
 @font-face {
-  font-family: 'Agrandir';
+  font-family: 'Agrandir Thin Italic';
   src: url('/fonts/agrandir-thin-italic.woff2') format('woff2');
   font-display: swap;
   font-style: italic;

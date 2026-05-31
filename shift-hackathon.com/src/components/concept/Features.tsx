@@ -40,7 +40,7 @@ export default function Features() {
                 {/* Text */}
                 <div style={{ padding: '3rem 3.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', direction: 'ltr', background: isEven ? '#0e0218' : '#0a0115' }}>
                   <h3 style={{
-                    fontFamily: "'Agrandir', 'Barlow', sans-serif",
+                    fontFamily: "'Agrandir Grand Heavy', sans-serif",
                     fontWeight: 800,
                     color: '#fff',
                     fontSize: 'clamp(1.1rem, 2vw, 1.5rem)',

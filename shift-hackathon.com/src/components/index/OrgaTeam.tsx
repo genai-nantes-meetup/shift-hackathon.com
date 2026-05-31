@@ -6,7 +6,7 @@ export default function OrgaTeam() {
     <section style={{ padding: '5rem 2rem', background: '#000' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <Reveal>
-          <h2 style={{ fontFamily: "'Agrandir', 'Barlow', sans-serif", fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', fontWeight: 800, color: '#fff', textTransform: 'uppercase', textAlign: 'center', marginBottom: '3rem' }}>
+          <h2 style={{ fontFamily: "'Agrandir Grand Heavy', sans-serif", fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', fontWeight: 800, color: '#fff', textTransform: 'uppercase', textAlign: 'center', marginBottom: '3rem' }}>
             La team <span style={{ color: '#9ff839' }}>orga</span> de choc
           </h2>
         </Reveal>

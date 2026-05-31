@@ -11,7 +11,7 @@ export default function CTASection() {
     }}>
       <Reveal>
         <h2 style={{
-          fontFamily: "'Agrandir', 'Barlow', sans-serif", fontSize: 'clamp(2rem, 5vw, 3rem)',
+          fontFamily: "'Agrandir Grand Heavy', sans-serif", fontSize: 'clamp(2rem, 5vw, 3rem)',
           fontWeight: 800, color: '#fff', marginBottom: '1rem',
           textTransform: 'uppercase', letterSpacing: '-0.02em',
         }}>

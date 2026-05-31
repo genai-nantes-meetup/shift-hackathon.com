@@ -12,7 +12,7 @@ export default function ConceptHero() {
       </div>
       <div style={{ position: 'relative', zIndex: 1, maxWidth: 900, margin: '0 auto', textAlign: 'center' }}>
         <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-          style={{ fontFamily: "'Agrandir', 'Barlow', sans-serif", fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: 800, color: '#fff', textTransform: 'uppercase', marginBottom: '1.5rem', lineHeight: 1 }}>
+          style={{ fontFamily: "'Agrandir Grand Heavy', sans-serif", fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: 800, color: '#fff', textTransform: 'uppercase', marginBottom: '1.5rem', lineHeight: 1 }}>
           Shift, <span style={{ color: '#f75787' }}>c'est quoi ?</span>
         </motion.h1>
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.15 }}
