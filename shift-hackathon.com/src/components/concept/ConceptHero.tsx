@@ -61,15 +61,15 @@ export default function ConceptHero() {
             <p
               style={{
                 fontFamily: AGRANDIR,
-                fontSize: '64px',
+                fontSize: '56px',
                 fontWeight: 800,
                 color: '#fff',
-                lineHeight: '57.6px',
+                lineHeight: '50.4px',
                 margin: '0 0 4px',
                 textTransform: 'uppercase',
               }}
             >
-              Shift
+              Shift,
             </p>
             <p
               style={{
@@ -82,20 +82,20 @@ export default function ConceptHero() {
                 textTransform: 'uppercase',
               }}
             >
-              Le Hackathon Gen AI n°1
+              C&apos;est quoi ?
             </p>
             <p
               style={{
                 fontFamily: AGRANDIR_ITALIC,
                 fontSize: '20px',
                 fontWeight: 100,
-                color: '#fff',
+                color: 'rgb(159, 248, 57)',
                 lineHeight: '24px',
                 margin: '0 0 28px',
                 textTransform: 'uppercase',
               }}
             >
-              pour les Designers, Devs &amp; Product Lovers
+              Le Hackathon Gen AI n°1
             </p>
           </motion.div>
 
@@ -106,13 +106,7 @@ export default function ConceptHero() {
             style={{ marginBottom: '24px' }}
           >
             <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: 0, lineHeight: '27.9px' }}>
-              Crée des produits Gen AI game-changer en 48h.
-            </p>
-            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: 0, lineHeight: '27.9px' }}>
-              Édition &ldquo;Time to Custom&rdquo; → Hack ton outil préféré.
-            </p>
-            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', lineHeight: '27.9px', marginTop: '14px', marginBottom: 0 }}>
-              🔥 Event all-inclusive - coaching, food &amp; drinks inclus.
+              Shift — Time To Custom, c&apos;est 48 heures pour créer des produits Gen AI game-changer. <strong>Event all-inclusive</strong> — coaching, food &amp; drinks inclus.
             </p>
           </motion.div>
 
@@ -142,7 +136,7 @@ export default function ConceptHero() {
                 width: 'fit-content',
               }}
             >
-              Je suis chaud pour 2027 !
+              Take my money 🤘
             </a>
           </motion.div>
         </div>

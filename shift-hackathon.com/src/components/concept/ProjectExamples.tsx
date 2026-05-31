@@ -1,49 +1,76 @@
 import Reveal from '../Reveal';
+import { SPEAKERS } from '../../data/site';
 
-const EXAMPLES = [
-  {
-    tool: 'Vinted', accent: '#2aebf5',
-    problem: "Les photos à plat n'aident pas à se projeter — on achète sans savoir si les vêtements vont nous aller.",
-    concept: 'Une feature qui projette le vêtement directement sur ta propre photo pour visualiser le rendu réel.',
-    features: ['Projection automatique du vêtement', 'Évaluation du risque de mauvais fit'],
-  },
-  {
-    tool: 'Slack', accent: '#fae01b',
-    problem: 'Les équipes perdent un temps monstrueux dans des réunions qui ne servent à rien.',
-    concept: 'Une IA intégrée à Slack qui identifie les réunions inutiles et propose des alternatives asynchrones.',
-    features: ['Scoring automatique des meetings', 'Alternative asynchrone générée'],
-  },
-  {
-    tool: 'eBay', accent: '#f75787',
-    problem: "Les objets ont souvent une histoire riche, mais elle est invisible — réduite à un prix et quelques photos.",
-    concept: "Une feature qui transforme les annonces en mini-musées racontant l'histoire des objets vendus.",
-    features: ["Reconstruction automatique de l'histoire", 'Mise en perspective culturelle et temporelle'],
-  },
-];
+const PREVIEW = SPEAKERS.slice(0, 3);
 
 export default function ProjectExamples() {
   return (
-    <section style={{ padding: '5rem 2rem', background: '#000' }}>
+    <section style={{ padding: '80px 32px', background: '#000' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <Reveal>
-          <h2 style={{ fontFamily: '"Agrandir Grand Heavy", sans-serif', fontSize: '48px', fontWeight: 800, color: '#fff', textTransform: 'uppercase', textAlign: 'center', marginBottom: '3rem', lineHeight: 1 }}>
-            Exemples de <span style={{ color: '#9ff839' }}>projets</span> à réaliser
+          <h2
+            style={{
+              fontFamily: '"Agrandir Grand Heavy", sans-serif',
+              fontSize: '50px',
+              fontWeight: 800,
+              lineHeight: '75px',
+              color: '#fff',
+              marginBottom: '32px',
+            }}
+          >
+            Ils seront présents en 2026
           </h2>
         </Reveal>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem' }}>
-          {EXAMPLES.map((ex, i) => (
-            <Reveal key={ex.tool} delay={i * 0.1}>
-              <div style={{ background: 'rgba(255,255,255,0.04)', border: `1px solid ${ex.accent}44`, borderTop: `3px solid ${ex.accent}`, borderRadius: '4px', padding: '1.75rem' }}>
-                <h3 style={{ fontFamily: '"Agrandir Grand Heavy", sans-serif', fontWeight: 800, color: ex.accent, fontSize: '18px', marginBottom: '1rem', textTransform: 'uppercase' }}>{ex.tool}</h3>
-                <p style={{ color: 'rgba(255,255,255,0.55)', fontFamily: 'Oxanium, sans-serif', fontSize: '14px', lineHeight: 1.6, marginBottom: '1rem' }}><strong style={{ color: 'rgba(255,255,255,0.7)' }}>Problème :</strong> {ex.problem}</p>
-                <p style={{ color: 'rgba(255,255,255,0.75)', fontFamily: 'Oxanium, sans-serif', fontSize: '15px', lineHeight: 1.6, marginBottom: '1rem' }}>{ex.concept}</p>
-                <ul style={{ padding: 0, margin: 0, listStyle: 'none' }}>
-                  {ex.features.map((f) => (
-                    <li key={f} style={{ color: 'rgba(255,255,255,0.55)', fontFamily: 'Oxanium, sans-serif', fontSize: '13px', padding: '0.2rem 0', display: 'flex', gap: '0.5rem' }}>
-                      <span style={{ color: ex.accent }}>›</span>{f}
-                    </li>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            gap: '32px',
+          }}
+        >
+          {PREVIEW.map((s, i) => (
+            <Reveal key={s.name} delay={i * 0.1}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                <img
+                  src={s.img}
+                  alt={s.name}
+                  style={{
+                    width: '100%',
+                    aspectRatio: '1 / 1',
+                    objectFit: 'cover',
+                    borderRadius: '4px',
+                    display: 'block',
+                  }}
+                />
+                <h4
+                  style={{
+                    fontFamily: '"Agrandir Grand Heavy", sans-serif',
+                    fontSize: '40px',
+                    fontWeight: 400,
+                    lineHeight: '44px',
+                    color: '#fff',
+                    margin: 0,
+                  }}
+                >
+                  {s.name}
+                </h4>
+                <div>
+                  {s.roles.map((r) => (
+                    <p
+                      key={r}
+                      style={{
+                        fontFamily: 'Oxanium, sans-serif',
+                        fontSize: '18px',
+                        fontWeight: 400,
+                        lineHeight: '27px',
+                        color: '#fff',
+                        margin: 0,
+                      }}
+                    >
+                      {r}
+                    </p>
                   ))}
-                </ul>
+                </div>
               </div>
             </Reveal>
           ))}

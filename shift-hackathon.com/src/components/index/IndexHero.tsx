@@ -189,7 +189,7 @@ export default function IndexHero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
-                  display: 'block',
+                  display: 'inline-block',
                   background: 'rgb(159,248,57)',
                   color: 'rgb(25,5,50)',
                   padding: '11.2px 28px',
@@ -227,20 +227,6 @@ export default function IndexHero() {
                 borderRadius: '6px',
                 display: 'block',
                 boxShadow: '0 0 60px rgba(0,180,0,0.12), 0 20px 60px rgba(0,0,0,0.5)',
-              }}
-            />
-            {/* Decorative dots/angel shape — bottom-left of image */}
-            <img
-              src={`${CDN}/mRZACm4BynYCqQoFUgtHbuSrdQ8.svg`}
-              alt=""
-              aria-hidden
-              style={{
-                position: 'absolute',
-                bottom: '-20px',
-                left: '-20px',
-                width: 112,
-                height: 120,
-                pointerEvents: 'none',
               }}
             />
           </motion.div>

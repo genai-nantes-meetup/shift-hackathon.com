@@ -84,10 +84,10 @@ export default function Programme() {
                 {/* Description */}
                 <p
                   style={{
-                    color: item.color,
+                    color: '#fff',
                     fontFamily: OXANIUM,
                     fontSize: '18px',
-                    lineHeight: 1.7,
+                    lineHeight: '27px',
                     margin: 0,
                   }}
                 >

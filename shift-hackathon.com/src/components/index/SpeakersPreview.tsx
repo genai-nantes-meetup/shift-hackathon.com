@@ -8,70 +8,79 @@ const OXANIUM = 'Oxanium, sans-serif';
 export default function SpeakersPreview() {
   const preview = SPEAKERS.slice(0, 6);
   return (
-    <section style={{ padding: '5rem 2rem', background: '#000' }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+    <section style={{ background: '#000', display: 'flex', justifyContent: 'center' }}>
+      <div
+        style={{
+          width: '1240px',
+          maxWidth: '1240px',
+          padding: '73px 120px 102px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '60px',
+        }}
+      >
         <Reveal>
           <h2
             style={{
               fontFamily: AGRANDIR,
               fontSize: '50px',
               fontWeight: 800,
+              lineHeight: '50px',
               color: '#fff',
-              textAlign: 'center',
-              marginBottom: '3rem',
             }}
           >
             Ils seront présents en 2026
           </h2>
         </Reveal>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '32px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px' }}>
           {preview.map((s, i) => (
             <Reveal key={s.name} delay={i * 0.07}>
-              <div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                 <img
                   src={s.img}
                   alt={s.name}
                   style={{
                     width: '100%',
-                    aspectRatio: '1',
+                    aspectRatio: '314 / 310',
                     objectFit: 'cover',
                     borderRadius: '4px',
-                    marginBottom: '1rem',
                     display: 'block',
                   }}
                 />
-                <h6
-                  style={{
-                    fontFamily: DELA,
-                    fontWeight: 400,
-                    color: '#fff',
-                    fontSize: '24px',
-                    margin: '0 0 0.25rem',
-                    lineHeight: 1.15,
-                  }}
-                >
-                  {s.name}
-                </h6>
-                {s.roles.map((r) => (
-                  <p
-                    key={r}
+                <div>
+                  <h6
                     style={{
-                      fontFamily: OXANIUM,
+                      fontFamily: DELA,
+                      fontWeight: 400,
                       color: '#fff',
-                      fontSize: '18px',
-                      margin: '0.1rem 0 0',
-                      lineHeight: 1.4,
+                      fontSize: '24px',
+                      margin: '0',
+                      lineHeight: 1.15,
                     }}
                   >
-                    {r}
-                  </p>
-                ))}
+                    {s.name}
+                  </h6>
+                  {s.roles.map((r) => (
+                    <p
+                      key={r}
+                      style={{
+                        fontFamily: OXANIUM,
+                        color: '#fff',
+                        fontSize: '18px',
+                        margin: '0',
+                        lineHeight: 1.4,
+                      }}
+                    >
+                      {r}
+                    </p>
+                  ))}
+                </div>
               </div>
             </Reveal>
           ))}
         </div>
         <Reveal delay={0.4}>
-          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+          <div style={{ textAlign: 'center' }}>
             <a
               href="/intervenants-2026"
               style={{

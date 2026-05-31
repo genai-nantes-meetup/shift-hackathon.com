@@ -3,7 +3,6 @@ import { motion } from 'motion/react';
 const TICKET_URL = 'https://www.billetweb.fr/shift-hackathon-2026';
 const CDN = 'https://framerusercontent.com/images';
 const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
-const AGRANDIR_ITALIC = "'Agrandir Thin Italic', sans-serif";
 const OXANIUM = 'Oxanium, sans-serif';
 
 export default function AgendaHero() {
@@ -33,33 +32,6 @@ export default function AgendaHero() {
           WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 100% 0%, rgba(0,0,0,0.6) 0%, transparent 70%)',
         }}
       />
-
-      {/* Background image (faint) */}
-      <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
-        <img
-          src={`${CDN}/wa9oVNjleDQIbBtztqNGal6M.png`}
-          alt=""
-          style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.1 }}
-        />
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            background:
-              'radial-gradient(ellipse 55% 65% at 8% 80%, rgba(15,90,0,0.65) 0%, rgba(0,50,0,0.2) 50%, transparent 70%)',
-          }}
-        />
-        <div
-          style={{
-            position: 'absolute',
-            bottom: 0,
-            left: 0,
-            right: 0,
-            height: '35%',
-            background: 'linear-gradient(to top, #000, transparent)',
-          }}
-        />
-      </div>
 
       <div
         style={{
@@ -93,34 +65,20 @@ export default function AgendaHero() {
                 textTransform: 'uppercase',
               }}
             >
-              Shift
+              L&apos;Agenda
             </p>
             <p
               style={{
                 fontFamily: AGRANDIR,
-                fontSize: '22px',
+                fontSize: '64px',
                 fontWeight: 800,
-                color: '#fff',
-                lineHeight: 1.1,
-                margin: '0 0 2px',
+                color: '#9ff839',
+                lineHeight: 0.9,
+                margin: '0 0 32px',
                 textTransform: 'uppercase',
               }}
             >
-              Le Hackathon Gen AI n°1
-            </p>
-            <p
-              style={{
-                fontFamily: AGRANDIR_ITALIC,
-                fontSize: '20px',
-                fontWeight: 100,
-                color: '#fff',
-                lineHeight: 1.2,
-                margin: '0 0 28px',
-                fontStyle: 'italic',
-                textTransform: 'uppercase',
-              }}
-            >
-              pour les Designers, Devs &amp; Product lovers
+              Shift
             </p>
           </motion.div>
 
@@ -128,16 +86,10 @@ export default function AgendaHero() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            style={{ marginBottom: '24px' }}
+            style={{ marginBottom: '32px' }}
           >
             <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: 0, lineHeight: 1.55 }}>
-              Crée des produits Gen AI game-changer en 48 heures.
-            </p>
-            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: 0, lineHeight: 1.55 }}>
-              Édition &quot;Time to Custom&quot; → Hack ton outil préféré.
-            </p>
-            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: '14px 0 0', lineHeight: 1.55 }}>
-              🔥 <strong>Event all-inclusive</strong> - coaching, food &amp; fun.
+              Check l&apos;agenda de ce hackathon qui s&apos;annonce épique !
             </p>
           </motion.div>
 
@@ -168,12 +120,12 @@ export default function AgendaHero() {
                 boxShadow: 'rgba(159,248,57,0.5) 0px 5px 0px 0px',
               }}
             >
-              Je suis chaud pour 2027 !
+              Take my money
             </a>
           </motion.div>
         </div>
 
-        {/* Right: Hero image */}
+        {/* Right: Hero image (3D sphere from live site) */}
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -182,25 +134,12 @@ export default function AgendaHero() {
         >
           <img
             src={`${CDN}/Rdl8zkLOcqcng7VGIk3w5sXc38.png`}
-            alt="Shift Hackathon"
+            alt="Shift Hackathon Agenda"
             style={{
               width: '100%',
               borderRadius: '6px',
               display: 'block',
               boxShadow: '0 0 60px rgba(0,180,0,0.12), 0 20px 60px rgba(0,0,0,0.5)',
-            }}
-          />
-          <img
-            src={`${CDN}/mRZACm4BynYCqQoFUgtHbuSrdQ8.svg`}
-            alt=""
-            aria-hidden
-            style={{
-              position: 'absolute',
-              bottom: '-20px',
-              left: '-20px',
-              width: 112,
-              height: 120,
-              pointerEvents: 'none',
             }}
           />
         </motion.div>

@@ -150,7 +150,7 @@ export default function SpeakersHero() {
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                display: 'inline-block',
+                display: 'block',
                 background: '#9ff839',
                 color: 'rgb(25,5,50)',
                 padding: '0.7rem 1.75rem',

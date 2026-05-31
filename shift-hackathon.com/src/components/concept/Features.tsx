@@ -18,42 +18,40 @@ const FEATURES: Feature[] = [
 
 export default function Features() {
   return (
-    <section style={{ padding: '2rem 0 4rem', background: '#000' }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+    <section style={{ padding: '100px 0', background: 'transparent' }}>
+      <div style={{ maxWidth: 1473, margin: '0 auto' }}>
         {FEATURES.map((f, i) => {
           const isEven = i % 2 === 0;
           return (
             <Reveal key={i} delay={0.05}>
               <div style={{
-                display: 'grid',
-                gridTemplateColumns: '1fr 1fr',
-                gap: 0,
-                minHeight: 320,
+                display: 'flex',
+                flexDirection: isEven ? 'row' : 'row-reverse',
+                minHeight: 383,
                 borderBottom: '1px solid rgba(255,255,255,0.06)',
-                direction: isEven ? 'ltr' : 'rtl',
               }}>
                 {/* Image */}
-                <div style={{ overflow: 'hidden', direction: 'ltr' }}>
+                <div style={{ flexShrink: 0, width: 460, overflow: 'hidden' }}>
                   <img
                     src={f.img}
                     alt=""
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                    style={{ width: '460px', maxWidth: '100%', display: 'block', objectFit: 'cover', height: '100%' }}
                   />
                 </div>
                 {/* Text */}
-                <div style={{ padding: '3rem 3.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', direction: 'ltr', background: '#000' }}>
-                  <h3 style={{
+                <div style={{ flex: 1, padding: '3rem 3.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                  <h4 style={{
                     fontFamily: "'Agrandir Grand Heavy', sans-serif",
                     fontWeight: 800,
                     color: '#fff',
                     fontSize: '40px',
-                    textTransform: 'uppercase',
+                    width: '460px',
                     margin: '0 0 1rem',
-                    lineHeight: 1.15,
+                    lineHeight: '44px',
                   }}>
                     {f.title}
-                  </h3>
-                  <p style={{ color: 'rgb(255, 255, 255)', fontFamily: 'Oxanium, sans-serif', fontSize: '15px', fontWeight: 400, lineHeight: '23.25px', margin: 0 }}>
+                  </h4>
+                  <p style={{ color: 'rgb(255, 255, 255)', fontFamily: 'Oxanium, sans-serif', fontSize: '18px', fontWeight: 400, lineHeight: '27px', margin: 0 }}>
                     {f.desc}
                   </p>
                 </div>
