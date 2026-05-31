@@ -1,8 +1,5 @@
 import type { FC, ReactNode } from 'react';
-import fontCssRaw from '../framer/font-css.html?raw';
-import { extractFontCss } from '../lib/framer';
-
-const fontCss = extractFontCss(fontCssRaw);
+import fontCss from '../framer/font-css.css?raw';
 
 const GTM_ID = 'GTM-NQ2DKKPD';
 const GTAG_ID = 'G-377KFTGYHV';

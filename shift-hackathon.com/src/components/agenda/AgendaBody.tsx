@@ -12,11 +12,10 @@ import breakpoints from '../../framer/agenda/breakpoints.json?raw';
 import appearRunner from '../../framer/shared/appear-runner.js?raw';
 import nodeenv from '../../framer/shared/nodeenv.js?raw';
 import preloadLinks from '../../framer/agenda/preload-links.html?raw';
+import htmlStyle from '../../framer/agenda/html-style.css?raw';
 
 const HYDRATE_V2 =
   '{"routeId":"uli2c4jR6","localeId":"default","breakpoints":[{"hash":"1vlrlm4","mediaQuery":"(min-width: 1240px)"},{"hash":"1kc20pd","mediaQuery":"(min-width: 768px) and (max-width: 1239.98px)"},{"hash":"14erxob","mediaQuery":"(max-width: 767.98px)"}]}';
-const HTML_STYLE =
-  'html body { background: var(--token-47e60ac2-bf54-46d5-b335-1a25fa14d0c2, rgb(14, 2, 24)); }';
 const ROOT_CLASS = 'framer-3sILa framer-h4WkX framer-Av4mF framer-1vlrlm4';
 
 const AgendaBody = () => (
@@ -28,8 +27,7 @@ const AgendaBody = () => (
       data-framer-page-optimized-at="2026-05-16T15:11:55.192Z"
       data-framer-generated-page=""
     >
-      {/* eslint-disable-next-line react/no-danger */}
-      <style data-framer-html-style dangerouslySetInnerHTML={{ __html: HTML_STYLE }} />
+      <style data-framer-html-style dangerouslySetInnerHTML={{ __html: htmlStyle }} />
       <div data-framer-root className={ROOT_CLASS} style={{ minHeight: '100vh', width: 'auto' }}>
         <AgendaHeader />
         <AgendaHero />

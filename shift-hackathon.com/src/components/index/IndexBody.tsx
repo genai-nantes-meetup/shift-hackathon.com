@@ -21,9 +21,9 @@ import breakpoints from '../../framer/index/breakpoints.json?raw';
 import appearRunner from '../../framer/shared/appear-runner.js?raw';
 import nodeenv from '../../framer/shared/nodeenv.js?raw';
 import preloadLinks from '../../framer/index/preload-links.html?raw';
+import htmlStyle from '../../framer/index/html-style.css?raw';
 
 const HYDRATE_V2 = '{"routeId":"HCW6Aki3T","localeId":"default","breakpoints":[{"hash":"uosayu","mediaQuery":"(min-width: 1240px)"},{"hash":"1pmeis7","mediaQuery":"(min-width: 768px) and (max-width: 1239.98px)"},{"hash":"hn3c4o","mediaQuery":"(max-width: 767.98px)"}]}';
-const HTML_STYLE = 'html body { background: var(--token-47e60ac2-bf54-46d5-b335-1a25fa14d0c2, rgb(0, 0, 0)); }';
 const ROOT_CLASS = 'framer-LCUx4 framer-h4WkX framer-Av4mF framer-WkFoA framer-zKk1p framer-8pImC framer-N6DDL framer-qY7Gj framer-Dk0KU framer-uosayu';
 
 const IndexBody: FC = () => (
@@ -35,7 +35,7 @@ const IndexBody: FC = () => (
       data-framer-page-optimized-at="2026-05-16T15:11:55.383Z"
       data-framer-generated-page=""
     >
-      <style data-framer-html-style dangerouslySetInnerHTML={{ __html: HTML_STYLE }} />
+      <style data-framer-html-style dangerouslySetInnerHTML={{ __html: htmlStyle }} />
       <div data-framer-root className={ROOT_CLASS} style={{ minHeight: '100vh', width: 'auto' }}>
         <IndexHeader />
         <IndexHero />

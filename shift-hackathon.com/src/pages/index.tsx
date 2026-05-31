@@ -1,11 +1,9 @@
 import Layout from '../layouts/Layout';
-import { extractCanonical, extractBreakpointCss, extractSsrCss } from '../lib/framer';
 import IndexBody from '../components/index/IndexBody';
-import headStylesRaw from '../framer/index.head-styles.html?raw';
-
-const canonical = extractCanonical(headStylesRaw);
-const breakpointCss = extractBreakpointCss(headStylesRaw);
-const { css: ssrCss, components: ssrCssComponents } = extractSsrCss(headStylesRaw);
+import canonical from '../framer/index/canonical.txt?raw';
+import breakpointCss from '../framer/index/breakpoint.css?raw';
+import ssrCss from '../framer/index/ssr.css?raw';
+import ssrCssComponents from '../framer/index/ssr-components.txt?raw';
 
 const IndexPage = () => (
   <Layout

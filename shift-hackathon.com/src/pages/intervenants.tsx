@@ -1,11 +1,9 @@
 import Layout from '../layouts/Layout';
-import { extractCanonical, extractBreakpointCss, extractSsrCss } from '../lib/framer';
 import IntervenantsBody from '../components/intervenants/IntervenantsBody';
-import headStylesRaw from '../framer/intervenants.head-styles.html?raw';
-
-const canonical = extractCanonical(headStylesRaw);
-const breakpointCss = extractBreakpointCss(headStylesRaw);
-const { css: ssrCss, components: ssrCssComponents } = extractSsrCss(headStylesRaw);
+import canonical from '../framer/intervenants/canonical.txt?raw';
+import breakpointCss from '../framer/intervenants/breakpoint.css?raw';
+import ssrCss from '../framer/intervenants/ssr.css?raw';
+import ssrCssComponents from '../framer/intervenants/ssr-components.txt?raw';
 
 const IntervenantsPage = () => (
   <Layout

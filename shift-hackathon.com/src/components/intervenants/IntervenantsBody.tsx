@@ -13,9 +13,9 @@ import breakpoints from '../../framer/intervenants/breakpoints.json?raw';
 import appearRunner from '../../framer/shared/appear-runner.js?raw';
 import nodeenv from '../../framer/shared/nodeenv.js?raw';
 import preloadLinks from '../../framer/intervenants/preload-links.html?raw';
+import htmlStyle from '../../framer/intervenants/html-style.css?raw';
 
 const HYDRATE_V2 = '{"routeId":"KmjIc40Lu","localeId":"default","breakpoints":[{"hash":"i1521","mediaQuery":"(min-width: 1240px)"},{"hash":"tbx75b","mediaQuery":"(min-width: 768px) and (max-width: 1239.98px)"},{"hash":"1yhlmg7","mediaQuery":"(max-width: 767.98px)"}]}';
-const HTML_STYLE = 'html body { background: var(--token-47e60ac2-bf54-46d5-b335-1a25fa14d0c2, rgb(14, 2, 24)); }';
 const ROOT_CLASS = 'framer-l8i7n framer-h4WkX framer-Av4mF framer-i1521';
 
 const IntervenantsBody: FC = () => (
@@ -27,7 +27,7 @@ const IntervenantsBody: FC = () => (
       data-framer-page-optimized-at="2026-05-16T15:11:55.269Z"
       data-framer-generated-page=""
     >
-      <style data-framer-html-style dangerouslySetInnerHTML={{ __html: HTML_STYLE }} />
+      <style data-framer-html-style dangerouslySetInnerHTML={{ __html: htmlStyle }} />
       <div data-framer-root className={ROOT_CLASS} style={{ minHeight: '100vh', width: 'auto' }}>
         <IntervenantsHeader />
         <IntervenantsHero />

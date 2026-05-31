@@ -1,11 +1,9 @@
 import Layout from '../layouts/Layout';
-import { extractCanonical, extractBreakpointCss, extractSsrCss } from '../lib/framer';
 import AgendaBody from '../components/agenda/AgendaBody';
-import headStylesRaw from '../framer/agenda.head-styles.html?raw';
-
-const canonical = extractCanonical(headStylesRaw);
-const breakpointCss = extractBreakpointCss(headStylesRaw);
-const { css: ssrCss, components: ssrCssComponents } = extractSsrCss(headStylesRaw);
+import canonical from '../framer/agenda/canonical.txt?raw';
+import breakpointCss from '../framer/agenda/breakpoint.css?raw';
+import ssrCss from '../framer/agenda/ssr.css?raw';
+import ssrCssComponents from '../framer/agenda/ssr-components.txt?raw';
 
 const AgendaPage = () => (
   <Layout
