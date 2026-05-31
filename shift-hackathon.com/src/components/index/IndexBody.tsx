@@ -14,12 +14,10 @@ import IndexGrid1 from './IndexGrid1';
 import IndexContact from './IndexContact';
 
 import navScript from '../../framer/shared/nav-script.js?raw';
-import variantScript from '../../framer/shared/variant-script.js?raw';
 import animatorScript from '../../framer/shared/animator-script.js?raw';
 import appearAnimations from '../../framer/index/appear-animations.json?raw';
 import breakpoints from '../../framer/index/breakpoints.json?raw';
 import appearRunner from '../../framer/shared/appear-runner.js?raw';
-import nodeenv from '../../framer/shared/nodeenv.js?raw';
 import preloadLinks from '../../framer/index/preload-links.html?raw';
 import htmlStyle from '../../framer/index/html-style.css?raw';
 
@@ -63,7 +61,6 @@ const IndexBody: FC = () => (
     <IndexGrid1 />
     <IndexContact />
     <script dangerouslySetInnerHTML={{ __html: navScript }} />
-    <script dangerouslySetInnerHTML={{ __html: variantScript }} />
     <script dangerouslySetInnerHTML={{ __html: animatorScript }} />
     <script
       type="framer/appear"
@@ -79,7 +76,6 @@ const IndexBody: FC = () => (
       data-framer-appear-animation="reduce"
       dangerouslySetInnerHTML={{ __html: appearRunner }}
     />
-    <script dangerouslySetInnerHTML={{ __html: nodeenv }} />
     <div dangerouslySetInnerHTML={{ __html: preloadLinks }} />
   </>
 );

@@ -9,12 +9,10 @@ import ConceptContainer from './ConceptContainer';
 import ConceptContact from './ConceptContact';
 
 import navScript from '../../framer/shared/nav-script.js?raw';
-import variantScript from '../../framer/shared/variant-script.js?raw';
 import animatorScript from '../../framer/shared/animator-script.js?raw';
 import appearAnimations from '../../framer/concept/appear-animations.json?raw';
 import breakpoints from '../../framer/concept/breakpoints.json?raw';
 import appearRunner from '../../framer/shared/appear-runner.js?raw';
-import nodeenv from '../../framer/shared/nodeenv.js?raw';
 import preloadLinks from '../../framer/concept/preload-links.html?raw';
 import htmlStyle from '../../framer/concept/html-style.css?raw';
 
@@ -53,7 +51,6 @@ const ConceptBody: FC = () => (
       </div>
     </div>
     <script dangerouslySetInnerHTML={{ __html: navScript }} />
-    <script dangerouslySetInnerHTML={{ __html: variantScript }} />
     <script dangerouslySetInnerHTML={{ __html: animatorScript }} />
     <script
       type="framer/appear"
@@ -69,7 +66,6 @@ const ConceptBody: FC = () => (
       data-framer-appear-animation="reduce"
       dangerouslySetInnerHTML={{ __html: appearRunner }}
     />
-    <script dangerouslySetInnerHTML={{ __html: nodeenv }} />
     <div dangerouslySetInnerHTML={{ __html: preloadLinks }} />
   </>
 );

@@ -6,12 +6,10 @@ import IntervenantsFooter from './IntervenantsFooter';
 import IntervenantsContact from './IntervenantsContact';
 
 import navScript from '../../framer/shared/nav-script.js?raw';
-import variantScript from '../../framer/shared/variant-script.js?raw';
 import animatorScript from '../../framer/shared/animator-script.js?raw';
 import appearAnimations from '../../framer/intervenants/appear-animations.json?raw';
 import breakpoints from '../../framer/intervenants/breakpoints.json?raw';
 import appearRunner from '../../framer/shared/appear-runner.js?raw';
-import nodeenv from '../../framer/shared/nodeenv.js?raw';
 import preloadLinks from '../../framer/intervenants/preload-links.html?raw';
 import htmlStyle from '../../framer/intervenants/html-style.css?raw';
 
@@ -46,7 +44,6 @@ const IntervenantsBody: FC = () => (
       </div>
     </div>
     <script dangerouslySetInnerHTML={{ __html: navScript }} />
-    <script dangerouslySetInnerHTML={{ __html: variantScript }} />
     <script dangerouslySetInnerHTML={{ __html: animatorScript }} />
     <script
       type="framer/appear"
@@ -62,7 +59,6 @@ const IntervenantsBody: FC = () => (
       data-framer-appear-animation="reduce"
       dangerouslySetInnerHTML={{ __html: appearRunner }}
     />
-    <script dangerouslySetInnerHTML={{ __html: nodeenv }} />
     <div dangerouslySetInnerHTML={{ __html: preloadLinks }} />
   </>
 );

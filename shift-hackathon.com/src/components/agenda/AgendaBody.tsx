@@ -5,12 +5,10 @@ import AgendaHero from './AgendaHero';
 import AgendaSchedule from './AgendaSchedule';
 
 import navScript from '../../framer/shared/nav-script.js?raw';
-import variantScript from '../../framer/shared/variant-script.js?raw';
 import animatorScript from '../../framer/shared/animator-script.js?raw';
 import appearAnimations from '../../framer/agenda/appear-animations.json?raw';
 import breakpoints from '../../framer/agenda/breakpoints.json?raw';
 import appearRunner from '../../framer/shared/appear-runner.js?raw';
-import nodeenv from '../../framer/shared/nodeenv.js?raw';
 import preloadLinks from '../../framer/agenda/preload-links.html?raw';
 import htmlStyle from '../../framer/agenda/html-style.css?raw';
 
@@ -45,7 +43,6 @@ const AgendaBody = () => (
       </div>
     </div>
     <script dangerouslySetInnerHTML={{ __html: navScript }} />
-    <script dangerouslySetInnerHTML={{ __html: variantScript }} />
     <script dangerouslySetInnerHTML={{ __html: animatorScript }} />
     <script
       type="framer/appear"
@@ -61,7 +58,6 @@ const AgendaBody = () => (
       data-framer-appear-animation="reduce"
       dangerouslySetInnerHTML={{ __html: appearRunner }}
     />
-    <script dangerouslySetInnerHTML={{ __html: nodeenv }} />
     <div dangerouslySetInnerHTML={{ __html: preloadLinks }} />
   </>
 );
