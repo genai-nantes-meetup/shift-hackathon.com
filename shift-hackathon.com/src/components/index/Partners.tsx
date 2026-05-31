@@ -8,13 +8,13 @@ export default function Partners() {
         <Reveal>
           <h2 style={{
             fontFamily: "'Agrandir Grand Heavy', sans-serif",
-            fontSize: 'clamp(1.5rem, 2.5vw, 2rem)',
+            fontSize: '30px',
             fontWeight: 800,
             color: '#fff',
             textTransform: 'uppercase',
             textAlign: 'center',
             marginBottom: '2.5rem',
-            letterSpacing: '-0.01em',
+            letterSpacing: '-0.3px',
           }}>
             Partenaires 2026
           </h2>

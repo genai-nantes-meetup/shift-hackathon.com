@@ -29,7 +29,7 @@ export default function Experience() {
           </Reveal>
           {PARAGRAPHS.map((p, i) => (
             <Reveal key={i} delay={i * 0.1}>
-              <p style={{ color: 'rgba(255,255,255,0.8)', fontFamily: OXANIUM, fontSize: '1.125rem', lineHeight: 1.65, marginBottom: '1rem' }}>
+              <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '1.125rem', lineHeight: 1.65, marginBottom: '1rem' }}>
                 {p}
               </p>
             </Reveal>

@@ -37,7 +37,7 @@ export default function Nav() {
             style={{
               color: '#fff', textDecoration: 'none',
               fontFamily: AGRANDIR, fontSize: '0.75rem',
-              fontWeight: 400, letterSpacing: '0.04em', textTransform: 'uppercase',
+              fontWeight: 400, letterSpacing: '1.2px', textTransform: 'uppercase',
               transition: 'opacity 0.2s', opacity: 0.85,
             }}
             onMouseEnter={(e) => (e.currentTarget.style.opacity = '1')}
@@ -54,7 +54,7 @@ export default function Nav() {
             background: '#9ff839', color: 'rgb(25,5,50)',
             padding: '0.5rem 1.1rem',
             fontFamily: AGRANDIR, fontWeight: 400, fontSize: '0.75rem',
-            letterSpacing: '0.04em', textDecoration: 'none', textTransform: 'uppercase',
+            letterSpacing: '1.2px', textDecoration: 'none', textTransform: 'uppercase',
             borderRadius: '3px', whiteSpace: 'nowrap',
           }}
         >

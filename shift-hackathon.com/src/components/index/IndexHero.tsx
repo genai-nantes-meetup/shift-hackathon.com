@@ -7,16 +7,31 @@ const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
 const AGRANDIR_ITALIC = "'Agrandir Thin Italic', sans-serif";
 const OXANIUM = 'Oxanium, sans-serif';
 
-const HERO_LOGOS = [
-  PARTNERS.find((p) => p.name === 'Ici Lundi')!,
-  PARTNERS.find((p) => p.name === 'Reecall')!,
-  PARTNERS.find((p) => p.name === 'Clever Cloud')!,
-  PARTNERS.find((p) => p.name === 'Externatic')!,
-  PARTNERS.find((p) => p.name === 'Agoriade AI')!,
-  PARTNERS.find((p) => p.name === 'OpenAI')!,
-  PARTNERS.find((p) => p.name === 'n8n')!,
-  PARTNERS.find((p) => p.name === 'ElevenLabs')!,
-].filter(Boolean);
+// All sponsors/complices — shown in scrolling marquee
+const ALL_COMPLICES = [
+  { name: 'Gemini',        logo: `${CDN}/ZDjW6Wo0anEy1mUzbo2oqRQtpeY.png` },
+  { name: 'Mistral AI',    logo: `${CDN}/D8JhRI4faB6vhAVUDF9e72ra0.png` },
+  { name: 'ElevenLabs',    logo: `${CDN}/8pyqucSyEzD44VogAFy6xnROzw.png` },
+  { name: 'n8n',           logo: `${CDN}/WgEQw7xxkydh0HvPGxeC5gEXf0E.png` },
+  { name: 'OpenAI',        logo: `${CDN}/2GfcXCoTjp9udilU3hSRmNI.png` },
+  { name: 'Meilisearch',   logo: `${CDN}/lLgDez4N7yTxGAZM34UIiFyWGYU.png` },
+  { name: 'Gladia',        logo: `${CDN}/3OZbojzYOu5aWZVGg9TzXv62rg.png` },
+  { name: 'GitHub Copilot',logo: `${CDN}/c70JnFks3D6g1Jt8j3uifdssjs.png` },
+  { name: 'Clever Cloud',  logo: `${CDN}/blQC5WAIES7A46wE17tWPV4vUM8.png` },
+  { name: 'Reecall',       logo: `${CDN}/Q4GlC03HI3EvrvR6avl4vVLn7RU.png` },
+  { name: 'Externatic',    logo: `${CDN}/NjhM1EcoE5U1JUbx41DQKwUqaY.png` },
+  { name: 'Agoriade AI',   logo: `${CDN}/FhyDFHEcmFWTH2IRbcuTP4xr8E.png` },
+  { name: 'Theodo',        logo: `${CDN}/mCTZuc3WkAEbF7mvjFvlgq2UpdY.png` },
+  { name: 'Onepoint',      logo: `${CDN}/4LTQ4nbLOoVH247zlIwkmulQeY.png` },
+  { name: 'Extia',         logo: `${CDN}/UY4Fa4zoVRxtT9bLGGzXa4CDvo.png` },
+  { name: 'Ici Lundi',     logo: `${CDN}/9HTUJVvG5eehTUa23w4KbvQXQ.png` },
+  { name: 'La Cantine',    logo: `${CDN}/jAnWbOPKhE4bgowOaZTeVS5I.svg` },
+  { name: 'Kalicube',      logo: `${CDN}/vUgDWWn8ASxflI3r8gukN5nzSA.png` },
+  { name: 'RCA',           logo: `${CDN}/Hp1Tl3hJIse0Z786qNEEdKjLSCU.png` },
+  { name: 'Arzel',         logo: `${CDN}/cHgckECvWGlsSEkTQRYeEbkkQtg.png` },
+  { name: 'Clint',         logo: `${CDN}/EyVeU2UQzbHZScFcXMMED5yAud8.png` },
+  { name: 'dev.events',    logo: `${CDN}/B3tmi7wxJqSp3uS69o09WfrttmQ.png` },
+];
 
 export default function IndexHero() {
   return (
@@ -100,7 +115,7 @@ export default function IndexHero() {
               <p
                 style={{
                   fontFamily: AGRANDIR,
-                  fontSize: 'clamp(4rem, 8vw, 7rem)',
+                  fontSize: 'clamp(4rem, 8vw, 6rem)',
                   fontWeight: 800,
                   color: '#fff',
                   lineHeight: 0.9,
@@ -121,7 +136,7 @@ export default function IndexHero() {
                   lineHeight: 1.1,
                   margin: '0 0 0.15rem',
                   textTransform: 'uppercase',
-                  letterSpacing: '0.01em',
+                  letterSpacing: '0.22px',
                 }}
               >
                 Le Hackathon Gen AI n°1
@@ -130,12 +145,13 @@ export default function IndexHero() {
               <p
                 style={{
                   fontFamily: AGRANDIR_ITALIC,
-                  fontSize: 'clamp(0.85rem, 1.3vw, 1.25rem)',
+                  fontSize: 'clamp(15.6px, 1.3vw, 20px)',
                   fontWeight: 100,
                   color: '#fff',
                   lineHeight: 1.2,
                   margin: '0 0 1.75rem',
-                  letterSpacing: '0.01em',
+                  letterSpacing: 'normal',
+                  textTransform: 'uppercase',
                   fontStyle: 'italic',
                 }}
               >
@@ -270,61 +286,53 @@ export default function IndexHero() {
       </section>
 
       {/* Sponsor strip */}
+      {/* Scrolling sponsor marquee */}
       <div
         style={{
           background: '#000',
           borderTop: '1px solid rgba(255,255,255,0.06)',
           borderBottom: '1px solid rgba(255,255,255,0.06)',
-          padding: '1.25rem 2rem',
+          padding: '1rem 0',
+          overflow: 'hidden',
         }}
       >
-        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <em
-            style={{
-              display: 'block',
-              fontFamily: OXANIUM,
-              fontSize: '1rem',
-              color: '#fff',
-              textAlign: 'center',
-              marginBottom: '1rem',
-              fontStyle: 'italic',
-              fontWeight: 400,
-            }}
+        <em
+          style={{
+            display: 'block',
+            fontFamily: OXANIUM,
+            fontSize: '1rem',
+            color: '#fff',
+            textAlign: 'center',
+            marginBottom: '0.875rem',
+            fontStyle: 'italic',
+            fontWeight: 400,
+          }}
+        >
+          Les complices de Shift depuis 2024
+        </em>
+        {/* Marquee track — duplicate logos for seamless loop */}
+        <div style={{ overflow: 'hidden', position: 'relative' }}>
+          <motion.div
+            animate={{ x: ['0%', '-50%'] }}
+            transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
+            style={{ display: 'flex', alignItems: 'center', gap: '3rem', width: 'max-content' }}
           >
-            Les complices de Shift depuis 2024
-          </em>
-          <div
-            style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: '2rem',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            {HERO_LOGOS.map((p) => (
-              <a
-                key={p.name}
-                href={p.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ opacity: 0.55, transition: 'opacity 0.2s' }}
-                onMouseEnter={(e) => (e.currentTarget.style.opacity = '1')}
-                onMouseLeave={(e) => (e.currentTarget.style.opacity = '0.55')}
-              >
-                <img
-                  src={p.logo}
-                  alt={p.name}
-                  style={{
-                    height: 28,
-                    width: 'auto',
-                    maxWidth: 120,
-                    objectFit: 'contain',
-                  }}
-                />
-              </a>
+            {[...ALL_COMPLICES, ...ALL_COMPLICES].map((p, i) => (
+              <img
+                key={`${p.name}-${i}`}
+                src={p.logo}
+                alt={p.name}
+                style={{
+                  height: 28,
+                  width: 'auto',
+                  maxWidth: 130,
+                  objectFit: 'contain',
+                  flexShrink: 0,
+                  opacity: 0.7,
+                }}
+              />
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </>
