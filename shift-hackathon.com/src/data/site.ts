@@ -43,21 +43,18 @@ export const PARTNERS = [
 ];
 
 export const TESTIMONIALS = [
-  { name: 'Quentin Brejoin', role: 'Software Engineer', img: `${CDN}/SCqfbkBiEi3yXuqwnfT9VYHSac.jpg`, quote: "Humainement expérience incroyable, toujours dans la cohésion et le partage. C'était une dinguerie que je suis pas prêt d'oublier. MERCI!" },
-  { name: 'Emilien Puech', role: 'Ingénieur cyberdéfense', img: `${CDN}/xF9eJG2OLrV44eTP3eqlyabXWM.jpg`, quote: "Techniquement et humainement j'ai énormément appris, mais le plus impressionnant c'est de voir ce qu'on a réussi à faire en 48h." },
-  { name: 'Mathieu Sacchi', role: 'VC @ Resonance', img: `${CDN}/6HTv2iWq73A9YMhX4CyScPi00YM.jpg`, quote: "J'ai trouvé ça vraiment excellent, les conditions étaient parfaites et tout était très pro - on sentait qu'il y avait de l'expérience." },
-  { name: 'Victor Degliame', role: 'Ingénieur IA @ DNUM', img: `${CDN}/N0ZXErFgdng4thx5dg2zCSzvScw.jpg`, quote: "Merci beaucoup pour l'orga, c'était très cool et je suis très content de ce qu'on a pu faire pendant le week-end." },
-  { name: 'Pierre De La Porte', role: 'Product builder IA', img: `${CDN}/SJhPWj2D7s4Og1452oNZBoLRdM.jpg`, quote: "Hackaton haute gamme. Et merci c'était top!" },
-  { name: 'Alexis Manuel', role: 'Data Engineer', img: `${CDN}/nUc06C3uEkJd3JveJjmsgDzBKM.jpg`, quote: "Merci de faire avancer la scène GenAI sous le format hackaton, vous le menez dans une ambiance Rock n Roll. Vivement la prochaine édition !" },
-  { name: 'Gaëtan Golliot', role: 'Référent IA', img: `${CDN}/yqVH6clkvOLl27WkMiwrxqUo.jpg`, quote: "Rencontrer des personnes cool, apprendre de nouvelles choses, passer de bons moments. Les trois sont atteints. Encore merci à vous." },
-  { name: 'Théo Lefort', role: 'Maker No-code / CEO @Mark Textile', img: `${CDN}/drIrLaJI70GKdYTEyJVTNwAY.jpg`, quote: "Merci pour tout! Vous êtes des boss! J'hésite entre revenir en tant que participant ou bénévole !" },
-  { name: 'Rémi Wetteren', role: 'Co-founder @ Coraye', img: `${CDN}/0bTb8YhZFIok7iJaq5K6Hb6nIt0.jpg`, quote: "Vous êtes géniaux. SHIFT c'est mon exutoire récréatif et une formidable occasion de rencontrer des gens qui te ressemblent !" },
-  { name: 'Monica Gatti', role: 'Ingénieur Logiciel @ Kanoma', img: `${CDN}/PV5Mu0oQkwrduXWHgvJoWowso.jpg`, quote: "Best event ever." },
-  { name: 'Vincent Desdoigts', role: 'Co-founder @ Premier Octet', img: `${CDN}/dygbKXzLcvbaH5bYNJscjNu1Jk.jpg`, quote: "C'était vraiment très bien. Je suis venu les mains dans les poches, reparti avec pleins de souvenirs et une troisième place." },
-  { name: 'Vyacheslav Efimov', role: 'Senior ML Engineer', img: `${CDN}/agIfKDRlkeejC3VsqZKgVmIx8.jpg`, quote: "C'était le meilleur hackaton dans lequel j'ai participé. Tout était magnifique: l'ambiance, l'organisation, la nourriture, les présentations." },
-  { name: 'Paul Tran Van', role: 'AI Lead @Linagora', img: `${CDN}/36VdB7x9iIguuKL00FBMjtnUjTY.jpg`, quote: "Un des évènements les plus quali en terme d'orga. On sent l'implication et la qualité humaine des orgas, bravo !!!" },
-  { name: 'Anaïs Clavier', role: 'HR | Product Enthusiast', img: `${CDN}/CMBAS8Jm3uSmtOd4yPcQC6u5g4.jpg`, quote: "Tout était super ! Les repas, l'orga, le lieu, les coachs, les conférenciers. Merci d'avoir rendu tout ça possible !" },
-  { name: 'Bertyn Boulikou', role: 'Développeur web fullstack', img: `${CDN}/FgLI1xQk9IeTynG4n6Cy5Mb7Vs.jpg`, quote: "Deuxième édition pour moi et c'est toujours autant un plaisir. Plein de superbes rencontres et moments drôles." },
+  { name: 'Quentin Brejoin', role: 'Software Engineer', img: `${CDN}/lTSeXpAcEIO1OACu0mUZoVn3kTU.jpeg`, quote: "Humainement expérience incroyable, toujours dans la cohésion et le partage. C'était une dinguerie que je suis pas prêt d'oublier. MERCI!" },
+  { name: 'Emilien Puech', role: 'Ingénieur cyberdéfense', img: `${CDN}/kfItRMVEBWsIMfOAWzbu49ycQI.jpeg`, quote: "Techniquement et humainement j'ai énormément appris, mais le plus impressionnant c'est de voir ce qu'on a réussi à faire en 48h." },
+  { name: 'Mathieu Sacchi', role: 'VC @ Resonance', img: `${CDN}/cTdtbRWHVrj73tROhU42L5MU3xQ.jpeg`, quote: "J'ai trouvé ça vraiment excellent, les conditions étaient parfaites et tout était très pro - on sentait qu'il y avait de l'expérience." },
+  { name: 'Victor Degliame', role: 'Ingénieur IA @ DNUM', img: `${CDN}/hkTVzgTY5dsUYZyrwATF1rKFDBY.jpeg`, quote: "Merci beaucoup pour l'orga, c'était très cool et je suis très content de ce qu'on a pu faire pendant le week-end." },
+  { name: 'Alexis Manuel', role: 'Data Engineer', img: `${CDN}/xF9eJG2OLrV44eTP3eqlyabXWM.jpg`, quote: "Merci de faire avancer la scène GenAI sous le format hackaton, vous le menez dans une ambiance Rock n Roll. Vivement la prochaine édition !" },
+  { name: 'Monica Gatti', role: 'Ingénieur Logiciel @ Kanoma', img: `${CDN}/CEAfCYOFNKNTUkLcYd6PthOj0Vk.jpeg`, quote: "Best event ever." },
+  { name: 'Mael Hillereau', role: 'Fondateur @ Alnitaka', img: `${CDN}/yqVH6clkvOLl27WkMiwrxqUo.jpg`, quote: "Aaaaaa Iiiiiiiiii !!! Trop bien, vous êtes au top. Merci pour toute l'énergie que vous avez déployée pour l'orga !!" },
+  { name: 'Vyacheslav Efimov', role: 'Senior ML Engineer', img: `${CDN}/drIrLaJI70GKdYTEyJVTNwAY.jpg`, quote: "C'était le meilleur hackaton dans lequel j'ai participé. Tout était magnifique: l'ambiance, l'organisation, la nourriture, les présentations." },
+  { name: 'Paul Tran Van', role: 'AI Lead @Linagora', img: `${CDN}/0bTb8YhZFIok7iJaq5K6Hb6nIt0.jpg`, quote: "Un des évènements les plus quali en terme d'orga. On sent l'implication et la qualité humaine des orgas, bravo !!!" },
+  { name: 'Anne Bluteau', role: 'CEO @ Sweet Show', img: `${CDN}/ZkESeHZyWtogSHoJ7xXMRiHfclU.jpg`, quote: "Bravo. Et un spécial Bravo à Maxime qui passe la main et qui excelle dans la réussite de ce type d'évent." },
+  { name: 'Erwan Bourrigault', role: 'Développeur web', img: `${CDN}/P26sOfpbMtxJB5H5wk5oM6bGt2M.jpeg`, quote: "Le monde de la tech, c'est que du bonheur, ne changez rien, continuons de partager. Longue vie aux open sources !" },
+  { name: 'Marius Pain', role: 'Étudiant @ Épitech', img: `${CDN}/xFlsTeIWCtbvBhgMG65vJXIKms.jpeg`, quote: "Un grand merci à toute l'équipe pour cette superbe expérience." },
 ];
 
 export const ORGA_TEAM = [

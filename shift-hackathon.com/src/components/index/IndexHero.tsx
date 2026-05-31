@@ -121,7 +121,7 @@ export default function IndexHero() {
                   lineHeight: 0.9,
                   margin: '0 0 4px',
                   textTransform: 'uppercase',
-                  letterSpacing: '-0.02em',
+                  letterSpacing: 'normal',
                 }}
               >
                 Shift
@@ -136,7 +136,7 @@ export default function IndexHero() {
                   lineHeight: 1.1,
                   margin: '0 0 2px',
                   textTransform: 'uppercase',
-                  letterSpacing: '0.22px',
+                  letterSpacing: 'normal',
                 }}
               >
                 Le Hackathon Gen AI n°1
@@ -164,8 +164,8 @@ export default function IndexHero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               style={{ marginBottom: '24px' }}
             >
-              {/* Line 1 — 14px Oxanium */}
-              <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '14px', margin: 0, lineHeight: 1.55 }}>
+              {/* Line 1 — 18px Oxanium (live site value) */}
+              <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: 0, lineHeight: 1.55 }}>
                 Crée des produits Gen AI game-changer en 48 heures.
               </p>
               {/* Line 2 — 15px Oxanium */}
@@ -200,8 +200,9 @@ export default function IndexHero() {
                   textDecoration: 'none',
                   textTransform: 'uppercase',
                   letterSpacing: '0.04em',
-                  borderRadius: '3px',
+                  borderRadius: '4px',
                   whiteSpace: 'nowrap',
+                  boxShadow: 'rgba(159,248,57,0.5) 0px 5px 0px 0px',
                 }}
               >
                 Je suis chaud pour 2027 !
@@ -265,7 +266,7 @@ export default function IndexHero() {
           background: '#000',
           borderTop: '1px solid rgba(255,255,255,0.06)',
           borderBottom: '1px solid rgba(255,255,255,0.06)',
-          padding: '1.25rem 0',
+          padding: '0.6rem 0',
         }}
       >
         {/* Label + marquee constrained to 1200px like all sections */}
@@ -274,10 +275,10 @@ export default function IndexHero() {
             style={{
               display: 'block',
               fontFamily: OXANIUM,
-              fontSize: '16px',
-              color: '#fff',
+              fontSize: '13px',
+              color: 'rgba(255,255,255,0.5)',
               textAlign: 'left',
-              marginBottom: '1rem',
+              marginBottom: '0.4rem',
               fontStyle: 'italic',
               fontWeight: 400,
             }}

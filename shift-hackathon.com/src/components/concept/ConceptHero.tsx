@@ -2,29 +2,210 @@ import { motion } from 'motion/react';
 
 const TICKET_URL = 'https://www.billetweb.fr/shift-hackathon-2026';
 const CDN = 'https://framerusercontent.com/images';
+const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
+const AGRANDIR_ITALIC = "'Agrandir Thin Italic', sans-serif";
+const OXANIUM = 'Oxanium, sans-serif';
 
 export default function ConceptHero() {
   return (
-    <section style={{ position: 'relative', padding: '6rem 2rem 4rem', overflow: 'hidden' }}>
+    <section
+      style={{
+        position: 'relative',
+        minHeight: '90vh',
+        display: 'flex',
+        alignItems: 'center',
+        overflow: 'hidden',
+        background: '#000',
+      }}
+    >
+      {/* Dot-grid texture — upper-right quadrant */}
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          right: 0,
+          width: '45%',
+          height: '60%',
+          zIndex: 0,
+          backgroundImage: 'radial-gradient(rgba(255,255,255,0.18) 1.5px, transparent 1.5px)',
+          backgroundSize: '22px 22px',
+          maskImage: 'radial-gradient(ellipse 80% 80% at 100% 0%, rgba(0,0,0,0.6) 0%, transparent 70%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 100% 0%, rgba(0,0,0,0.6) 0%, transparent 70%)',
+        }}
+      />
+
+      {/* Background image (faint) */}
       <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
-        <img src={`${CDN}/dhjQcdCP4VBrUzqK0gjelJruk.png`} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.2 }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, #0e0218 0%, transparent 30%, #0e0218 100%)' }} />
+        <img
+          src={`${CDN}/wa9oVNjleDQIbBtztqNGal6M.png`}
+          alt=""
+          style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.1 }}
+        />
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            background:
+              'radial-gradient(ellipse 55% 65% at 8% 80%, rgba(15,90,0,0.65) 0%, rgba(0,50,0,0.2) 50%, transparent 70%)',
+          }}
+        />
+        <div
+          style={{
+            position: 'absolute',
+            bottom: 0,
+            left: 0,
+            right: 0,
+            height: '35%',
+            background: 'linear-gradient(to top, #000, transparent)',
+          }}
+        />
       </div>
-      <div style={{ position: 'relative', zIndex: 1, maxWidth: 900, margin: '0 auto', textAlign: 'center' }}>
-        <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-          style={{ fontFamily: "'Agrandir Grand Heavy', sans-serif", fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: 800, color: '#fff', textTransform: 'uppercase', marginBottom: '1.5rem', lineHeight: 1 }}>
-          Shift, <span style={{ color: '#f75787' }}>c'est quoi ?</span>
-        </motion.h1>
-        <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.15 }}
-          style={{ color: 'rgba(255,255,255,0.75)', fontFamily: 'Barlow, sans-serif', fontSize: '1.15rem', lineHeight: 1.7, marginBottom: '2.5rem', maxWidth: 700, margin: '0 auto 2.5rem' }}>
-          Shift — Time To Custom, c'est <strong style={{ color: '#fff' }}>48 heures</strong> pour <strong style={{ color: '#f75787' }}>hacker ton outil préféré</strong>,
-          créer une vraie feature Gen AI utile pour ton usage, et produire aux côtés des meilleurs experts tech.
-        </motion.p>
-        <motion.a href={TICKET_URL} target="_blank" rel="noopener noreferrer"
-          initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, delay: 0.3 }}
-          style={{ display: 'inline-block', background: '#f75787', color: '#000', padding: '1rem 2.5rem', fontFamily: 'Barlow, sans-serif', fontWeight: 900, fontSize: '1rem', textDecoration: 'none', textTransform: 'uppercase', letterSpacing: '0.05em', borderRadius: '2px' }}>
-          Take my money 🤘
-        </motion.a>
+
+      <div
+        style={{
+          position: 'relative',
+          zIndex: 1,
+          maxWidth: 1200,
+          margin: '0 auto',
+          padding: '4rem 2rem',
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr',
+          gap: '3rem',
+          alignItems: 'center',
+          width: '100%',
+        }}
+      >
+        {/* Left: Text */}
+        <div>
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <p
+              style={{
+                fontFamily: AGRANDIR,
+                fontSize: '64px',
+                fontWeight: 800,
+                color: '#fff',
+                lineHeight: 0.9,
+                margin: '0 0 4px',
+                textTransform: 'uppercase',
+              }}
+            >
+              Shift,
+            </p>
+            <p
+              style={{
+                fontFamily: AGRANDIR,
+                fontSize: '22px',
+                fontWeight: 800,
+                color: '#fff',
+                lineHeight: 1.1,
+                margin: '0 0 2px',
+                textTransform: 'uppercase',
+              }}
+            >
+              C&apos;est quoi ?
+            </p>
+            <p
+              style={{
+                fontFamily: AGRANDIR_ITALIC,
+                fontSize: '20px',
+                fontWeight: 100,
+                color: '#9ff839',
+                lineHeight: 1.2,
+                margin: '0 0 28px',
+                fontStyle: 'italic',
+                textTransform: 'uppercase',
+              }}
+            >
+              Le Hackathon Gen AI n°1
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            style={{ marginBottom: '24px' }}
+          >
+            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: 0, lineHeight: 1.55 }}>
+              Shift — Time To Custom, c&apos;est 48 heures pour hacker ton outil préféré.
+            </p>
+            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '15px', margin: 0, lineHeight: 1.55 }}>
+              Créer une vraie feature Gen AI utile pour ton usage.
+            </p>
+            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '15px', lineHeight: 1.55, marginTop: '14px', marginBottom: 0 }}>
+              🔥 Produire aux côtés des <strong style={{ fontWeight: 700 }}>meilleurs experts tech</strong>.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.35 }}
+            style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', alignItems: 'flex-start' }}
+          >
+            <a
+              href={TICKET_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-block',
+                background: '#9ff839',
+                color: 'rgb(25,5,50)',
+                padding: '0.7rem 1.75rem',
+                fontFamily: AGRANDIR,
+                fontWeight: 400,
+                fontSize: '0.75rem',
+                textDecoration: 'none',
+                textTransform: 'uppercase',
+                letterSpacing: '0.04em',
+                borderRadius: '4px',
+                whiteSpace: 'nowrap',
+                boxShadow: 'rgba(159,248,57,0.5) 0px 5px 0px 0px',
+              }}
+            >
+              Take my money 🤘
+            </a>
+          </motion.div>
+        </div>
+
+        {/* Right: Hero image */}
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7, delay: 0.1 }}
+          style={{ position: 'relative' }}
+        >
+          <img
+            src={`${CDN}/Rdl8zkLOcqcng7VGIk3w5sXc38.png`}
+            alt="Shift Hackathon"
+            style={{
+              width: '100%',
+              aspectRatio: '1 / 1',
+              objectFit: 'cover',
+              objectPosition: 'right center',
+              borderRadius: '6px',
+              display: 'block',
+              boxShadow: '0 0 60px rgba(0,180,0,0.12), 0 20px 60px rgba(0,0,0,0.5)',
+            }}
+          />
+          <img
+            src={`${CDN}/mRZACm4BynYCqQoFUgtHbuSrdQ8.svg`}
+            alt=""
+            aria-hidden
+            style={{
+              position: 'absolute',
+              bottom: '-20px',
+              left: '-20px',
+              width: 112,
+              height: 120,
+              pointerEvents: 'none',
+            }}
+          />
+        </motion.div>
       </div>
     </section>
   );

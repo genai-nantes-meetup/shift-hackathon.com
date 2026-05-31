@@ -35,6 +35,7 @@ export default function CTASection() {
           fontSize: '1.1rem', textDecoration: 'none',
           textTransform: 'uppercase', letterSpacing: '0.05em',
           borderRadius: '2px',
+          boxShadow: 'rgba(159,248,57,0.5) 0px 5px 0px 0px',
         }}>
           Take my money 🤘
         </a>

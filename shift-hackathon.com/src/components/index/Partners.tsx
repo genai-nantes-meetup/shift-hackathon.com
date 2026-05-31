@@ -3,7 +3,7 @@ import { PARTNERS } from '../../data/site';
 
 export default function Partners() {
   return (
-    <section style={{ padding: '4rem 2rem', background: '#050505', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+    <section style={{ padding: '64px 32px', background: 'transparent' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <Reveal>
           <h2 style={{
@@ -19,7 +19,7 @@ export default function Partners() {
             Partenaires 2026
           </h2>
         </Reveal>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2.5rem', justifyContent: 'center', alignItems: 'center' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '48px', justifyContent: 'center', alignItems: 'center' }}>
           {PARTNERS.map((p, i) => (
             <Reveal key={p.name} delay={i * 0.04}>
               <a

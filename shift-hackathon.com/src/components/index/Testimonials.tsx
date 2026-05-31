@@ -6,40 +6,38 @@ const OXANIUM = 'Oxanium, sans-serif';
 
 export default function Testimonials() {
   return (
-    <section style={{ padding: '5rem 2rem', background: '#f5f5f5' }}>
+    <section style={{ padding: '5rem 2rem', background: 'rgba(0,0,0,0)' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <Reveal>
           <h2
             style={{
               fontFamily: AGRANDIR,
               fontSize: '1.875rem',
-              fontWeight: 800,
-              color: '#000',
-              textAlign: 'center',
+              fontWeight: 400,
+              color: '#fff',
               marginBottom: '3rem',
             }}
           >
             Témoignages
           </h2>
         </Reveal>
-        <div style={{ columns: '3 260px', gap: '1rem' }}>
+        <div style={{ columns: '3 260px', gap: '30px' }}>
           {TESTIMONIALS.map((t, i) => (
             <Reveal key={t.name} delay={(i % 3) * 0.06}>
               <div
                 style={{
                   breakInside: 'avoid',
-                  background: '#fff',
+                  background: 'rgba(0,0,0,0)',
                   borderRadius: '6px',
                   padding: '1.25rem',
-                  marginBottom: '1rem',
-                  boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
+                  marginBottom: '30px',
                 }}
               >
                 <p
                   style={{
-                    color: 'rgb(102,102,102)',
+                    color: 'rgb(255,255,255)',
                     fontFamily: OXANIUM,
-                    fontSize: '0.875rem',
+                    fontSize: '18px',
                     lineHeight: 1.65,
                     fontStyle: 'italic',
                     marginBottom: '1rem',
@@ -58,8 +56,8 @@ export default function Testimonials() {
                       style={{
                         fontFamily: AGRANDIR,
                         fontWeight: 400,
-                        color: 'rgb(51,51,51)',
-                        fontSize: '0.85rem',
+                        color: 'rgb(255,255,255)',
+                        fontSize: '24px',
                         margin: 0,
                       }}
                     >
@@ -68,8 +66,8 @@ export default function Testimonials() {
                     <p
                       style={{
                         fontFamily: OXANIUM,
-                        color: 'rgb(120,120,120)',
-                        fontSize: '0.72rem',
+                        color: 'rgb(255,255,255)',
+                        fontSize: '18px',
                         margin: 0,
                       }}
                     >

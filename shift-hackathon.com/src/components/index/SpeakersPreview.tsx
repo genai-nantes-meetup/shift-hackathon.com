@@ -14,7 +14,7 @@ export default function SpeakersPreview() {
           <h2
             style={{
               fontFamily: AGRANDIR,
-              fontSize: '1.875rem',
+              fontSize: '50px',
               fontWeight: 800,
               color: '#fff',
               textAlign: 'center',

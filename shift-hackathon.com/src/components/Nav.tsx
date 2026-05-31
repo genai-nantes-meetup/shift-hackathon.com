@@ -36,8 +36,8 @@ export default function Nav() {
             href={l.href}
             style={{
               color: '#fff', textDecoration: 'none',
-              fontFamily: AGRANDIR, fontSize: '0.75rem',
-              fontWeight: 400, letterSpacing: '1.2px', textTransform: 'uppercase',
+              fontFamily: AGRANDIR, fontSize: '14px',
+              fontWeight: 400, letterSpacing: '1.4px', textTransform: 'uppercase',
               transition: 'opacity 0.2s', opacity: 0.85,
             }}
             onMouseEnter={(e) => (e.currentTarget.style.opacity = '1')}
@@ -53,9 +53,10 @@ export default function Nav() {
           style={{
             background: '#9ff839', color: 'rgb(25,5,50)',
             padding: '0.5rem 1.1rem',
-            fontFamily: AGRANDIR, fontWeight: 400, fontSize: '0.75rem',
-            letterSpacing: '1.2px', textDecoration: 'none', textTransform: 'uppercase',
-            borderRadius: '3px', whiteSpace: 'nowrap',
+            fontFamily: AGRANDIR, fontWeight: 400, fontSize: '14px',
+            letterSpacing: '1.4px', textDecoration: 'none', textTransform: 'uppercase',
+            borderRadius: '4px', whiteSpace: 'nowrap',
+            boxShadow: 'rgba(159,248,57,0.5) 0px 5px 0px 0px',
           }}
         >
           Je suis chaud

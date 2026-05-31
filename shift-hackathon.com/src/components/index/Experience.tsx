@@ -23,7 +23,7 @@ export default function Experience() {
       <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
         <div>
           <Reveal>
-            <h2 style={{ fontFamily: AGRANDIR, fontSize: '1.875rem', fontWeight: 800, color: '#fff', marginBottom: '2rem', lineHeight: 1.1 }}>
+            <h2 style={{ fontFamily: AGRANDIR, fontSize: '50px', fontWeight: 800, color: '#fff', marginBottom: '2rem', lineHeight: 1.1 }}>
               Une expérience inédite
             </h2>
           </Reveal>
@@ -49,7 +49,8 @@ export default function Experience() {
                 textTransform: 'uppercase',
                 letterSpacing: '0.04em',
                 padding: '0.6rem 1.4rem',
-                borderRadius: '3px',
+                borderRadius: '4px',
+                boxShadow: 'rgba(159,248,57,0.5) 0px 5px 0px 0px',
               }}
             >
               En savoir plus sur le concept

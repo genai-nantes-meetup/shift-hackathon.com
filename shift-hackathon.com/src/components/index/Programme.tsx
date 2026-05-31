@@ -5,39 +5,42 @@ const OXANIUM = 'Oxanium, sans-serif';
 
 const ITEMS = [
   {
+    icon: '🎤',
     title: "Confs'",
     color: 'rgb(245,183,0)',
-    desc: "Des conférences croustillantes sur la Gen AI et le Product que vous allez bouillir d'envie d'activer illico dans votre arsenal.",
+    desc: "Cette aventure, c'est le level up que vous attendiez : des conférences si croustillantes sur la Gen AI et le Product que vous allez bouillir d'envie de tout disrupter sur votre passage. On parle de stratégies de ninja et de techniques secrètes activables directement à embarquer illico dans votre arsenal.",
   },
   {
+    icon: '🔗',
     title: 'Coaching',
-    color: '#2aebf5',
-    desc: "Une équipe de choc en Gen AI & Product prête à vous extirper de n'importe quel pétrin. Plus d'excuses.",
+    color: 'rgb(162,255,44)',
+    desc: "Vous bloquez sur la tech ? Nous débarquons avec une équipe de choc en Gen AI & Product prête à vous extirper de n'importe quel pétrin. Plus d'excuses.",
   },
   {
+    icon: '🧪',
     title: 'User tests',
-    color: '#9ff839',
-    desc: 'Deux rounds de battle avec des utilisateurs au programme pour enrichir votre produit avec une UX qui déchire.',
+    color: '#2aebf5',
+    desc: "Attention, messieurs-dames, on change les règles du jeu pour ce hackathon : deux rounds de battle avec les utilisateurs au programme ! On est là pour pimenter les choses et enrichir votre idée avec une expérience utilisateur qui déchire.",
   },
   {
+    icon: '🤘',
     title: "Fun & Rock'n Roll",
     color: 'rgb(233,25,15)',
-    desc: 'Une ambiance déjantée, des participants chauds bouillants, et quelques surprises au programme !',
+    desc: "On vous réserve quelques surprises mais attendez-vous à une ambiance déjantée et des participants chauds bouillants !",
   },
 ];
 
 export default function Programme() {
   return (
-    <section style={{ padding: '5rem 2rem', background: '#080808' }}>
+    <section style={{ padding: '5rem 2rem', background: '#000' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <Reveal>
           <h4
             style={{
               fontFamily: AGRANDIR,
-              fontSize: '1.875rem',
+              fontSize: '30px',
               fontWeight: 400,
               color: '#fff',
-              textAlign: 'center',
               marginBottom: '3rem',
               letterSpacing: '-0.01em',
             }}
@@ -45,34 +48,46 @@ export default function Programme() {
             Au programme
           </h4>
         </Reveal>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1px', background: 'rgba(255,255,255,0.06)' }}>
+
+        {/* 2-column staggered grid matching live site */}
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', alignItems: 'start' }}>
           {ITEMS.map((item, i) => (
-            <Reveal key={item.title} delay={i * 0.08}>
+            <Reveal key={item.title} delay={i * 0.1}>
               <div
                 style={{
-                  background: '#080808',
+                  background: '#111',
+                  border: `2px solid ${item.color}`,
+                  borderRadius: '8px',
                   padding: '2.5rem',
-                  borderTop: `3px solid ${item.color}`,
+                  marginTop: i % 2 === 1 ? '3rem' : '0',
                 }}
               >
+                {/* Icon */}
+                <div style={{ fontSize: '2rem', marginBottom: '1.25rem', lineHeight: 1 }}>
+                  {item.icon}
+                </div>
+
+                {/* Title */}
                 <h4
                   style={{
                     fontFamily: AGRANDIR,
                     fontWeight: 800,
                     color: item.color,
-                    fontSize: '1.5rem',
+                    fontSize: '40px',
                     marginBottom: '1rem',
                     lineHeight: 1.1,
                   }}
                 >
                   {item.title}
                 </h4>
+
+                {/* Description */}
                 <p
                   style={{
-                    color: 'rgba(255,255,255,0.65)',
+                    color: item.color,
                     fontFamily: OXANIUM,
-                    fontSize: '0.9rem',
-                    lineHeight: 1.65,
+                    fontSize: '18px',
+                    lineHeight: 1.7,
                     margin: 0,
                   }}
                 >

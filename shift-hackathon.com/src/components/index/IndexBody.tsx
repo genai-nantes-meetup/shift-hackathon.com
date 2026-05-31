@@ -8,6 +8,9 @@ import Programme from './Programme';
 import Testimonials from './Testimonials';
 import Partners from './Partners';
 import Pricing from './Pricing';
+import HackathonPerfait from './HackathonPerfait';
+import Lieu from './Lieu';
+import Faq from './Faq';
 import OrgaTeam from './OrgaTeam';
 
 export default function IndexBody() {
@@ -23,6 +26,9 @@ export default function IndexBody() {
         <Testimonials />
         <Partners />
         <Pricing />
+        <HackathonPerfait />
+        <Lieu />
+        <Faq />
         <OrgaTeam />
       </main>
       <Footer />
