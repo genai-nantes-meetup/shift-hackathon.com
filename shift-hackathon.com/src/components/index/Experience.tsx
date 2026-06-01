@@ -1,69 +1,67 @@
-import Reveal from '../Reveal';
-
-const CDN = 'https://framerusercontent.com/images';
-const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
-const OXANIUM = 'Oxanium, sans-serif';
-
-const PHOTOS = [
-  { src: `${CDN}/OIZRhOSUxhsy9yPligk2tSs1po.jpg`, alt: 'Speaker session' },
-  { src: `${CDN}/THrFvx3h9HQZm3DxRql29ftQ5Y.jpg`, alt: 'Group discussion' },
-  { src: `${CDN}/1MilzwluR4WPySgY1Nc71NA7z10.jpg`, alt: 'Conférence' },
-  { src: `${CDN}/cq8ZzypnQ3B7cnq3vSe9YqtKZkc.jpeg`, alt: 'Speaker' },
-];
-
-const PARAGRAPHS = [
-  "Shift, c'est LE hackathon Gen AI de la place nantaise. Après 2 éditions hautes en couleur, nous revenons sous le pavillon noir : à cette édition 2026, tu vas te RÉ-GA-LER.",
-  "Le concept : hacker ton outil préféré. Il lui manque une fonctionnalité clé ? Viens proposer ton hack pour développer la feature qui te ferait kiffer !",
-  "Shift, c'est 48H de pure prod pour créer des produits Gen AI à en faire rougir les techos de la Silicon Valley. On te fournit tout : le cadre, les outils, et les conseils des meilleurs experts.",
-];
+const BG_IMAGE = 'https://framerusercontent.com/images/OIZRhOSUxhsy9yPligk2tSs1po.jpg';
 
 export default function Experience() {
   return (
-    <section style={{ padding: '5rem 2rem', background: '#050505' }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
-        <div>
-          <Reveal>
-            <h2 style={{ fontFamily: AGRANDIR, fontSize: '50px', fontWeight: 400, color: '#fff', marginBottom: '2rem', lineHeight: 1.1 }}>
-              Une expérience inédite
-            </h2>
-          </Reveal>
-          {PARAGRAPHS.map((p, i) => (
-            <Reveal key={i} delay={i * 0.1}>
-              <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '1.125rem', lineHeight: 1.65, marginBottom: '1rem' }}>
-                {p}
-              </p>
-            </Reveal>
-          ))}
-          <Reveal delay={0.3}>
-            <a
-              href="/concept-2026"
-              style={{
-                display: 'inline-block',
-                marginTop: '1rem',
-                color: 'rgb(25,5,50)',
-                background: '#9ff839',
-                fontFamily: AGRANDIR,
-                fontWeight: 400,
-                fontSize: '0.875rem',
-                textDecoration: 'none',
-                textTransform: 'uppercase',
-                letterSpacing: '1.4px',
-                padding: '0.6rem 1.4rem',
-                borderRadius: '4px',
-                boxShadow: 'rgba(159,248,57,0.5) 0px 5px 0px 0px',
-              }}
-            >
-              En savoir plus sur le concept
-            </a>
-          </Reveal>
-        </div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
-          {PHOTOS.map((p, i) => (
-            <Reveal key={p.src} delay={i * 0.08}>
-              <img src={p.src} alt={p.alt} style={{ width: '100%', aspectRatio: '1', objectFit: 'cover', borderRadius: '4px' }} />
-            </Reveal>
-          ))}
-        </div>
+    <section
+      style={{
+        display: 'flex',
+        flexDirection: 'row',
+        backgroundColor: 'rgb(0, 0, 0)',
+        color: 'rgb(255, 255, 255)',
+        width: '100%',
+        maxWidth: '1280px',
+        margin: '0 auto',
+        position: 'relative',
+        height: '720px',
+        alignItems: 'center',
+        overflow: 'hidden',
+      }}
+    >
+      {/* Background image at 10% opacity */}
+      <img
+        src={BG_IMAGE}
+        alt=""
+        aria-hidden="true"
+        style={{
+          display: 'block',
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          opacity: 0.1,
+          pointerEvents: 'none',
+        }}
+      />
+      {/* Text content */}
+      <div style={{ position: 'relative', zIndex: 1, padding: '0 0 0 80px', maxWidth: '544px' }}>
+        <p
+          style={{
+            color: 'rgb(255, 255, 255)',
+            fontFamily: "'Agrandir Grand Heavy', sans-serif",
+            fontSize: '56px',
+            fontWeight: '800',
+            lineHeight: '50.4px',
+            textTransform: 'uppercase',
+            margin: 0,
+          }}
+        >
+          Shift,
+        </p>
+        <p
+          style={{
+            color: 'rgb(159, 248, 57)',
+            fontFamily: "'Agrandir Thin Italic', sans-serif",
+            fontSize: '20px',
+            fontWeight: '100',
+            lineHeight: '24px',
+            textTransform: 'uppercase',
+            margin: '30px 0 0 0',
+          }}
+        >
+          Le Hackathon Gen AI n°1
+        </p>
       </div>
     </section>
   );

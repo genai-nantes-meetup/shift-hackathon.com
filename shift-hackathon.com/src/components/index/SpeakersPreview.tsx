@@ -85,11 +85,16 @@ export default function SpeakersPreview() {
               href="/intervenants-2026"
               style={{
                 display: 'inline-block',
-                fontFamily: DELA,
-                fontSize: '1.375rem',
-                color: '#9ff839',
+                fontFamily: AGRANDIR,
+                fontSize: '12px',
+                color: 'rgb(25, 5, 50)',
+                backgroundColor: '#9ff839',
                 textDecoration: 'none',
-                letterSpacing: '0.01em',
+                letterSpacing: '0.48px',
+                textTransform: 'uppercase',
+                borderRadius: '4px',
+                boxShadow: 'rgba(159, 248, 57, 0.5) 0px 5px 0px 0px',
+                padding: '11.2px 28px',
               }}
             >
               Voir tous les intervenants →

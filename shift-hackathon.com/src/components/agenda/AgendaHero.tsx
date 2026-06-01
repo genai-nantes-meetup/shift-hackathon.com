@@ -10,7 +10,7 @@ export default function AgendaHero() {
     <section
       style={{
         position: 'relative',
-        minHeight: '90vh',
+        height: '720px',
         display: 'flex',
         alignItems: 'center',
         overflow: 'hidden',

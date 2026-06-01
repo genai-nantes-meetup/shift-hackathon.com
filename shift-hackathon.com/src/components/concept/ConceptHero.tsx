@@ -61,15 +61,15 @@ export default function ConceptHero() {
             <p
               style={{
                 fontFamily: AGRANDIR,
-                fontSize: '56px',
+                fontSize: '64px',
                 fontWeight: 800,
                 color: '#fff',
-                lineHeight: '50.4px',
+                lineHeight: '57.6px',
                 margin: '0 0 4px',
                 textTransform: 'uppercase',
               }}
             >
-              Shift,
+              Shift
             </p>
             <p
               style={{
@@ -78,24 +78,24 @@ export default function ConceptHero() {
                 fontWeight: 800,
                 color: '#fff',
                 lineHeight: '24.2px',
-                margin: 0,
+                margin: '0 0 2px',
                 textTransform: 'uppercase',
               }}
             >
-              C&apos;est quoi ?
+              Le Hackathon Gen AI n°1
             </p>
             <p
               style={{
                 fontFamily: AGRANDIR_ITALIC,
                 fontSize: '20px',
                 fontWeight: 100,
-                color: 'rgb(159, 248, 57)',
+                color: '#fff',
                 lineHeight: '24px',
                 margin: '0 0 28px',
                 textTransform: 'uppercase',
               }}
             >
-              Le Hackathon Gen AI n°1
+              pour les Designers, Devs &amp; Product Lovers
             </p>
           </motion.div>
 
@@ -106,7 +106,13 @@ export default function ConceptHero() {
             style={{ marginBottom: '24px' }}
           >
             <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: 0, lineHeight: '27.9px' }}>
-              Shift — Time To Custom, c&apos;est 48 heures pour créer des produits Gen AI game-changer. <strong>Event all-inclusive</strong> — coaching, food &amp; drinks inclus.
+              Crée des produits Gen AI game-changer en 48h.
+            </p>
+            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: 0, lineHeight: '27.9px' }}>
+              Édition &quot;Time to Custom&quot; → Hack ton outil favori.
+            </p>
+            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: '14px 0 0', lineHeight: '27.9px' }}>
+              🔥 Event all-inclusive - coaching, food &amp; drinks inclus.
             </p>
           </motion.div>
 
@@ -120,7 +126,7 @@ export default function ConceptHero() {
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                display: 'block',
+                display: 'inline-block',
                 background: 'rgb(159, 248, 57)',
                 color: 'rgb(25, 5, 50)',
                 padding: '11.2px 28px',
@@ -133,10 +139,9 @@ export default function ConceptHero() {
                 borderRadius: '4px',
                 whiteSpace: 'nowrap',
                 boxShadow: 'rgba(159, 248, 57, 0.5) 0px 5px 0px 0px',
-                width: 'fit-content',
               }}
             >
-              Take my money 🤘
+              Je suis chaud pour 2027 !
             </a>
           </motion.div>
         </div>

@@ -128,14 +128,8 @@ export default function SpeakersHero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             style={{ marginBottom: '24px' }}
           >
-            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: '0 0 0', lineHeight: '27.9px' }}>
+            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: '0', lineHeight: '27.9px' }}>
               Shift — Time To Custom, c&apos;est 48 heures pour construire un projet Gen AI de A à Z.
-            </p>
-            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '15px', margin: '0', lineHeight: '23.25px' }}>
-              Créer une vraie feature Gen AI utile pour ta boîte.
-            </p>
-            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '15px', margin: '14px 0 0', lineHeight: '23.25px' }}>
-              🔥 Produire aux côtés des meilleurs experts Gen AI.
             </p>
           </motion.div>
 
@@ -165,7 +159,7 @@ export default function SpeakersHero() {
                 boxShadow: 'rgba(159,248,57,0.5) 0px 5px 0px 0px',
               }}
             >
-              Take my money 🤘
+              Take my money
             </a>
           </motion.div>
         </div>

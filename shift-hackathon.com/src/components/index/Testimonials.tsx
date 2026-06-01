@@ -21,15 +21,23 @@ export default function Testimonials() {
   return (
     <section
       style={{
-        padding: '37px 100px',
         background: '#000',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        gap: '60px',
         overflow: 'hidden',
       }}
     >
+      <div
+        style={{
+          width: '1200px',
+          maxWidth: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '60px',
+          padding: '37px 0',
+        }}
+      >
       <h4
         style={{
           fontFamily: AGRANDIR,
@@ -49,7 +57,6 @@ export default function Testimonials() {
           display: 'flex',
           flexDirection: 'row',
           gap: '60px',
-          maxWidth: '1000px',
           width: '100%',
         }}
       >
@@ -100,6 +107,7 @@ export default function Testimonials() {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );

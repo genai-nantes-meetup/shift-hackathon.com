@@ -18,8 +18,8 @@ const FEATURES: Feature[] = [
 
 export default function Features() {
   return (
-    <section style={{ padding: '100px 0', background: 'transparent' }}>
-      <div style={{ maxWidth: 1473, margin: '0 auto' }}>
+    <section style={{ padding: '100px 0', background: 'rgb(0, 0, 0)' }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         {FEATURES.map((f, i) => {
           const isEven = i % 2 === 0;
           return (
@@ -31,11 +31,19 @@ export default function Features() {
                 borderBottom: '1px solid rgba(255,255,255,0.06)',
               }}>
                 {/* Image */}
-                <div style={{ flexShrink: 0, width: 460, overflow: 'hidden' }}>
+                <div style={{ flexShrink: 0, width: 544, overflow: 'hidden' }}>
                   <img
                     src={f.img}
                     alt=""
-                    style={{ width: '460px', maxWidth: '100%', display: 'block', objectFit: 'cover', height: '100%' }}
+                    style={{
+                      width: '544px',
+                      maxWidth: '100%',
+                      display: 'block',
+                      objectFit: 'cover',
+                      height: '100%',
+                      borderRadius: '6px',
+                      boxShadow: 'rgba(0, 0, 0, 0.5) 0px 20px 60px 0px',
+                    }}
                   />
                 </div>
                 {/* Text */}
@@ -45,13 +53,13 @@ export default function Features() {
                     fontWeight: 800,
                     color: '#fff',
                     fontSize: '40px',
-                    width: '460px',
+                    width: '544px',
                     margin: '0 0 1rem',
                     lineHeight: '44px',
                   }}>
                     {f.title}
                   </h4>
-                  <p style={{ color: 'rgb(255, 255, 255)', fontFamily: 'Oxanium, sans-serif', fontSize: '18px', fontWeight: 400, lineHeight: '27px', margin: 0 }}>
+                  <p style={{ color: 'rgb(255, 255, 255)', fontFamily: 'Oxanium, sans-serif', fontSize: '18px', fontWeight: 400, lineHeight: '27.9px', margin: 0 }}>
                     {f.desc}
                   </p>
                 </div>

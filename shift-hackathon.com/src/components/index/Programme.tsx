@@ -32,7 +32,7 @@ const ITEMS = [
 
 export default function Programme() {
   return (
-    <section style={{ padding: '80px 32px', background: 'rgb(8,8,8)' }}>
+    <section style={{ padding: '80px 32px', background: '#000' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <Reveal>
           <h2

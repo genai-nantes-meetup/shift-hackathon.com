@@ -2,49 +2,69 @@ import { SPEAKERS } from '../../data/site';
 
 export default function SpeakerGrid() {
   return (
-    <section style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', padding: '100px 0px' }}>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '100px', maxWidth: '1000px', width: '100%' }}>
+    <section style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '100px 0 0', gap: '10px' }}>
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(3, 375px)',
+          gridAutoRows: '570px',
+          gap: '20px',
+          width: '100%',
+          maxWidth: '1240px',
+          padding: '0 20px 80px',
+          justifyContent: 'center',
+        }}
+      >
         {SPEAKERS.map((s) => (
-          <div key={s.name} style={{ display: 'flex', flexDirection: 'row', gap: '80px', width: '1000px' }}>
+          <div
+            key={s.name}
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'flex-start',
+              gap: '10px',
+              width: '100%',
+              height: '100%',
+            }}
+          >
             {/* Image */}
-            <div style={{ flexShrink: 0, width: '460px', height: '383px', borderRadius: '20px', overflow: 'hidden' }}>
+            <div style={{ flex: '1 0 0', width: '100%', overflow: 'hidden', position: 'relative' }}>
               <img
                 src={s.img}
                 alt={s.name}
-                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
               />
             </div>
-            {/* Text */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', width: '460px', justifyContent: 'center' }}>
-              <h4
-                style={{
-                  fontFamily: '"Agrandir Grand Heavy", sans-serif',
-                  fontSize: '40px',
-                  fontWeight: '400',
-                  lineHeight: '44px',
-                  color: '#fff',
-                  margin: '0',
-                }}
-              >
-                {s.name}
-              </h4>
-              <div>
-                {s.roles.map((r) => (
-                  <p
-                    key={r}
-                    style={{
-                      fontFamily: 'Oxanium, sans-serif',
-                      fontSize: '18px',
-                      fontWeight: '400',
-                      lineHeight: '27px',
-                      color: '#fff',
-                      margin: '0',
-                    }}
-                  >
-                    {r}
-                  </p>
-                ))}
-              </div>
+            {/* Name */}
+            <h6
+              style={{
+                fontFamily: '"Dela Gothic One", sans-serif',
+                fontSize: '24px',
+                fontWeight: '400',
+                lineHeight: '1.2',
+                color: '#fff',
+                margin: '0',
+              }}
+            >
+              {s.name}
+            </h6>
+            {/* Roles */}
+            <div>
+              {s.roles.map((r) => (
+                <p
+                  key={r}
+                  style={{
+                    fontFamily: 'Oxanium, sans-serif',
+                    fontSize: '18px',
+                    fontWeight: '400',
+                    lineHeight: '1.5em',
+                    color: '#fff',
+                    margin: '0',
+                  }}
+                >
+                  {r}
+                </p>
+              ))}
             </div>
           </div>
         ))}

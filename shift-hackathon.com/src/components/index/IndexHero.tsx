@@ -111,50 +111,48 @@ export default function IndexHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              {/* SHIFT — 64px exact live site value */}
+              {/* SHIFT, — 56px per live computed */}
               <p
                 style={{
                   fontFamily: AGRANDIR,
-                  fontSize: '64px',
+                  fontSize: '56px',
                   fontWeight: 800,
                   color: '#fff',
-                  lineHeight: 0.9,
+                  lineHeight: '50.4px',
                   margin: '0 0 4px',
                   textTransform: 'uppercase',
-                  letterSpacing: 'normal',
                 }}
               >
-                Shift
+                Shift,
               </p>
-              {/* Le Hackathon Gen AI n°1 — 22px exact */}
+              {/* C'est quoi ? — 22px per live computed */}
               <p
                 style={{
                   fontFamily: AGRANDIR,
                   fontSize: '22px',
                   fontWeight: 800,
                   color: '#fff',
-                  lineHeight: 1.1,
+                  lineHeight: '24.2px',
                   margin: '0 0 2px',
                   textTransform: 'uppercase',
-                  letterSpacing: 'normal',
                 }}
               >
-                Le Hackathon Gen AI n°1
+                C&apos;est quoi ?
               </p>
-              {/* Italic subtitle — 20px exact */}
+              {/* Le Hackathon Gen AI n°1 — 20px green italic per live computed */}
               <p
                 style={{
                   fontFamily: AGRANDIR_ITALIC,
                   fontSize: '20px',
                   fontWeight: 100,
-                  color: '#fff',
-                  lineHeight: 1.2,
+                  color: 'rgb(159, 248, 57)',
+                  lineHeight: '24px',
                   margin: '0 0 28px',
                   fontStyle: 'italic',
                   textTransform: 'uppercase',
                 }}
               >
-                pour les Designers, Devs &amp; Product Lovers
+                Le Hackathon Gen AI n°1
               </p>
             </motion.div>
 
@@ -164,17 +162,17 @@ export default function IndexHero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               style={{ marginBottom: '24px' }}
             >
-              {/* Line 1 — 18px Oxanium (live site value) */}
-              <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: 0, lineHeight: 1.55 }}>
-                Crée des produits Gen AI game-changer en 48 heures.
+              {/* Line 1 — 18px Oxanium per live computed */}
+              <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: 0, lineHeight: '27.9px' }}>
+                Shift — Time To Custom, c&apos;est 48 heures pour hacker ton outil préféré.
               </p>
-              {/* Line 2 — 18px Oxanium (live site value) */}
-              <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: 0, lineHeight: 1.55 }}>
-                Édition &quot;Time to Custom&quot; → Hack ton outil préféré.
+              {/* Line 2 — 15px Oxanium per live computed */}
+              <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '15px', margin: 0, lineHeight: '23.25px' }}>
+                Créer une vraie feature Gen AI utile pour ton usage.
               </p>
-              {/* Line 3 — 18px Oxanium + margin top + bold */}
-              <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', lineHeight: 1.55, marginTop: '14px', marginBottom: 0 }}>
-                🔥 <strong style={{ fontWeight: 700 }}>Event all-inclusive</strong> - coaching, food &amp; fun.
+              {/* Line 3 — 15px Oxanium + margin top per live computed */}
+              <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '15px', lineHeight: '23.25px', margin: '14px 0 0' }}>
+                🔥 Produire aux côtés des meilleurs experts tech.
               </p>
             </motion.div>
 
@@ -204,7 +202,7 @@ export default function IndexHero() {
                   boxShadow: 'rgba(159,248,57,0.5) 0px 5px 0px 0px',
                 }}
               >
-                Je suis chaud pour 2027 !
+                Take my money 🤘
               </a>
             </motion.div>
           </div>
