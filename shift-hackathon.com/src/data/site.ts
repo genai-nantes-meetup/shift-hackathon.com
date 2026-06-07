@@ -44,42 +44,42 @@ export const SPEAKERS = [
   {
     name: 'Adrien Etaix',
     roles: ['UX/UI | Frontend @ Mistral AI'],
-    img: `${CDN}/FgLI1xQk9IeTynG4n6Cy5Mb7Vs.jpg`,
+    img: `${CDN}/j7T1SCmyBoHbElE7JQ4RxqnGq5Y.jpg`,
   },
   {
     name: 'Quentin de Quelen',
     roles: ['CEO @ Meilisearch'],
-    img: `${CDN}/d0sSiNB2OI70YeTMCgAxAL0Oa6A.jpeg`,
+    img: `${CDN}/z8lfXNihh1iSFCAoYvd6VO7CLqQ.jpeg`,
   },
   {
     name: 'Yannis Sulfourt',
     roles: ['Co-Founder & Designer @ Explore the Vault'],
-    img: `${CDN}/xFlsTeIWCtbvBhgMG65vJXIKms.jpeg`,
+    img: `${CDN}/JtiVwFXrEXMWFdxretcIj3Bks.jpg`,
   },
   {
     name: 'Clément Renault',
     roles: ['CTO @ Meilisearch'],
-    img: `${CDN}/P26sOfpbMtxJB5H5wk5oM6bGt2M.jpeg`,
+    img: `${CDN}/LloqbKDq0Wj2OTwXyyljP2lbLwA.jpeg`,
   },
   {
     name: 'Maxime Courant',
     roles: ['Consultant IA Freelance'],
-    img: `${CDN}/CEAfCYOFNKNTUkLcYd6PthOj0Vk.jpeg`,
+    img: `${CDN}/LND2iGZ8dTQjbG02EmN417Dgk.jpeg`,
   },
   {
     name: 'Céline Haentzler',
     roles: ['GenAI Product Expert @ Betclic', 'Orga @ Meetup Gen AI Rennes'],
-    img: `${CDN}/cTdtbRWHVrj73tROhU42L5MU3xQ.jpeg`,
+    img: `${CDN}/FAjbhIrRbZ00xvNva9T9WfEFV8.jpeg`,
   },
   {
     name: 'Kévin Lafortune',
     roles: ['Associé & Designer @ Explore the Vault'],
-    img: `${CDN}/lTSeXpAcEIO1OACu0mUZoVn3kTU.jpeg`,
+    img: `${CDN}/75gwYhnBAZvxYyRrrLT3asl0TX8.jpeg`,
   },
   {
     name: 'Baptiste Rongier',
     roles: ['Co-founder & Designer @ Présent'],
-    img: `${CDN}/ZkESeHZyWtogSHoJ7xXMRiHfclU.jpg`,
+    img: `${CDN}/FUWfV9DUONzzBTnrtdSZEAhsUTY.jpeg`,
   },
 ];
 
