@@ -91,8 +91,8 @@ export default function IntroSection() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(4, 1fr)',
-              gap: '20px',
+              gridTemplateColumns: 'repeat(2, 1fr)',
+              gap: '24px',
             }}
           >
             {MOSAIC.map((m) => (
@@ -103,9 +103,9 @@ export default function IntroSection() {
                 loading="lazy"
                 style={{
                   width: '100%',
-                  aspectRatio: '419 / 279',
+                  aspectRatio: '16 / 10',
                   objectFit: 'cover',
-                  borderRadius: '4px',
+                  borderRadius: '6px',
                   display: 'block',
                 }}
               />

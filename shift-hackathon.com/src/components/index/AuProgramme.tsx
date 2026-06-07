@@ -32,12 +32,13 @@ const CARDS = [
 
 export default function AuProgramme() {
   return (
-    <section style={{ background: '#000', padding: '80px 120px' }}>
+    <section style={{ background: '#000', padding: '100px 30px' }}>
       <div style={{ maxWidth: 1240, margin: '0 auto' }}>
         <div
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(2, 1fr)',
+            gap: '40px',
           }}
         >
           {CARDS.map((card, i) => (
@@ -45,20 +46,21 @@ export default function AuProgramme() {
               <div
                 style={{
                   border: `8px solid ${card.color}`,
-                  padding: '60px 70px',
+                  padding: '80px 70px',
                   display: 'flex',
                   flexDirection: 'column',
-                  gap: '30px',
+                  gap: '40px',
+                  minHeight: 520,
                 }}
               >
                 <h4
                   style={{
                     fontFamily: AGRANDIR,
-                    fontSize: 'clamp(24px, 2.5vw, 40px)',
+                    fontSize: 'clamp(36px, 4vw, 60px)',
                     color: card.color,
                     margin: 0,
                     whiteSpace: 'pre-line',
-                    lineHeight: 1.1,
+                    lineHeight: 1.05,
                   }}
                 >
                   {card.title}
@@ -66,7 +68,7 @@ export default function AuProgramme() {
                 <p
                   style={{
                     fontFamily: OXANIUM,
-                    fontSize: 'clamp(15px, 1.2vw, 18px)',
+                    fontSize: 'clamp(16px, 1.4vw, 20px)',
                     color: card.color,
                     margin: 0,
                     lineHeight: 1.6,

@@ -266,33 +266,29 @@ export default function IndexHero() {
       <div
         style={{
           background: '#000',
-          borderTop: '1px solid rgba(255,255,255,0.06)',
-          borderBottom: '1px solid rgba(255,255,255,0.06)',
-          padding: '0.6rem 0',
+          padding: '1.2rem 0 2rem',
         }}
       >
-        {/* Label + marquee constrained to 1200px like all sections */}
         <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 2rem' }}>
           <em
             style={{
               display: 'block',
               fontFamily: OXANIUM,
-              fontSize: '13px',
-              color: 'rgba(255,255,255,0.5)',
+              fontSize: '14px',
+              color: 'rgba(255,255,255,0.55)',
               textAlign: 'left',
-              marginBottom: '0.4rem',
+              marginBottom: '1rem',
               fontStyle: 'italic',
               fontWeight: 400,
             }}
           >
             Les complices de Shift depuis 2024
           </em>
-          {/* Marquee track — overflow hidden on this container only */}
           <div style={{ overflow: 'hidden', position: 'relative' }}>
             <motion.div
               animate={{ x: ['0%', '-50%'] }}
               transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
-              style={{ display: 'flex', alignItems: 'center', gap: '2.5rem', width: 'max-content' }}
+              style={{ display: 'flex', alignItems: 'center', gap: '4rem', width: 'max-content' }}
             >
               {[...ALL_COMPLICES, ...ALL_COMPLICES].map((p, i) => (
                 <img
@@ -300,12 +296,12 @@ export default function IndexHero() {
                   src={p.logo}
                   alt={p.name}
                   style={{
-                    height: 28,
+                    height: 48,
                     width: 'auto',
-                    maxWidth: 120,
+                    maxWidth: 200,
                     objectFit: 'contain',
                     flexShrink: 0,
-                    opacity: 0.65,
+                    opacity: 0.85,
                   }}
                 />
               ))}

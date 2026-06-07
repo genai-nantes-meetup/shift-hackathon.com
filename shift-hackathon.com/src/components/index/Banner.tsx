@@ -13,41 +13,62 @@ export default function Banner() {
       style={{
         position: 'relative',
         background: '#000',
-        padding: '100px 30px',
+        padding: '120px 30px 160px',
         overflow: 'hidden',
         textAlign: 'center',
       }}
     >
-      {/* Neon glow background */}
+      {/* Horizontal neon beam — colored laser through SHIFT */}
       <div
         aria-hidden="true"
         style={{
           position: 'absolute',
-          inset: '20% 0 0 0',
+          top: '62%',
+          left: '-10%',
+          right: '-10%',
+          height: '4px',
           background:
-            'radial-gradient(ellipse 60% 40% at 50% 50%, rgba(159,248,57,0.35) 0%, rgba(247,87,135,0.25) 30%, rgba(42,235,245,0.15) 60%, transparent 80%)',
-          filter: 'blur(60px)',
+            'linear-gradient(90deg, transparent 0%, rgba(159,248,57,0.95) 22%, rgba(255,255,255,1) 45%, rgba(247,87,135,0.95) 58%, rgba(42,235,245,0.9) 78%, transparent 100%)',
+          filter: 'blur(1px)',
           pointerEvents: 'none',
+          zIndex: 0,
         }}
       />
-      {/* Huge background SHIFT text */}
+      {/* Glow halo around the beam */}
+      <div
+        aria-hidden="true"
+        style={{
+          position: 'absolute',
+          top: '52%',
+          left: 0,
+          right: 0,
+          height: '180px',
+          background:
+            'radial-gradient(ellipse 50% 100% at 50% 50%, rgba(159,248,57,0.45) 0%, rgba(247,87,135,0.4) 35%, rgba(42,235,245,0.3) 65%, transparent 90%)',
+          filter: 'blur(48px)',
+          pointerEvents: 'none',
+          zIndex: 0,
+        }}
+      />
+      {/* Huge background SHIFT text behind the beam */}
       <p
         aria-hidden="true"
         style={{
           position: 'absolute',
-          top: '50%',
+          top: '58%',
           left: 0,
           right: 0,
           transform: 'translateY(-50%)',
           fontFamily: AGRANDIR,
-          fontSize: 'clamp(120px, 18vw, 280px)',
+          fontSize: 'clamp(140px, 20vw, 320px)',
           fontWeight: 900,
-          color: 'rgba(255,255,255,0.08)',
+          color: 'rgba(255,255,255,0.14)',
           letterSpacing: '0.05em',
           margin: 0,
           lineHeight: 1,
           pointerEvents: 'none',
           textTransform: 'uppercase',
+          zIndex: 0,
         }}
       >
         SHIFT

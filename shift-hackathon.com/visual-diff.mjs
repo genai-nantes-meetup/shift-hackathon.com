@@ -21,7 +21,8 @@ const ctx = await browser.newContext({ viewport: VIEWPORT });
 
 async function shotSlices(url, label) {
   const page = await ctx.newPage();
-  await page.goto(url, { waitUntil: 'networkidle', timeout: 30000 });
+  await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+  await page.waitForLoadState('networkidle', { timeout: 60000 }).catch(() => {});
   await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
   await page.waitForTimeout(700);
   await page.evaluate(() => window.scrollTo(0, 0));
