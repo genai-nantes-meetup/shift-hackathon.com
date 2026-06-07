@@ -4,3 +4,8 @@ dist/
 test-results/
 tests/screenshots/*.png
 playwright-report/
+
+# Self-hosted images (overrides root *.png|*.jpg|*.jpeg exclusion)
+!public/assets/images/*.png
+!public/assets/images/*.jpg
+!public/assets/images/*.jpeg
