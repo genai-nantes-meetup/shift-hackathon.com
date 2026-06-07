@@ -51,6 +51,7 @@ export default function AuProgramme() {
                   flexDirection: 'column',
                   gap: '40px',
                   minHeight: 520,
+                  marginTop: i % 2 === 1 ? '120px' : 0,
                 }}
               >
                 <h4

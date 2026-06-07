@@ -69,9 +69,9 @@ export default function Testimonials() {
 
         <div
           style={{
-            display: 'flex',
-            flexDirection: 'row',
-            gap: '60px',
+            display: 'grid',
+            gridTemplateColumns: 'repeat(2, 1fr)',
+            gap: '40px',
             width: '100%',
           }}
         >
@@ -82,7 +82,6 @@ export default function Testimonials() {
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '30px',
-                flex: '1 0 0',
               }}
             >
               <div style={{ width: '100%', aspectRatio: '16/9', position: 'relative' }}>
