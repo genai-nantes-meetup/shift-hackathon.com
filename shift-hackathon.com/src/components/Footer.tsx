@@ -67,7 +67,7 @@ export default function Footer() {
             style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}
           >
             <input
-              placeholder="Name"
+              placeholder="Prénom"
               type="text"
               value={values.prenom}
               onChange={(e) => setValues({ ...values, prenom: e.target.value })}

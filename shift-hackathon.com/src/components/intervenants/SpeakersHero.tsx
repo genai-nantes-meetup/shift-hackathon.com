@@ -163,7 +163,7 @@ export default function SpeakersHero() {
           style={{ position: 'relative' }}
         >
           <img
-            src={`${CDN}/Rdl8zkLOcqcng7VGIk3w5sXc38.png`}
+            src={`${CDN}/BEuIuTovs901AlleEtQLUxkuxI.png`}
             alt="Shift Hackathon"
             style={{
               width: '100%',

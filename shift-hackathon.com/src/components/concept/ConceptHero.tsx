@@ -85,20 +85,6 @@ export default function ConceptHero() {
             >
               C&apos;est quoi ?
             </p>
-            <p
-              style={{
-                fontFamily: AGRANDIR_ITALIC,
-                fontSize: '20px',
-                fontWeight: 100,
-                color: '#fff',
-                lineHeight: '24px',
-                margin: '0 0 28px',
-                fontStyle: 'italic',
-                textTransform: 'uppercase',
-              }}
-            >
-              Le Hackathon Gen AI n°1
-            </p>
           </motion.div>
 
           <motion.div
@@ -160,7 +146,7 @@ export default function ConceptHero() {
           style={{ position: 'relative' }}
         >
           <img
-            src={`${CDN}/Rdl8zkLOcqcng7VGIk3w5sXc38.png`}
+            src={`${CDN}/dhjQcdCP4VBrUzqK0gjelJruk.png`}
             alt="Shift Hackathon"
             style={{
               width: '100%',
