@@ -34,7 +34,7 @@ export default function Nav() {
     >
       <a href="/" style={{ display: 'flex', alignItems: 'center' }}>
         <img
-          src="https://framerusercontent.com/images/pSUT90jYhOZMo6IvXy5LtJs0.png"
+          src="/assets/images/pSUT90jYhOZMo6IvXy5LtJs0.png"
           alt="SHIFT"
           style={{ height: 24, width: 'auto' }}
         />

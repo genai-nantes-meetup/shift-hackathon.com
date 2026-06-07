@@ -1,5 +1,5 @@
 export const TICKET_URL = 'https://www.billetweb.fr/shift-hackathon-2026';
-export const CDN = 'https://framerusercontent.com/images';
+export const CDN = '/assets/images';
 
 export const NAV_LINKS = [
   { label: 'Concept', href: '/concept-2026' },

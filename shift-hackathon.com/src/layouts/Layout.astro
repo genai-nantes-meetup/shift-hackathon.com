@@ -11,7 +11,7 @@ const {
   title,
   description = 'Créé des produits Gen AI game-changer en 48 heures. Édition "Time to Custom" → Hack ton outil préféré.',
   canonical,
-  ogImage = 'https://framerusercontent.com/images/HINjkEIVuvTLAMTIcSPr6jing.png',
+  ogImage = new URL('/assets/images/HINjkEIVuvTLAMTIcSPr6jing.png', Astro.site).toString(),
 } = Astro.props;
 ---
 <!doctype html>

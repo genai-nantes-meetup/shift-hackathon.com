@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 
 const TICKET_URL = 'https://www.billetweb.fr/shift-hackathon-2026';
-const CDN = 'https://framerusercontent.com/images';
+const CDN = '/assets/images';
 const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
 const OXANIUM = 'Oxanium, sans-serif';
 

@@ -1,4 +1,4 @@
-const CDN = 'https://framerusercontent.com/images';
+const CDN = '/assets/images';
 
 export const SCHEDULE = [
   {

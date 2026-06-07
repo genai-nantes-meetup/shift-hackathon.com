@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import { PARTNERS } from '../../data/site';
 
 const TICKET_URL = 'https://tally.so/r/D45GKl';
-const CDN = 'https://framerusercontent.com/images';
+const CDN = '/assets/images';
 const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
 const AGRANDIR_ITALIC = "'Agrandir Thin Italic', sans-serif";
 const OXANIUM = 'Oxanium, sans-serif';

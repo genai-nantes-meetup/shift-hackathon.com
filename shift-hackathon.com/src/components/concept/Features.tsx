@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import Reveal from '../Reveal';
 
-const CDN = 'https://framerusercontent.com/images';
+const CDN = '/assets/images';
 
 type Feature = { title: ReactNode; desc: string; img: string };
 

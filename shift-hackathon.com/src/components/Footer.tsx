@@ -8,7 +8,7 @@ export default function Footer() {
       <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem' }}>
         <div>
           <img
-            src="https://framerusercontent.com/images/pSUT90jYhOZMo6IvXy5LtJs0.png"
+            src="/assets/images/pSUT90jYhOZMo6IvXy5LtJs0.png"
             alt="SHIFT"
             style={{ height: 32, width: 'auto', marginBottom: '1.5rem', display: 'block' }}
           />
