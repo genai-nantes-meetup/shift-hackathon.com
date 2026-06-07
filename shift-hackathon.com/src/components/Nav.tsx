@@ -1,12 +1,13 @@
 import { motion } from 'motion/react';
 import { useEffect, useState } from 'react';
+import { EDITION } from '../data/edition';
 
 const NAV_LINKS = [
   { label: 'Concept', href: '/concept-2026' },
   { label: 'Intervenants', href: '/intervenants-2026' },
   { label: 'Agenda', href: '/agenda-2026' },
 ];
-const TICKET_URL = 'https://www.billetweb.fr/shift-hackathon-2026';
+const TICKET_URL = EDITION.ticketUrl;
 const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
 
 export default function Nav() {

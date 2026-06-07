@@ -1,4 +1,6 @@
-export const TICKET_URL = 'https://www.billetweb.fr/shift-hackathon-2026';
+import { EDITION } from './edition';
+
+export const TICKET_URL = EDITION.ticketUrl;
 export const CDN = '/assets/images';
 
 export const NAV_LINKS = [

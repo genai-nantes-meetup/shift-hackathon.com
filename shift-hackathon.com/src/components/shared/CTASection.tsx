@@ -1,6 +1,7 @@
 import Reveal from '../Reveal';
+import { EDITION } from '../../data/edition';
 
-const TICKET_URL = 'https://www.billetweb.fr/shift-hackathon-2026';
+const TICKET_URL = EDITION.ticketUrl;
 
 export default function CTASection() {
   return (

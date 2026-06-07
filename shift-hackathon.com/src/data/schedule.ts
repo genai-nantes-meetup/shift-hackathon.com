@@ -1,4 +1,4 @@
-const CDN = '/assets/images';
+import { CDN } from './site';
 
 export const SCHEDULE = [
   {

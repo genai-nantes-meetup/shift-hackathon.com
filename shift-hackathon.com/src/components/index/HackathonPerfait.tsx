@@ -1,10 +1,11 @@
 import Reveal from '../Reveal';
+import { EDITION } from '../../data/edition';
 
 const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
 const DELA = "'Dela Gothic One', sans-serif";
 const OXANIUM = 'Oxanium, sans-serif';
 
-const TICKET_URL = 'https://www.billetweb.fr/shift-hackathon-2026';
+const TICKET_URL = EDITION.ticketUrl;
 
 const DESCRIPTION_PARAGRAPHS = [
   "Shift, c'est LE hackathon Gen AI de la place nantaise. Après 2 éditions hautes en couleur, nous revenons sous le pavillon noir : toi, l'iconoclastic hacker, toi le designer alchemist, ou toi le product shaper, à cette édition 2026, tu vas te RÉ-GA-LER.",
