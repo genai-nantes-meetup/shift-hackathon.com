@@ -41,25 +41,33 @@ export default function Footer() {
           </p>
         </div>
         <div>
+          <h3
+            style={{
+              color: '#fff',
+              fontFamily: "'Agrandir Grand Heavy', sans-serif",
+              fontSize: '24px',
+              fontWeight: 800,
+              margin: '0 0 8px',
+            }}
+          >
+            Nous Contacter
+          </h3>
           <p
             style={{
               color: 'rgba(255,255,255,0.6)',
-              fontFamily: 'Barlow, sans-serif',
-              fontSize: '0.8rem',
-              fontWeight: 600,
+              fontFamily: 'Oxanium, sans-serif',
+              fontSize: '14px',
               marginBottom: '1rem',
-              textTransform: 'uppercase',
-              letterSpacing: '0.08em',
             }}
           >
-            Contact
+            Une question ? N&apos;hésite pas à nous contacter
           </p>
           <form
             onSubmit={(e) => e.preventDefault()}
             style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}
           >
             <input
-              placeholder="Prénom"
+              placeholder="Name"
               type="text"
               value={values.prenom}
               onChange={(e) => setValues({ ...values, prenom: e.target.value })}
@@ -112,7 +120,7 @@ export default function Footer() {
           fontSize: '0.8rem',
         }}
       >
-        © 2026 Shift — Tous droits réservés
+        © 2026 Shift / Tous droits réservés
       </div>
     </footer>
   );

@@ -113,7 +113,6 @@ export default function IndexHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              {/* SHIFT, — 56px per live computed */}
               <p
                 style={{
                   fontFamily: AGRANDIR,
@@ -125,9 +124,8 @@ export default function IndexHero() {
                   textTransform: 'uppercase',
                 }}
               >
-                Shift,
+                Shift
               </p>
-              {/* C'est quoi ? — 22px per live computed */}
               <p
                 style={{
                   fontFamily: AGRANDIR,
@@ -139,9 +137,8 @@ export default function IndexHero() {
                   textTransform: 'uppercase',
                 }}
               >
-                C&apos;est quoi ?
+                Le Hackathon Gen AI n°1
               </p>
-              {/* Le Hackathon Gen AI n°1 — 20px green italic per live computed */}
               <p
                 style={{
                   fontFamily: AGRANDIR_ITALIC,
@@ -154,7 +151,7 @@ export default function IndexHero() {
                   textTransform: 'uppercase',
                 }}
               >
-                Le Hackathon Gen AI n°1
+                pour les Designers, Devs &amp; Product lovers
               </p>
             </motion.div>
 
@@ -164,7 +161,6 @@ export default function IndexHero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               style={{ marginBottom: '24px' }}
             >
-              {/* Line 1 — 18px Oxanium per live computed */}
               <p
                 style={{
                   color: '#fff',
@@ -174,9 +170,8 @@ export default function IndexHero() {
                   lineHeight: '27.9px',
                 }}
               >
-                Shift — Time To Custom, c&apos;est 48 heures pour hacker ton outil préféré.
+                Crée des produits Gen AI game-changer en 48 heures.
               </p>
-              {/* Line 2 — 15px Oxanium per live computed */}
               <p
                 style={{
                   color: '#fff',
@@ -186,9 +181,8 @@ export default function IndexHero() {
                   lineHeight: '23.25px',
                 }}
               >
-                Créer une vraie feature Gen AI utile pour ton usage.
+                Édition &ldquo;Time to Custom&rdquo; → Hack ton outil préféré.
               </p>
-              {/* Line 3 — 15px Oxanium + margin top per live computed */}
               <p
                 style={{
                   color: '#fff',
@@ -198,7 +192,7 @@ export default function IndexHero() {
                   margin: '14px 0 0',
                 }}
               >
-                🔥 Produire aux côtés des meilleurs experts tech.
+                🔥 Event all-inclusive - coaching, food &amp; fun.
               </p>
             </motion.div>
 
@@ -207,7 +201,6 @@ export default function IndexHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.35 }}
             >
-              {/* CTA Button — Agrandir Grand Heavy, dark bg, green shadow like live */}
               <a
                 href={TICKET_URL}
                 target="_blank"
@@ -228,8 +221,20 @@ export default function IndexHero() {
                   boxShadow: 'rgba(159,248,57,0.5) 0px 5px 0px 0px',
                 }}
               >
-                Take my money 🤘
+                Je suis chaud pour 2027 !
               </a>
+              <p
+                style={{
+                  fontFamily: AGRANDIR_ITALIC,
+                  fontStyle: 'italic',
+                  fontSize: '14px',
+                  fontWeight: 100,
+                  color: 'rgba(255,255,255,0.7)',
+                  margin: '8px 0 0',
+                }}
+              >
+                Réserve ta place !!
+              </p>
             </motion.div>
           </div>
 

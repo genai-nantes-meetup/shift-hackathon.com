@@ -50,7 +50,7 @@ export const SCHEDULE = [
     day: 'Samedi 28 Mars',
     label: 'Jour 2',
     weekday: 'Samedi',
-    headerColor: '#f75787',
+    headerColor: '#9ff839',
     slots: [
       { time: '8h30', title: 'Petit déjeuner' },
       {
@@ -90,7 +90,7 @@ export const SCHEDULE = [
     day: 'Dimanche 29 Mars',
     label: 'Jour 3',
     weekday: 'Dimanche',
-    headerColor: '#2aebf5',
+    headerColor: '#9ff839',
     slots: [
       { time: '8h30', title: 'Petit déjeuner' },
       {

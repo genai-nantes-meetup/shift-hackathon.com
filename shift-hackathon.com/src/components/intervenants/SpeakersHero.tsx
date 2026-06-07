@@ -84,45 +84,20 @@ export default function SpeakersHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <p
+            <h1
               style={{
                 fontFamily: AGRANDIR,
-                fontSize: '56px',
+                fontSize: '64px',
                 fontWeight: 800,
                 color: '#fff',
-                lineHeight: '50.4px',
-                textTransform: 'uppercase',
-                margin: '0 0 4px',
-              }}
-            >
-              Shift,
-            </p>
-            <p
-              style={{
-                fontFamily: AGRANDIR,
-                fontSize: '22px',
-                fontWeight: 800,
-                color: '#fff',
-                lineHeight: '24.2px',
-                textTransform: 'uppercase',
-                margin: '0 0 2px',
-              }}
-            >
-              C&apos;est quoi ?
-            </p>
-            <p
-              style={{
-                fontFamily: AGRANDIR_ITALIC,
-                fontSize: '20px',
-                fontWeight: 100,
-                color: 'rgb(159, 248, 57)',
-                lineHeight: '24px',
+                lineHeight: '57.6px',
                 textTransform: 'uppercase',
                 margin: '0 0 28px',
               }}
             >
-              Le Hackathon Gen AI n°1
-            </p>
+              Les{' '}
+              <span style={{ color: 'rgb(159, 248, 57)' }}>Intervenants</span>
+            </h1>
           </motion.div>
 
           <motion.div
@@ -140,8 +115,7 @@ export default function SpeakersHero() {
                 lineHeight: '27.9px',
               }}
             >
-              Shift — Time To Custom, c&apos;est 48 heures pour construire un projet Gen AI de A à
-              Z.
+              Attache ta ceinture et jette un œil au line-up de ce hackathon d&apos;anthologie !
             </p>
           </motion.div>
 

@@ -65,7 +65,7 @@ const arrowSvg = (color: string) =>
 
 export default function Pricing() {
   return (
-    <section style={{ padding: '79px 30px', background: '#000' }}>
+    <section style={{ padding: '79px 30px', background: '#e8e8e8' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <Reveal>
           <h2
@@ -73,7 +73,7 @@ export default function Pricing() {
               fontFamily: AGRANDIR,
               fontSize: '50px',
               fontWeight: 800,
-              color: '#fff',
+              color: '#190532',
               marginBottom: '0.5rem',
               lineHeight: 1,
             }}
@@ -84,7 +84,7 @@ export default function Pricing() {
         <Reveal delay={0.1}>
           <p
             style={{
-              color: 'rgba(255,255,255,0.7)',
+              color: 'rgba(25,5,50,0.7)',
               fontFamily: OXANIUM,
               fontSize: '18px',
               marginBottom: '3rem',

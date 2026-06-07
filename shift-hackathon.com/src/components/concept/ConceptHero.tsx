@@ -70,20 +70,20 @@ export default function ConceptHero() {
                 textTransform: 'uppercase',
               }}
             >
-              Shift
+              Shift,
             </p>
             <p
               style={{
                 fontFamily: AGRANDIR,
-                fontSize: '22px',
+                fontSize: '36px',
                 fontWeight: 800,
-                color: '#fff',
-                lineHeight: '24.2px',
-                margin: '0 0 2px',
+                color: 'rgb(159, 248, 57)',
+                lineHeight: '38px',
+                margin: '0 0 4px',
                 textTransform: 'uppercase',
               }}
             >
-              Le Hackathon Gen AI n°1
+              C&apos;est quoi ?
             </p>
             <p
               style={{
@@ -93,10 +93,11 @@ export default function ConceptHero() {
                 color: '#fff',
                 lineHeight: '24px',
                 margin: '0 0 28px',
+                fontStyle: 'italic',
                 textTransform: 'uppercase',
               }}
             >
-              pour les Designers, Devs &amp; Product Lovers
+              Le Hackathon Gen AI n°1
             </p>
           </motion.div>
 
@@ -115,29 +116,9 @@ export default function ConceptHero() {
                 lineHeight: '27.9px',
               }}
             >
-              Crée des produits Gen AI game-changer en 48h.
-            </p>
-            <p
-              style={{
-                color: '#fff',
-                fontFamily: OXANIUM,
-                fontSize: '18px',
-                margin: 0,
-                lineHeight: '27.9px',
-              }}
-            >
-              Édition &quot;Time to Custom&quot; → Hack ton outil favori.
-            </p>
-            <p
-              style={{
-                color: '#fff',
-                fontFamily: OXANIUM,
-                fontSize: '18px',
-                margin: '14px 0 0',
-                lineHeight: '27.9px',
-              }}
-            >
-              🔥 Event all-inclusive - coaching, food &amp; drinks inclus.
+              Shift - Time To Custom, c&apos;est 48 heures pour hacker ton outil préféré, créer une
+              vraie feature Gen AI utile pour ton usage, et produire aux côtés des meilleurs experts
+              tech.
             </p>
           </motion.div>
 
@@ -166,7 +147,7 @@ export default function ConceptHero() {
                 boxShadow: 'rgba(159, 248, 57, 0.5) 0px 5px 0px 0px',
               }}
             >
-              Je suis chaud pour 2027 !
+              Take my money
             </a>
           </motion.div>
         </div>

@@ -32,10 +32,10 @@ export default function SpeakersPreview() {
             Ils seront présents en 2026
           </h2>
         </Reveal>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px' }}>
-          {preview.map((s, i) => (
-            <Reveal key={s.name} delay={i * 0.07}>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+        <Reveal>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px' }}>
+            {preview.map((s) => (
+              <div key={s.name} style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                 <img
                   src={s.img}
                   alt={s.name}
@@ -76,9 +76,9 @@ export default function SpeakersPreview() {
                   ))}
                 </div>
               </div>
-            </Reveal>
-          ))}
-        </div>
+            ))}
+          </div>
+        </Reveal>
         <Reveal delay={0.4}>
           <div style={{ textAlign: 'center' }}>
             <a
