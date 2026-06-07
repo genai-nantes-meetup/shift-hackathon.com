@@ -1,6 +1,9 @@
+@import './tokens.css';
+@import './hero.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 html,
 body {
   margin: 0;
@@ -11,11 +14,4 @@ body {
 *::before,
 *::after {
   box-sizing: inherit;
-}
-:root {
-  --cyan: #2aebf5;
-  --yellow: #fae01b;
-  --pink: #f75787;
-  --lime: #9ff839;
-  --red: #fc233d;
 }

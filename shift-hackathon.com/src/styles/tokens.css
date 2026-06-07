@@ -1,0 +1,121 @@
+/* Design tokens — extracted from prod (shift-hackathon.com) via DOM computed-style scrape. */
+
+:root {
+  /* ---- Colors ---- */
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-purple-deep: #190532;        /* CTA text on green bg */
+  --color-lime: #9ff839;               /* CTA bg, accents */
+  --color-lime-shadow: rgba(159, 248, 57, 0.5);
+  --color-cyan: #2aebf5;
+  --color-yellow: #fae01b;
+  --color-pink: #f75787;
+  --color-red: #fc233d;
+  --color-orange: #f5b700;
+
+  /* Translucent overlays */
+  --color-white-85: rgba(255, 255, 255, 0.85);
+  --color-white-70: rgba(255, 255, 255, 0.70);
+  --color-white-55: rgba(255, 255, 255, 0.55);
+  --color-white-30: rgba(255, 255, 255, 0.30);
+  --color-white-15: rgba(255, 255, 255, 0.15);
+  --color-white-08: rgba(255, 255, 255, 0.08);
+
+  /* ---- Fonts ---- */
+  --font-display: 'Agrandir Grand Heavy', 'Agrandir Grand Heavy Placeholder', sans-serif;
+  --font-italic: 'Agrandir Thin Italic', sans-serif;
+  --font-body: 'Oxanium', sans-serif;
+  --font-dela: 'Dela Gothic One', sans-serif;
+  --font-barlow: 'Barlow', sans-serif;
+
+  /* ---- Type scale (computed from prod) ---- */
+  /* Hero */
+  --fs-hero-title: 64px;
+  --lh-hero-title: 70.4px;
+  --fs-hero-sub: 22px;
+  --lh-hero-sub: 24.2px;
+  --fs-hero-italic: 20px;
+  --lh-hero-italic: 22px;
+  --fs-hero-body: 18px;
+  --lh-hero-body: 27px;
+  --fs-cta: 16px;
+  --lh-cta: 19.2px;
+  --ls-cta: 1.6px;
+
+  /* Section titles (h2) */
+  --fs-h2: 50px;
+  --lh-h2: 50px;
+
+  /* ---- Spacing ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* Container */
+  --container-max: 1200px;
+  --container-pad: 32px;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+
+  /* ---- Shadows ---- */
+  --shadow-cta: 0 5px 0 0 var(--color-lime-shadow);
+
+  /* ---- Easing (Framer-like) ---- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 0.4s;
+  --duration-base: 0.55s;
+  --duration-slow: 0.7s;
+}
+
+/* ---- Reusable utility classes ---- */
+
+.cta-primary {
+  display: inline-block;
+  background: var(--color-lime);
+  color: var(--color-purple-deep);
+  font-family: var(--font-display);
+  font-size: var(--fs-cta);
+  font-weight: 400;
+  line-height: var(--lh-cta);
+  letter-spacing: var(--ls-cta);
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 11.2px 28px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  box-shadow: var(--shadow-cta);
+  transition: transform 0.2s var(--ease-out);
+}
+.cta-primary:hover {
+  transform: translateY(-2px);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-left: var(--container-pad);
+  padding-right: var(--container-pad);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
+  font-weight: 800;
+  color: var(--color-white);
+  margin: 0;
+}
