@@ -46,6 +46,35 @@
   --fs-h2: 50px;
   --lh-h2: 50px;
 
+  /* Topic cards */
+  --fs-topic-title: 40px;
+  --lh-topic-title: 44px;
+  --fs-topic-body: 18px;
+  --lh-topic-body: 27px;
+
+  /* Testimonial cards */
+  --fs-test-name: 16px;
+  --lh-test-name: 22.4px;
+  --fs-test-role: 14px;
+  --lh-test-role: 21px;
+  --fs-test-quote: 16px;
+  --lh-test-quote: 25.6px;
+  --color-test-name: rgb(51, 51, 51);
+  --color-test-role: rgb(153, 153, 153);
+  --color-test-quote: rgb(102, 102, 102);
+
+  /* Pricing */
+  --fs-pricing-tag: 16px;
+  --lh-pricing-tag: 20.8px;
+
+  /* Lieu / Past glimpse badge */
+  --fs-lieu-badge: 36px;
+  --lh-lieu-badge: 43.2px;
+
+  /* Banner subtitle */
+  --fs-banner-sub: 20px;
+  --lh-banner-sub: 24px;
+
   /* ---- Spacing ---- */
   --space-1: 4px;
   --space-2: 8px;

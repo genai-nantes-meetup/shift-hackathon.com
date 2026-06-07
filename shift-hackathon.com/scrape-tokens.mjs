@@ -5,20 +5,20 @@ const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
 await page.goto('https://shift-hackathon.com/', { waitUntil: 'domcontentloaded', timeout: 60000 });
 await page.waitForLoadState('networkidle', { timeout: 30000 }).catch(() => {});
 
-// Inspect hero section : find h1, big text, CTA, sub-CTA
-const hero = await page.evaluate(() => {
+// Inspect a target section. Default to Hero, override via $SECTION env (data-framer-name).
+const targetName = process.env.SECTION || 'Hero';
+const hero = await page.evaluate((sectionName) => {
   const out = { fonts: new Set(), colors: new Set(), elements: [] };
   const props = ['fontFamily', 'fontSize', 'fontWeight', 'lineHeight', 'letterSpacing', 'color', 'textTransform', 'fontStyle', 'marginTop', 'marginBottom', 'marginLeft', 'marginRight', 'paddingTop', 'paddingBottom', 'paddingLeft', 'paddingRight', 'gap', 'backgroundColor', 'borderRadius', 'boxShadow'];
 
-  // Get hero section by data-framer-name
-  const heroSection = document.querySelector('[data-framer-name="Hero"]');
-  if (!heroSection) return { error: 'Hero section not found' };
+  const heroSection = document.querySelector(`[data-framer-name="${sectionName}"]`);
+  if (!heroSection) return { error: `Section "${sectionName}" not found` };
+  heroSection.scrollIntoView({ block: 'start' });
 
   // Walk all relevant elements including span and br for inline styles
   heroSection.querySelectorAll('h1, h2, h3, h4, h5, h6, p, a, button, img, span, div').forEach((el) => {
     const cs = getComputedStyle(el);
     const rect = el.getBoundingClientRect();
-    if (rect.width === 0 || rect.height === 0) return;
     const data = {
       tag: el.tagName.toLowerCase(),
       name: el.getAttribute('data-framer-name') || null,
@@ -41,9 +41,9 @@ const hero = await page.evaluate(() => {
   return {
     fonts: [...out.fonts],
     colors: [...out.colors],
-    elements: out.elements.slice(0, 200),
+    elements: out.elements.slice(0, 300),
   };
-});
+}, targetName);
 
 console.log(JSON.stringify(hero, null, 2));
 await browser.close();

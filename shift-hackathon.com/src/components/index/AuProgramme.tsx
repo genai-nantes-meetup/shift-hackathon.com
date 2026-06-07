@@ -1,8 +1,5 @@
 import Reveal from '../Reveal';
 
-const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
-const OXANIUM = 'Oxanium, sans-serif';
-
 const CARDS = [
   {
     title: "Confs'",
@@ -32,55 +29,22 @@ const CARDS = [
 
 export default function AuProgramme() {
   return (
-    <section style={{ background: '#000', padding: '100px 30px' }}>
-      <div style={{ maxWidth: 1240, margin: '0 auto' }}>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(2, 1fr)',
-            gap: '40px',
-          }}
-        >
-          {CARDS.map((card, i) => (
-            <Reveal key={card.title} delay={i * 0.08}>
-              <div
-                style={{
-                  border: `8px solid ${card.color}`,
-                  padding: '80px 70px',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '40px',
-                  minHeight: 520,
-                  marginTop: i % 2 === 1 ? '120px' : 0,
-                }}
-              >
-                <h4
-                  style={{
-                    fontFamily: AGRANDIR,
-                    fontSize: 'clamp(36px, 4vw, 60px)',
-                    color: card.color,
-                    margin: 0,
-                    whiteSpace: 'pre-line',
-                    lineHeight: 1.05,
-                  }}
-                >
-                  {card.title}
-                </h4>
-                <p
-                  style={{
-                    fontFamily: OXANIUM,
-                    fontSize: 'clamp(16px, 1.4vw, 20px)',
-                    color: card.color,
-                    margin: 0,
-                    lineHeight: 1.6,
-                  }}
-                >
-                  {card.description}
-                </p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
+    <section className="topics">
+      <div className="topics__inner">
+        {CARDS.map((card, i) => (
+          <Reveal key={card.title} delay={i * 0.08}>
+            <div
+              className={`topics__card ${i % 2 === 1 ? 'topics__card--offset' : ''}`}
+              style={{
+                border: `8px solid ${card.color}`,
+                color: card.color,
+              }}
+            >
+              <h4>{card.title}</h4>
+              <p>{card.description}</p>
+            </div>
+          </Reveal>
+        ))}
       </div>
     </section>
   );

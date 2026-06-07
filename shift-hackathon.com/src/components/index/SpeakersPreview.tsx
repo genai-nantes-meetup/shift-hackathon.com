@@ -1,102 +1,32 @@
 import Reveal from '../Reveal';
 import { SPEAKERS } from '../../data/site';
 
-const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
-const DELA = "'Dela Gothic One', sans-serif";
-const OXANIUM = 'Oxanium, sans-serif';
-
 export default function SpeakersPreview() {
   const preview = SPEAKERS.slice(0, 6);
   return (
-    <section style={{ background: '#000', display: 'flex', justifyContent: 'center' }}>
-      <div
-        style={{
-          width: '1240px',
-          maxWidth: '1240px',
-          padding: '73px 120px 102px',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '60px',
-        }}
-      >
+    <section className="speakers">
+      <div className="speakers__inner">
         <Reveal>
-          <h2
-            style={{
-              fontFamily: AGRANDIR,
-              fontSize: '50px',
-              fontWeight: 800,
-              lineHeight: '50px',
-              color: '#fff',
-            }}
-          >
-            Ils seront présents en 2026
-          </h2>
+          <h2 className="speakers__title">Ils seront présents en 2026</h2>
         </Reveal>
         <Reveal>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px' }}>
+          <div className="speakers__grid">
             {preview.map((s) => (
-              <div key={s.name} style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                <img
-                  src={s.img}
-                  alt={s.name}
-                  style={{
-                    width: '100%',
-                    aspectRatio: '314 / 310',
-                    objectFit: 'cover',
-                    borderRadius: '4px',
-                    display: 'block',
-                  }}
-                />
+              <div key={s.name} className="speakers__card">
+                <img src={s.img} alt={s.name} loading="lazy" />
                 <div>
-                  <h6
-                    style={{
-                      fontFamily: DELA,
-                      fontWeight: 400,
-                      color: '#fff',
-                      fontSize: '24px',
-                      margin: '0',
-                      lineHeight: 1.15,
-                    }}
-                  >
-                    {s.name}
-                  </h6>
+                  <h6>{s.name}</h6>
                   {s.roles.map((r) => (
-                    <p
-                      key={r}
-                      style={{
-                        fontFamily: OXANIUM,
-                        color: '#fff',
-                        fontSize: '18px',
-                        margin: '0',
-                        lineHeight: 1.4,
-                      }}
-                    >
-                      {r}
-                    </p>
+                    <p key={r}>{r}</p>
                   ))}
                 </div>
               </div>
             ))}
           </div>
         </Reveal>
-        <Reveal delay={0.4}>
-          <div style={{ textAlign: 'center' }}>
-            <a
-              href="/intervenants-2026"
-              style={{
-                display: 'inline-block',
-                fontFamily: AGRANDIR,
-                fontSize: '12px',
-                color: 'rgb(25, 5, 50)',
-                backgroundColor: '#9ff839',
-                textDecoration: 'none',
-                letterSpacing: '0.48px',
-                textTransform: 'uppercase',
-                borderRadius: '4px',
-                boxShadow: 'rgba(159, 248, 57, 0.5) 0px 5px 0px 0px',
-                padding: '11.2px 28px',
-              }}
-            >
+        <Reveal delay={0.2}>
+          <div className="speakers__see-all">
+            <a href="/intervenants-2026" className="cta-primary">
               Voir tous les intervenants →
             </a>
           </div>

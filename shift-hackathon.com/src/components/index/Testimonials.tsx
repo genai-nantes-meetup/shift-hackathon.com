@@ -1,6 +1,3 @@
-const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
-const OXANIUM = 'Oxanium, sans-serif';
-
 const VIDEOS = [
   {
     id: '5WpRugDrfvY',
@@ -19,106 +16,35 @@ const VIDEOS = [
   {
     id: 'Vi69XNKCSVw',
     title: 'Aftermovie 2024',
-    description:
-      "Plongez dans l'ambiance de l'édition 2024 pour avoir un aperçu de l'expérience !",
+    description: "Plongez dans l'ambiance de l'édition 2024 pour avoir un aperçu de l'expérience !",
     autoplay: false,
   },
   {
     id: 'ZQ2QHJ4kOkE',
     title: 'Interviews 2024',
-    description:
-      "Découvrez ce qu'on pensé les différents participants de l'édition 2024.",
+    description: "Découvrez ce qu'on pensé les différents participants de l'édition 2024.",
     autoplay: false,
   },
 ];
 
 export default function Testimonials() {
   return (
-    <section
-      style={{
-        background: '#000',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        overflow: 'hidden',
-      }}
-    >
-      <div
-        style={{
-          width: '1200px',
-          maxWidth: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '60px',
-          padding: '37px 0',
-        }}
-      >
-        <h4
-          style={{
-            fontFamily: AGRANDIR,
-            fontSize: '40px',
-            fontWeight: 400,
-            lineHeight: '1.1em',
-            color: 'rgb(255,255,255)',
-            margin: 0,
-            alignSelf: 'flex-start',
-          }}
-        >
-          Révivez les éditions précédentes
-        </h4>
-
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(2, 1fr)',
-            gap: '40px',
-            width: '100%',
-          }}
-        >
+    <section className="past">
+      <div className="past__inner">
+        <h4 className="past__title">Révivez les éditions précédentes</h4>
+        <div className="past__grid">
           {VIDEOS.map((v) => (
-            <div
-              key={v.id}
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '30px',
-              }}
-            >
-              <div style={{ width: '100%', aspectRatio: '16/9', position: 'relative' }}>
+            <div key={v.id} className="past__card">
+              <div className="past__video">
                 <iframe
-                  style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-                  title={v.title}
-                  allow="presentation; fullscreen; accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                   src={`https://www.youtube.com/embed/${v.id}?iv_load_policy=3&rel=0&modestbranding=1&playsinline=1&autoplay=${v.autoplay ? 1 : 0}${v.autoplay ? '&mute=1' : ''}`}
-                  frameBorder="0"
+                  title={v.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
                 />
               </div>
-
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-                <h6
-                  style={{
-                    fontFamily: AGRANDIR,
-                    fontSize: '24px',
-                    fontWeight: 400,
-                    color: 'rgb(255,255,255)',
-                    margin: 0,
-                  }}
-                >
-                  {v.title}
-                </h6>
-                <p
-                  style={{
-                    fontFamily: OXANIUM,
-                    fontSize: '18px',
-                    fontWeight: 400,
-                    lineHeight: '27px',
-                    color: 'rgb(255,255,255)',
-                    margin: 0,
-                  }}
-                >
-                  {v.description}
-                </p>
-              </div>
+              <h5>{v.title}</h5>
+              <p>{v.description}</p>
             </div>
           ))}
         </div>

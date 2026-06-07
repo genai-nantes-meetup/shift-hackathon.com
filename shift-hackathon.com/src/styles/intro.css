@@ -1,0 +1,66 @@
+/* Intro Section — pixel-aligned with prod */
+
+.intro {
+  background: var(--color-black);
+  padding: 80px 30px;
+}
+.intro__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro__title {
+  font-family: var(--font-display);
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 800;
+  color: var(--color-white);
+  margin: 0 0 30px;
+}
+
+.intro__body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.intro__body p {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 400;
+  color: var(--color-white);
+}
+
+.intro__cta {
+  display: inline-block;
+  background: var(--color-lime);
+  color: var(--color-purple-deep);
+  font-family: var(--font-display);
+  font-size: 14px;
+  line-height: 16.8px;
+  font-weight: 400;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 11px 28px;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-cta);
+}
+
+.intro__mosaic {
+  max-width: 1240px;
+  margin: 60px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.intro__mosaic img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  display: block;
+}
