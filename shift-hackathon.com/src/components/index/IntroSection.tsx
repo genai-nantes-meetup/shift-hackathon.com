@@ -21,35 +21,8 @@ const MOSAIC = [
 export default function IntroSection() {
   return (
     <section style={{ background: '#000', padding: '80px 30px' }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+      <div style={{ maxWidth: 1000, margin: '0 auto', textAlign: 'center' }}>
         <Reveal>
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(4, 1fr)',
-              gap: '20px',
-              marginBottom: '60px',
-            }}
-          >
-            {MOSAIC.map((m) => (
-              <img
-                key={m.src}
-                src={m.src}
-                alt={m.alt}
-                loading="lazy"
-                style={{
-                  width: '100%',
-                  aspectRatio: '419 / 279',
-                  objectFit: 'cover',
-                  borderRadius: '4px',
-                  display: 'block',
-                }}
-              />
-            ))}
-          </div>
-        </Reveal>
-
-        <Reveal delay={0.05}>
           <h2
             style={{
               fontFamily: AGRANDIR,
@@ -64,13 +37,12 @@ export default function IntroSection() {
           </h2>
         </Reveal>
 
-        <Reveal delay={0.1}>
+        <Reveal delay={0.05}>
           <div
             style={{
               display: 'flex',
               flexDirection: 'column',
               gap: '1rem',
-              maxWidth: 880,
               marginBottom: '32px',
             }}
           >
@@ -91,7 +63,7 @@ export default function IntroSection() {
           </div>
         </Reveal>
 
-        <Reveal delay={0.15}>
+        <Reveal delay={0.1}>
           <a
             href="/concept-2026"
             style={{
@@ -106,10 +78,39 @@ export default function IntroSection() {
               letterSpacing: '0.48px',
               borderRadius: '4px',
               boxShadow: 'rgba(159,248,57,0.5) 0px 5px 0px 0px',
+              marginBottom: '60px',
             }}
           >
             En savoir plus sur le concept
           </a>
+        </Reveal>
+      </div>
+
+      <div style={{ maxWidth: 1240, margin: '60px auto 0' }}>
+        <Reveal delay={0.15}>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(4, 1fr)',
+              gap: '20px',
+            }}
+          >
+            {MOSAIC.map((m) => (
+              <img
+                key={m.src}
+                src={m.src}
+                alt={m.alt}
+                loading="lazy"
+                style={{
+                  width: '100%',
+                  aspectRatio: '419 / 279',
+                  objectFit: 'cover',
+                  borderRadius: '4px',
+                  display: 'block',
+                }}
+              />
+            ))}
+          </div>
         </Reveal>
       </div>
     </section>

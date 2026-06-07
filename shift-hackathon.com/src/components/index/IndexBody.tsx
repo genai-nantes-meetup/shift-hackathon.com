@@ -4,11 +4,12 @@ import Footer from '../Footer';
 import IndexHero from './IndexHero';
 import IntroSection from './IntroSection';
 import SpeakersPreview from './SpeakersPreview';
-import HackathonPerfait from './HackathonPerfait';
+import AuProgramme from './AuProgramme';
+import Testimonials from './Testimonials';
 import TestimonialsList from './TestimonialsList';
 import Partners from './Partners';
 import Pricing from './Pricing';
-import Testimonials from './Testimonials';
+import Banner from './Banner';
 import Lieu from './Lieu';
 import Faq from './Faq';
 import OrgaTeam from './OrgaTeam';
@@ -22,11 +23,12 @@ export default function IndexBody() {
         <IndexHero />
         <IntroSection />
         <SpeakersPreview />
-        <HackathonPerfait />
+        <AuProgramme />
+        <Testimonials />
         <TestimonialsList />
         <Partners />
         <Pricing />
-        <Testimonials />
+        <Banner />
         <Lieu />
         <Faq />
         <OrgaTeam />
