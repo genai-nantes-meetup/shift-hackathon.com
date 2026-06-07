@@ -50,7 +50,11 @@ const TIERS = [
     features: [
       { text: 'Une ', bold: 'visibilité', rest: " auprès des makers de l'IA générative" },
       { text: "L'occasion parfaite de ", bold: 'sourcer', rest: ' de futurs talents' },
-      { text: "L'occasion unique pour ", bold: "mettre le pied à l’étrier", rest: ' de vos collaborateurs' },
+      {
+        text: "L'occasion unique pour ",
+        bold: 'mettre le pied à l’étrier',
+        rest: ' de vos collaborateurs',
+      },
     ],
   },
 ];
@@ -90,7 +94,14 @@ export default function Pricing() {
           </p>
         </Reveal>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem', alignItems: 'start' }}>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            gap: '1.5rem',
+            alignItems: 'start',
+          }}
+        >
           {TIERS.map((t, i) => (
             <Reveal key={t.name} delay={i * 0.1}>
               <div
@@ -155,7 +166,15 @@ export default function Pricing() {
                   </p>
 
                   {/* Divider */}
-                  <div style={{ width: 32, height: 3, background: '#000', margin: '0 auto 1rem', borderRadius: 2 }} />
+                  <div
+                    style={{
+                      width: 32,
+                      height: 3,
+                      background: '#000',
+                      margin: '0 auto 1rem',
+                      borderRadius: 2,
+                    }}
+                  />
 
                   {/* Tagline */}
                   <p

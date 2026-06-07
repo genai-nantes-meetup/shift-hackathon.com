@@ -106,13 +106,37 @@ export default function ConceptHero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             style={{ marginBottom: '24px' }}
           >
-            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: 0, lineHeight: '27.9px' }}>
+            <p
+              style={{
+                color: '#fff',
+                fontFamily: OXANIUM,
+                fontSize: '18px',
+                margin: 0,
+                lineHeight: '27.9px',
+              }}
+            >
               Crée des produits Gen AI game-changer en 48h.
             </p>
-            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: 0, lineHeight: '27.9px' }}>
+            <p
+              style={{
+                color: '#fff',
+                fontFamily: OXANIUM,
+                fontSize: '18px',
+                margin: 0,
+                lineHeight: '27.9px',
+              }}
+            >
               Édition &quot;Time to Custom&quot; → Hack ton outil favori.
             </p>
-            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: '14px 0 0', lineHeight: '27.9px' }}>
+            <p
+              style={{
+                color: '#fff',
+                fontFamily: OXANIUM,
+                fontSize: '18px',
+                margin: '14px 0 0',
+                lineHeight: '27.9px',
+              }}
+            >
               🔥 Event all-inclusive - coaching, food &amp; drinks inclus.
             </p>
           </motion.div>

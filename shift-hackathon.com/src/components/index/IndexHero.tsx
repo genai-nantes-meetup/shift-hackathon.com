@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
-import { CDN, PARTNERS } from '../../data/site';
-
+import { CDN } from '../../data/site';
 import { EDITION } from '../../data/edition';
+
 const TICKET_URL = EDITION.earlyTicketUrl;
 const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
 const AGRANDIR_ITALIC = "'Agrandir Thin Italic', sans-serif";
@@ -9,28 +9,28 @@ const OXANIUM = 'Oxanium, sans-serif';
 
 // All sponsors/complices — shown in scrolling marquee
 const ALL_COMPLICES = [
-  { name: 'Gemini',        logo: `${CDN}/ZDjW6Wo0anEy1mUzbo2oqRQtpeY.png` },
-  { name: 'Mistral AI',    logo: `${CDN}/D8JhRI4faB6vhAVUDF9e72ra0.png` },
-  { name: 'ElevenLabs',    logo: `${CDN}/8pyqucSyEzD44VogAFy6xnROzw.png` },
-  { name: 'n8n',           logo: `${CDN}/WgEQw7xxkydh0HvPGxeC5gEXf0E.png` },
-  { name: 'OpenAI',        logo: `${CDN}/2GfcXCoTjp9udilU3hSRmNI.png` },
-  { name: 'Meilisearch',   logo: `${CDN}/lLgDez4N7yTxGAZM34UIiFyWGYU.png` },
-  { name: 'Gladia',        logo: `${CDN}/3OZbojzYOu5aWZVGg9TzXv62rg.png` },
-  { name: 'GitHub Copilot',logo: `${CDN}/c70JnFks3D6g1Jt8j3uifdssjs.png` },
-  { name: 'Clever Cloud',  logo: `${CDN}/blQC5WAIES7A46wE17tWPV4vUM8.png` },
-  { name: 'Reecall',       logo: `${CDN}/Q4GlC03HI3EvrvR6avl4vVLn7RU.png` },
-  { name: 'Externatic',    logo: `${CDN}/NjhM1EcoE5U1JUbx41DQKwUqaY.png` },
-  { name: 'Agoriade AI',   logo: `${CDN}/FhyDFHEcmFWTH2IRbcuTP4xr8E.png` },
-  { name: 'Theodo',        logo: `${CDN}/mCTZuc3WkAEbF7mvjFvlgq2UpdY.png` },
-  { name: 'Onepoint',      logo: `${CDN}/4LTQ4nbLOoVH247zlIwkmulQeY.png` },
-  { name: 'Extia',         logo: `${CDN}/UY4Fa4zoVRxtT9bLGGzXa4CDvo.png` },
-  { name: 'Ici Lundi',     logo: `${CDN}/9HTUJVvG5eehTUa23w4KbvQXQ.png` },
-  { name: 'La Cantine',    logo: `${CDN}/jAnWbOPKhE4bgowOaZTeVS5I.svg` },
-  { name: 'Kalicube',      logo: `${CDN}/vUgDWWn8ASxflI3r8gukN5nzSA.png` },
-  { name: 'RCA',           logo: `${CDN}/Hp1Tl3hJIse0Z786qNEEdKjLSCU.png` },
-  { name: 'Arzel',         logo: `${CDN}/cHgckECvWGlsSEkTQRYeEbkkQtg.png` },
-  { name: 'Clint',         logo: `${CDN}/EyVeU2UQzbHZScFcXMMED5yAud8.png` },
-  { name: 'dev.events',    logo: `${CDN}/B3tmi7wxJqSp3uS69o09WfrttmQ.png` },
+  { name: 'Gemini', logo: `${CDN}/ZDjW6Wo0anEy1mUzbo2oqRQtpeY.png` },
+  { name: 'Mistral AI', logo: `${CDN}/D8JhRI4faB6vhAVUDF9e72ra0.png` },
+  { name: 'ElevenLabs', logo: `${CDN}/8pyqucSyEzD44VogAFy6xnROzw.png` },
+  { name: 'n8n', logo: `${CDN}/WgEQw7xxkydh0HvPGxeC5gEXf0E.png` },
+  { name: 'OpenAI', logo: `${CDN}/2GfcXCoTjp9udilU3hSRmNI.png` },
+  { name: 'Meilisearch', logo: `${CDN}/lLgDez4N7yTxGAZM34UIiFyWGYU.png` },
+  { name: 'Gladia', logo: `${CDN}/3OZbojzYOu5aWZVGg9TzXv62rg.png` },
+  { name: 'GitHub Copilot', logo: `${CDN}/c70JnFks3D6g1Jt8j3uifdssjs.png` },
+  { name: 'Clever Cloud', logo: `${CDN}/blQC5WAIES7A46wE17tWPV4vUM8.png` },
+  { name: 'Reecall', logo: `${CDN}/Q4GlC03HI3EvrvR6avl4vVLn7RU.png` },
+  { name: 'Externatic', logo: `${CDN}/NjhM1EcoE5U1JUbx41DQKwUqaY.png` },
+  { name: 'Agoriade AI', logo: `${CDN}/FhyDFHEcmFWTH2IRbcuTP4xr8E.png` },
+  { name: 'Theodo', logo: `${CDN}/mCTZuc3WkAEbF7mvjFvlgq2UpdY.png` },
+  { name: 'Onepoint', logo: `${CDN}/4LTQ4nbLOoVH247zlIwkmulQeY.png` },
+  { name: 'Extia', logo: `${CDN}/UY4Fa4zoVRxtT9bLGGzXa4CDvo.png` },
+  { name: 'Ici Lundi', logo: `${CDN}/9HTUJVvG5eehTUa23w4KbvQXQ.png` },
+  { name: 'La Cantine', logo: `${CDN}/jAnWbOPKhE4bgowOaZTeVS5I.svg` },
+  { name: 'Kalicube', logo: `${CDN}/vUgDWWn8ASxflI3r8gukN5nzSA.png` },
+  { name: 'RCA', logo: `${CDN}/Hp1Tl3hJIse0Z786qNEEdKjLSCU.png` },
+  { name: 'Arzel', logo: `${CDN}/cHgckECvWGlsSEkTQRYeEbkkQtg.png` },
+  { name: 'Clint', logo: `${CDN}/EyVeU2UQzbHZScFcXMMED5yAud8.png` },
+  { name: 'dev.events', logo: `${CDN}/B3tmi7wxJqSp3uS69o09WfrttmQ.png` },
 ];
 
 export default function IndexHero() {
@@ -57,8 +57,10 @@ export default function IndexHero() {
             zIndex: 0,
             backgroundImage: 'radial-gradient(rgba(255,255,255,0.18) 1.5px, transparent 1.5px)',
             backgroundSize: '22px 22px',
-            maskImage: 'radial-gradient(ellipse 80% 80% at 100% 0%, rgba(0,0,0,0.6) 0%, transparent 70%)',
-            WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 100% 0%, rgba(0,0,0,0.6) 0%, transparent 70%)',
+            maskImage:
+              'radial-gradient(ellipse 80% 80% at 100% 0%, rgba(0,0,0,0.6) 0%, transparent 70%)',
+            WebkitMaskImage:
+              'radial-gradient(ellipse 80% 80% at 100% 0%, rgba(0,0,0,0.6) 0%, transparent 70%)',
           }}
         />
 
@@ -163,15 +165,39 @@ export default function IndexHero() {
               style={{ marginBottom: '24px' }}
             >
               {/* Line 1 — 18px Oxanium per live computed */}
-              <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: 0, lineHeight: '27.9px' }}>
+              <p
+                style={{
+                  color: '#fff',
+                  fontFamily: OXANIUM,
+                  fontSize: '18px',
+                  margin: 0,
+                  lineHeight: '27.9px',
+                }}
+              >
                 Shift — Time To Custom, c&apos;est 48 heures pour hacker ton outil préféré.
               </p>
               {/* Line 2 — 15px Oxanium per live computed */}
-              <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '15px', margin: 0, lineHeight: '23.25px' }}>
+              <p
+                style={{
+                  color: '#fff',
+                  fontFamily: OXANIUM,
+                  fontSize: '15px',
+                  margin: 0,
+                  lineHeight: '23.25px',
+                }}
+              >
                 Créer une vraie feature Gen AI utile pour ton usage.
               </p>
               {/* Line 3 — 15px Oxanium + margin top per live computed */}
-              <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '15px', lineHeight: '23.25px', margin: '14px 0 0' }}>
+              <p
+                style={{
+                  color: '#fff',
+                  fontFamily: OXANIUM,
+                  fontSize: '15px',
+                  lineHeight: '23.25px',
+                  margin: '14px 0 0',
+                }}
+              >
                 🔥 Produire aux côtés des meilleurs experts tech.
               </p>
             </motion.div>

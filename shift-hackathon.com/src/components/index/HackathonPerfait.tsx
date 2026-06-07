@@ -9,9 +9,9 @@ const TICKET_URL = EDITION.ticketUrl;
 
 const DESCRIPTION_PARAGRAPHS = [
   "Shift, c'est LE hackathon Gen AI de la place nantaise. Après 2 éditions hautes en couleur, nous revenons sous le pavillon noir : toi, l'iconoclastic hacker, toi le designer alchemist, ou toi le product shaper, à cette édition 2026, tu vas te RÉ-GA-LER.",
-  "Le concept de cette année, ça va être de hacker ton outil préféré. Tu le trouves cool mais il ne répond pas exactement à ton usage parce qu'il lui manque une fonctionnalité clé ou parce que tu n'en es pas vraiment le \"user type\" ? Viens proposer ton hack pour développer la feature qui te ferait kiffer !",
+  'Le concept de cette année, ça va être de hacker ton outil préféré. Tu le trouves cool mais il ne répond pas exactement à ton usage parce qu\'il lui manque une fonctionnalité clé ou parce que tu n\'en es pas vraiment le "user type" ? Viens proposer ton hack pour développer la feature qui te ferait kiffer !',
   "Shift, c'est 48H de pure prod pour créer des produits Gen AI à en faire rougir les techos de la Silicon Valley. On te fournit tout : le cadre, les outils, et les conseils des meilleurs experts de la tech et de la Gen AI.",
-  "Prêt à faire tomber les barrières ? Inscris-toi et embarque pour une aventure inoubliable !",
+  'Prêt à faire tomber les barrières ? Inscris-toi et embarque pour une aventure inoubliable !',
 ];
 
 const CARDS = [
@@ -31,7 +31,7 @@ const CARDS = [
     title: 'User tests',
     color: '#44e5e7',
     description:
-      "Attention, messieurs-dames, on change les règles du jeu pour ce hackathon : deux rounds de battle avec les utilisateurs au programme ! On est là pour pimenter les choses et enrichir votre idée avec une expérience utilisateur qui déchire.",
+      'Attention, messieurs-dames, on change les règles du jeu pour ce hackathon : deux rounds de battle avec les utilisateurs au programme ! On est là pour pimenter les choses et enrichir votre idée avec une expérience utilisateur qui déchire.',
   },
   {
     title: "Fun &\nRock'n Roll",

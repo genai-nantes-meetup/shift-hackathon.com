@@ -30,8 +30,10 @@ export default function SpeakersHero() {
           zIndex: 0,
           backgroundImage: 'radial-gradient(rgba(255,255,255,0.18) 1.5px, transparent 1.5px)',
           backgroundSize: '22px 22px',
-          maskImage: 'radial-gradient(ellipse 80% 80% at 100% 0%, rgba(0,0,0,0.6) 0%, transparent 70%)',
-          WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 100% 0%, rgba(0,0,0,0.6) 0%, transparent 70%)',
+          maskImage:
+            'radial-gradient(ellipse 80% 80% at 100% 0%, rgba(0,0,0,0.6) 0%, transparent 70%)',
+          WebkitMaskImage:
+            'radial-gradient(ellipse 80% 80% at 100% 0%, rgba(0,0,0,0.6) 0%, transparent 70%)',
         }}
       />
 
@@ -129,8 +131,17 @@ export default function SpeakersHero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             style={{ marginBottom: '24px' }}
           >
-            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: '0', lineHeight: '27.9px' }}>
-              Shift — Time To Custom, c&apos;est 48 heures pour construire un projet Gen AI de A à Z.
+            <p
+              style={{
+                color: '#fff',
+                fontFamily: OXANIUM,
+                fontSize: '18px',
+                margin: '0',
+                lineHeight: '27.9px',
+              }}
+            >
+              Shift — Time To Custom, c&apos;est 48 heures pour construire un projet Gen AI de A à
+              Z.
             </p>
           </motion.div>
 
@@ -138,7 +149,12 @@ export default function SpeakersHero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.35 }}
-            style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', alignItems: 'flex-start' }}
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '0.5rem',
+              alignItems: 'flex-start',
+            }}
           >
             <a
               href={TICKET_URL}
