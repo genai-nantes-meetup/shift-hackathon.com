@@ -32,14 +32,14 @@ export const SPEAKERS = [
   },
   { name: 'Gaël Musquet', roles: ['Ethical Hacker'], img: `${CDN}/XVDL059pMtc0ikDTkzncToMVM.jpeg` },
   {
-    name: 'Pauline Corriou',
-    roles: ['Founder @ Motiv', 'Lead User Researcher @ Imagination Machine'],
-    img: `${CDN}/lyIwOv1puBWIqCuDn2zoYOXI9BY.jpeg`,
-  },
-  {
     name: 'Benoit Hediard',
     roles: ['CEO @ Globetrotters AI', 'Ex CTO @ Agorapulse'],
     img: `${CDN}/gW3WIQssHcWADKLXAFkOSSgRuM.jpg`,
+  },
+  {
+    name: 'Pauline Corriou',
+    roles: ['Founder @ Motiv', 'Lead User Researcher @ Imagination Machine'],
+    img: `${CDN}/lyIwOv1puBWIqCuDn2zoYOXI9BY.jpeg`,
   },
   {
     name: 'Adrien Etaix',
