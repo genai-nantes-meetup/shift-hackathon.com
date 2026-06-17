@@ -1,7 +1,5 @@
 import Reveal from '../Reveal';
 
-const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
-
 const IMAGES = [
   { src: '/assets/images/cq8ZzypnQ3B7cnq3vSe9YqtKZkc.jpeg', alt: 'Speaker', flex: '0 0 22%' },
   { src: '/assets/images/1MilzwluR4WPySgY1Nc71NA7z10.jpg', alt: 'Conférence', flex: '1' },
@@ -82,33 +80,6 @@ export default function Lieu() {
               </div>
             ))}
           </div>
-        </div>
-
-        {/* Title badge overlaid */}
-        <div
-          style={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            background: '#0e0218',
-            border: '6px solid #9ff839',
-            padding: '30px 80px',
-            textAlign: 'center',
-            whiteSpace: 'nowrap',
-          }}
-        >
-          <h2
-            style={{
-              fontFamily: AGRANDIR,
-              fontWeight: 800,
-              fontSize: 'clamp(20px, 2.5vw, 36px)',
-              color: '#fff',
-              margin: 0,
-            }}
-          >
-            Le Lieu - Le Palace, Nantes
-          </h2>
         </div>
       </Reveal>
     </section>

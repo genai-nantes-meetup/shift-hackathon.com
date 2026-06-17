@@ -25,13 +25,20 @@ const VIDEOS = [
     description: "Découvrez ce qu'on pensé les différents participants de l'édition 2024.",
     autoplay: false,
   },
+  {
+    id: 'u0kiG5Yn0BI',
+    title: 'Projet Vainqueur 2024',
+    description:
+      'Des playlists radio personnalisées, connectées à votre Spotify, animées par un animateur radio IA.',
+    autoplay: false,
+  },
 ];
 
 export default function Testimonials() {
   return (
     <section className="past">
       <div className="past__inner">
-        <h4 className="past__title">Révivez les éditions précédentes</h4>
+        <h4 className="past__title">Revivez les éditions précédentes</h4>
         <div className="past__grid">
           {VIDEOS.map((v) => (
             <div key={v.id} className="past__card">
@@ -48,6 +55,25 @@ export default function Testimonials() {
             </div>
           ))}
         </div>
+        <p
+          style={{
+            fontFamily: 'Oxanium, sans-serif',
+            fontStyle: 'italic',
+            fontSize: '16px',
+            color: 'rgba(255,255,255,0.7)',
+            margin: 0,
+          }}
+        >
+          Pour explorer les projets des dernières éditions, c&rsquo;est juste ici :{' '}
+          <a
+            href="https://taap.it/playlistshift"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: '#9ff839', textDecoration: 'none' }}
+          >
+            @playlistSHIFT
+          </a>
+        </p>
       </div>
     </section>
   );

@@ -4,7 +4,6 @@ import { CDN } from '../../data/site';
 import { EDITION } from '../../data/edition';
 const TICKET_URL = EDITION.ticketUrl;
 const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
-const AGRANDIR_ITALIC = "'Agrandir Thin Italic', sans-serif";
 const OXANIUM = 'Oxanium, sans-serif';
 
 export default function SpeakersHero() {

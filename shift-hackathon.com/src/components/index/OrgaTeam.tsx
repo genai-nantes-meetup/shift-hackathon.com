@@ -5,9 +5,6 @@ export default function OrgaTeam() {
   return (
     <section className="orga">
       <div className="orga__inner">
-        <Reveal>
-          <h2 className="orga__title">La team orga de choc</h2>
-        </Reveal>
         <Reveal delay={0.1}>
           <div className="orga__grid">
             {ORGA_TEAM.map((m) => (

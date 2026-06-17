@@ -241,7 +241,7 @@ export default function Pricing() {
                       boxShadow: `rgba(${t.name === 'FRIENDS' ? '252,35,61' : t.name === 'ANGELS' ? '65,105,225' : '159,248,57'},0.5) 0px 5px 0px 0px`,
                     }}
                   >
-                    Je suis chaud
+                    {t.name === 'ANGELS' ? 'Nous contacter' : 'Je suis chaud'}
                   </a>
                 </div>
               </div>

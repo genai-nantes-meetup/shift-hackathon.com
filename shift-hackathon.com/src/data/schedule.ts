@@ -2,7 +2,7 @@ import { CDN } from './site';
 
 export const SCHEDULE = [
   {
-    day: 'Vendredi 27 Mars',
+    day: '27 Mars 2026',
     label: 'Jour 1',
     weekday: 'Vendredi',
     headerColor: '#9ff839',
@@ -47,7 +47,7 @@ export const SCHEDULE = [
     ],
   },
   {
-    day: 'Samedi 28 Mars',
+    day: '28 mars 2026',
     label: 'Jour 2',
     weekday: 'Samedi',
     headerColor: '#9ff839',
@@ -66,28 +66,32 @@ export const SCHEDULE = [
       { time: '12h30', title: 'Déjeuner' },
       {
         time: '13h45',
-        title: 'Conf User Test',
-        desc: 'Masterclass par Pauline Corriou sur les user tests.',
+        title: "Conf' User Test",
+        desc: 'Une masterclass par Pauline Corriou activable pour bien préparer son premier User Test.',
         speakers: [{ name: 'Pauline Corriou', img: `${CDN}/lyIwOv1puBWIqCuDn2zoYOXI9BY.jpeg` }],
       },
       {
         time: '13h45',
-        title: 'Conf Pitch/Demo',
-        desc: "Masterclass sur l'art du pitch par Florian Hervéou.",
+        title: "Conf' Pitch/Demo",
+        desc: "Une masterclass sur l'art du pitch par Florian Hervéou dédiée aux pitcheurs/ses de votre team pour tout déchirer sur scène.",
         speakers: [{ name: 'Florian Hervéou', img: `${CDN}/FUWfV9DUONzzBTnrtdSZEAhsUTY.jpeg` }],
       },
       { time: '18h', title: 'Premier User Tests', desc: "C'est le moment des tests !" },
       { time: '19h30', title: 'Dîner' },
       {
-        time: '20h30',
+        time: '20h30 - ∞',
         title: 'Boulot',
         desc: "Jusqu'au bout de la nuit pour les plus téméraires.",
       },
-      { time: '0h', title: 'DJ set + Cocktails', desc: 'Party !' },
+      {
+        time: '00h00',
+        title: 'DJ set + Cocktails',
+        desc: "Jusqu'au bout de la nuit pour les plus téméraires.",
+      },
     ],
   },
   {
-    day: 'Dimanche 29 Mars',
+    day: '29 mars 2026',
     label: 'Jour 3',
     weekday: 'Dimanche',
     headerColor: '#9ff839',

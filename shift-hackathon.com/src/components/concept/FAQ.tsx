@@ -4,19 +4,17 @@ import { FAQ as FAQ_DATA } from '../../data/schedule';
 export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
   return (
-    <section style={{ padding: '5rem 2rem', background: '#0e0218' }}>
+    <section style={{ padding: '5rem 2rem', background: '#000' }}>
       <div style={{ maxWidth: 900, margin: '0 auto' }}>
         <h2
           style={{
             fontFamily: '"Agrandir Grand Heavy", sans-serif',
-            fontSize: '19.2px',
-            fontWeight: 900,
-            color: '#9ff839',
-            textTransform: 'uppercase',
-            letterSpacing: '1.536px',
-            padding: '0px 0px 12px',
-            margin: '0px 0px 24px',
-            borderBottom: '1px solid rgba(159,248,57,0.3)',
+            fontSize: '50px',
+            fontWeight: 800,
+            color: '#fff',
+            textAlign: 'center',
+            lineHeight: 1,
+            margin: '0 0 48px',
           }}
         >
           FAQ

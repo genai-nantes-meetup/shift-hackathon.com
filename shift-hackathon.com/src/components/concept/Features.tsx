@@ -20,17 +20,17 @@ const FEATURES: Feature[] = [
         <span style={{ color: 'rgb(159, 248, 57)' }}>Code</span> même la nuit
       </>
     ),
-    desc: "T'as deux jours pour faire trembler la tech ! Ton pack de survie est prêt pour un samedi soir épique.",
+    desc: "Défi lancé, t'as deux jours pour faire trembler la tech ! Ton pack de survie est prêt pour un samedi soir épique. Prêt à entrer dans la légende ? 😉",
     img: `${CDN}/Jiw5jmjl5bkZOcRTjhZozWVqkag.png`,
   },
   {
     title: 'Itère à fond sur ton produit avec des user tests',
-    desc: 'Deux rounds de battle avec les utilisateurs au programme — reste 100% focus sur ton code.',
+    desc: 'Voici le deal : on te dégote une bande de fous furieux prêts à maltraiter ton produit pour que tu restes 100% focus sur ton code. Mais prépares-en une de ton côté également, juste au cas où.',
     img: `${CDN}/FIv08CwEEV86fdOiJJDRE18EggA.png`,
   },
   {
     title: 'Accède à des masterclass exclusives',
-    desc: 'Choppe ces méthodes toutes fraîches et injecte-les dans ton projet dès lundi matin.',
+    desc: 'Choppe ces méthodes toutes fraîches, injecte-les dans ton projet et secoue ta boîte avec dès lundi matin.',
     img: `${CDN}/e0qRnLkp6ZzXmC6IzKZpNaCI.png`,
   },
   {
@@ -39,7 +39,7 @@ const FEATURES: Feature[] = [
         Fais toi coacher par des <span style={{ color: 'rgb(159, 248, 57)' }}>experts</span>
       </>
     ),
-    desc: "Les ninjas de la Tech, de l'IA et du Product catapultent ton projet dans la stratosphère !",
+    desc: "Besoin d'un boost ? Les ninjas de la Tech, de l'IA et du Product sont là pour catapulter ton projet dans la stratosphère !",
     img: `${CDN}/c7xay2RuvE2cpbyqmrtHBUEOg8U.png`,
   },
   {
@@ -48,17 +48,17 @@ const FEATURES: Feature[] = [
         Network avec des gens <span style={{ color: 'rgb(159, 248, 57)' }}>brillants</span>
       </>
     ),
-    desc: "Tu t'apprêtes à lier des amitiés explosives et à mettre le turbo sur ta carrière.",
+    desc: "Tu t'apprêtes à lier des amitiés explosives et à mettre le turbo sur ta carrière. Allez, montre à cet univers tech qui est le boss!",
     img: `${CDN}/TqmlbPEltzwxviVMUZaLht8j4y4.png`,
   },
   {
     title: 'Déguste 7 repas préparés avec amour',
-    desc: 'Avec ton billet, enchaîne 7 festins et code sans limite. Ne laisse pas un ventre vide te hacker le cerveau.',
+    desc: 'Ne laisse pas un ventre vide te hacker le cerveau! Avec ton billet, enchaine 7 festins et code sans limite.',
     img: `${CDN}/dHlDhUao0KWx2OMBpDbJMXLUAU8.png`,
   },
   {
     title: 'Fais péter la démo devant un jury canon',
-    desc: 'Lance-toi, épate la crème des experts et arrache ta place au sommet de Shift.',
+    desc: "Lance-toi, épate la crème des experts et arrache ta place au sommet de Shift, l'arène qui bouscule l'univers tech !",
     img: `${CDN}/dRKLyFcQn1nMAcgsUMGuKEszs.jpg`,
   },
 ];

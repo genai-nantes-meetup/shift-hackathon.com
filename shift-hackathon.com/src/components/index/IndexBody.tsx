@@ -1,4 +1,3 @@
-import ScrollProgress from '../ScrollProgress';
 import Nav from '../Nav';
 import Footer from '../Footer';
 import IndexHero from './IndexHero';
@@ -17,7 +16,6 @@ import OrgaTeam from './OrgaTeam';
 export default function IndexBody() {
   return (
     <>
-      <ScrollProgress />
       <Nav />
       <main style={{ paddingTop: 60, background: '#000', minHeight: '100vh', color: '#fff' }}>
         <IndexHero />
