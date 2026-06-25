@@ -61,8 +61,7 @@ export default function Footer() {
                 margin: '0 0 8px',
               }}
             >
-              Nous Contacter
-            </h3>
+              Nous contacter
             <p
               style={{
                 color: 'rgba(255,255,255,0.6)',
@@ -79,7 +78,7 @@ export default function Footer() {
             >
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
                 <input
-                  placeholder="Name"
+                  placeholder="Nom"
                   type="text"
                   value={values.name}
                   onChange={(e) => setValues({ ...values, name: e.target.value })}
@@ -115,7 +114,7 @@ export default function Footer() {
                   width: '100%',
                 }}
               >
-                Send
+                Envoyer
               </button>
             </form>
           </div>

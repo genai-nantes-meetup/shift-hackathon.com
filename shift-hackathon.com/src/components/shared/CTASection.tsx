@@ -42,8 +42,7 @@ export default function CTASection() {
                 margin: 0,
               }}
             >
-              Inscrits toi dès maintenant et chauffe tes potes !
-            </p>
+              Inscris-toi dès maintenant et chauffe tes potes !
           </div>
           <a
             href={TICKET_URL}
