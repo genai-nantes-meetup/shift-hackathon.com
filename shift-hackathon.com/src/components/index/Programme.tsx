@@ -20,13 +20,13 @@ const ITEMS = [
     icon: '🧪',
     title: 'User tests',
     color: '#2aebf5',
-    desc: "Attention, messieurs-dames, on change les règles du jeu pour ce hackathon : deux rounds de battle avec les utilisateurs au programme ! On est là pour pimenter les choses et enrichir votre idée avec une expérience utilisateur qui déchire.",
+    desc: 'Attention, messieurs-dames, on change les règles du jeu pour ce hackathon : deux rounds de battle avec les utilisateurs au programme ! On est là pour pimenter les choses et enrichir votre idée avec une expérience utilisateur qui déchire.',
   },
   {
     icon: '🤘',
     title: "Fun & Rock'n Roll",
     color: 'rgb(233,25,15)',
-    desc: "On vous réserve quelques surprises mais attendez-vous à une ambiance déjantée et des participants chauds bouillants !",
+    desc: 'On vous réserve quelques surprises mais attendez-vous à une ambiance déjantée et des participants chauds bouillants !',
   },
 ];
 
@@ -50,7 +50,14 @@ export default function Programme() {
         </Reveal>
 
         {/* 2-column staggered grid matching live site */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px', alignItems: 'start' }}>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            gap: '30px',
+            alignItems: 'start',
+          }}
+        >
           {ITEMS.map((item, i) => (
             <Reveal key={item.title} delay={i * 0.1}>
               <div

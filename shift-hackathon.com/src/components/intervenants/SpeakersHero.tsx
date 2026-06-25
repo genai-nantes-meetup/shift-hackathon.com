@@ -1,9 +1,9 @@
 import { motion } from 'motion/react';
+import { CDN } from '../../data/site';
 
-const TICKET_URL = 'https://www.billetweb.fr/shift-hackathon-2026';
-const CDN = 'https://framerusercontent.com/images';
+import { EDITION } from '../../data/edition';
+const TICKET_URL = EDITION.ticketUrl;
 const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
-const AGRANDIR_ITALIC = "'Agrandir Thin Italic', sans-serif";
 const OXANIUM = 'Oxanium, sans-serif';
 
 export default function SpeakersHero() {
@@ -29,8 +29,10 @@ export default function SpeakersHero() {
           zIndex: 0,
           backgroundImage: 'radial-gradient(rgba(255,255,255,0.18) 1.5px, transparent 1.5px)',
           backgroundSize: '22px 22px',
-          maskImage: 'radial-gradient(ellipse 80% 80% at 100% 0%, rgba(0,0,0,0.6) 0%, transparent 70%)',
-          WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 100% 0%, rgba(0,0,0,0.6) 0%, transparent 70%)',
+          maskImage:
+            'radial-gradient(ellipse 80% 80% at 100% 0%, rgba(0,0,0,0.6) 0%, transparent 70%)',
+          WebkitMaskImage:
+            'radial-gradient(ellipse 80% 80% at 100% 0%, rgba(0,0,0,0.6) 0%, transparent 70%)',
         }}
       />
 
@@ -81,45 +83,20 @@ export default function SpeakersHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <p
+            <h1
               style={{
                 fontFamily: AGRANDIR,
-                fontSize: '56px',
+                fontSize: '64px',
                 fontWeight: 800,
                 color: '#fff',
-                lineHeight: '50.4px',
-                textTransform: 'uppercase',
-                margin: '0 0 4px',
-              }}
-            >
-              Shift,
-            </p>
-            <p
-              style={{
-                fontFamily: AGRANDIR,
-                fontSize: '22px',
-                fontWeight: 800,
-                color: '#fff',
-                lineHeight: '24.2px',
-                textTransform: 'uppercase',
-                margin: '0 0 2px',
-              }}
-            >
-              C&apos;est quoi ?
-            </p>
-            <p
-              style={{
-                fontFamily: AGRANDIR_ITALIC,
-                fontSize: '20px',
-                fontWeight: 100,
-                color: 'rgb(159, 248, 57)',
-                lineHeight: '24px',
+                lineHeight: '57.6px',
                 textTransform: 'uppercase',
                 margin: '0 0 28px',
               }}
             >
-              Le Hackathon Gen AI n°1
-            </p>
+              Les{' '}
+              <span style={{ color: 'rgb(159, 248, 57)' }}>Intervenants</span>
+            </h1>
           </motion.div>
 
           <motion.div
@@ -128,8 +105,16 @@ export default function SpeakersHero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             style={{ marginBottom: '24px' }}
           >
-            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: '0', lineHeight: '27.9px' }}>
-              Shift — Time To Custom, c&apos;est 48 heures pour construire un projet Gen AI de A à Z.
+            <p
+              style={{
+                color: '#fff',
+                fontFamily: OXANIUM,
+                fontSize: '18px',
+                margin: '0',
+                lineHeight: '27.9px',
+              }}
+            >
+              Attache ta ceinture et jette un œil au line-up de ce hackathon d&apos;anthologie !
             </p>
           </motion.div>
 
@@ -137,7 +122,12 @@ export default function SpeakersHero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.35 }}
-            style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', alignItems: 'flex-start' }}
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '0.5rem',
+              alignItems: 'flex-start',
+            }}
           >
             <a
               href={TICKET_URL}
@@ -172,7 +162,7 @@ export default function SpeakersHero() {
           style={{ position: 'relative' }}
         >
           <img
-            src={`${CDN}/Rdl8zkLOcqcng7VGIk3w5sXc38.png`}
+            src={`${CDN}/BEuIuTovs901AlleEtQLUxkuxI.png`}
             alt="Shift Hackathon"
             style={{
               width: '100%',

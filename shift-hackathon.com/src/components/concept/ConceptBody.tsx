@@ -1,4 +1,3 @@
-import ScrollProgress from '../ScrollProgress';
 import Nav from '../Nav';
 import Footer from '../Footer';
 import ConceptHero from './ConceptHero';
@@ -10,9 +9,8 @@ import FAQ from './FAQ';
 export default function ConceptBody() {
   return (
     <>
-      <ScrollProgress />
       <Nav />
-      <main style={{ paddingTop: 60, background: '#0e0218', minHeight: '100vh', color: '#fff' }}>
+      <main style={{ paddingTop: 60, background: '#000', minHeight: '100vh', color: '#fff' }}>
         <ConceptHero />
         <Features />
         <ProjectExamples />

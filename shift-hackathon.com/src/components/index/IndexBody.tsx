@@ -1,14 +1,14 @@
-import ScrollProgress from '../ScrollProgress';
 import Nav from '../Nav';
 import Footer from '../Footer';
 import IndexHero from './IndexHero';
-import Experience from './Experience';
+import IntroSection from './IntroSection';
 import SpeakersPreview from './SpeakersPreview';
-import Programme from './Programme';
+import AuProgramme from './AuProgramme';
 import Testimonials from './Testimonials';
+import TestimonialsList from './TestimonialsList';
 import Partners from './Partners';
 import Pricing from './Pricing';
-import HackathonPerfait from './HackathonPerfait';
+import Banner from './Banner';
 import Lieu from './Lieu';
 import Faq from './Faq';
 import OrgaTeam from './OrgaTeam';
@@ -16,17 +16,17 @@ import OrgaTeam from './OrgaTeam';
 export default function IndexBody() {
   return (
     <>
-      <ScrollProgress />
       <Nav />
       <main style={{ paddingTop: 60, background: '#000', minHeight: '100vh', color: '#fff' }}>
         <IndexHero />
-        <Experience />
+        <IntroSection />
         <SpeakersPreview />
-        <Programme />
+        <AuProgramme />
         <Testimonials />
+        <TestimonialsList />
         <Partners />
         <Pricing />
-        <HackathonPerfait />
+        <Banner />
         <Lieu />
         <Faq />
         <OrgaTeam />

@@ -1,7 +1,8 @@
 import { motion } from 'motion/react';
+import { CDN } from '../../data/site';
 
-const TICKET_URL = 'https://www.billetweb.fr/shift-hackathon-2026';
-const CDN = 'https://framerusercontent.com/images';
+import { EDITION } from '../../data/edition';
+const TICKET_URL = EDITION.ticketUrl;
 const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
 const OXANIUM = 'Oxanium, sans-serif';
 
@@ -28,8 +29,10 @@ export default function AgendaHero() {
           zIndex: 0,
           backgroundImage: 'radial-gradient(rgba(255,255,255,0.18) 1.5px, transparent 1.5px)',
           backgroundSize: '22px 22px',
-          maskImage: 'radial-gradient(ellipse 80% 80% at 100% 0%, rgba(0,0,0,0.6) 0%, transparent 70%)',
-          WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 100% 0%, rgba(0,0,0,0.6) 0%, transparent 70%)',
+          maskImage:
+            'radial-gradient(ellipse 80% 80% at 100% 0%, rgba(0,0,0,0.6) 0%, transparent 70%)',
+          WebkitMaskImage:
+            'radial-gradient(ellipse 80% 80% at 100% 0%, rgba(0,0,0,0.6) 0%, transparent 70%)',
         }}
       />
 
@@ -88,7 +91,15 @@ export default function AgendaHero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             style={{ marginBottom: '32px' }}
           >
-            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: 0, lineHeight: 1.55 }}>
+            <p
+              style={{
+                color: '#fff',
+                fontFamily: OXANIUM,
+                fontSize: '18px',
+                margin: 0,
+                lineHeight: 1.55,
+              }}
+            >
               Check l&apos;agenda de ce hackathon qui s&apos;annonce épique !
             </p>
           </motion.div>
@@ -97,7 +108,12 @@ export default function AgendaHero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.35 }}
-            style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', alignItems: 'flex-start' }}
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '0.5rem',
+              alignItems: 'flex-start',
+            }}
           >
             <a
               href={TICKET_URL}
@@ -133,7 +149,7 @@ export default function AgendaHero() {
           style={{ position: 'relative' }}
         >
           <img
-            src={`${CDN}/Rdl8zkLOcqcng7VGIk3w5sXc38.png`}
+            src={`${CDN}/wDi0gtJVMnvVglqFOk8UiRQUdM.png`}
             alt="Shift Hackathon Agenda"
             style={{
               width: '100%',

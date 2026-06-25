@@ -2,7 +2,15 @@ import { SPEAKERS } from '../../data/site';
 
 export default function SpeakerGrid() {
   return (
-    <section style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '100px 0 0', gap: '10px' }}>
+    <section
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        padding: '100px 0 0',
+        gap: '10px',
+      }}
+    >
       <div
         style={{
           display: 'grid',
@@ -32,7 +40,13 @@ export default function SpeakerGrid() {
               <img
                 src={s.img}
                 alt={s.name}
-                style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
+                style={{
+                  display: 'block',
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  objectPosition: 'center',
+                }}
               />
             </div>
             {/* Name */}

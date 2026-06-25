@@ -1,9 +1,9 @@
 import { motion } from 'motion/react';
+import { CDN } from '../../data/site';
 
-const TICKET_URL = 'https://www.billetweb.fr/shift-hackathon-2026';
-const CDN = 'https://framerusercontent.com/images';
+import { EDITION } from '../../data/edition';
+const TICKET_URL = EDITION.ticketUrl;
 const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
-const AGRANDIR_ITALIC = "'Agrandir Thin Italic', sans-serif";
 const OXANIUM = 'Oxanium, sans-serif';
 
 export default function ConceptHero() {
@@ -69,33 +69,20 @@ export default function ConceptHero() {
                 textTransform: 'uppercase',
               }}
             >
-              Shift
+              Shift,
             </p>
             <p
               style={{
                 fontFamily: AGRANDIR,
-                fontSize: '22px',
+                fontSize: '36px',
                 fontWeight: 800,
-                color: '#fff',
-                lineHeight: '24.2px',
-                margin: '0 0 2px',
+                color: 'rgb(159, 248, 57)',
+                lineHeight: '38px',
+                margin: '0 0 4px',
                 textTransform: 'uppercase',
               }}
             >
-              Le Hackathon Gen AI n°1
-            </p>
-            <p
-              style={{
-                fontFamily: AGRANDIR_ITALIC,
-                fontSize: '20px',
-                fontWeight: 100,
-                color: '#fff',
-                lineHeight: '24px',
-                margin: '0 0 28px',
-                textTransform: 'uppercase',
-              }}
-            >
-              pour les Designers, Devs &amp; Product Lovers
+              C&apos;est quoi ?
             </p>
           </motion.div>
 
@@ -105,14 +92,18 @@ export default function ConceptHero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             style={{ marginBottom: '24px' }}
           >
-            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: 0, lineHeight: '27.9px' }}>
-              Crée des produits Gen AI game-changer en 48h.
-            </p>
-            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: 0, lineHeight: '27.9px' }}>
-              Édition &quot;Time to Custom&quot; → Hack ton outil favori.
-            </p>
-            <p style={{ color: '#fff', fontFamily: OXANIUM, fontSize: '18px', margin: '14px 0 0', lineHeight: '27.9px' }}>
-              🔥 Event all-inclusive - coaching, food &amp; drinks inclus.
+            <p
+              style={{
+                color: '#fff',
+                fontFamily: OXANIUM,
+                fontSize: '18px',
+                margin: 0,
+                lineHeight: '27.9px',
+              }}
+            >
+              Shift - Time To Custom, c&apos;est 48 heures pour hacker ton outil préféré, créer une
+              vraie feature Gen AI utile pour ton usage, et produire aux côtés des meilleurs experts
+              tech.
             </p>
           </motion.div>
 
@@ -141,7 +132,7 @@ export default function ConceptHero() {
                 boxShadow: 'rgba(159, 248, 57, 0.5) 0px 5px 0px 0px',
               }}
             >
-              Je suis chaud pour 2027 !
+              Take my money
             </a>
           </motion.div>
         </div>
@@ -154,7 +145,7 @@ export default function ConceptHero() {
           style={{ position: 'relative' }}
         >
           <img
-            src={`${CDN}/Rdl8zkLOcqcng7VGIk3w5sXc38.png`}
+            src={`${CDN}/dhjQcdCP4VBrUzqK0gjelJruk.png`}
             alt="Shift Hackathon"
             style={{
               width: '100%',

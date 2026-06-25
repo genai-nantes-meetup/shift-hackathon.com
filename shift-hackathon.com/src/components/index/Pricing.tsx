@@ -1,6 +1,7 @@
 import Reveal from '../Reveal';
+import { EDITION } from '../../data/edition';
 
-const TICKET_URL = 'https://www.billetweb.fr/shift-hackathon-2026';
+const TICKET_URL = EDITION.ticketUrl;
 const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
 const OXANIUM = 'Oxanium, sans-serif';
 const BARLOW = 'Barlow, sans-serif';
@@ -49,7 +50,11 @@ const TIERS = [
     features: [
       { text: 'Une ', bold: 'visibilité', rest: " auprès des makers de l'IA générative" },
       { text: "L'occasion parfaite de ", bold: 'sourcer', rest: ' de futurs talents' },
-      { text: "L'occasion unique pour ", bold: "mettre le pied à l’étrier", rest: ' de vos collaborateurs' },
+      {
+        text: "L'occasion unique pour ",
+        bold: 'mettre le pied à l’étrier',
+        rest: ' de vos collaborateurs',
+      },
     ],
   },
 ];
@@ -60,7 +65,7 @@ const arrowSvg = (color: string) =>
 
 export default function Pricing() {
   return (
-    <section style={{ padding: '79px 30px', background: '#000' }}>
+    <section style={{ padding: '79px 30px', background: '#e8e8e8' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <Reveal>
           <h2
@@ -68,7 +73,7 @@ export default function Pricing() {
               fontFamily: AGRANDIR,
               fontSize: '50px',
               fontWeight: 800,
-              color: '#fff',
+              color: '#190532',
               marginBottom: '0.5rem',
               lineHeight: 1,
             }}
@@ -79,7 +84,7 @@ export default function Pricing() {
         <Reveal delay={0.1}>
           <p
             style={{
-              color: 'rgba(255,255,255,0.7)',
+              color: 'rgba(25,5,50,0.7)',
               fontFamily: OXANIUM,
               fontSize: '18px',
               marginBottom: '3rem',
@@ -89,7 +94,14 @@ export default function Pricing() {
           </p>
         </Reveal>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem', alignItems: 'start' }}>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            gap: '1.5rem',
+            alignItems: 'start',
+          }}
+        >
           {TIERS.map((t, i) => (
             <Reveal key={t.name} delay={i * 0.1}>
               <div
@@ -154,7 +166,15 @@ export default function Pricing() {
                   </p>
 
                   {/* Divider */}
-                  <div style={{ width: 32, height: 3, background: '#000', margin: '0 auto 1rem', borderRadius: 2 }} />
+                  <div
+                    style={{
+                      width: 32,
+                      height: 3,
+                      background: '#000',
+                      margin: '0 auto 1rem',
+                      borderRadius: 2,
+                    }}
+                  />
 
                   {/* Tagline */}
                   <p
@@ -221,7 +241,7 @@ export default function Pricing() {
                       boxShadow: `rgba(${t.name === 'FRIENDS' ? '252,35,61' : t.name === 'ANGELS' ? '65,105,225' : '159,248,57'},0.5) 0px 5px 0px 0px`,
                     }}
                   >
-                    Je suis chaud
+                    {t.name === 'ANGELS' ? 'Nous contacter' : 'Je suis chaud'}
                   </a>
                 </div>
               </div>
