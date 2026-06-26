@@ -94,8 +94,7 @@ export default function SpeakersHero() {
                 margin: '0 0 28px',
               }}
             >
-              Les{' '}
-              <span style={{ color: 'rgb(159, 248, 57)' }}>Intervenants</span>
+              Les <span style={{ color: 'rgb(159, 248, 57)' }}>Intervenants</span>
             </h1>
           </motion.div>
 

@@ -17,9 +17,10 @@ export default function Footer() {
             lineHeight: 1.5,
           }}
         >
-          Nos événements sont ouverts à toutes et à tous, sans distinction de genre, d&rsquo;orientation
-          sexuelle ou d&rsquo;identité. En vous inscrivant, vous vous engagez à faire preuve de respect et
-          de tolérance, afin que chacun&middot;e se sente accueilli&middot;e et en sécurité.
+          Nos événements sont ouverts à toutes et à tous, sans distinction de genre,
+          d&rsquo;orientation sexuelle ou d&rsquo;identité. En vous inscrivant, vous vous engagez à
+          faire preuve de respect et de tolérance, afin que chacun&middot;e se sente
+          accueilli&middot;e et en sécurité.
         </p>
 
         <div

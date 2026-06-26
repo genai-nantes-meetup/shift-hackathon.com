@@ -8,7 +8,9 @@ export default function Banner() {
     <section className="banner">
       <div className="banner__beam" aria-hidden="true" />
       <div className="banner__glow" aria-hidden="true" />
-      <p className="banner__ghost" aria-hidden="true">SHIFT</p>
+      <p className="banner__ghost" aria-hidden="true">
+        SHIFT
+      </p>
 
       <div className="banner__inner">
         <Reveal>

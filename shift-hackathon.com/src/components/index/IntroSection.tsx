@@ -4,8 +4,8 @@ const PARAGRAPHS = [
   "Shift, c'est LE hackathon Gen AI de la place nantaise. Après 2 éditions hautes en couleur, nous revenons sous le pavillon noir : toi, l'iconoclastic hacker, toi le designer alchemist, ou toi le product shaper, à cette édition 2026, tu vas te RÉ-GA-LER.",
   "Le concept de cette année, ça va être de hacker ton outil préféré. Tu le trouves cool mais il ne répond pas exactement à ton usage parce qu'il lui manque une fonctionnalité clé ou parce que tu n'en es pas vraiment le “user type” ? Viens proposer ton hack pour développer la feature qui te ferait kiffer !",
   "Shift, c'est 48H de pure prod pour créer des produits Gen AI à en faire rougir les techos de la Silicon Valley.",
-  "On te fournit tout : le cadre, les outils, et les conseils des meilleurs experts de la tech et de la Gen AI.",
-  "Prêt à faire tomber les barrières ? Inscris-toi et embarque pour une aventure inoubliable !",
+  'On te fournit tout : le cadre, les outils, et les conseils des meilleurs experts de la tech et de la Gen AI.',
+  'Prêt à faire tomber les barrières ? Inscris-toi et embarque pour une aventure inoubliable !',
 ];
 
 const MOSAIC = [

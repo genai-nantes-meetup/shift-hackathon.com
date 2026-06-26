@@ -45,12 +45,7 @@ export default function CTASection() {
               Inscris-toi dès maintenant et chauffe tes potes !
             </p>
           </div>
-          <a
-            href={TICKET_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cta-primary"
-          >
+          <a href={TICKET_URL} target="_blank" rel="noopener noreferrer" className="cta-primary">
             Take my money
           </a>
         </div>
