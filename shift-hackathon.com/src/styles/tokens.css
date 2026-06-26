@@ -4,8 +4,8 @@
   /* ---- Colors ---- */
   --color-black: #000000;
   --color-white: #ffffff;
-  --color-purple-deep: #190532;        /* CTA text on green bg */
-  --color-lime: #9ff839;               /* CTA bg, accents */
+  --color-purple-deep: #190532; /* CTA text on green bg */
+  --color-lime: #9ff839; /* CTA bg, accents */
   --color-lime-shadow: rgba(159, 248, 57, 0.5);
   --color-cyan: #2aebf5;
   --color-yellow: #fae01b;
@@ -15,9 +15,9 @@
 
   /* Translucent overlays */
   --color-white-85: rgba(255, 255, 255, 0.85);
-  --color-white-70: rgba(255, 255, 255, 0.70);
+  --color-white-70: rgba(255, 255, 255, 0.7);
   --color-white-55: rgba(255, 255, 255, 0.55);
-  --color-white-30: rgba(255, 255, 255, 0.30);
+  --color-white-30: rgba(255, 255, 255, 0.3);
   --color-white-15: rgba(255, 255, 255, 0.15);
   --color-white-08: rgba(255, 255, 255, 0.08);
 

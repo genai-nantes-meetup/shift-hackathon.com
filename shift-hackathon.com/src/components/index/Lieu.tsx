@@ -15,71 +15,27 @@ export default function Lieu() {
   const row2 = IMAGES.slice(3);
 
   return (
-    <section
-      style={{
-        background: '#000',
-        padding: '100px 20px',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: '10px',
-      }}
-    >
-      <Reveal style={{ width: '100%', maxWidth: 1240, position: 'relative' }}>
-        {/* Image grid */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-          {/* Row 1 */}
-          <div style={{ display: 'flex', gap: '10px', width: '100%' }}>
+    <section className="lieu">
+      <Reveal className="lieu__inner">
+        <div className="lieu__rows">
+          <div className="lieu__row">
             {row1.map((img) => (
-              <div
-                key={img.src}
-                style={{
-                  flex: img.flex,
-                  height: '400px',
-                  overflow: 'hidden',
-                  borderRadius: '4px',
-                }}
-              >
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    objectPosition: 'center',
-                    display: 'block',
-                  }}
-                />
+              <div key={img.src} className="lieu__cell" style={{ flex: img.flex }}>
+                <img src={img.src} alt={img.alt} loading="lazy" />
               </div>
             ))}
           </div>
-          {/* Row 2 */}
-          <div style={{ display: 'flex', gap: '10px', width: '100%' }}>
+          <div className="lieu__row">
             {row2.map((img) => (
-              <div
-                key={img.src}
-                style={{
-                  flex: img.flex,
-                  height: '400px',
-                  overflow: 'hidden',
-                  borderRadius: '4px',
-                }}
-              >
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    objectPosition: 'center',
-                    display: 'block',
-                  }}
-                />
+              <div key={img.src} className="lieu__cell" style={{ flex: img.flex }}>
+                <img src={img.src} alt={img.alt} loading="lazy" />
               </div>
             ))}
           </div>
+        </div>
+
+        <div className="lieu__badge">
+          <h2>Le Lieu - Le Palace, Nantes</h2>
         </div>
       </Reveal>
     </section>
