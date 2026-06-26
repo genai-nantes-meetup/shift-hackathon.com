@@ -75,6 +75,21 @@ shift-hackathon.com/           # Astro app (active)
 - Per-page head styles (`*.head-styles.html`) include canonical URL and Framer breakpoint/SSR CSS — parsed by `lib/framer.ts` and passed as props to `Layout`.
 - Re-exporting from Framer: replace `*.main.html` and `*.head-styles.html`, then re-run the extraction script to update `framer/<page>/` files and regenerate Body/section components.
 
+## Styling
+
+Plain hand-written CSS — **no CSS framework**. Tailwind was removed (it was wired in but
+no utility classes were ever used). Do not reintroduce it; add styles to the appropriate
+`src/styles/*.css` file using the existing BEM convention (e.g. `hero__container`, `cta-primary`).
+
+CSS lives in `src/styles/`, all imported via `layouts/Layout.astro` (`global.css` chains the rest):
+
+- `global.css`   — `@import`s the others + a **basic reset** (replaces the former Tailwind Preflight)
+- `tokens.css`   — CSS variables (brand colors, fonts) + reusable classes (`.container`, `.section-title`, `.cta-primary`)
+- `fonts.css`    — Google Fonts / `@font-face`
+- `hero.css` / `intro.css` / `sections.css` — per-section layout & styling
+
+A few components also use inline styles (`Nav.tsx`, `Footer.tsx`, `ScrollProgress.tsx`).
+
 ## Linting & Formatting
 
 ESLint (`eslint.config.js`) + Prettier (`.prettierrc`). `src/framer/` is excluded from Prettier (generated HTML).
