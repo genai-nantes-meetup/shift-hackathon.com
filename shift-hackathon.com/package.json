@@ -1,6 +1,7 @@
 {
   "name": "shift-hackathon",
   "type": "module",
+  "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -9,16 +10,17 @@
     "lint:fix": "eslint src --fix",
     "format": "prettier --write src",
     "format:check": "prettier --check src",
-    "test": "playwright test",
-    "test:ui": "playwright test --ui"
+    "typecheck": "astro check",
+    "check": "npm run lint && npm run typecheck && npm run build",
+    "test:visual": "playwright test"
   },
   "dependencies": {
-    "@astrojs/react": "^4.0.0",
-    "@astrojs/sitemap": "^3.0.0",
-    "astro": "^5.0.0",
-    "motion": "^11.0.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "@astrojs/react": "5.0.6",
+    "@astrojs/sitemap": "3.4.1",
+    "astro": "5.8.0",
+    "motion": "12.15.0",
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
   },
   "devDependencies": {
     "@eslint/js": "^9.0.0",
