@@ -32,7 +32,7 @@ export default function IntroSection() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <a href="/concept-2026" className="intro__cta">
+          <a href="/concept" className="intro__cta">
             En savoir plus sur le concept
           </a>
         </Reveal>

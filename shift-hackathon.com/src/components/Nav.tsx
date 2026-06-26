@@ -2,9 +2,9 @@ import { motion } from 'motion/react';
 import { EDITION } from '../data/edition';
 
 const NAV_LINKS = [
-  { label: 'Concept', href: '/concept-2026' },
-  { label: 'Intervenants', href: '/intervenants-2026' },
-  { label: 'Agenda', href: '/agenda-2026' },
+  { label: 'Concept', href: '/concept' },
+  { label: 'Intervenants', href: '/intervenants' },
+  { label: 'Agenda', href: '/agenda' },
 ];
 const TICKET_URL = EDITION.ticketUrl;
 const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
