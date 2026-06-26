@@ -1,22 +1,28 @@
-const YEAR = 2026;
-const MONTH_TITLE = 'Mars';
-const MONTH_LOWER = 'mars';
-const START_DAY = 27;
-const DAY_NAMES = ['VENDREDI', 'SAMEDI', 'DIMANCHE'] as const;
-
 export const EDITION = {
-  year: YEAR,
-  startDay: START_DAY,
-  endDay: START_DAY + 2,
-  month: MONTH_TITLE,
-  dateRangeShort: `${START_DAY}-${START_DAY + 2}/03/${YEAR}`,
-  dateRangeLong: `Du ${START_DAY} au ${START_DAY + 2} ${MONTH_LOWER} ${YEAR}`,
-  ticketUrl: `https://www.billetweb.fr/shift-hackathon-${YEAR}`,
+  year: 2026,
+  startDay: 27,
+  endDay: 29,
+  month: 'Mars',
+  dateRangeShort: '27-29/03/2026',
+  dateRangeLong: `Du 27 au 29 mars 2026`,
+  ticketUrl: `https://www.billetweb.fr/shift-hackathon-2026`,
   earlyTicketUrl: 'https://tally.so/r/D45GKl',
   contactEmail: 'contact@shift-hackathon.com',
-  agendaDays: DAY_NAMES.map((day, i) => ({
-    date: `${START_DAY + i} ${MONTH_TITLE} ${YEAR}`,
-    label: `Jour ${i + 1}`,
-    weekday: day,
-  })),
+  agendaDays: [
+    {
+      date: '27 Mars 2026',
+      label: 'Jour 1',
+      weekday: 'Vendredi',
+    },
+    {
+      date: '28 Mars 2026',
+      label: 'Jour 2',
+      weekday: 'Samedi',
+    },
+    {
+      date: '29 Mars 2026',
+      label: 'Jour 3',
+      weekday: 'Dimanche',
+    },
+  ],
 } as const;

@@ -1,5 +1,3 @@
-import { CDN } from './site';
-
 export const SCHEDULE = [
   {
     day: '27 Mars 2026',
@@ -13,8 +11,8 @@ export const SCHEDULE = [
         title: 'Démarrage de Shift',
         desc: 'Lancement du hackathon.',
         speakers: [
-          { name: 'Maxime Thoonsen', img: `${CDN}/speakers/maxime-thoonsen.jpeg` },
-          { name: 'Samuel Berthe', img: `${CDN}/team/samuel-berthe.jpg` },
+          { name: 'Maxime Thoonsen', img: '/assets/images/speakers/maxime-thoonsen.jpeg' },
+          { name: 'Samuel Berthe', img: '/assets/images/team/samuel-berthe.jpg' },
         ],
       },
       { time: '20h', title: 'Pitch fire', desc: 'Présentation en 1min des idées.' },
@@ -27,7 +25,9 @@ export const SCHEDULE = [
         time: '21h15',
         title: 'REX Pierre Renaudin',
         desc: "Retour d'expérience d'un entrepreneur dans la Gen AI",
-        speakers: [{ name: 'Pierre Renaudin', img: `${CDN}/speakers/pierre-renaudin.jpeg` }],
+        speakers: [
+          { name: 'Pierre Renaudin', img: '/assets/images/speakers/pierre-renaudin.jpeg' },
+        ],
       },
       {
         time: '21h45',
@@ -68,13 +68,17 @@ export const SCHEDULE = [
         time: '13h45',
         title: "Conf' User Test",
         desc: 'Une masterclass par Pauline Corriou activable pour bien préparer son premier User Test.',
-        speakers: [{ name: 'Pauline Corriou', img: `${CDN}/speakers/pauline-corriou.jpeg` }],
+        speakers: [
+          { name: 'Pauline Corriou', img: '/assets/images/speakers/pauline-corriou.jpeg' },
+        ],
       },
       {
         time: '13h45',
         title: "Conf' Pitch/Demo",
         desc: "Une masterclass sur l'art du pitch par Florian Hervéou dédiée aux pitcheurs/ses de votre team pour tout déchirer sur scène.",
-        speakers: [{ name: 'Florian Hervéou', img: `${CDN}/speakers/baptiste-rongier.jpeg` }],
+        speakers: [
+          { name: 'Florian Hervéou', img: '/assets/images/speakers/baptiste-rongier.jpeg' },
+        ],
       },
       { time: '18h', title: 'Premier User Tests', desc: "C'est le moment des tests !" },
       { time: '19h30', title: 'Dîner' },

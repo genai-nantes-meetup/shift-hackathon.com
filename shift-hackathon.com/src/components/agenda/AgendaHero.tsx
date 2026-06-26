@@ -1,8 +1,6 @@
 import { motion } from 'motion/react';
-import { CDN } from '../../data/site';
 
 import { EDITION } from '../../data/edition';
-const TICKET_URL = EDITION.ticketUrl;
 const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
 const OXANIUM = 'Oxanium, sans-serif';
 
@@ -116,7 +114,7 @@ export default function AgendaHero() {
             }}
           >
             <a
-              href={TICKET_URL}
+              href={EDITION.ticketUrl}
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -149,7 +147,7 @@ export default function AgendaHero() {
           style={{ position: 'relative' }}
         >
           <img
-            src={`${CDN}/hero/agenda-hero.png`}
+            src={'/assets/images/hero/agenda-hero.png'}
             alt="Shift Hackathon Agenda"
             style={{
               width: '100%',

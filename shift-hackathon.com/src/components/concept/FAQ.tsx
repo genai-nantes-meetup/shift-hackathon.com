@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FAQ as FAQ_DATA } from '../../data/schedule';
+import { FAQ as FAQ_DATA } from '../../data/edition_schedule';
 
 export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);

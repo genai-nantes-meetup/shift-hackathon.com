@@ -1,5 +1,4 @@
 import Reveal from '../Reveal';
-import { CDN } from '../../data/site';
 
 const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
 const OXANIUM = 'Oxanium, sans-serif';
@@ -15,7 +14,7 @@ type Project = {
 const PROJECTS: Project[] = [
   {
     name: 'Vinted',
-    img: `${CDN}/projects/project-vinted.jpeg`,
+    img: '/assets/images/projects/project-vinted.jpeg',
     probleme:
       "Sur Vinted, on achète des vêtements sans jamais vraiment savoir s'ils vont nous aller et les photos à plat n'aident pas à se projeter.",
     concept:
@@ -27,7 +26,7 @@ const PROJECTS: Project[] = [
   },
   {
     name: 'Slack',
-    img: `${CDN}/projects/project-slack.jpeg`,
+    img: '/assets/images/projects/project-slack.jpeg',
     probleme: 'Les équipes perdent un temps monstrueux dans des réunions qui ne servent à rien.',
     concept:
       'Une IA intégrée à Slack qui identifie les réunions inutiles et propose des alternatives asynchrones.',
@@ -35,7 +34,7 @@ const PROJECTS: Project[] = [
   },
   {
     name: 'eBay',
-    img: `${CDN}/projects/project-ebay.png`,
+    img: '/assets/images/projects/project-ebay.png',
     probleme:
       'Sur eBay, les objets ont souvent une histoire riche, mais elle est invisible et réduite à un simple prix et quelques photos.',
     concept:

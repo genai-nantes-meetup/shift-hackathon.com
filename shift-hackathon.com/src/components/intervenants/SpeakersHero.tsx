@@ -1,8 +1,6 @@
 import { motion } from 'motion/react';
-import { CDN } from '../../data/site';
 
 import { EDITION } from '../../data/edition';
-const TICKET_URL = EDITION.ticketUrl;
 const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
 const OXANIUM = 'Oxanium, sans-serif';
 
@@ -39,7 +37,7 @@ export default function SpeakersHero() {
       {/* Background image (faint) */}
       <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
         <img
-          src={`${CDN}/hero/hero-background.png`}
+          src={'/assets/images/hero/hero-background.png'}
           alt=""
           style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.1 }}
         />
@@ -129,7 +127,7 @@ export default function SpeakersHero() {
             }}
           >
             <a
-              href={TICKET_URL}
+              href={EDITION.ticketUrl}
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -161,7 +159,7 @@ export default function SpeakersHero() {
           style={{ position: 'relative' }}
         >
           <img
-            src={`${CDN}/hero/speakers-hero.png`}
+            src={'/assets/images/hero/speakers-hero.png'}
             alt="Shift Hackathon"
             style={{
               width: '100%',
@@ -174,7 +172,7 @@ export default function SpeakersHero() {
             }}
           />
           <img
-            src={`${CDN}/hero/hero-arrow-decoration.svg`}
+            src={'/assets/images/hero/hero-arrow-decoration.svg'}
             alt=""
             aria-hidden
             style={{

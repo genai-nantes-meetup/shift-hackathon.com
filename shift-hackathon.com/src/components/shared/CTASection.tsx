@@ -1,8 +1,6 @@
 import Reveal from '../Reveal';
 import { EDITION } from '../../data/edition';
 
-const TICKET_URL = EDITION.ticketUrl;
-
 export default function CTASection() {
   return (
     <section style={{ background: '#000', padding: '80px 32px' }}>
@@ -45,7 +43,12 @@ export default function CTASection() {
               Inscris-toi dès maintenant et chauffe tes potes !
             </p>
           </div>
-          <a href={TICKET_URL} target="_blank" rel="noopener noreferrer" className="cta-primary">
+          <a
+            href={EDITION.ticketUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cta-primary"
+          >
             Take my money
           </a>
         </div>

@@ -6,7 +6,6 @@ const NAV_LINKS = [
   { label: 'Intervenants', href: '/intervenants' },
   { label: 'Agenda', href: '/agenda' },
 ];
-const TICKET_URL = EDITION.ticketUrl;
 const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
 
 export default function Nav() {
@@ -61,7 +60,7 @@ export default function Nav() {
           </a>
         ))}
         <a
-          href={TICKET_URL}
+          href={EDITION.ticketUrl}
           target="_blank"
           rel="noopener noreferrer"
           style={{

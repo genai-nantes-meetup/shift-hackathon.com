@@ -1,4 +1,4 @@
-import { SCHEDULE } from '../../data/schedule';
+import { SCHEDULE } from '../../data/edition_schedule';
 
 interface Speaker {
   name: string;

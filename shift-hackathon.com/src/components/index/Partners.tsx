@@ -1,5 +1,5 @@
 import Reveal from '../Reveal';
-import { PARTNERS } from '../../data/site';
+import { PARTNERS } from '../../data/edition_partners';
 
 export default function Partners() {
   return (

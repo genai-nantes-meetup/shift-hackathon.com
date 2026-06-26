@@ -1,5 +1,5 @@
 import Reveal from '../Reveal';
-import { SPEAKERS } from '../../data/site';
+import { SPEAKERS } from '../../data/edition_speakers';
 
 export default function SpeakersPreview() {
   const preview = SPEAKERS.slice(0, 6);

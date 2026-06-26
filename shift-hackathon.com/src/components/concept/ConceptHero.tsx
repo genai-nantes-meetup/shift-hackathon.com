@@ -1,8 +1,6 @@
 import { motion } from 'motion/react';
-import { CDN } from '../../data/site';
 
 import { EDITION } from '../../data/edition';
-const TICKET_URL = EDITION.ticketUrl;
 const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
 const OXANIUM = 'Oxanium, sans-serif';
 
@@ -21,7 +19,7 @@ export default function ConceptHero() {
     >
       {/* Background image (faint, full section) */}
       <img
-        src={`${CDN}/hero/hero-background.png`}
+        src={'/assets/images/hero/hero-background.png'}
         alt=""
         style={{
           display: 'block',
@@ -113,7 +111,7 @@ export default function ConceptHero() {
             transition={{ duration: 0.5, delay: 0.35 }}
           >
             <a
-              href={TICKET_URL}
+              href={EDITION.ticketUrl}
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -145,7 +143,7 @@ export default function ConceptHero() {
           style={{ position: 'relative' }}
         >
           <img
-            src={`${CDN}/hero/concept-hero.png`}
+            src={'/assets/images/hero/concept-hero.png'}
             alt="Shift Hackathon"
             style={{
               width: '100%',
@@ -158,7 +156,7 @@ export default function ConceptHero() {
             }}
           />
           <img
-            src={`${CDN}/hero/hero-arrow-decoration.svg`}
+            src={'/assets/images/hero/hero-arrow-decoration.svg'}
             alt=""
             aria-hidden
             style={{

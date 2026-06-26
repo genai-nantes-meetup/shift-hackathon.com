@@ -1,4 +1,4 @@
-import { SPEAKERS } from '../../data/site';
+import { SPEAKERS } from '../../data/edition_speakers';
 
 export default function SpeakerGrid() {
   return (

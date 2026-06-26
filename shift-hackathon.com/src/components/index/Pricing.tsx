@@ -1,7 +1,6 @@
 import Reveal from '../Reveal';
 import { EDITION } from '../../data/edition';
 
-const TICKET_URL = EDITION.ticketUrl;
 const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
 const OXANIUM = 'Oxanium, sans-serif';
 const BARLOW = 'Barlow, sans-serif';
@@ -222,7 +221,7 @@ export default function Pricing() {
 
                   {/* CTA */}
                   <a
-                    href={TICKET_URL}
+                    href={EDITION.ticketUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{
