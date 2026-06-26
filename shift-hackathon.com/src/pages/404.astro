@@ -3,18 +3,112 @@ import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav';
 ---
 
-<Layout title="404 — Page introuvable · Shift Hackathon">
+<Layout title="404 — Cette page a pivoté · Shift Hackathon">
   <Nav client:load />
-  <main
-    style="min-height:100vh;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;font-family:'Barlow',sans-serif;text-align:center;gap:1.5rem;padding:2rem;padding-top:80px;"
-  >
-    <p style="font-size:7rem;font-weight:900;line-height:1;margin:0;color:#2aebf5;">404</p>
-    <p style="font-size:1.25rem;opacity:0.6;margin:0;">Cette page n'existe pas.</p>
-    <a
-      href="/"
-      style="margin-top:1rem;padding:0.75rem 2rem;border:2px solid #2aebf5;color:#2aebf5;text-decoration:none;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;"
-    >
-      Retour à l'accueil
-    </a>
+  <main class="notfound">
+    <p class="notfound__code" aria-label="Erreur 404">
+      <span class="notfound__digit notfound__digit--cyan">4</span>
+      <span class="notfound__digit notfound__digit--pink">0</span>
+      <span class="notfound__digit notfound__digit--lime">4</span>
+    </p>
+
+    <h1 class="notfound__title">Cette page a pivoté pendant la nuit.</h1>
+
+    <p class="notfound__text">
+      Comme tout bon projet de hackathon vers 4h du mat'. L'équipe a tout plaqué pour une meilleure
+      idée — et celle-ci n'a pas survécu au pitch.
+    </p>
+
+    <p class="notfound__badge">⏱ Pivot #3 · 04:12 du matin</p>
+
+    <a href="/" class="cta-primary notfound__cta">Repartir de zéro →</a>
   </main>
 </Layout>
+
+<style>
+  .notfound {
+    min-height: 100vh;
+    background: var(--color-black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.25rem;
+    padding: 2rem;
+    padding-top: 96px;
+    color: var(--color-white);
+    font-family: var(--font-body);
+  }
+
+  .notfound__code {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(6rem, 22vw, 12rem);
+    line-height: 1;
+    letter-spacing: 0.02em;
+    animation: notfound-pulse 3.2s var(--ease-out, ease-in-out) infinite;
+  }
+
+  .notfound__digit--cyan {
+    color: var(--color-cyan);
+    text-shadow: 0 0 28px rgba(42, 235, 245, 0.55);
+  }
+  .notfound__digit--pink {
+    color: var(--color-pink);
+    text-shadow: 0 0 28px rgba(247, 87, 135, 0.55);
+  }
+  .notfound__digit--lime {
+    color: var(--color-lime);
+    text-shadow: 0 0 28px var(--color-lime-shadow);
+  }
+
+  .notfound__title {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(1.6rem, 5vw, 2.6rem);
+    line-height: 1.1;
+    max-width: 18ch;
+  }
+
+  .notfound__text {
+    margin: 0;
+    max-width: 46ch;
+    font-size: 1.0625rem;
+    line-height: 1.55;
+    color: var(--color-white-70);
+  }
+
+  .notfound__badge {
+    margin: 0;
+    font-family: ui-monospace, 'SF Mono', 'Cascadia Code', monospace;
+    font-size: 0.8125rem;
+    letter-spacing: 0.04em;
+    color: var(--color-white-55);
+    border: 1px solid var(--color-white-15);
+    border-radius: var(--radius-sm);
+    padding: 0.4rem 0.8rem;
+  }
+
+  .notfound__cta {
+    margin-top: 0.75rem;
+  }
+
+  @keyframes notfound-pulse {
+    0%,
+    100% {
+      filter: brightness(1);
+    }
+    50% {
+      filter: brightness(1.18);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .notfound__code {
+      animation: none;
+    }
+  }
+</style>
