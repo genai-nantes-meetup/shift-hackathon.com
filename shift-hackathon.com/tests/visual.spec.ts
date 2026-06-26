@@ -3,9 +3,9 @@ import fs from 'node:fs';
 
 const PAGES = [
   { path: '/', name: 'index' },
-  { path: '/concept-2026', name: 'concept' },
-  { path: '/agenda-2026', name: 'agenda' },
-  { path: '/intervenants-2026', name: 'intervenants' },
+  { path: '/concept', name: 'concept' },
+  { path: '/agenda', name: 'agenda' },
+  { path: '/intervenants', name: 'intervenants' },
 ];
 
 const LIVE_BASE = 'https://shift-hackathon.com';

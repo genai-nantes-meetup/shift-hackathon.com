@@ -1,0 +1,23 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/agenda-2026",
+      "destination": "/agenda",
+      "statusCode": 301
+    },
+    {
+      "source": "/concept-2026",
+      "destination": "/concept",
+      "statusCode": 301
+    },
+    {
+      "source": "/intervenants-2026",
+      "destination": "/intervenants",
+      "statusCode": 301
+    }
+  ]
+}

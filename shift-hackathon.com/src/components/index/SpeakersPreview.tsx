@@ -26,7 +26,7 @@ export default function SpeakersPreview() {
         </Reveal>
         <Reveal delay={0.2}>
           <div className="speakers__see-all">
-            <a href="/intervenants-2026" className="cta-primary">
+            <a href="/intervenants" className="cta-primary">
               Voir tous les intervenants →
             </a>
           </div>

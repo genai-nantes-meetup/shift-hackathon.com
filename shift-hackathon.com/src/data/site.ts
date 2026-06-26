@@ -4,9 +4,9 @@ export const TICKET_URL = EDITION.ticketUrl;
 export const CDN = '/assets/images';
 
 export const NAV_LINKS = [
-  { label: 'Concept', href: '/concept-2026' },
-  { label: 'Intervenants', href: '/intervenants-2026' },
-  { label: 'Agenda', href: '/agenda-2026' },
+  { label: 'Concept', href: '/concept' },
+  { label: 'Intervenants', href: '/intervenants' },
+  { label: 'Agenda', href: '/agenda' },
 ];
 
 export const SPEAKERS = [
