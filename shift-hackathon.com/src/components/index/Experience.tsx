@@ -1,4 +1,4 @@
-const BG_IMAGE = '/assets/images/OIZRhOSUxhsy9yPligk2tSs1po.jpg';
+const BG_IMAGE = '/assets/images/gallery/gallery-speaker-session.jpg';
 
 export default function Experience() {
   return (

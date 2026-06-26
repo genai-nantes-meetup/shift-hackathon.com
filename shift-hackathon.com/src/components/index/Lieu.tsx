@@ -1,13 +1,13 @@
 import Reveal from '../Reveal';
 
 const IMAGES = [
-  { src: '/assets/images/cq8ZzypnQ3B7cnq3vSe9YqtKZkc.jpeg', alt: 'Speaker', flex: '0 0 22%' },
-  { src: '/assets/images/1MilzwluR4WPySgY1Nc71NA7z10.jpg', alt: 'Conférence', flex: '1' },
-  { src: '/assets/images/FS3ISXEUHf4xNgOzHz1v79bPNPo.jpg', alt: 'Speaker', flex: '0 0 22%' },
-  { src: '/assets/images/LB31XkKlru3wRHoN0ROFW1Y1BE.jpeg', alt: 'Stage', flex: '0 0 22%' },
-  { src: '/assets/images/K6Lz2buwWgCTrXdKmIWect7xmg.jpg', alt: 'Speaker', flex: '0 0 22%' },
-  { src: '/assets/images/eXXGGok3iFG8OxR7xj0iB21IJTc.jpg', alt: 'Live session', flex: '0 0 22%' },
-  { src: '/assets/images/P6aQkNmNYMQTB5ICXGS1vinnYg.jpeg', alt: 'Group photo', flex: '1' },
+  { src: '/assets/images/gallery/venue-speaker-1.jpeg', alt: 'Speaker', flex: '0 0 22%' },
+  { src: '/assets/images/gallery/venue-conference.jpg', alt: 'Conférence', flex: '1' },
+  { src: '/assets/images/gallery/venue-speaker-2.jpg', alt: 'Speaker', flex: '0 0 22%' },
+  { src: '/assets/images/gallery/venue-stage.jpeg', alt: 'Stage', flex: '0 0 22%' },
+  { src: '/assets/images/gallery/venue-speaker-3.jpg', alt: 'Speaker', flex: '0 0 22%' },
+  { src: '/assets/images/gallery/venue-live-session.jpg', alt: 'Live session', flex: '0 0 22%' },
+  { src: '/assets/images/gallery/venue-group-photo.jpeg', alt: 'Group photo', flex: '1' },
 ];
 
 export default function Lieu() {

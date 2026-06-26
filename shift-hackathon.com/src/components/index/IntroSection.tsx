@@ -9,10 +9,10 @@ const PARAGRAPHS = [
 ];
 
 const MOSAIC = [
-  { src: '/assets/images/OIZRhOSUxhsy9yPligk2tSs1po.jpg', alt: 'Speaker session' },
-  { src: '/assets/images/THrFvx3h9HQZm3DxRql29ftQ5Y.jpg', alt: 'Group discussion' },
-  { src: '/assets/images/NmsuCE1ygqeOArGamS3TUXcMabo.jpg', alt: 'Speaker' },
-  { src: '/assets/images/RJ84OukkCBEpErHTshc2s2G5Ug4.jpg', alt: 'Meeting' },
+  { src: '/assets/images/gallery/gallery-speaker-session.jpg', alt: 'Speaker session' },
+  { src: '/assets/images/gallery/gallery-group-discussion.jpg', alt: 'Group discussion' },
+  { src: '/assets/images/gallery/gallery-speaker.jpg', alt: 'Speaker' },
+  { src: '/assets/images/gallery/gallery-meeting.jpg', alt: 'Meeting' },
 ];
 
 export default function IntroSection() {

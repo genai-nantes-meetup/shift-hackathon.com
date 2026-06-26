@@ -32,7 +32,7 @@ export default function Footer() {
         >
           <div>
             <img
-              src="/assets/images/pSUT90jYhOZMo6IvXy5LtJs0.png"
+              src="/assets/images/hero/logo-shift.png"
               alt="SHIFT"
               style={{ height: 64, width: 'auto', marginBottom: '2rem', display: 'block' }}
             />
@@ -62,6 +62,7 @@ export default function Footer() {
               }}
             >
               Nous contacter
+            </h3>
             <p
               style={{
                 color: 'rgba(255,255,255,0.6)',

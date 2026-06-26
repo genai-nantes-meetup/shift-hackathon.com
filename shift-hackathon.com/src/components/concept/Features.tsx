@@ -12,7 +12,7 @@ const FEATURES: Feature[] = [
       </>
     ),
     desc: "Dévoile ton concept à base d'IA Générative. Si tu es choisi, forge ta dream team et fais chauffer les claviers.",
-    img: `${CDN}/jeSMOnElSkaQ2mtTpAj8hEBc.png`,
+    img: `${CDN}/features/feature-dream-team.png`,
   },
   {
     title: (
@@ -21,17 +21,17 @@ const FEATURES: Feature[] = [
       </>
     ),
     desc: "Défi lancé, t'as deux jours pour faire trembler la tech ! Ton pack de survie est prêt pour un samedi soir épique. Prêt à entrer dans la légende ? 😉",
-    img: `${CDN}/Jiw5jmjl5bkZOcRTjhZozWVqkag.png`,
+    img: `${CDN}/features/feature-code-night.png`,
   },
   {
     title: 'Itère à fond sur ton produit avec des user tests',
     desc: 'Voici le deal : on te dégote une bande de fous furieux prêts à maltraiter ton produit pour que tu restes 100% focus sur ton code. Mais prépares-en une de ton côté également, juste au cas où.',
-    img: `${CDN}/FIv08CwEEV86fdOiJJDRE18EggA.png`,
+    img: `${CDN}/features/feature-user-tests.png`,
   },
   {
     title: 'Accède à des masterclass exclusives',
     desc: 'Choppe ces méthodes toutes fraîches, injecte-les dans ton projet et secoue ta boîte avec dès lundi matin.',
-    img: `${CDN}/e0qRnLkp6ZzXmC6IzKZpNaCI.png`,
+    img: `${CDN}/features/feature-masterclass.png`,
   },
   {
     title: (
@@ -40,7 +40,7 @@ const FEATURES: Feature[] = [
       </>
     ),
     desc: "Besoin d'un boost ? Les ninjas de la Tech, de l'IA et du Product sont là pour catapulter ton projet dans la stratosphère !",
-    img: `${CDN}/c7xay2RuvE2cpbyqmrtHBUEOg8U.png`,
+    img: `${CDN}/features/feature-coaching.png`,
   },
   {
     title: (
@@ -49,17 +49,17 @@ const FEATURES: Feature[] = [
       </>
     ),
     desc: "Tu t'apprêtes à lier des amitiés explosives et à mettre le turbo sur ta carrière. Allez, montre à cet univers tech qui est le boss!",
-    img: `${CDN}/TqmlbPEltzwxviVMUZaLht8j4y4.png`,
+    img: `${CDN}/features/feature-networking.png`,
   },
   {
     title: 'Déguste 7 repas préparés avec amour',
     desc: 'Ne laisse pas un ventre vide te hacker le cerveau! Avec ton billet, enchaine 7 festins et code sans limite.',
-    img: `${CDN}/dHlDhUao0KWx2OMBpDbJMXLUAU8.png`,
+    img: `${CDN}/features/feature-meals.png`,
   },
   {
     title: 'Fais péter la démo devant un jury canon',
     desc: "Lance-toi, épate la crème des experts et arrache ta place au sommet de Shift, l'arène qui bouscule l'univers tech !",
-    img: `${CDN}/dRKLyFcQn1nMAcgsUMGuKEszs.jpg`,
+    img: `${CDN}/features/feature-demo.jpg`,
   },
 ];
 

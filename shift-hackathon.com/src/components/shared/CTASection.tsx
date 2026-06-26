@@ -43,6 +43,7 @@ export default function CTASection() {
               }}
             >
               Inscris-toi dès maintenant et chauffe tes potes !
+            </p>
           </div>
           <a
             href={TICKET_URL}

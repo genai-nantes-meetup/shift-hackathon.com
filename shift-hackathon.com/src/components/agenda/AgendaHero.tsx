@@ -149,7 +149,7 @@ export default function AgendaHero() {
           style={{ position: 'relative' }}
         >
           <img
-            src={`${CDN}/wDi0gtJVMnvVglqFOk8UiRQUdM.png`}
+            src={`${CDN}/hero/agenda-hero.png`}
             alt="Shift Hackathon Agenda"
             style={{
               width: '100%',

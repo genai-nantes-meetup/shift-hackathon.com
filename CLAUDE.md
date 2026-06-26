@@ -25,6 +25,7 @@ docker run -it --rm -p 80:80 --name nginx -v `pwd`:/usr/share/nginx/html nginx
 
 ```
 legacy/                        # Framer export — reference only, do not hand-edit
+beta/                          # previous attempt - please ignore
 shift-hackathon.com/           # Astro app (active)
 ├── src/
 │   ├── layouts/Layout.tsx     # shared <head>: GTM, gtag, Hotjar, font-css, og/twitter props
@@ -49,8 +50,20 @@ shift-hackathon.com/           # Astro app (active)
 │           ├── appear-animations.json / breakpoints.json
 │           ├── preload-links.html
 │           └── meta.json      # hydrateV2, rootClass, htmlStyle, dates
-└── public/assets/             # copy of legacy/assets (images, fonts, Framer JS bundles)
+└── public/assets/
+    └── images/                # organized by type (named files, not Framer hashes):
+        ├── hero/              # brand logo + per-page hero visuals
+        ├── speakers/ team/    # profile pictures (filename = person's real name)
+        ├── testimonials/      # testimonial profile pictures
+        ├── sponsors/          # partner & sponsor logos (logo-<brand>.png)
+        ├── features/ projects/ gallery/   # concept illustrations, project examples, venue photos
+        └── og-image.png, cover-2026.jpg   # site-wide meta images (root)
 ```
+
+> NOTE: the Architecture block below this line is stale — it documents the pre-"rebuild"
+> Framer-export approach (Layout.tsx, lib/framer.ts, framer/ dirs). The active app now uses
+> `layouts/Layout.astro` + real React components composed via `<Page>Body.tsx`, with content
+> data in `src/data/` (`site.ts`, `schedule.ts`, `edition.ts`).
 
 ### Key patterns
 
@@ -65,6 +78,15 @@ shift-hackathon.com/           # Astro app (active)
 ## Linting & Formatting
 
 ESLint (`eslint.config.js`) + Prettier (`.prettierrc`). `src/framer/` is excluded from Prettier (generated HTML).
+
+## Dev gotchas
+
+- `astro.config.mjs` sets `vite.resolve.dedupe: ['react','react-dom']` + `optimizeDeps.include` for
+  React/JSX runtimes and `motion`. Required: without it, `motion` pulls a second React copy →
+  "Invalid hook call / more than one copy of React".
+- After moving/renaming many files while `npm run dev` is running, the Vite dep cache desyncs
+  (symptoms: `Outdated Optimize Dep`, `jsxDEV is not a function`). Fix: stop dev, `rm -rf
+  node_modules/.vite`, restart, then hard-refresh the browser.
 
 ## Deployment
 

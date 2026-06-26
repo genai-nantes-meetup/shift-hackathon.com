@@ -15,7 +15,7 @@ type Project = {
 const PROJECTS: Project[] = [
   {
     name: 'Vinted',
-    img: `${CDN}/3QG8HAofce1SSTmNSAhZ0DzH00.jpeg`,
+    img: `${CDN}/projects/project-vinted.jpeg`,
     probleme:
       "Sur Vinted, on achète des vêtements sans jamais vraiment savoir s'ils vont nous aller et les photos à plat n'aident pas à se projeter.",
     concept:
@@ -27,7 +27,7 @@ const PROJECTS: Project[] = [
   },
   {
     name: 'Slack',
-    img: `${CDN}/kjzVCluFK8oW2G3e9zNuP71zYME.jpeg`,
+    img: `${CDN}/projects/project-slack.jpeg`,
     probleme: 'Les équipes perdent un temps monstrueux dans des réunions qui ne servent à rien.',
     concept:
       'Une IA intégrée à Slack qui identifie les réunions inutiles et propose des alternatives asynchrones.',
@@ -35,7 +35,7 @@ const PROJECTS: Project[] = [
   },
   {
     name: 'eBay',
-    img: `${CDN}/UgnRMu8i0uaOLbaOpAwHEbf6c.png`,
+    img: `${CDN}/projects/project-ebay.png`,
     probleme:
       'Sur eBay, les objets ont souvent une histoire riche, mais elle est invisible et réduite à un simple prix et quelques photos.',
     concept:

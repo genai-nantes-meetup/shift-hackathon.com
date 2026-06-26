@@ -21,7 +21,7 @@ export default function ConceptHero() {
     >
       {/* Background image (faint, full section) */}
       <img
-        src={`${CDN}/wa9oVNjleDQIbBtztqNGal6M.png`}
+        src={`${CDN}/hero/hero-background.png`}
         alt=""
         style={{
           display: 'block',
@@ -145,7 +145,7 @@ export default function ConceptHero() {
           style={{ position: 'relative' }}
         >
           <img
-            src={`${CDN}/dhjQcdCP4VBrUzqK0gjelJruk.png`}
+            src={`${CDN}/hero/concept-hero.png`}
             alt="Shift Hackathon"
             style={{
               width: '100%',
@@ -158,7 +158,7 @@ export default function ConceptHero() {
             }}
           />
           <img
-            src={`${CDN}/mRZACm4BynYCqQoFUgtHbuSrdQ8.svg`}
+            src={`${CDN}/hero/hero-arrow-decoration.svg`}
             alt=""
             aria-hidden
             style={{

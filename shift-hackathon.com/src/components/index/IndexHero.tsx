@@ -6,28 +6,28 @@ const TICKET_URL = EDITION.earlyTicketUrl;
 
 // All sponsors/complices — shown in scrolling marquee below the hero.
 const ALL_COMPLICES = [
-  { name: 'Gemini',         logo: `${CDN}/ZDjW6Wo0anEy1mUzbo2oqRQtpeY.png` },
-  { name: 'Mistral AI',     logo: `${CDN}/D8JhRI4faB6vhAVUDF9e72ra0.png` },
-  { name: 'ElevenLabs',     logo: `${CDN}/8pyqucSyEzD44VogAFy6xnROzw.png` },
-  { name: 'n8n',            logo: `${CDN}/WgEQw7xxkydh0HvPGxeC5gEXf0E.png` },
-  { name: 'OpenAI',         logo: `${CDN}/2GfcXCoTjp9udilU3hSRmNI.png` },
-  { name: 'Meilisearch',    logo: `${CDN}/lLgDez4N7yTxGAZM34UIiFyWGYU.png` },
-  { name: 'Gladia',         logo: `${CDN}/3OZbojzYOu5aWZVGg9TzXv62rg.png` },
-  { name: 'GitHub Copilot', logo: `${CDN}/c70JnFks3D6g1Jt8j3uifdssjs.png` },
-  { name: 'Clever Cloud',   logo: `${CDN}/blQC5WAIES7A46wE17tWPV4vUM8.png` },
-  { name: 'Reecall',        logo: `${CDN}/Q4GlC03HI3EvrvR6avl4vVLn7RU.png` },
-  { name: 'Externatic',     logo: `${CDN}/NjhM1EcoE5U1JUbx41DQKwUqaY.png` },
-  { name: 'Agoriade AI',    logo: `${CDN}/FhyDFHEcmFWTH2IRbcuTP4xr8E.png` },
-  { name: 'Theodo',         logo: `${CDN}/mCTZuc3WkAEbF7mvjFvlgq2UpdY.png` },
-  { name: 'Onepoint',       logo: `${CDN}/4LTQ4nbLOoVH247zlIwkmulQeY.png` },
-  { name: 'Extia',          logo: `${CDN}/UY4Fa4zoVRxtT9bLGGzXa4CDvo.png` },
-  { name: 'Ici Lundi',      logo: `${CDN}/9HTUJVvG5eehTUa23w4KbvQXQ.png` },
-  { name: 'La Cantine',     logo: `${CDN}/jAnWbOPKhE4bgowOaZTeVS5I.svg` },
-  { name: 'Kalicube',       logo: `${CDN}/vUgDWWn8ASxflI3r8gukN5nzSA.png` },
-  { name: 'RCA',            logo: `${CDN}/Hp1Tl3hJIse0Z786qNEEdKjLSCU.png` },
-  { name: 'Arzel',          logo: `${CDN}/cHgckECvWGlsSEkTQRYeEbkkQtg.png` },
-  { name: 'Clint',          logo: `${CDN}/EyVeU2UQzbHZScFcXMMED5yAud8.png` },
-  { name: 'dev.events',     logo: `${CDN}/B3tmi7wxJqSp3uS69o09WfrttmQ.png` },
+  { name: 'Gemini',         logo: `${CDN}/sponsors/logo-gemini.png` },
+  { name: 'Mistral AI',     logo: `${CDN}/sponsors/logo-mistral-ai.png` },
+  { name: 'ElevenLabs',     logo: `${CDN}/sponsors/logo-elevenlabs.png` },
+  { name: 'n8n',            logo: `${CDN}/sponsors/logo-n8n.png` },
+  { name: 'OpenAI',         logo: `${CDN}/sponsors/logo-openai.png` },
+  { name: 'Meilisearch',    logo: `${CDN}/sponsors/logo-meilisearch.png` },
+  { name: 'Gladia',         logo: `${CDN}/sponsors/logo-gladia.png` },
+  { name: 'GitHub Copilot', logo: `${CDN}/sponsors/logo-github-copilot.png` },
+  { name: 'Clever Cloud',   logo: `${CDN}/sponsors/logo-clever-cloud.png` },
+  { name: 'Reecall',        logo: `${CDN}/sponsors/logo-reecall.png` },
+  { name: 'Externatic',     logo: `${CDN}/sponsors/logo-externatic.png` },
+  { name: 'Agoriade AI',    logo: `${CDN}/sponsors/logo-agoriade-ai.png` },
+  { name: 'Theodo',         logo: `${CDN}/sponsors/logo-theodo.png` },
+  { name: 'Onepoint',       logo: `${CDN}/sponsors/logo-onepoint.png` },
+  { name: 'Extia',          logo: `${CDN}/sponsors/logo-extia.png` },
+  { name: 'Ici Lundi',      logo: `${CDN}/sponsors/logo-ici-lundi.png` },
+  { name: 'La Cantine',     logo: `${CDN}/sponsors/logo-la-cantine.svg` },
+  { name: 'Kalicube',       logo: `${CDN}/sponsors/logo-kalicube.png` },
+  { name: 'RCA',            logo: `${CDN}/sponsors/logo-rca.png` },
+  { name: 'Arzel',          logo: `${CDN}/sponsors/logo-arzel.png` },
+  { name: 'Clint',          logo: `${CDN}/sponsors/logo-clint.png` },
+  { name: 'dev.events',     logo: `${CDN}/sponsors/logo-dev-events.png` },
 ];
 
 export default function IndexHero() {
@@ -37,7 +37,7 @@ export default function IndexHero() {
         {/* Background image, faded */}
         <img
           className="hero__bg"
-          src={`${CDN}/wa9oVNjleDQIbBtztqNGal6M.png`}
+          src={`${CDN}/hero/hero-background.png`}
           alt=""
           aria-hidden="true"
         />
@@ -80,7 +80,7 @@ export default function IndexHero() {
             transition={{ duration: 0.7, delay: 0.1 }}
           >
             <img
-              src={`${CDN}/Rdl8zkLOcqcng7VGIk3w5sXc38.png`}
+              src={`${CDN}/hero/home-hero.png`}
               alt="Shift Hackathon"
               className="hero__image"
             />

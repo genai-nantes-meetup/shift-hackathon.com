@@ -39,7 +39,7 @@ export default function SpeakersHero() {
       {/* Background image (faint) */}
       <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
         <img
-          src={`${CDN}/wa9oVNjleDQIbBtztqNGal6M.png`}
+          src={`${CDN}/hero/hero-background.png`}
           alt=""
           style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.1 }}
         />
@@ -162,7 +162,7 @@ export default function SpeakersHero() {
           style={{ position: 'relative' }}
         >
           <img
-            src={`${CDN}/BEuIuTovs901AlleEtQLUxkuxI.png`}
+            src={`${CDN}/hero/speakers-hero.png`}
             alt="Shift Hackathon"
             style={{
               width: '100%',
@@ -175,7 +175,7 @@ export default function SpeakersHero() {
             }}
           />
           <img
-            src={`${CDN}/mRZACm4BynYCqQoFUgtHbuSrdQ8.svg`}
+            src={`${CDN}/hero/hero-arrow-decoration.svg`}
             alt=""
             aria-hidden
             style={{
