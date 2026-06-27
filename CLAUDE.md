@@ -25,33 +25,31 @@ docker run -it --rm -p 80:80 --name nginx -v `pwd`:/usr/share/nginx/html nginx
 
 ## Architecture
 
+The app is hand-written Astro + React (the old Framer-export approach — `Layout.tsx`,
+`lib/framer.ts`, `src/framer/`, per-page `.tsx` routes, `<Page>Body.tsx` wrappers — has been
+fully removed).
+
 ```
 legacy/                        # Framer export — reference only, do not hand-edit
 beta/                          # previous attempt - please ignore
 shift-hackathon.com/           # Astro app (active)
 ├── src/
-│   ├── layouts/Layout.tsx     # shared <head>: GTM, gtag, Hotjar, font-css, og/twitter props
-│   │                          # accepts children (ReactNode) for page body
-│   ├── lib/framer.ts          # helpers: extractCanonical, extractBreakpointCss, extractSsrCss
-│   ├── pages/                 # routing: one .astro + one .tsx per route
-│   │   ├── index.astro        # delegates to index.tsx (Astro requires .astro for routing)
-│   │   ├── index.tsx          # composes Layout + IndexBody
-│   │   └── (agenda, concept, intervenants — same pattern)
+│   ├── layouts/
+│   │   └── Layout.astro       # shared <head> (GTM, gtag, og/twitter); renders <Nav> / <slot> / <Footer>
+│   │                          # props: title, description (defaults to site.ts), canonical, ogImage
+│   ├── pages/                 # one .astro per route (Astro file-based routing)
+│   │   ├── index.astro        # imports section components, renders them as client:load islands in <main>
+│   │   └── (concept, agenda, intervenants, 404 — same pattern)
 │   ├── components/
-│   │   ├── <page>/            # per-page section components + Body component
-│   │   │   ├── <Page>Header.tsx / <Page>Hero.tsx / ...   # section components
-│   │   │   └── <Page>Body.tsx # renders div#main JSX wrapper + section components + scripts
-│   │   └── (agenda/, concept/, index/, intervenants/)
-│   └── framer/
-│       ├── font-css.html      # shared <style data-framer-font-css> block
-│       ├── *.head-styles.html # per-page: canonical + og:url + breakpoint/ssr CSS
-│       ├── *.main.html        # per-page monolithic Framer SSR HTML (source, not used directly)
-│       └── <page>/            # per-section HTML extracts + scripts
-│           ├── header.html / hero.html / ...   # section HTML (dangerouslySetInnerHTML)
-│           ├── nav-script.js / variant-script.js / animator-script.js / ...
-│           ├── appear-animations.json / breakpoints.json
-│           ├── preload-links.html
-│           └── meta.json      # hydrateV2, rootClass, htmlStyle, dates
+│   │   ├── Nav.tsx Footer.tsx Reveal.tsx ScrollProgress.tsx   # site-wide components
+│   │   ├── shared/            # cross-page sections: CTASection.tsx, Faq.tsx
+│   │   └── <page>/            # per-page section components: index/ concept/ agenda/ intervenants/
+│   ├── data/                  # all copy/content lives here (no logic, no hardcoding in components)
+│   │   ├── edition.ts         # core facts: year, nextYear, dates, ticket URLs, agenda days
+│   │   ├── edition_*.ts       # per-section edition content: complices, partners, pricing, schedule, speakers
+│   │   ├── site.ts            # DEFAULT_META_DESCRIPTION, ORGA_TEAM
+│   │   ├── testimonials.ts faq.ts videos.ts   # TESTIMONIALS, FAQ_ITEMS, video embeds
+│   └── styles/                # hand-written CSS (see Styling)
 └── public/assets/
     └── images/                # organized by type (named files, not Framer hashes):
         ├── hero/              # brand logo + per-page hero visuals
@@ -62,20 +60,20 @@ shift-hackathon.com/           # Astro app (active)
         └── og-image.png, cover-2026.jpg   # site-wide meta images (root)
 ```
 
-> NOTE: the Architecture block below this line is stale — it documents the pre-"rebuild"
-> Framer-export approach (Layout.tsx, lib/framer.ts, framer/ dirs). The active app now uses
-> `layouts/Layout.astro` + real React components composed via `<Page>Body.tsx`, with content
-> data in `src/data/` (`site.ts`, `schedule.ts`, `edition.ts`).
-
 ### Key patterns
 
-- Pages use `.astro` for routing + `.tsx` for logic. Astro requires `.astro` files in `src/pages/`.
-- `Layout.tsx` accepts `children: ReactNode` — body content rendered as React children.
-- Each page's `<Page>Body.tsx` renders `<div id="main">` as proper JSX with hydration attributes, then section components inside `<div data-framer-root>`, then scripts.
-- Section components use `dangerouslySetInnerHTML` with their extracted HTML file (`?raw` import). Content is static Framer SSR — no user input, XSS not a risk.
-- Framer JS bundles (`/assets/sites/5H3lPLxtIZUluG4tDZQyhH/`) are served from `public/` unchanged.
-- Per-page head styles (`*.head-styles.html`) include canonical URL and Framer breakpoint/SSR CSS — parsed by `lib/framer.ts` and passed as props to `Layout`.
-- Re-exporting from Framer: replace `*.main.html` and `*.head-styles.html`, then re-run the extraction script to update `framer/<page>/` files and regenerate Body/section components.
+- Pages are `.astro` only (file-based routing). Each page imports its section components and
+  renders them inside `<main>` as `client:load` islands — there is no wrapper `Body` component.
+- `Layout.astro` owns the shared `<head>` and renders `<Nav client:load />` before the page
+  `<slot />` and `<Footer client:load />` after. **Do not add Nav/Footer per page** — they come
+  only from the layout.
+- Section components are real React (`.tsx`) with inline styles and `motion`/`Reveal` animations.
+  They need a client directive to hydrate (`client:load`); without it `Reveal`'s
+  `initial={{ opacity: 0 }}` never animates and the content stays invisible.
+- A section reused on more than one page goes in `components/shared/` (e.g. `Faq`, `CTASection`);
+  page-specific sections live in `components/<page>/`.
+- Copy/content lives in `src/data/` modules, never inline in components. Years derive from
+  `EDITION.year` / `EDITION.nextYear`; the default meta description from `site.ts`.
 
 ## Styling
 
@@ -90,7 +88,8 @@ CSS lives in `src/styles/`, all imported via `layouts/Layout.astro` (`global.css
 - `fonts.css`    — Google Fonts / `@font-face`
 - `hero.css` / `intro.css` / `sections.css` — per-section layout & styling
 
-A few components also use inline styles (`Nav.tsx`, `Footer.tsx`, `ScrollProgress.tsx`).
+Many components also use inline `style={{}}` objects (`Nav.tsx`, `Footer.tsx`, `ScrollProgress.tsx`,
+and most section components) — the two styling approaches coexist.
 
 ## Linting & Formatting
 
@@ -111,4 +110,4 @@ Vercel with `cleanUrls: true` and `trailingSlash: false`. Deployment root = `shi
 
 ## Tracking
 
-GTM (`GTM-NQ2DKKPD`), gtag (`G-377KFTGYHV`), Hotjar (`hjid:4943377`) — all in `Layout.tsx`.
+GTM (`GTM-NQ2DKKPD`) and gtag (`G-377KFTGYHV`) — both in `Layout.astro`.
