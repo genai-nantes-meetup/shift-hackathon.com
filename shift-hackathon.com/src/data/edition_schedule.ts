@@ -125,38 +125,3 @@ export const SCHEDULE = [
     ],
   },
 ];
-
-export const FAQ = [
-  {
-    q: 'Puis-je pitcher une idée dont le projet a déjà débuté ?',
-    a: "Pour que tous les participants soient sur le même pied d'égalité, il ne faut pas avoir commencé à travailler sur l'idée en amont.",
-  },
-  {
-    q: "Est-ce que je peux bosser sur mon outil / l'outil de ma boite ?",
-    a: "Bien sûr que non petit malin, l'objectif ici est de prendre un outil sur le marché.",
-  },
-  {
-    q: 'Dois-je avoir constitué mon équipe en amont du weekend ?',
-    a: 'Pas du tout, les équipes seront créées au lancement du hackathon.',
-  },
-  {
-    q: "J'ai combien de temps pour présenter mon idée ?",
-    a: '1min tout pile, pas une seconde de plus.',
-  },
-  { q: 'Est-ce que je peux pitcher 2 idées ?', a: 'Choisis ta préférée !' },
-  { q: 'Est-ce que je peux prévoir des objets ou des slides ?', a: 'Objets oui, slides non !' },
-  { q: 'Combien de projets sont sélectionnés ?', a: '15 projets, pas un de plus.' },
-  {
-    q: "Que faire si mon idée n'est pas choisie ?",
-    a: "Rejoins une team dont l'idée ou le porteur te parle.",
-  },
-  { q: "Qu'est-ce que je dois emmener ?", a: 'Ta bonne humeur et ton PC bien sûr !' },
-  {
-    q: 'Comment me rendre sur place ?',
-    a: 'Via le tram 1, le bus 11, en voiture au parking Graslin ou en vélo.',
-  },
-  {
-    q: 'Est-ce que je peux rester dormir ?',
-    a: 'Le vendredi soir, non. Le samedi, oui ! Par contre prévois un duvet, un masque de nuit et des boules quies ;)',
-  },
-];

@@ -2,6 +2,7 @@
 import '../styles/fonts.css';
 import '../styles/global.css';
 import { DEFAULT_META_DESCRIPTION } from '../data/site';
+import Nav from '../components/Nav';
 interface Props {
   title: string;
   description?: string;
@@ -71,6 +72,7 @@ const {
         width="0"
         style="display:none;visibility:hidden"></iframe></noscript
     >
+    <Nav client:load />
     <slot />
   </body>
 </html>

@@ -1,4 +1,3 @@
-import Nav from '../Nav';
 import Footer from '../Footer';
 import IndexHero from './IndexHero';
 import IntroSection from './IntroSection';
@@ -10,13 +9,12 @@ import Partners from './Partners';
 import Pricing from './Pricing';
 import Banner from './Banner';
 import Lieu from './Lieu';
-import Faq from './Faq';
+import Faq from '../shared/Faq';
 import OrgaTeam from './OrgaTeam';
 
 export default function IndexBody() {
   return (
     <>
-      <Nav />
       <main style={{ paddingTop: 60, background: '#000', minHeight: '100vh', color: '#fff' }}>
         <IndexHero />
         <IntroSection />
