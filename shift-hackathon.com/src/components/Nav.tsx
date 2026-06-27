@@ -8,6 +8,50 @@ const NAV_LINKS = [
 ];
 const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
 
+function NavLink({ label, href }: { label: string; href: string }) {
+  return (
+    <motion.a
+      href={href}
+      initial="rest"
+      animate="rest"
+      whileHover="hover"
+      variants={{
+        rest: { color: '#fff' },
+        hover: { color: '#f75787' },
+      }}
+      transition={{ duration: 0.2, ease: 'easeOut' }}
+      style={{
+        position: 'relative',
+        color: '#fff',
+        textDecoration: 'none',
+        fontFamily: AGRANDIR,
+        fontSize: '14px',
+        fontWeight: 400,
+        letterSpacing: '1.4px',
+        textTransform: 'uppercase',
+      }}
+    >
+      {label}
+      <motion.span
+        variants={{
+          rest: { scaleX: 0 },
+          hover: { scaleX: 1 },
+        }}
+        transition={{ duration: 0.25, ease: 'easeOut' }}
+        style={{
+          position: 'absolute',
+          left: 0,
+          right: 0,
+          bottom: '-4px',
+          height: '2px',
+          background: '#f75787',
+          transformOrigin: 'center',
+        }}
+      />
+    </motion.a>
+  );
+}
+
 export default function Nav() {
   return (
     <motion.nav
@@ -39,25 +83,7 @@ export default function Nav() {
       </a>
       <div style={{ display: 'flex', alignItems: 'center', gap: '1.75rem' }}>
         {NAV_LINKS.map((l) => (
-          <a
-            key={l.href}
-            href={l.href}
-            style={{
-              color: '#fff',
-              textDecoration: 'none',
-              fontFamily: AGRANDIR,
-              fontSize: '14px',
-              fontWeight: 400,
-              letterSpacing: '1.4px',
-              textTransform: 'uppercase',
-              transition: 'opacity 0.2s',
-              opacity: 0.85,
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.opacity = '1')}
-            onMouseLeave={(e) => (e.currentTarget.style.opacity = '0.85')}
-          >
-            {l.label}
-          </a>
+          <NavLink key={l.href} label={l.label} href={l.href} />
         ))}
         <a
           href={EDITION.ticketUrl}
