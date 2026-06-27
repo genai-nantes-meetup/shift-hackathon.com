@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import AgendaBody from '../components/agenda/AgendaBody';
+import AgendaHero from '../components/agenda/AgendaHero';
+import Schedule from '../components/agenda/Schedule';
+import CTASection from '../components/shared/CTASection';
 import { EDITION } from '../data/edition';
 ---
 
@@ -9,5 +11,9 @@ import { EDITION } from '../data/edition';
   description={`L'agenda du Shift Hackathon ${EDITION.year} : 3 jours de hackathon Gen AI à Nantes.`}
   canonical="https://shift-hackathon.com/agenda"
 >
-  <AgendaBody client:load />
+  <main style="padding-top: 60px; background: #000; min-height: 100vh; color: #fff;">
+    <AgendaHero client:load />
+    <Schedule client:load />
+    <CTASection client:load />
+  </main>
 </Layout>

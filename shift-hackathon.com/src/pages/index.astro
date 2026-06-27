@@ -1,6 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import IndexBody from '../components/index/IndexBody';
+import IndexHero from '../components/index/IndexHero';
+import IntroSection from '../components/index/IntroSection';
+import SpeakersPreview from '../components/index/SpeakersPreview';
+import AuProgramme from '../components/index/AuProgramme';
+import Testimonials from '../components/index/Testimonials';
+import TestimonialsList from '../components/index/TestimonialsList';
+import Partners from '../components/index/Partners';
+import Pricing from '../components/index/Pricing';
+import Banner from '../components/index/Banner';
+import Lieu from '../components/index/Lieu';
+import Faq from '../components/shared/Faq';
+import OrgaTeam from '../components/index/OrgaTeam';
 ---
 
 <Layout
@@ -8,5 +19,18 @@ import IndexBody from '../components/index/IndexBody';
   description='Créé des produits Gen AI game-changer en 48 heures. Édition "Time to Custom" → Hack ton outil préféré.'
   canonical="https://shift-hackathon.com/"
 >
-  <IndexBody client:load />
+  <main style="padding-top: 60px; background: #000; min-height: 100vh; color: #fff;">
+    <IndexHero client:load />
+    <IntroSection client:load />
+    <SpeakersPreview client:load />
+    <AuProgramme client:load />
+    <Testimonials client:load />
+    <TestimonialsList client:load />
+    <Partners client:load />
+    <Pricing client:load />
+    <Banner client:load />
+    <Lieu client:load />
+    <Faq client:load />
+    <OrgaTeam client:load />
+  </main>
 </Layout>

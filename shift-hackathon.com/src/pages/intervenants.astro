@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import IntervenantsBody from '../components/intervenants/IntervenantsBody';
+import SpeakersHero from '../components/intervenants/SpeakersHero';
+import SpeakerGrid from '../components/intervenants/SpeakerGrid';
+import CTASection from '../components/shared/CTASection';
 import { EDITION } from '../data/edition';
 ---
 
@@ -9,5 +11,9 @@ import { EDITION } from '../data/edition';
   description={`Découvrez les intervenants du Shift Hackathon Gen AI ${EDITION.year} à Nantes.`}
   canonical="https://shift-hackathon.com/intervenants"
 >
-  <IntervenantsBody client:load />
+  <main style="padding-top: 60px; background: #000; min-height: 100vh; color: #fff;">
+    <SpeakersHero client:load />
+    <SpeakerGrid client:load />
+    <CTASection client:load />
+  </main>
 </Layout>

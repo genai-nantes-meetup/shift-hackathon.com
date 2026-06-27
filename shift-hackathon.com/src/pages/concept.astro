@@ -1,6 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import ConceptBody from '../components/concept/ConceptBody';
+import ConceptHero from '../components/concept/ConceptHero';
+import Features from '../components/concept/Features';
+import ProjectExamples from '../components/concept/ProjectExamples';
+import CTASection from '../components/shared/CTASection';
+import Faq from '../components/shared/Faq';
 ---
 
 <Layout
@@ -8,5 +12,11 @@ import ConceptBody from '../components/concept/ConceptBody';
   description="Shift Time To Custom: 48 heures pour hacker ton outil préféré et créer une vraie feature Gen AI."
   canonical="https://shift-hackathon.com/concept"
 >
-  <ConceptBody client:load />
+  <main style="padding-top: 60px; background: #000; min-height: 100vh; color: #fff;">
+    <ConceptHero client:load />
+    <Features client:load />
+    <ProjectExamples client:load />
+    <CTASection client:load />
+    <Faq client:load />
+  </main>
 </Layout>
