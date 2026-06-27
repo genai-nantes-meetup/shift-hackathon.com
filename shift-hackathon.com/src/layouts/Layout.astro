@@ -3,6 +3,7 @@ import '../styles/fonts.css';
 import '../styles/global.css';
 import { DEFAULT_META_DESCRIPTION } from '../data/site';
 import Nav from '../components/Nav';
+import Footer from '../components/Footer';
 interface Props {
   title: string;
   description?: string;
@@ -74,5 +75,6 @@ const {
     >
     <Nav client:load />
     <slot />
+    <Footer client:load />
   </body>
 </html>
