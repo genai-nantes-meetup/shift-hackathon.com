@@ -1,5 +1,5 @@
 import Reveal from '../Reveal';
-import { TESTIMONIALS } from '../../data/site';
+import { TESTIMONIALS } from '../../data/testimonials';
 
 export default function TestimonialsList() {
   return (

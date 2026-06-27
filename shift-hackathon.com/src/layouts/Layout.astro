@@ -1,6 +1,7 @@
 ---
 import '../styles/fonts.css';
 import '../styles/global.css';
+import { DEFAULT_META_DESCRIPTION } from '../data/site';
 interface Props {
   title: string;
   description?: string;
@@ -9,7 +10,7 @@ interface Props {
 }
 const {
   title,
-  description = 'Créé des produits Gen AI game-changer en 48 heures. Édition "Time to Custom" → Hack ton outil préféré.',
+  description = DEFAULT_META_DESCRIPTION,
   canonical,
   ogImage = new URL('/assets/images/og-image.png', Astro.site).toString(),
 } = Astro.props;
