@@ -1,5 +1,6 @@
 export const EDITION = {
   year: 2026,
+  nextYear: 2027,
   startDay: 27,
   endDay: 29,
   month: 'Mars',

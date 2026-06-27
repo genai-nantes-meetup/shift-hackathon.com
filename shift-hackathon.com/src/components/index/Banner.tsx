@@ -18,7 +18,7 @@ export default function Banner() {
         <div className="banner__bottom">
           <Reveal delay={0.1}>
             <p className="banner__sub">
-              Un événement pour développeurs, designers &amp; product lovers.
+              Un événement pour développeurs, designers & product lovers.
             </p>
           </Reveal>
           <Reveal delay={0.2}>

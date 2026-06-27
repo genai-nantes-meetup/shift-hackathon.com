@@ -111,7 +111,7 @@ export default function SpeakersHero() {
                 lineHeight: '27.9px',
               }}
             >
-              Attache ta ceinture et jette un œil au line-up de ce hackathon d&apos;anthologie !
+              Attache ta ceinture et jette un œil au line-up de ce hackathon d’anthologie !
             </p>
           </motion.div>
 

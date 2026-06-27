@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { EDITION } from '../data/edition';
 
 export default function Footer() {
   const [values, setValues] = useState({ name: '', email: '', message: '' });
@@ -17,10 +18,9 @@ export default function Footer() {
             lineHeight: 1.5,
           }}
         >
-          Nos événements sont ouverts à toutes et à tous, sans distinction de genre,
-          d&rsquo;orientation sexuelle ou d&rsquo;identité. En vous inscrivant, vous vous engagez à
-          faire preuve de respect et de tolérance, afin que chacun&middot;e se sente
-          accueilli&middot;e et en sécurité.
+          Nos événements sont ouverts à toutes et à tous, sans distinction de genre, d’orientation
+          sexuelle ou d’identité. En vous inscrivant, vous vous engagez à faire preuve de respect et
+          de tolérance, afin que chacun·e se sente accueilli·e et en sécurité.
         </p>
 
         <div
@@ -46,7 +46,7 @@ export default function Footer() {
                 margin: 0,
               }}
             >
-              © 2026 Shift
+              © {EDITION.year} Shift
               <br />
               Tous droits réservés
             </p>
@@ -72,7 +72,7 @@ export default function Footer() {
                 marginBottom: '1rem',
               }}
             >
-              Une question ? N&apos;hésite pas à nous contacter
+              Une question ? N’hésite pas à nous contacter
             </p>
             <form
               onSubmit={(e) => e.preventDefault()}

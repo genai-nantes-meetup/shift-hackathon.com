@@ -66,7 +66,7 @@ export default function AgendaHero() {
                 textTransform: 'uppercase',
               }}
             >
-              L&apos;Agenda
+              L’Agenda
             </p>
             <p
               style={{
@@ -98,7 +98,7 @@ export default function AgendaHero() {
                 lineHeight: 1.55,
               }}
             >
-              Check l&apos;agenda de ce hackathon qui s&apos;annonce épique !
+              Check l’agenda de ce hackathon qui s’annonce épique !
             </p>
           </motion.div>
 

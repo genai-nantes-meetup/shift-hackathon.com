@@ -1,31 +1,6 @@
 import { motion } from 'motion/react';
 import { EDITION } from '../../data/edition';
-
-// All sponsors/complices — shown in scrolling marquee below the hero.
-const ALL_COMPLICES = [
-  { name: 'Gemini', logo: '/assets/images/sponsors/logo-gemini.png' },
-  { name: 'Mistral AI', logo: '/assets/images/sponsors/logo-mistral-ai.png' },
-  { name: 'ElevenLabs', logo: '/assets/images/sponsors/logo-elevenlabs.png' },
-  { name: 'n8n', logo: '/assets/images/sponsors/logo-n8n.png' },
-  { name: 'OpenAI', logo: '/assets/images/sponsors/logo-openai.png' },
-  { name: 'Meilisearch', logo: '/assets/images/sponsors/logo-meilisearch.png' },
-  { name: 'Gladia', logo: '/assets/images/sponsors/logo-gladia.png' },
-  { name: 'GitHub Copilot', logo: '/assets/images/sponsors/logo-github-copilot.png' },
-  { name: 'Clever Cloud', logo: '/assets/images/sponsors/logo-clever-cloud.png' },
-  { name: 'Reecall', logo: '/assets/images/sponsors/logo-reecall.png' },
-  { name: 'Externatic', logo: '/assets/images/sponsors/logo-externatic.png' },
-  { name: 'Agoriade AI', logo: '/assets/images/sponsors/logo-agoriade-ai.png' },
-  { name: 'Theodo', logo: '/assets/images/sponsors/logo-theodo.png' },
-  { name: 'Onepoint', logo: '/assets/images/sponsors/logo-onepoint.png' },
-  { name: 'Extia', logo: '/assets/images/sponsors/logo-extia.png' },
-  { name: 'Ici Lundi', logo: '/assets/images/sponsors/logo-ici-lundi.png' },
-  { name: 'La Cantine', logo: '/assets/images/sponsors/logo-la-cantine.svg' },
-  { name: 'Kalicube', logo: '/assets/images/sponsors/logo-kalicube.png' },
-  { name: 'RCA', logo: '/assets/images/sponsors/logo-rca.png' },
-  { name: 'Arzel', logo: '/assets/images/sponsors/logo-arzel.png' },
-  { name: 'Clint', logo: '/assets/images/sponsors/logo-clint.png' },
-  { name: 'dev.events', logo: '/assets/images/sponsors/logo-dev-events.png' },
-];
+import { ALL_COMPLICES } from '../../data/edition_complices';
 
 export default function IndexHero() {
   return (
@@ -53,15 +28,13 @@ export default function IndexHero() {
             <h1 className="hero__title">
               <span className="hero__title-main">Shift</span>
               <span className="hero__title-sub">Le Hackathon Gen AI n°1</span>
-              <span className="hero__title-italic">
-                pour les Designers, Devs &amp; Product lovers
-              </span>
+              <span className="hero__title-italic">pour les Designers, Devs & Product lovers</span>
             </h1>
 
             <div className="hero__body">
               <p>Crée des produits Gen AI game-changer en 48 heures.</p>
-              <p>Édition &ldquo;Time to Custom&rdquo; → Hack ton outil préféré.</p>
-              <p>🔥 Event all-inclusive - coaching, food &amp; fun.</p>
+              <p>Édition “Time to Custom” → Hack ton outil préféré.</p>
+              <p>🔥 Event all-inclusive - coaching, food & fun.</p>
             </div>
 
             <div className="hero__cta-group">
@@ -71,7 +44,7 @@ export default function IndexHero() {
                 rel="noopener noreferrer"
                 className="cta-primary"
               >
-                Je suis chaud pour 2027 !
+                Je suis chaud pour {EDITION.nextYear} !
               </a>
               <p className="hero__sub-cta">Réserve ta place !!</p>
             </div>

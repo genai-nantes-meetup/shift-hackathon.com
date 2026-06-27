@@ -1,5 +1,6 @@
 import Reveal from '../Reveal';
 import { SPEAKERS } from '../../data/edition_speakers';
+import { EDITION } from '../../data/edition';
 
 export default function SpeakersPreview() {
   const preview = SPEAKERS.slice(0, 6);
@@ -7,7 +8,7 @@ export default function SpeakersPreview() {
     <section className="speakers">
       <div className="speakers__inner">
         <Reveal>
-          <h2 className="speakers__title">Ils seront présents en 2026</h2>
+          <h2 className="speakers__title">Ils seront présents en {EDITION.year}</h2>
         </Reveal>
         <Reveal>
           <div className="speakers__grid">

@@ -64,7 +64,7 @@ export default function Testimonials() {
             margin: 0,
           }}
         >
-          Pour explorer les projets des dernières éditions, c&rsquo;est juste ici :{' '}
+          Pour explorer les projets des dernières éditions, c’est juste ici :{' '}
           <a
             href="https://taap.it/playlistshift"
             target="_blank"

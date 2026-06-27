@@ -80,7 +80,7 @@ export default function ConceptHero() {
                 textTransform: 'uppercase',
               }}
             >
-              C&apos;est quoi ?
+              C’est quoi ?
             </p>
           </motion.div>
 
@@ -99,9 +99,8 @@ export default function ConceptHero() {
                 lineHeight: '27.9px',
               }}
             >
-              Shift - Time To Custom, c&apos;est 48 heures pour hacker ton outil préféré, créer une
-              vraie feature Gen AI utile pour ton usage, et produire aux côtés des meilleurs experts
-              tech.
+              Shift - Time To Custom, c’est 48 heures pour hacker ton outil préféré, créer une vraie
+              feature Gen AI utile pour ton usage, et produire aux côtés des meilleurs experts tech.
             </p>
           </motion.div>
 
