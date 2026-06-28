@@ -1,6 +1,7 @@
 import Reveal from '../Reveal';
 import { SPEAKERS } from '../../data/edition_speakers';
 import { EDITION } from '../../data/edition';
+import { speakerSlug } from '../../lib/seo';
 
 export default function SpeakersPreview() {
   const preview = SPEAKERS.slice(0, 6);
@@ -13,15 +14,20 @@ export default function SpeakersPreview() {
         <Reveal>
           <div className="speakers__grid">
             {preview.map((s) => (
-              <div key={s.name} className="speakers__card">
-                <img src={s.img} alt={s.name} loading="lazy" />
+              <a
+                key={s.name}
+                href={`/intervenants/${speakerSlug(s)}`}
+                className="speakers__card"
+                style={{ textDecoration: 'none', color: 'inherit' }}
+              >
+                <img src={s.img} alt={`${s.name}, ${s.roles.join(' · ')}`} loading="lazy" />
                 <div>
                   <h6>{s.name}</h6>
                   {s.roles.map((r) => (
                     <p key={r}>{r}</p>
                   ))}
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </Reveal>

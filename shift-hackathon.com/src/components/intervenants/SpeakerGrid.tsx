@@ -43,7 +43,7 @@ export default function SpeakerGrid() {
             <div style={{ flex: '1 0 0', width: '100%', overflow: 'hidden', position: 'relative' }}>
               <img
                 src={s.img}
-                alt={s.name}
+                alt={`${s.name}, ${s.roles.join(' · ')}`}
                 style={{
                   display: 'block',
                   width: '100%',
@@ -54,7 +54,7 @@ export default function SpeakerGrid() {
               />
             </div>
             {/* Name */}
-            <h6
+            <p
               style={{
                 fontFamily: '"Dela Gothic One", sans-serif',
                 fontSize: '24px',
@@ -65,7 +65,7 @@ export default function SpeakerGrid() {
               }}
             >
               {s.name}
-            </h6>
+            </p>
             {/* Roles */}
             <div>
               {s.roles.map((r) => (

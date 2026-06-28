@@ -3,10 +3,12 @@
 // Consommé par `Layout.astro` (Organization + WebSite site-wide) et par les pages
 // (Event, FAQPage, BreadcrumbList, Person, ItemList) via la prop `jsonLd`.
 
-import { SITE_URL, DEFAULT_META_DESCRIPTION } from '../data/site';
+import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/site';
 import { EDITION, JE_SUIS_CHAUD_URL, SOCIAL_LINKS, VENUE } from '../data/edition';
 import { PRICING_TIERS } from '../data/edition_pricing';
 import { SPEAKERS, type Speaker } from '../data/edition_speakers';
+import { SCHEDULE } from '../data/edition_schedule';
+import { VIDEOS } from '../data/videos';
 import type { FaqItem } from '../data/faq';
 
 export type JsonLd = Record<string, unknown>;
@@ -46,7 +48,12 @@ export function organizationSchema(): JsonLd {
     '@id': ORGANIZATION_ID,
     name: 'Shift Hackathon',
     url: SITE_URL,
-    logo: abs('/assets/images/hero/logo-shift.png'),
+    logo: {
+      '@type': 'ImageObject',
+      url: abs('/assets/images/hero/logo-shift.png'),
+      width: 787,
+      height: 153,
+    },
     email: EDITION.contactEmail,
     ...(links.length ? { sameAs: links } : {}),
   };
@@ -105,6 +112,7 @@ function ticketOffers(): JsonLd[] {
       availability: 'https://schema.org/InStock',
       url: JE_SUIS_CHAUD_URL,
       category: tier.period,
+      validThrough: `${isoDay(EDITION.endDay)}T23:59:59+02:00`,
     };
   }).filter((offer): offer is JsonLd => offer !== null);
 }
@@ -112,23 +120,49 @@ function ticketOffers(): JsonLd[] {
 const isoDay = (day: number): string =>
   `${EDITION.year}-${String(EDITION.monthNumber).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
 
+// Description factuelle (≠ accroche marketing) — meilleure extraction par les moteurs IA.
+const EVENT_DESCRIPTION =
+  'Hackathon Gen AI de 48 heures à Nantes (édition « Time to Custom »). En équipe, les ' +
+  "participant·es prennent un outil existant et lui ajoutent une vraie fonctionnalité d'IA " +
+  'générative, accompagné·es par des experts tech, product et design, puis la testent et la ' +
+  'pitchent devant un jury.';
+
+// Un sous-événement par jour d'agenda (Google valorise subEvent pour les events multi-jours).
+function subEvents(): JsonLd[] {
+  return SCHEDULE.map((day, index) => ({
+    '@type': 'Event',
+    name: `Shift ${EDITION.year} — ${day.weekday} (${day.label})`,
+    startDate: isoDay(EDITION.startDay + index),
+    endDate: isoDay(EDITION.startDay + index),
+    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+    eventStatus: 'https://schema.org/EventScheduled',
+    location: placeSchema(),
+  }));
+}
+
 export function eventSchema(): JsonLd {
   return {
     '@type': 'Event',
     '@id': EVENT_ID,
     name: `Shift — Le Hackathon Gen AI ${EDITION.year}`,
-    description: DEFAULT_META_DESCRIPTION,
+    description: EVENT_DESCRIPTION,
     // Kickoff vendredi 18h (CET, +01:00) → clôture dimanche soir.
     // NB : passage à l'heure d'été le 29/03/2026 ⇒ le dimanche est en +02:00.
     startDate: `${isoDay(EDITION.startDay)}T18:00:00+01:00`,
     endDate: `${isoDay(EDITION.endDay)}T23:00:00+02:00`,
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     eventStatus: 'https://schema.org/EventScheduled',
+    isAccessibleForFree: false,
     location: placeSchema(),
-    image: [abs('/assets/images/og-image.png')],
+    image: [abs(DEFAULT_OG_IMAGE)],
     organizer: { '@id': ORGANIZATION_ID },
-    performer: SPEAKERS.map((s) => ({ '@type': 'Person', name: s.name })),
+    performer: SPEAKERS.map((s) => personSchema(s)),
+    audience: {
+      '@type': 'Audience',
+      audienceType: 'Développeurs, designers et product lovers',
+    },
     offers: ticketOffers(),
+    subEvent: subEvents(),
     url: SITE_URL,
     inLanguage: 'fr-FR',
   };
@@ -167,7 +201,15 @@ export function personSchema(s: Speaker): JsonLd {
     image: abs(s.img),
     jobTitle: s.roles[0],
     ...(s.bio ? { description: s.bio } : {}),
-    ...(company ? { worksFor: { '@type': 'Organization', name: company } } : {}),
+    ...(company
+      ? {
+          worksFor: {
+            '@type': 'Organization',
+            name: company,
+            ...(s.companyUrl ? { url: s.companyUrl } : {}),
+          },
+        }
+      : {}),
     ...(links.length ? { sameAs: links } : {}),
   };
 }
@@ -194,3 +236,25 @@ export function faqSchema(items: FaqItem[]): JsonLd {
     })),
   };
 }
+
+interface Video {
+  id: string;
+  title: string;
+  description: string;
+  uploadDate?: string;
+}
+
+export function videoSchema(video: Video): JsonLd {
+  return {
+    '@type': 'VideoObject',
+    name: video.title,
+    description: video.description,
+    thumbnailUrl: `https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`,
+    embedUrl: `https://www.youtube.com/embed/${video.id}`,
+    contentUrl: `https://www.youtube.com/watch?v=${video.id}`,
+    // uploadDate optionnel : à renseigner dans data/videos.ts pour l'éligibilité rich results.
+    ...(video.uploadDate ? { uploadDate: video.uploadDate } : {}),
+  };
+}
+
+export const videoSchemas = (): JsonLd[] => VIDEOS.map(videoSchema);

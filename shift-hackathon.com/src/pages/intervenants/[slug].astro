@@ -18,9 +18,14 @@ const slug = speakerSlug(speaker);
 const path = `/intervenants/${slug}`;
 const roleLine = speaker.roles.join(' · ');
 const title = `${speaker.name} — Intervenant·e Shift Hackathon Gen AI ${EDITION.year}`;
-const description = speaker.bio
-  ? `${speaker.name}, ${roleLine}. ${speaker.bio}`.slice(0, 157)
+const rawDescription = speaker.bio
+  ? `${speaker.name}, ${roleLine}. ${speaker.bio}`
   : `${speaker.name} (${roleLine}) intervient au Shift Hackathon Gen AI ${EDITION.year}, le hackathon Gen AI de 48h à Nantes.`;
+// Troncature au mot près (≤160 chars) pour éviter de couper en plein milieu d'un mot dans le SERP.
+const description =
+  rawDescription.length <= 160
+    ? rawDescription
+    : `${rawDescription.slice(0, 157).replace(/\s+\S*$/, '')}…`;
 
 // Anti-thin-content : on n'indexe une fiche que si elle a une bio (contenu unique réel).
 // Sans bio, la page reste accessible et maillée (noindex, follow) jusqu'à enrichissement.

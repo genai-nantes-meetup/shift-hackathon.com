@@ -1,7 +1,7 @@
 ---
 import '../styles/fonts.css';
 import '../styles/global.css';
-import { DEFAULT_META_DESCRIPTION } from '../data/site';
+import { DEFAULT_META_DESCRIPTION, DEFAULT_OG_IMAGE } from '../data/site';
 import { EDITION, SOCIAL_LINKS } from '../data/edition';
 import type { FaqItem } from '../data/faq';
 import { organizationSchema, websiteSchema, faqSchema, type JsonLd } from '../lib/seo';
@@ -20,7 +20,7 @@ const {
   title,
   description = DEFAULT_META_DESCRIPTION,
   canonical,
-  ogImage = new URL('/assets/images/og-image.png', Astro.site).toString(),
+  ogImage = new URL(DEFAULT_OG_IMAGE, Astro.site).toString(),
   faqItems,
   noindex = false,
   jsonLd = [],
@@ -55,6 +55,13 @@ const jsonLdGraph = { '@context': 'https://schema.org', '@graph': graph };
     <meta name="theme-color" content={EDITION.dominantColor} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/fonts/agrandir-grand-heavy.woff2"
+      crossorigin
+    />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Shift Hackathon" />
     <meta property="og:locale" content="fr_FR" />
