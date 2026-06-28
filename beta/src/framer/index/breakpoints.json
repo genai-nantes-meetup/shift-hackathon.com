@@ -1,8 +1,0 @@
-[
-  { "hash": "uosayu", "mediaQuery": "(min-width: 1240px)" },
-  {
-    "hash": "1pmeis7",
-    "mediaQuery": "(min-width: 768px) and (max-width: 1239.98px)"
-  },
-  { "hash": "hn3c4o", "mediaQuery": "(max-width: 767.98px)" }
-]
