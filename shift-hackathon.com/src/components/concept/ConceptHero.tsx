@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 
-import { EDITION } from '../../data/edition';
+import { EDITION, JE_SUIS_CHAUD_URL } from '../../data/edition';
 const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
 const OXANIUM = 'Oxanium, sans-serif';
 
@@ -110,7 +110,7 @@ export default function ConceptHero() {
             transition={{ duration: 0.5, delay: 0.35 }}
           >
             <a
-              href={EDITION.ticketUrl}
+              href={JE_SUIS_CHAUD_URL}
               target="_blank"
               rel="noopener noreferrer"
               style={{

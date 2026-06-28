@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { EDITION } from '../data/edition';
+import { EDITION, JE_SUIS_CHAUD_URL } from '../data/edition';
 
 const NAV_LINKS = [
   { label: 'Concept', href: '/concept' },
@@ -86,7 +86,7 @@ export default function Nav() {
           <NavLink key={l.href} label={l.label} href={l.href} />
         ))}
         <a
-          href={EDITION.ticketUrl}
+          href={JE_SUIS_CHAUD_URL}
           target="_blank"
           rel="noopener noreferrer"
           style={{

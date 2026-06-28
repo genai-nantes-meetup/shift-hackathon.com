@@ -1,5 +1,5 @@
 import Reveal from '../Reveal';
-import { EDITION } from '../../data/edition';
+import { JE_SUIS_CHAUD_URL } from '../../data/edition';
 
 export default function Banner() {
   return (
@@ -23,7 +23,7 @@ export default function Banner() {
           </Reveal>
           <Reveal delay={0.2}>
             <a
-              href={EDITION.ticketUrl}
+              href={JE_SUIS_CHAUD_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="cta-primary"

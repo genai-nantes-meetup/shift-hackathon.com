@@ -1,5 +1,5 @@
 import Reveal from '../Reveal';
-import { EDITION } from '../../data/edition';
+import { EDITION, JE_SUIS_CHAUD_URL } from '../../data/edition';
 
 export default function CTASection() {
   return (
@@ -44,7 +44,7 @@ export default function CTASection() {
             </p>
           </div>
           <a
-            href={EDITION.ticketUrl}
+            href={JE_SUIS_CHAUD_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="cta-primary"

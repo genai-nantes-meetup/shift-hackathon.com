@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { EDITION } from '../../data/edition';
+import { EDITION, JE_SUIS_CHAUD_URL } from '../../data/edition';
 import { ALL_COMPLICES } from '../../data/edition_complices';
 
 export default function IndexHero() {
@@ -39,7 +39,7 @@ export default function IndexHero() {
 
             <div className="hero__cta-group">
               <a
-                href={EDITION.nextYearWaitingListUrl}
+                href={JE_SUIS_CHAUD_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cta-primary"

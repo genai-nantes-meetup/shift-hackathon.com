@@ -1,5 +1,5 @@
 import Reveal from '../Reveal';
-import { EDITION } from '../../data/edition';
+import { EDITION, JE_SUIS_CHAUD_URL } from '../../data/edition';
 import { PRICING_TIERS } from '../../data/edition_pricing';
 
 const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
@@ -170,7 +170,7 @@ export default function Pricing() {
 
                   {/* CTA */}
                   <a
-                    href={EDITION.ticketUrl}
+                    href={JE_SUIS_CHAUD_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{
