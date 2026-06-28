@@ -82,6 +82,6 @@ export const VENUE: {
   postalCode: '44000',
   addressLocality: 'Nantes',
   addressCountry: 'FR',
-  latitude: null,
-  longitude: null,
+  latitude: 47.2129216,
+  longitude: -1.5644127,
 };
