@@ -7,10 +7,13 @@ fully removed.
 ## Development
 
 ```bash
-ASTRO_TELEMETRY_DISABLED=1 npm run dev     # http://localhost:4321
-ASTRO_TELEMETRY_DISABLED=1 npm run build   # outputs to dist/
-npm run lint                               # ESLint
-npm run format                             # Prettier
+npm run dev          # astro dev — http://localhost:4324 (port set in astro.config.mjs)
+npm run build        # astro build → dist/
+npm run typecheck    # astro check
+npm run lint         # eslint src        (lint:fix to autofix)
+npm run format       # prettier --write src   (format:check to verify)
+npm run check        # lint + typecheck + build — pre-push gate
+npm run test:visual  # Playwright visual tests (tests/visual.spec.ts)
 ```
 
 ## Architecture
@@ -30,7 +33,8 @@ src/
 ├── data/                  # all copy/content lives here (no logic, no hardcoding in components)
 │   ├── edition.ts         # core facts: year, nextYear, dates, ticket URLs, agenda days
 │   ├── edition_*.ts       # per-section edition content: complices, partners, pricing, schedule, speakers
-│   ├── site.ts            # DEFAULT_META_DESCRIPTION, ORGA_TEAM
+│   ├── site.ts            # DEFAULT_META_DESCRIPTION
+│   ├── team.ts            # ORGA_TEAM (organising team)
 │   ├── testimonials.ts faq.ts videos.ts   # TESTIMONIALS, FAQ_ITEMS, video embeds
 └── styles/                # hand-written CSS (see Styling)
 public/assets/images/      # organized by type (named files, not Framer hashes):
@@ -75,7 +79,13 @@ and most section components) — the two styling approaches coexist.
 
 ## Linting & Formatting
 
-ESLint (`eslint.config.js`) + Prettier (`.prettierrc`). `src/framer/` is excluded from Prettier (generated HTML).
+ESLint (`eslint.config.js`) lints `src`; Prettier formats `src` (no config file — defaults +
+`prettier-plugin-astro`).
+
+## Testing
+
+Playwright visual regression only: spec in `tests/visual.spec.ts`, config in `playwright.config.ts`.
+Run with `npm run test:visual`.
 
 ## Dev gotchas
 
@@ -89,6 +99,7 @@ ESLint (`eslint.config.js`) + Prettier (`.prettierrc`). `src/framer/` is exclude
 ## Deployment
 
 Vercel with `cleanUrls: true` and `trailingSlash: false`. Deployment root = `dist/` after build.
+`@astrojs/sitemap` emits `sitemap-index.xml` at build (relies on `site:` in `astro.config.mjs`).
 
 ## Tracking
 
