@@ -20,7 +20,7 @@ jobs:
       run:
         working-directory: shift-hackathon.com
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           ref: ${{ github.head_ref || github.ref_name }}
 
