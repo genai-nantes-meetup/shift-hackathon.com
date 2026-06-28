@@ -67,11 +67,12 @@ Plain hand-written CSS — **no CSS framework**. Tailwind was removed (it was wi
 no utility classes were ever used). Do not reintroduce it; add styles to the appropriate
 `src/styles/*.css` file using the existing BEM convention (e.g. `hero__container`, `cta-primary`).
 
-CSS lives in `src/styles/`, all imported via `layouts/Layout.astro` (`global.css` chains the rest):
+CSS lives in `src/styles/`, all imported via `layouts/Layout.astro` — which imports `fonts.css`
+then `global.css` (`global.css` `@import`s the rest):
 
-- `global.css`   — `@import`s the others + a **basic reset** (replaces the former Tailwind Preflight)
+- `fonts.css`    — Google Fonts / `@font-face` (imported directly in `Layout.astro`, before `global.css`)
+- `global.css`   — `@import`s `tokens.css` / `hero.css` / `intro.css` / `sections.css` + a **basic reset** (replaces the former Tailwind Preflight)
 - `tokens.css`   — CSS variables (brand colors, fonts) + reusable classes (`.container`, `.section-title`, `.cta-primary`)
-- `fonts.css`    — Google Fonts / `@font-face`
 - `hero.css` / `intro.css` / `sections.css` — per-section layout & styling
 
 Many components also use inline `style={{}}` objects (`Nav.tsx`, `Footer.tsx`, `ScrollProgress.tsx`,
@@ -98,8 +99,10 @@ Run with `npm run test:visual`.
 
 ## Deployment
 
-Vercel with `cleanUrls: true` and `trailingSlash: false`. Deployment root = `dist/` after build.
-`@astrojs/sitemap` emits `sitemap-index.xml` at build (relies on `site:` in `astro.config.mjs`).
+Vercel (`vercel.json`) with `buildCommand: npm run build`, `outputDirectory: dist`, `cleanUrls: true`
+and `trailingSlash: false`. `@astrojs/sitemap` emits `sitemap-index.xml` at build (relies on `site:`
+in `astro.config.mjs`). `vercel.json` also keeps 301 redirects from the old `/<page>-2026` URLs
+(`/agenda-2026`, `/concept-2026`, `/intervenants-2026`) to their clean equivalents.
 
 ## Tracking
 
