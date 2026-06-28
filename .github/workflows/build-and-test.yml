@@ -16,6 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    defaults:
+      run:
+        working-directory: shift-hackathon.com
     steps:
       - uses: actions/checkout@v6
         with:
@@ -25,13 +28,10 @@ jobs:
         with:
           node-version: '22'
           cache: 'npm'
-          cache-dependency-path: package-lock.json
+          cache-dependency-path: shift-hackathon.com/package-lock.json
 
       - name: Install dependencies
         run: npm i
-
-      - name: Build
-        run: npm run build
 
       - name: Lint
         run: npm run lint
