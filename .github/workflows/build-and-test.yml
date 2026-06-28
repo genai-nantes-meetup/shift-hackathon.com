@@ -1,0 +1,46 @@
+name: Build and test
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'shift-hackathon.com/**'
+      - '.github/workflows/build-and-test.yml'
+  pull_request:
+    paths:
+      - 'shift-hackathon.com/**'
+      - '.github/workflows/build-and-test.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm i
+
+      - name: Build
+        run: npm run build
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build
+        run: npm run build
+
+      - name: Check links in website content
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --root-dir ${{ github.workspace }}/shift-hackathon.com/dist/ shift-hackathon.com/
+          fail: true

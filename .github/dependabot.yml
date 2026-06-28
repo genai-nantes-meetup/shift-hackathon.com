@@ -1,0 +1,70 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5
+    groups:
+      root:
+        patterns:
+          - "*"
+
+  - package-ecosystem: npm
+    directory: /shared
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5
+    groups:
+      shared:
+        patterns:
+          - "*"
+
+  - package-ecosystem: npm
+    directory: /cordee.care
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5
+    groups:
+      cordee:
+        patterns:
+          - "*"
+
+  - package-ecosystem: npm
+    directory: /reflet.care
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5
+    groups:
+      reflet:
+        patterns:
+          - "*"
+
+  - package-ecosystem: npm
+    directory: /prisme.care
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5
+    groups:
+      prisme:
+        patterns:
+          - "*"
+
+  - package-ecosystem: npm
+    directory: /api.prisme.care
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5
+    groups:
+      api:
+        patterns:
+          - "*"
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      github-actions:
+        patterns:
+          - "*"
