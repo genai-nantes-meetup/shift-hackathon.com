@@ -3,13 +3,13 @@ import Layout from '../layouts/Layout.astro';
 import SpeakersHero from '../components/intervenants/SpeakersHero';
 import SpeakerGrid from '../components/intervenants/SpeakerGrid';
 import CTASection from '../components/shared/CTASection';
-import { EDITION } from '../data/edition';
+import { PAGE_META, canonicalFor } from '../data/site';
 ---
 
 <Layout
-  title={`Shift - Les Intervenants ${EDITION.year}`}
-  description={`Découvrez les intervenants du Shift Hackathon Gen AI ${EDITION.year} à Nantes.`}
-  canonical="https://shift-hackathon.com/intervenants"
+  title={PAGE_META.intervenants.title}
+  description={PAGE_META.intervenants.description}
+  canonical={canonicalFor(PAGE_META.intervenants.path)}
 >
   <main style="padding-top: 60px; background: #000; min-height: 100vh; color: #fff;">
     <SpeakersHero client:load />

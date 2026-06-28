@@ -1,8 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { PAGE_META } from '../data/site';
 ---
 
-<Layout title="404 — Cette page a pivoté · Shift Hackathon">
+<Layout title={PAGE_META.notFound.title}>
   <main class="notfound">
     <p class="notfound__code" aria-label="Erreur 404">
       <span class="notfound__digit notfound__digit--cyan">4</span>

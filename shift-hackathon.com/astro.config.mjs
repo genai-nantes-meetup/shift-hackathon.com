@@ -1,9 +1,10 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
+import { SITE_URL } from './src/data/site.ts';
 
 export default defineConfig({
-  site: 'https://shift-hackathon.com',
+  site: SITE_URL,
   server: { port: 4324 },
   integrations: [
     react(),

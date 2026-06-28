@@ -3,13 +3,13 @@ import Layout from '../layouts/Layout.astro';
 import AgendaHero from '../components/agenda/AgendaHero';
 import Schedule from '../components/agenda/Schedule';
 import CTASection from '../components/shared/CTASection';
-import { EDITION } from '../data/edition';
+import { PAGE_META, canonicalFor } from '../data/site';
 ---
 
 <Layout
-  title="Shift - Le Hackathon Gen AI — Agenda"
-  description={`L'agenda du Shift Hackathon ${EDITION.year} : 3 jours de hackathon Gen AI à Nantes.`}
-  canonical="https://shift-hackathon.com/agenda"
+  title={PAGE_META.agenda.title}
+  description={PAGE_META.agenda.description}
+  canonical={canonicalFor(PAGE_META.agenda.path)}
 >
   <main style="padding-top: 60px; background: #000; min-height: 100vh; color: #fff;">
     <AgendaHero client:load />

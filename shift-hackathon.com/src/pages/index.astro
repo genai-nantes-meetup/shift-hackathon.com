@@ -13,12 +13,13 @@ import Lieu from '../components/index/Lieu';
 import Faq from '../components/shared/Faq';
 import OrgaTeam from '../components/index/OrgaTeam';
 import { FAQ_ITEMS } from '../data/faq';
+import { PAGE_META, canonicalFor } from '../data/site';
 ---
 
 <Layout
-  title="Shift, le Hackathon Gen AI"
-  description='Créé des produits Gen AI game-changer en 48 heures. Édition "Time to Custom" → Hack ton outil préféré.'
-  canonical="https://shift-hackathon.com/"
+  title={PAGE_META.index.title}
+  description={PAGE_META.index.description}
+  canonical={canonicalFor(PAGE_META.index.path)}
   faqItems={FAQ_ITEMS}
 >
   <main style="padding-top: 60px; background: #000; min-height: 100vh; color: #fff;">

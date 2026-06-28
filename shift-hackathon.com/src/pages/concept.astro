@@ -6,12 +6,13 @@ import ProjectExamples from '../components/concept/ProjectExamples';
 import CTASection from '../components/shared/CTASection';
 import Faq from '../components/shared/Faq';
 import { FAQ_ITEMS } from '../data/faq';
+import { PAGE_META, canonicalFor } from '../data/site';
 ---
 
 <Layout
-  title="Shift - Le Hackathon Gen AI"
-  description="Shift Time To Custom: 48 heures pour hacker ton outil préféré et créer une vraie feature Gen AI."
-  canonical="https://shift-hackathon.com/concept"
+  title={PAGE_META.concept.title}
+  description={PAGE_META.concept.description}
+  canonical={canonicalFor(PAGE_META.concept.path)}
   faqItems={FAQ_ITEMS}
 >
   <main style="padding-top: 60px; background: #000; min-height: 100vh; color: #fff;">
