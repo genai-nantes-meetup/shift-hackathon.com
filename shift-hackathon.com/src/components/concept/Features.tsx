@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import Reveal from '../Reveal';
+import { EDITION } from '../../data/edition';
 
 type Feature = { title: ReactNode; desc: string; img: string };
 
@@ -7,7 +8,7 @@ const FEATURES: Feature[] = [
   {
     title: (
       <>
-        Monte ou rejoins une <span style={{ color: 'rgb(159, 248, 57)' }}>dream team</span>
+        Monte ou rejoins une <span style={{ color: EDITION.dominantColor }}>dream team</span>
       </>
     ),
     desc: "Dévoile ton concept à base d'IA Générative. Si tu es choisi, forge ta dream team et fais chauffer les claviers.",
@@ -16,7 +17,7 @@ const FEATURES: Feature[] = [
   {
     title: (
       <>
-        <span style={{ color: 'rgb(159, 248, 57)' }}>Code</span> même la nuit
+        <span style={{ color: EDITION.dominantColor }}>Code</span> même la nuit
       </>
     ),
     desc: "Défi lancé, t'as deux jours pour faire trembler la tech ! Ton pack de survie est prêt pour un samedi soir épique. Prêt à entrer dans la légende ? 😉",
@@ -35,7 +36,7 @@ const FEATURES: Feature[] = [
   {
     title: (
       <>
-        Fais toi coacher par des <span style={{ color: 'rgb(159, 248, 57)' }}>experts</span>
+        Fais toi coacher par des <span style={{ color: EDITION.dominantColor }}>experts</span>
       </>
     ),
     desc: "Besoin d'un boost ? Les ninjas de la Tech, de l'IA et du Product sont là pour catapulter ton projet dans la stratosphère !",
@@ -44,7 +45,7 @@ const FEATURES: Feature[] = [
   {
     title: (
       <>
-        Network avec des gens <span style={{ color: 'rgb(159, 248, 57)' }}>brillants</span>
+        Network avec des gens <span style={{ color: EDITION.dominantColor }}>brillants</span>
       </>
     ),
     desc: "Tu t'apprêtes à lier des amitiés explosives et à mettre le turbo sur ta carrière. Allez, montre à cet univers tech qui est le boss!",

@@ -1,8 +1,9 @@
+import { EDITION } from './edition';
+
 export const PRICING_TIERS = [
   {
     name: 'FRIENDS',
     tag: { bg: '#fc233d', text: '#fff' },
-    shadow: 'rgba(252,35,61,0.4)',
     card: { bg: '#fde8ec', border: '#fc233d' },
     period: 'Dimanche soir',
     price: '5€',
@@ -14,9 +15,8 @@ export const PRICING_TIERS = [
   },
   {
     name: 'MAKERS',
-    tag: { bg: '#9ff839', text: '#000' },
-    shadow: 'rgba(159,248,57,0.4)',
-    card: { bg: '#edfcd6', border: '#9ff839' },
+    tag: { bg: EDITION.dominantColor, text: '#000' },
+    card: { bg: '#edfcd6', border: EDITION.dominantColor },
     period: 'Weekend',
     price: '79€',
     tagline: "Pour profiter en intégralité de l'expérience",
@@ -33,7 +33,6 @@ export const PRICING_TIERS = [
   {
     name: 'ANGELS',
     tag: { bg: '#4169e1', text: '#fff' },
-    shadow: 'rgba(65,105,225,0.4)',
     card: { bg: '#e8eeff', border: '#4169e1' },
     period: 'Partenaires',
     price: 'Custom',

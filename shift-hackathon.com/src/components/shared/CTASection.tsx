@@ -9,7 +9,7 @@ export default function CTASection() {
           style={{
             maxWidth: 1200,
             margin: '0 auto',
-            border: '8px solid #9ff839',
+            border: `8px solid ${EDITION.dominantColor}`,
             padding: '56px 56px',
             display: 'flex',
             alignItems: 'center',

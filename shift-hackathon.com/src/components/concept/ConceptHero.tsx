@@ -74,7 +74,7 @@ export default function ConceptHero() {
                 fontFamily: AGRANDIR,
                 fontSize: '36px',
                 fontWeight: 800,
-                color: 'rgb(159, 248, 57)',
+                color: EDITION.dominantColor,
                 lineHeight: '38px',
                 margin: '0 0 4px',
                 textTransform: 'uppercase',
@@ -115,7 +115,7 @@ export default function ConceptHero() {
               rel="noopener noreferrer"
               style={{
                 display: 'inline-block',
-                background: 'rgb(159, 248, 57)',
+                background: EDITION.dominantColor,
                 color: 'rgb(25, 5, 50)',
                 padding: '11.2px 28px',
                 fontFamily: AGRANDIR,
@@ -126,7 +126,7 @@ export default function ConceptHero() {
                 letterSpacing: '0.48px',
                 borderRadius: '4px',
                 whiteSpace: 'nowrap',
-                boxShadow: 'rgba(159, 248, 57, 0.5) 0px 5px 0px 0px',
+                boxShadow: `${EDITION.dominantColorShadow} 0px 5px 0px 0px`,
               }}
             >
               Take my money

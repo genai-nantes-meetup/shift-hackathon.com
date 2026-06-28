@@ -31,9 +31,9 @@ src/
 │   ├── shared/            # cross-page sections: CTASection.tsx, Faq.tsx
 │   └── <page>/            # per-page section components: index/ concept/ agenda/ intervenants/
 ├── data/                  # all copy/content lives here (no logic, no hardcoding in components)
-│   ├── edition.ts         # core facts: year, nextYear, dates, ticket URLs, agenda days
+│   ├── edition.ts         # core facts: year, nextYear, dates, ticket URLs, agenda days, dominantColor/dominantColorShadow (single source for the edition's dominant color)
 │   ├── edition_*.ts       # per-section edition content: complices, partners, pricing, schedule, speakers
-│   ├── site.ts            # DEFAULT_META_DESCRIPTION
+│   ├── site.ts            # SITE_URL (single source — astro.config imports it), canonicalFor(), PAGE_META (per-page SEO), DEFAULT_META_DESCRIPTION
 │   ├── team.ts            # ORGA_TEAM (organising team)
 │   ├── testimonials.ts faq.ts videos.ts   # TESTIMONIALS, FAQ_ITEMS, video embeds
 └── styles/                # hand-written CSS (see Styling)
@@ -59,7 +59,10 @@ public/assets/images/      # organized by type (named files, not Framer hashes):
 - A section reused on more than one page goes in `components/shared/` (e.g. `Faq`, `CTASection`);
   page-specific sections live in `components/<page>/`.
 - Copy/content lives in `src/data/` modules, never inline in components. Years derive from
-  `EDITION.year` / `EDITION.nextYear`; the default meta description from `site.ts`.
+  `EDITION.year` / `EDITION.nextYear`.
+- SEO meta is centralised: each `.astro` page reads `PAGE_META.<page>` from `site.ts` for its
+  `title` / `description` and builds its canonical with `canonicalFor(path)`. The base URL lives
+  once as `SITE_URL` in `site.ts` — `astro.config.mjs` imports it for `site:` (don't hardcode it).
 
 ## Styling
 
@@ -72,7 +75,7 @@ then `global.css` (`global.css` `@import`s the rest):
 
 - `fonts.css`    — Google Fonts / `@font-face` (imported directly in `Layout.astro`, before `global.css`)
 - `global.css`   — `@import`s `tokens.css` / `hero.css` / `intro.css` / `sections.css` + a **basic reset** (replaces the former Tailwind Preflight)
-- `tokens.css`   — CSS variables (brand colors, fonts) + reusable classes (`.container`, `.section-title`, `.cta-primary`)
+- `tokens.css`   — CSS variables (brand colors, fonts) + reusable classes (`.container`, `.section-title`, `.cta-primary`). `--color-lime` / `--color-lime-shadow` (the edition's dominant color) are **not** hardcoded here — they're injected at runtime on `<html>` by `Layout.astro` from `EDITION.dominantColor` / `EDITION.dominantColorShadow`, so the dominant color has a single source (`data/edition.ts`).
 - `hero.css` / `intro.css` / `sections.css` — per-section layout & styling
 
 Many components also use inline `style={{}}` objects (`Nav.tsx`, `Footer.tsx`, `ScrollProgress.tsx`,

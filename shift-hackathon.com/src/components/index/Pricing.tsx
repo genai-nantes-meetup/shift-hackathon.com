@@ -186,7 +186,7 @@ export default function Pricing() {
                       textTransform: 'uppercase',
                       letterSpacing: '1.4px',
                       borderRadius: '4px',
-                      boxShadow: `rgba(${t.name === 'FRIENDS' ? '252,35,61' : t.name === 'ANGELS' ? '65,105,225' : '159,248,57'},0.5) 0px 5px 0px 0px`,
+                      boxShadow: `${t.name === 'FRIENDS' ? 'rgba(252,35,61,0.5)' : t.name === 'ANGELS' ? 'rgba(65,105,225,0.5)' : EDITION.dominantColorShadow} 0px 5px 0px 0px`,
                     }}
                   >
                     {t.name === 'ANGELS' ? 'Nous contacter' : 'Je suis chaud'}

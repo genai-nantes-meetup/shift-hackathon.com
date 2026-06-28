@@ -92,7 +92,7 @@ export default function SpeakersHero() {
                 margin: '0 0 28px',
               }}
             >
-              Les <span style={{ color: 'rgb(159, 248, 57)' }}>Intervenants</span>
+              Les <span style={{ color: EDITION.dominantColor }}>Intervenants</span>
             </h1>
           </motion.div>
 
@@ -132,7 +132,7 @@ export default function SpeakersHero() {
               rel="noopener noreferrer"
               style={{
                 display: 'block',
-                background: '#9ff839',
+                background: EDITION.dominantColor,
                 color: 'rgb(25,5,50)',
                 padding: '0.7rem 1.75rem',
                 fontFamily: AGRANDIR,
@@ -143,7 +143,7 @@ export default function SpeakersHero() {
                 letterSpacing: '0.04em',
                 borderRadius: '4px',
                 whiteSpace: 'nowrap',
-                boxShadow: 'rgba(159,248,57,0.5) 0px 5px 0px 0px',
+                boxShadow: `${EDITION.dominantColorShadow} 0px 5px 0px 0px`,
               }}
             >
               Take my money

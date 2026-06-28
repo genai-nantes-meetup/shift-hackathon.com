@@ -39,7 +39,7 @@ export default function IndexHero() {
 
             <div className="hero__cta-group">
               <a
-                href={EDITION.earlyTicketUrl}
+                href={EDITION.nextYearWaitingListUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cta-primary"

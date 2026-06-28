@@ -90,7 +90,7 @@ export default function Nav() {
           target="_blank"
           rel="noopener noreferrer"
           style={{
-            background: '#9ff839',
+            background: EDITION.dominantColor,
             color: 'rgb(25,5,50)',
             padding: '0.5rem 1.1rem',
             fontFamily: AGRANDIR,
@@ -101,7 +101,7 @@ export default function Nav() {
             textTransform: 'uppercase',
             borderRadius: '4px',
             whiteSpace: 'nowrap',
-            boxShadow: 'rgba(159,248,57,0.5) 0px 5px 0px 0px',
+            boxShadow: `${EDITION.dominantColorShadow} 0px 5px 0px 0px`,
           }}
         >
           Je suis chaud

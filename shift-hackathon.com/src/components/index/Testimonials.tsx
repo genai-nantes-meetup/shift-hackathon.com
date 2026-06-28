@@ -1,4 +1,5 @@
 import { VIDEOS } from '../../data/videos';
+import { EDITION } from '../../data/edition';
 
 export default function Testimonials() {
   return (
@@ -35,7 +36,7 @@ export default function Testimonials() {
             href="https://taap.it/playlistshift"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: '#9ff839', textDecoration: 'none' }}
+            style={{ color: EDITION.dominantColor, textDecoration: 'none' }}
           >
             @playlistSHIFT
           </a>

@@ -1,9 +1,11 @@
+import { EDITION } from './edition';
+
 export const SCHEDULE = [
   {
     day: '27 Mars 2026',
     label: 'Jour 1',
     weekday: 'Vendredi',
-    headerColor: '#9ff839',
+    headerColor: EDITION.dominantColor,
     slots: [
       { time: '18h', title: 'Accueil' },
       {
@@ -50,7 +52,7 @@ export const SCHEDULE = [
     day: '28 mars 2026',
     label: 'Jour 2',
     weekday: 'Samedi',
-    headerColor: '#9ff839',
+    headerColor: EDITION.dominantColor,
     slots: [
       { time: '8h30', title: 'Petit déjeuner' },
       {
@@ -98,7 +100,7 @@ export const SCHEDULE = [
     day: '29 mars 2026',
     label: 'Jour 3',
     weekday: 'Dimanche',
-    headerColor: '#9ff839',
+    headerColor: EDITION.dominantColor,
     slots: [
       { time: '8h30', title: 'Petit déjeuner' },
       {

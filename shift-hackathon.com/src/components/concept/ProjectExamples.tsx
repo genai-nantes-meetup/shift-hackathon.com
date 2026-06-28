@@ -1,4 +1,5 @@
 import Reveal from '../Reveal';
+import { EDITION } from '../../data/edition';
 
 const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
 const OXANIUM = 'Oxanium, sans-serif';
@@ -54,7 +55,7 @@ function Block({ label, children }: { label: string; children: React.ReactNode }
           fontFamily: AGRANDIR,
           fontSize: 16,
           fontWeight: 800,
-          color: '#9ff839',
+          color: EDITION.dominantColor,
           textTransform: 'uppercase',
           letterSpacing: '1.6px',
           margin: '0 0 6px',
@@ -124,7 +125,7 @@ export default function ProjectExamples() {
                           key={f}
                           style={{ ...paraStyle, display: 'flex', gap: 8, marginBottom: 6 }}
                         >
-                          <span style={{ color: '#9ff839', flexShrink: 0 }}>•</span>
+                          <span style={{ color: EDITION.dominantColor, flexShrink: 0 }}>•</span>
                           <span>{f}</span>
                         </li>
                       ))}

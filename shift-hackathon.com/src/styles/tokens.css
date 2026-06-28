@@ -5,8 +5,8 @@
   --color-black: #000000;
   --color-white: #ffffff;
   --color-purple-deep: #190532; /* CTA text on green bg */
-  --color-lime: #9ff839; /* CTA bg, accents */
-  --color-lime-shadow: rgba(159, 248, 57, 0.5);
+  /* --color-lime / --color-lime-shadow are injected at runtime on <html> from
+     EDITION.dominantColor / EDITION.dominantColorShadow (see layouts/Layout.astro). */
   --color-cyan: #2aebf5;
   --color-yellow: #fae01b;
   --color-pink: #f75787;

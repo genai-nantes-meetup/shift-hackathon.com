@@ -73,7 +73,7 @@ export default function AgendaHero() {
                 fontFamily: AGRANDIR,
                 fontSize: '64px',
                 fontWeight: 800,
-                color: '#9ff839',
+                color: EDITION.dominantColor,
                 lineHeight: 0.9,
                 margin: '0 0 32px',
                 textTransform: 'uppercase',
@@ -119,7 +119,7 @@ export default function AgendaHero() {
               rel="noopener noreferrer"
               style={{
                 display: 'block',
-                background: '#9ff839',
+                background: EDITION.dominantColor,
                 color: 'rgb(25,5,50)',
                 padding: '11.2px 28px',
                 fontFamily: AGRANDIR,
@@ -131,7 +131,7 @@ export default function AgendaHero() {
                 letterSpacing: '0.48px',
                 borderRadius: '4px',
                 whiteSpace: 'nowrap',
-                boxShadow: 'rgba(159,248,57,0.5) 0px 5px 0px 0px',
+                boxShadow: `${EDITION.dominantColorShadow} 0px 5px 0px 0px`,
               }}
             >
               Take my money

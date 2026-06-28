@@ -1,3 +1,5 @@
+import { EDITION } from '../../data/edition';
+
 const BG_IMAGE = '/assets/images/gallery/gallery-speaker-session.jpg';
 
 export default function Experience() {
@@ -51,7 +53,7 @@ export default function Experience() {
         </p>
         <p
           style={{
-            color: 'rgb(159, 248, 57)',
+            color: EDITION.dominantColor,
             fontFamily: "'Agrandir Thin Italic', sans-serif",
             fontSize: '20px',
             fontWeight: '100',
