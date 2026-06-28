@@ -34,3 +34,5 @@ Astro website.
 ## Convention
 
 Except if asked by the user, only update `shift-hackathon.com/`. Other directories are archives of previous years.
+
+Use the `motion` library to create cool animations.
