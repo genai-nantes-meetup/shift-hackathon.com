@@ -12,12 +12,14 @@ import Banner from '../components/index/Banner';
 import Lieu from '../components/index/Lieu';
 import Faq from '../components/shared/Faq';
 import OrgaTeam from '../components/index/OrgaTeam';
+import { FAQ_ITEMS } from '../data/faq';
 ---
 
 <Layout
   title="Shift, le Hackathon Gen AI"
   description='Créé des produits Gen AI game-changer en 48 heures. Édition "Time to Custom" → Hack ton outil préféré.'
   canonical="https://shift-hackathon.com/"
+  faqItems={FAQ_ITEMS}
 >
   <main style="padding-top: 60px; background: #000; min-height: 100vh; color: #fff;">
     <IndexHero client:load />

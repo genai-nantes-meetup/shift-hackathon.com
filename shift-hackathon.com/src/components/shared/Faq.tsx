@@ -2,14 +2,28 @@
 
 import { useState } from 'react';
 import Reveal from '../Reveal';
-import { FAQ_ITEMS } from '../../data/faq';
+import { FAQ_ITEMS, type FaqItem } from '../../data/faq';
 
 const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
 const DELA = "'Dela Gothic One', sans-serif";
 const OXANIUM = 'Oxanium, sans-serif';
 
-export default function Faq({ title = 'FAQ' }: { title?: string }) {
-  const [open, setOpen] = useState<number | null>(null);
+export default function Faq({
+  title = 'FAQ',
+  items = FAQ_ITEMS,
+}: {
+  title?: string;
+  items?: FaqItem[];
+}) {
+  const [open, setOpen] = useState<Set<number>>(new Set());
+
+  const toggle = (i: number) =>
+    setOpen((prev) => {
+      const next = new Set(prev);
+      if (next.has(i)) next.delete(i);
+      else next.add(i);
+      return next;
+    });
 
   return (
     <section style={{ background: '#000', padding: '100px 120px' }}>
@@ -29,12 +43,12 @@ export default function Faq({ title = 'FAQ' }: { title?: string }) {
           </h2>
         </Reveal>
         <div>
-          {FAQ_ITEMS.map((item, i) => (
+          {items.map((item, i) => (
             <Reveal key={i} delay={i * 0.04}>
               <div>
                 <div style={{ height: '1px', background: 'rgb(77, 66, 76)' }} />
                 <button
-                  onClick={() => setOpen((v) => (v === i ? null : i))}
+                  onClick={() => toggle(i)}
                   style={{
                     width: '100%',
                     background: 'none',
@@ -67,10 +81,10 @@ export default function Faq({ title = 'FAQ' }: { title?: string }) {
                       fontWeight: 300,
                     }}
                   >
-                    {open === i ? '−' : '+'}
+                    {open.has(i) ? '−' : '+'}
                   </span>
                 </button>
-                {open === i && (
+                {open.has(i) && (
                   <p
                     style={{
                       fontFamily: OXANIUM,

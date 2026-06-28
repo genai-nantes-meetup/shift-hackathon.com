@@ -1,4 +1,9 @@
-export const FAQ_ITEMS = [
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+export const FAQ_ITEMS: FaqItem[] = [
   {
     question: 'Puis-je pitcher une idée dont le projet a déjà débuté ?',
     answer:

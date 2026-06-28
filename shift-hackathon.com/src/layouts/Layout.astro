@@ -2,6 +2,7 @@
 import '../styles/fonts.css';
 import '../styles/global.css';
 import { DEFAULT_META_DESCRIPTION } from '../data/site';
+import type { FaqItem } from '../data/faq';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 interface Props {
@@ -9,13 +10,27 @@ interface Props {
   description?: string;
   canonical?: string;
   ogImage?: string;
+  faqItems?: FaqItem[];
 }
 const {
   title,
   description = DEFAULT_META_DESCRIPTION,
   canonical,
   ogImage = new URL('/assets/images/og-image.png', Astro.site).toString(),
+  faqItems,
 } = Astro.props;
+
+const faqJsonLd = faqItems?.length
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqItems.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: { '@type': 'Answer', text: item.answer },
+      })),
+    }
+  : null;
 ---
 
 <!doctype html>
@@ -41,6 +56,11 @@ const {
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+    {
+      faqJsonLd && (
+        <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)} />
+      )
+    }
     <script is:inline>
       /* eslint-disable no-var */
       (function (w, d, s, l, i) {
