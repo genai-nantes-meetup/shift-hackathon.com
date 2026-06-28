@@ -1,5 +1,4 @@
-/* Hero — pixel-aligned with prod (shift-hackathon.com).
- * Sizes / fonts / paddings extracted from prod via computed-style scrape. */
+/* Hero section — layout & styling. */
 
 .hero {
   position: relative;
@@ -60,7 +59,7 @@
   pointer-events: none;
 }
 
-/* Container — exact prod dims: 1240×720 with 70/40/50/40 padding */
+/* Container — 1240×720 with 70/40/50/40 padding */
 .hero__container {
   position: relative;
   z-index: 1;
@@ -206,7 +205,7 @@
   opacity: 0.9;
 }
 
-/* ---- Responsive (tablet/mobile fallback — prod doesn't support these, kept simple) ---- */
+/* ---- Responsive (tablet/mobile fallback) ---- */
 @media (max-width: 960px) {
   .hero__container {
     grid-template-columns: 1fr;

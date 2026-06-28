@@ -1,4 +1,4 @@
-/* Design tokens — extracted from prod (shift-hackathon.com) via DOM computed-style scrape. */
+/* Design tokens — brand colors, typography, spacing, easing. */
 
 :root {
   /* ---- Colors ---- */
@@ -28,7 +28,7 @@
   --font-dela: 'Dela Gothic One', sans-serif;
   --font-barlow: 'Barlow', sans-serif;
 
-  /* ---- Type scale (computed from prod) ---- */
+  /* ---- Type scale ---- */
   /* Hero */
   --fs-hero-title: 64px;
   --lh-hero-title: 70.4px;
@@ -102,7 +102,7 @@
   /* ---- Shadows ---- */
   --shadow-cta: 0 5px 0 0 var(--color-lime-shadow);
 
-  /* ---- Easing (Framer-like) ---- */
+  /* ---- Easing ---- */
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --duration-fast: 0.4s;
   --duration-base: 0.55s;
