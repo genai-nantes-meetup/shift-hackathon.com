@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import Reveal from '../Reveal';
-import { ORGA_TEAM } from '../../data/site';
+import { ORGA_TEAM } from '../../data/team';
 
 // Cards are laid out on a 3-column grid; group the reveal delay by row so each
 // row fades in one after another on scroll.
