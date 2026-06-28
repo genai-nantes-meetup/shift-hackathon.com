@@ -8,7 +8,15 @@ export default defineConfig({
   server: { port: 4324 },
   integrations: [
     react(),
-    sitemap(),
+    sitemap({
+      changefreq: 'weekly',
+      priority: 0.7,
+      serialize(item) {
+        // La home porte la priorité maximale.
+        if (item.url === `${SITE_URL}/`) item.priority = 1.0;
+        return item;
+      },
+    }),
   ],
   vite: {
     // Force a single React instance so deps like `motion` don't get their own

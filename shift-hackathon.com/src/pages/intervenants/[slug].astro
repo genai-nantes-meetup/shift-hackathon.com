@@ -1,0 +1,170 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTASection from '../../components/shared/CTASection';
+import { SPEAKERS } from '../../data/edition_speakers';
+import { EDITION } from '../../data/edition';
+import { canonicalFor } from '../../data/site';
+import { speakerSlug, personSchema, breadcrumbSchema } from '../../lib/seo';
+
+export function getStaticPaths() {
+  return SPEAKERS.map((speaker) => ({
+    params: { slug: speakerSlug(speaker) },
+    props: { speaker },
+  }));
+}
+
+const { speaker } = Astro.props;
+const slug = speakerSlug(speaker);
+const path = `/intervenants/${slug}`;
+const roleLine = speaker.roles.join(' · ');
+const title = `${speaker.name} — Intervenant·e Shift Hackathon Gen AI ${EDITION.year}`;
+const description = speaker.bio
+  ? `${speaker.name}, ${roleLine}. ${speaker.bio}`.slice(0, 157)
+  : `${speaker.name} (${roleLine}) intervient au Shift Hackathon Gen AI ${EDITION.year}, le hackathon Gen AI de 48h à Nantes.`;
+
+// Anti-thin-content : on n'indexe une fiche que si elle a une bio (contenu unique réel).
+// Sans bio, la page reste accessible et maillée (noindex, follow) jusqu'à enrichissement.
+const indexable = Boolean(speaker.bio);
+
+const externalLinks = speaker.links
+  ? Object.entries(speaker.links).filter(([, url]) => Boolean(url))
+  : [];
+
+const others = SPEAKERS.filter((s) => s !== speaker);
+
+const jsonLd = [
+  personSchema(speaker),
+  breadcrumbSchema([
+    { name: 'Accueil', path: '/' },
+    { name: 'Intervenants', path: '/intervenants' },
+    { name: speaker.name, path },
+  ]),
+];
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonical={canonicalFor(path)}
+  noindex={!indexable}
+  jsonLd={jsonLd}
+>
+  <main style="padding-top: 60px; background: #000; min-height: 100vh; color: #fff;">
+    <article style="max-width: 900px; margin: 0 auto; padding: 3rem 1.25rem 4rem;">
+      <nav
+        aria-label="Fil d'ariane"
+        style="font-family: Oxanium, sans-serif; font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 2rem;"
+      >
+        <a href="/" style="color: inherit;">Accueil</a>
+        <span aria-hidden="true"> › </span>
+        <a href="/intervenants" style="color: inherit;">Intervenants</a>
+        <span aria-hidden="true"> › </span>
+        <span style="color: #fff;">{speaker.name}</span>
+      </nav>
+
+      <div style="display: flex; gap: 2rem; flex-wrap: wrap; align-items: flex-start;">
+        <img
+          src={speaker.img}
+          alt={`${speaker.name} — ${roleLine}`}
+          width="280"
+          height="280"
+          style="width: 280px; height: 280px; object-fit: cover; border-radius: 8px; flex-shrink: 0;"
+        />
+        <div style="flex: 1; min-width: 260px;">
+          <h1
+            style="font-family: 'Agrandir Grand Heavy', sans-serif; font-size: 40px; line-height: 1.1; margin: 0 0 0.75rem;"
+          >
+            {speaker.name}
+          </h1>
+          <ul style="list-style: none; padding: 0; margin: 0 0 1.25rem;">
+            {
+              speaker.roles.map((r) => (
+                <li style="font-family: Oxanium, sans-serif; font-size: 18px; color: rgba(255,255,255,0.85);">
+                  {r}
+                </li>
+              ))
+            }
+          </ul>
+
+          {
+            speaker.bio && (
+              <p style="font-family: Oxanium, sans-serif; font-size: 18px; line-height: 1.6; margin: 0 0 1.25rem;">
+                {speaker.bio}
+              </p>
+            )
+          }
+
+          {
+            speaker.talk && (
+              <p style="font-family: Oxanium, sans-serif; font-size: 18px; line-height: 1.6; margin: 0 0 1.25rem;">
+                <strong>Intervention :</strong> {speaker.talk}
+              </p>
+            )
+          }
+
+          {
+            externalLinks.length > 0 && (
+              <ul style="list-style: none; padding: 0; margin: 0 0 1.25rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                {externalLinks.map(([label, url]) => (
+                  <li>
+                    <a
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer me"
+                      style="color: var(--color-lime); font-family: Oxanium, sans-serif;"
+                    >
+                      {label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )
+          }
+
+          <p
+            style="font-family: Oxanium, sans-serif; font-size: 16px; line-height: 1.6; color: rgba(255,255,255,0.7);"
+          >
+            {speaker.name} fait partie des intervenant·es du <a href="/" style="color: var(--color-lime);"
+              >Shift Hackathon Gen AI {EDITION.year}</a
+            >, le hackathon Gen AI de 48 heures à Nantes ({EDITION.dateRangeLong}). Découvre le <a
+              href="/agenda"
+              style="color: var(--color-lime);">programme</a
+            > et tous les <a href="/intervenants" style="color: var(--color-lime);">intervenant·es</a>.
+          </p>
+        </div>
+      </div>
+
+      <section style="margin-top: 3.5rem;">
+        <h2
+          style="font-family: 'Agrandir Grand Heavy', sans-serif; font-size: 24px; margin: 0 0 1.5rem;"
+        >
+          Autres intervenant·es
+        </h2>
+        <ul
+          style="list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem;"
+        >
+          {
+            others.map((s) => (
+              <li>
+                <a
+                  href={`/intervenants/${speakerSlug(s)}`}
+                  style="display: flex; flex-direction: column; gap: 0.5rem; text-decoration: none; color: #fff;"
+                >
+                  <img
+                    src={s.img}
+                    alt={s.name}
+                    loading="lazy"
+                    style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 6px;"
+                  />
+                  <span style="font-family: Oxanium, sans-serif; font-size: 15px;">{s.name}</span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </article>
+
+    <CTASection client:load />
+  </main>
+</Layout>

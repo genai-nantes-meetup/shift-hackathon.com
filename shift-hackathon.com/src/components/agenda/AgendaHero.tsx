@@ -55,7 +55,7 @@ export default function AgendaHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <p
+            <h1
               style={{
                 fontFamily: AGRANDIR,
                 fontSize: '64px',
@@ -67,7 +67,7 @@ export default function AgendaHero() {
               }}
             >
               L’Agenda
-            </p>
+            </h1>
             <p
               style={{
                 fontFamily: AGRANDIR,

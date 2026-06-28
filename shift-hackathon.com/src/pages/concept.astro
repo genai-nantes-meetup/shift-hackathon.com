@@ -7,6 +7,7 @@ import CTASection from '../components/shared/CTASection';
 import Faq from '../components/shared/Faq';
 import { FAQ_ITEMS } from '../data/faq';
 import { PAGE_META, canonicalFor } from '../data/site';
+import { breadcrumbSchema } from '../lib/seo';
 ---
 
 <Layout
@@ -14,6 +15,12 @@ import { PAGE_META, canonicalFor } from '../data/site';
   description={PAGE_META.concept.description}
   canonical={canonicalFor(PAGE_META.concept.path)}
   faqItems={FAQ_ITEMS}
+  jsonLd={[
+    breadcrumbSchema([
+      { name: 'Accueil', path: '/' },
+      { name: 'Concept', path: PAGE_META.concept.path },
+    ]),
+  ]}
 >
   <main style="padding-top: 60px; background: #000; min-height: 100vh; color: #fff;">
     <ConceptHero client:load />

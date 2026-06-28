@@ -4,12 +4,20 @@ import AgendaHero from '../components/agenda/AgendaHero';
 import Schedule from '../components/agenda/Schedule';
 import CTASection from '../components/shared/CTASection';
 import { PAGE_META, canonicalFor } from '../data/site';
+import { eventSchema, breadcrumbSchema } from '../lib/seo';
 ---
 
 <Layout
   title={PAGE_META.agenda.title}
   description={PAGE_META.agenda.description}
   canonical={canonicalFor(PAGE_META.agenda.path)}
+  jsonLd={[
+    eventSchema(),
+    breadcrumbSchema([
+      { name: 'Accueil', path: '/' },
+      { name: 'Agenda', path: PAGE_META.agenda.path },
+    ]),
+  ]}
 >
   <main style="padding-top: 60px; background: #000; min-height: 100vh; color: #fff;">
     <AgendaHero client:load />

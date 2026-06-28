@@ -4,12 +4,20 @@ import SpeakersHero from '../components/intervenants/SpeakersHero';
 import SpeakerGrid from '../components/intervenants/SpeakerGrid';
 import CTASection from '../components/shared/CTASection';
 import { PAGE_META, canonicalFor } from '../data/site';
+import { breadcrumbSchema, speakerListSchema } from '../lib/seo';
 ---
 
 <Layout
   title={PAGE_META.intervenants.title}
   description={PAGE_META.intervenants.description}
   canonical={canonicalFor(PAGE_META.intervenants.path)}
+  jsonLd={[
+    breadcrumbSchema([
+      { name: 'Accueil', path: '/' },
+      { name: 'Intervenants', path: PAGE_META.intervenants.path },
+    ]),
+    speakerListSchema(),
+  ]}
 >
   <main style="padding-top: 60px; background: #000; min-height: 100vh; color: #fff;">
     <SpeakersHero client:load />

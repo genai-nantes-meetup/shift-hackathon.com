@@ -56,7 +56,7 @@ export default function ConceptHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <p
+            <h1
               style={{
                 fontFamily: AGRANDIR,
                 fontSize: '64px',
@@ -68,7 +68,7 @@ export default function ConceptHero() {
               }}
             >
               Shift,
-            </p>
+            </h1>
             <p
               style={{
                 fontFamily: AGRANDIR,

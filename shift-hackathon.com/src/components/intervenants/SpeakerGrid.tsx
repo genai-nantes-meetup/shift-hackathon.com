@@ -1,4 +1,5 @@
 import { SPEAKERS } from '../../data/edition_speakers';
+import { speakerSlug } from '../../lib/seo';
 
 export default function SpeakerGrid() {
   return (
@@ -24,8 +25,9 @@ export default function SpeakerGrid() {
         }}
       >
         {SPEAKERS.map((s) => (
-          <div
+          <a
             key={s.name}
+            href={`/intervenants/${speakerSlug(s)}`}
             style={{
               display: 'flex',
               flexDirection: 'column',
@@ -33,6 +35,8 @@ export default function SpeakerGrid() {
               gap: '10px',
               width: '100%',
               height: '100%',
+              textDecoration: 'none',
+              color: 'inherit',
             }}
           >
             {/* Image */}
@@ -80,7 +84,7 @@ export default function SpeakerGrid() {
                 </p>
               ))}
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </section>

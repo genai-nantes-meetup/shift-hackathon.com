@@ -4,6 +4,7 @@ export const EDITION = {
   startDay: 27,
   endDay: 29,
   month: 'Mars',
+  monthNumber: 3, // mois (1-12) — utilisé pour construire les dates ISO du schema Event
   dateRangeShort: '27-29/03/2026',
   dateRangeLong: `Du 27 au 29 mars 2026`,
   agendaDays: [
@@ -47,3 +48,40 @@ const JE_SUIS_CHAUD_URL_BY_MODE: Record<JeSuisChaudTicketMode, string> = {
 };
 
 export const JE_SUIS_CHAUD_URL = JE_SUIS_CHAUD_URL_BY_MODE[JE_SUIS_CHAUD_TICKET_MODE];
+
+// Comptes sociaux officiels — à compléter avec les URLs réelles.
+// Consommé par Layout (twitter:site/creator) et le schema Organization (`sameAs`).
+// Laisser une chaîne vide pour omettre proprement le champ.
+export const SOCIAL_LINKS: {
+  twitterHandle: string;
+  twitter: string;
+  linkedin: string;
+  instagram: string;
+  youtube: string;
+} = {
+  twitterHandle: '', // ex: '@shifthackathon' (pour <meta name="twitter:site">)
+  twitter: '', // ex: 'https://twitter.com/shifthackathon'
+  linkedin: 'https://www.linkedin.com/company/shift-hackathon/',
+  instagram: '', // ex: 'https://www.instagram.com/shifthackathon'
+  youtube: '',
+};
+
+// Lieu de l'événement — compléter l'adresse postale (SEO local + schema Place/Event).
+// `streetAddress`/`postalCode` vides ⇒ champs omis du JSON-LD. `latitude`/`longitude` null ⇒ pas de `geo`.
+export const VENUE: {
+  name: string;
+  streetAddress: string;
+  postalCode: string;
+  addressLocality: string;
+  addressCountry: string;
+  latitude: number | null;
+  longitude: number | null;
+} = {
+  name: 'Le Palace',
+  streetAddress: '4 rue Voltaire',
+  postalCode: '44000',
+  addressLocality: 'Nantes',
+  addressCountry: 'FR',
+  latitude: null,
+  longitude: null,
+};

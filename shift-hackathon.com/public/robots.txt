@@ -1,0 +1,30 @@
+# Shift Hackathon — https://shift-hackathon.com
+# Objectif : être indexé par les moteurs classiques ET cité par les moteurs IA.
+# Aucun crawler n'est bloqué (bloquer un bot IA = ne plus être cité par ce moteur).
+
+User-agent: *
+Allow: /
+
+# Crawlers IA explicitement autorisés (citations dans ChatGPT, Perplexity, Claude, Gemini, Copilot)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://shift-hackathon.com/sitemap-index.xml

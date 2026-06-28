@@ -2,8 +2,9 @@
 import '../styles/fonts.css';
 import '../styles/global.css';
 import { DEFAULT_META_DESCRIPTION } from '../data/site';
-import { EDITION } from '../data/edition';
+import { EDITION, SOCIAL_LINKS } from '../data/edition';
 import type { FaqItem } from '../data/faq';
+import { organizationSchema, websiteSchema, faqSchema, type JsonLd } from '../lib/seo';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 interface Props {
@@ -12,6 +13,8 @@ interface Props {
   canonical?: string;
   ogImage?: string;
   faqItems?: FaqItem[];
+  noindex?: boolean;
+  jsonLd?: JsonLd[];
 }
 const {
   title,
@@ -19,19 +22,19 @@ const {
   canonical,
   ogImage = new URL('/assets/images/og-image.png', Astro.site).toString(),
   faqItems,
+  noindex = false,
+  jsonLd = [],
 } = Astro.props;
 
-const faqJsonLd = faqItems?.length
-  ? {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: faqItems.map((item) => ({
-        '@type': 'Question',
-        name: item.question,
-        acceptedAnswer: { '@type': 'Answer', text: item.answer },
-      })),
-    }
-  : null;
+// Organization + WebSite sont injectés site-wide ; chaque page ajoute ses propres entités
+// (Event, BreadcrumbList, Person, ItemList…) via `jsonLd`, et son FAQ via `faqItems`.
+const graph: JsonLd[] = [
+  organizationSchema(),
+  websiteSchema(),
+  ...jsonLd,
+  ...(faqItems?.length ? [faqSchema(faqItems)] : []),
+];
+const jsonLdGraph = { '@context': 'https://schema.org', '@graph': graph };
 ---
 
 <!doctype html>
@@ -44,6 +47,7 @@ const faqJsonLd = faqItems?.length
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
     {canonical && <link rel="canonical" href={canonical} />}
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/favicon.png" />
@@ -52,19 +56,22 @@ const faqJsonLd = faqItems?.length
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Shift Hackathon" />
+    <meta property="og:locale" content="fr_FR" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1080" />
+    <meta property="og:image:alt" content="Shift — Le Hackathon Gen AI" />
     {canonical && <meta property="og:url" content={canonical} />}
     <meta name="twitter:card" content="summary_large_image" />
+    {SOCIAL_LINKS.twitterHandle && <meta name="twitter:site" content={SOCIAL_LINKS.twitterHandle} />}
+    {SOCIAL_LINKS.twitterHandle && <meta name="twitter:creator" content={SOCIAL_LINKS.twitterHandle} />}
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
-    {
-      faqJsonLd && (
-        <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)} />
-      )
-    }
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLdGraph)} />
     <script is:inline>
       /* eslint-disable no-var */
       (function (w, d, s, l, i) {

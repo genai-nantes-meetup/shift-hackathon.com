@@ -21,22 +21,27 @@ npm run test:visual  # Playwright visual tests (tests/visual.spec.ts)
 ```
 src/
 ├── layouts/
-│   └── Layout.astro       # shared <head> (GTM, gtag, og/twitter); renders <Nav> / <slot> / <Footer>
-│                          # props: title, description (defaults to site.ts), canonical, ogImage
+│   └── Layout.astro       # shared <head> (GTM, gtag, og/twitter, JSON-LD @graph); renders <Nav> / <slot> / <Footer>
+│                          # props: title, description (defaults to site.ts), canonical, ogImage,
+│                          #        faqItems (→ FAQPage), noindex (→ robots noindex), jsonLd (extra schema nodes)
 ├── pages/                 # one .astro per route (Astro file-based routing)
 │   ├── index.astro        # imports section components, renders them as client:load islands in <main>
+│   ├── intervenants/[slug].astro  # dynamic speaker pages (getStaticPaths over SPEAKERS), SSR HTML + Person schema
 │   └── (concept, agenda, intervenants, 404 — same pattern)
 ├── components/
 │   ├── Nav.tsx Footer.tsx Reveal.tsx ScrollProgress.tsx   # site-wide components
 │   ├── shared/            # cross-page sections: CTASection.tsx, Faq.tsx
 │   └── <page>/            # per-page section components: index/ concept/ agenda/ intervenants/
+├── lib/
+│   └── seo.ts             # JSON-LD builders (Organization, WebSite, Event, BreadcrumbList, Person, ItemList, FAQPage) + slugify()/speakerSlug() — logic lives here, NOT in data/
 ├── data/                  # all copy/content lives here (no logic, no hardcoding in components)
-│   ├── edition.ts         # core facts: year, nextYear, dates, ticket URLs, agenda days, dominantColor/dominantColorShadow (single source for the edition's dominant color)
-│   ├── edition_*.ts       # per-section edition content: complices, partners, pricing, schedule, speakers
+│   ├── edition.ts         # core facts: year, monthNumber, dates, ticket URLs, agenda days, dominantColor*, SOCIAL_LINKS (fill in), VENUE (fill in address)
+│   ├── edition_*.ts       # per-section edition content: complices, partners, pricing, schedule, speakers (Speaker interface: name/roles/img + optional slug/bio/talk/company/links)
 │   ├── site.ts            # SITE_URL (single source — astro.config imports it), canonicalFor(), PAGE_META (per-page SEO), DEFAULT_META_DESCRIPTION
 │   ├── team.ts            # ORGA_TEAM (organising team)
 │   ├── testimonials.ts faq.ts videos.ts   # TESTIMONIALS, FAQ_ITEMS, video embeds
 └── styles/                # hand-written CSS (see Styling)
+public/                    # robots.txt (AI crawlers allowed + sitemap ref), llms.txt (AI context), manifest.json
 public/assets/images/      # organized by type (named files, not Framer hashes):
 ├── hero/                  # brand logo + per-page hero visuals
 ├── speakers/ team/        # profile pictures (filename = person's real name)
@@ -63,6 +68,16 @@ public/assets/images/      # organized by type (named files, not Framer hashes):
 - SEO meta is centralised: each `.astro` page reads `PAGE_META.<page>` from `site.ts` for its
   `title` / `description` and builds its canonical with `canonicalFor(path)`. The base URL lives
   once as `SITE_URL` in `site.ts` — `astro.config.mjs` imports it for `site:` (don't hardcode it).
+- Structured data (JSON-LD): `Layout.astro` always injects `Organization` + `WebSite` (site-wide)
+  and renders one `<script type="application/ld+json">` containing a `@graph`. Pages add their own
+  schema nodes through the `jsonLd` prop (e.g. `eventSchema()` on `/` and `/agenda`,
+  `breadcrumbSchema([...])`, `speakerListSchema()`, `personSchema(speaker)`) and their FAQ through
+  `faqItems`. All builders are pure functions in `src/lib/seo.ts` — add new schema there, never in
+  `data/`. Speaker URLs use `speakerSlug()` (stable, accent-free); `/intervenants/[slug]` pages stay
+  `noindex` until a `bio` is added to the speaker (anti-thin-content guard).
+- To enable richer social/SEO: fill `SOCIAL_LINKS` (→ `twitter:site` + Organization `sameAs`) and
+  `VENUE` address (→ Event `Place`/`geo`) in `data/edition.ts`; add `bio`/`links`/`talk` per speaker
+  in `edition_speakers.ts` to unlock speaker-page indexing.
 
 ## Styling
 
@@ -104,8 +119,10 @@ Run with `npm run test:visual`.
 
 Vercel (`vercel.json`) with `buildCommand: npm run build`, `outputDirectory: dist`, `cleanUrls: true`
 and `trailingSlash: false`. `@astrojs/sitemap` emits `sitemap-index.xml` at build (relies on `site:`
-in `astro.config.mjs`). `vercel.json` also keeps 301 redirects from the old `/<page>-2026` URLs
-(`/agenda-2026`, `/concept-2026`, `/intervenants-2026`) to their clean equivalents.
+in `astro.config.mjs`; home priority bumped to 1.0 via `serialize`). `public/robots.txt` references
+the sitemap and allows AI crawlers; `public/llms.txt` gives AI engines a factual overview. `vercel.json`
+also keeps 301 redirects from the old `/<page>-2026` URLs (`/agenda-2026`, `/concept-2026`,
+`/intervenants-2026`) to their clean equivalents.
 
 ## Tracking
 
