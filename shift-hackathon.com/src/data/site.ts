@@ -5,10 +5,21 @@ export const SITE_URL = 'https://shift-hackathon.com';
 export const canonicalFor = (path: string) => `${SITE_URL}${path}`;
 
 export const DEFAULT_META_DESCRIPTION =
-  'Créé des produits Gen AI game-changer en 48 heures. Édition "Time to Custom" → Hack ton outil préféré.';
+  'Crée des produits Gen AI game-changer en 48 heures. Édition "Time to Custom" → Hack ton outil préféré.';
 
 // Image Open Graph par défaut (chemin relatif — résolu en URL absolue par les consommateurs).
 export const DEFAULT_OG_IMAGE = '/assets/images/og-image.jpg';
+
+// Wording centralisé des CTA billetterie — source unique consommée par tous les boutons
+// « Je suis chaud » (Nav, Banner, héros de page, grille tarifaire…).
+// `primary` : libellé unique de tous les boutons d'inscription.
+// `contact` : palier ANGELS de la grille tarifaire (mise en relation, pas d'achat direct).
+export const CTA_LABELS = {
+  // primary: 'Je suis chaud',
+  // primary: 'Take my money',
+  primary: `Je suis chaud pour ${EDITION.nextYear} !`,
+  contact: 'Nous contacter',
+} as const;
 
 // Méta SEO par page — source unique consommée par les pages `.astro` (title/description/canonical).
 export const PAGE_META = {

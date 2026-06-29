@@ -1,5 +1,6 @@
 import { motion, useReducedMotion } from 'motion/react';
-import { EDITION, JE_SUIS_CHAUD_URL } from '../../data/edition';
+import { JE_SUIS_CHAUD_URL } from '../../data/edition';
+import { CTA_LABELS } from '../../data/site';
 import { ALL_COMPLICES } from '../../data/edition_complices';
 
 export default function IndexHero() {
@@ -45,7 +46,7 @@ export default function IndexHero() {
                 rel="noopener noreferrer"
                 className="cta-primary"
               >
-                Je suis chaud pour {EDITION.nextYear} !
+                {CTA_LABELS.primary}
               </a>
               <p className="hero__sub-cta">Réserve ta place !!</p>
             </div>

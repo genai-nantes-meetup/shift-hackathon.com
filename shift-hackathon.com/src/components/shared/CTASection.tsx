@@ -1,5 +1,6 @@
 import Reveal from '../Reveal';
 import { EDITION, JE_SUIS_CHAUD_URL } from '../../data/edition';
+import { CTA_LABELS } from '../../data/site';
 
 export default function CTASection() {
   return (
@@ -49,7 +50,7 @@ export default function CTASection() {
             rel="noopener noreferrer"
             className="cta-primary"
           >
-            Take my money
+            {CTA_LABELS.primary}
           </a>
         </div>
       </Reveal>

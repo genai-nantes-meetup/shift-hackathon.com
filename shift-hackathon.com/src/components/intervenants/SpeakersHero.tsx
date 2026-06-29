@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 
 import { EDITION, JE_SUIS_CHAUD_URL } from '../../data/edition';
+import { CTA_LABELS } from '../../data/site';
 const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
 const OXANIUM = 'Oxanium, sans-serif';
 
@@ -146,7 +147,7 @@ export default function SpeakersHero() {
                 boxShadow: `${EDITION.dominantColorShadow} 0px 5px 0px 0px`,
               }}
             >
-              Take my money
+              {CTA_LABELS.primary}
             </a>
           </motion.div>
         </div>

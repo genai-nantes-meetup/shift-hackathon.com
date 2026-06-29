@@ -1,6 +1,7 @@
 import Reveal from '../Reveal';
 import { EDITION, JE_SUIS_CHAUD_URL } from '../../data/edition';
 import { PRICING_TIERS } from '../../data/edition_pricing';
+import { CTA_LABELS } from '../../data/site';
 
 const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
 const OXANIUM = 'Oxanium, sans-serif';
@@ -189,7 +190,7 @@ export default function Pricing() {
                       boxShadow: `${t.name === 'FRIENDS' ? 'rgba(252,35,61,0.5)' : t.name === 'ANGELS' ? 'rgba(65,105,225,0.5)' : EDITION.dominantColorShadow} 0px 5px 0px 0px`,
                     }}
                   >
-                    {t.name === 'ANGELS' ? 'Nous contacter' : 'Je suis chaud'}
+                    {t.name === 'ANGELS' ? CTA_LABELS.contact : CTA_LABELS.primary}
                   </a>
                 </div>
               </div>

@@ -25,12 +25,12 @@ src/
 │                          # props: title, description (defaults to site.ts), canonical, ogImage,
 │                          #        faqItems (→ FAQPage), noindex (→ robots noindex), jsonLd (extra schema nodes)
 ├── pages/                 # one .astro per route (Astro file-based routing)
-│   ├── index.astro        # imports section components, renders them as client:load islands in <main>
+│   ├── index.astro        # imports section components into <main>: hero client:load, below-fold sections client:visible
 │   ├── intervenants/[slug].astro  # dynamic speaker pages (getStaticPaths over SPEAKERS), SSR HTML + Person schema
 │   ├── llms.txt.ts        # prerendered endpoint → /llms.txt, generated from edition/site/pricing/speakers/faq data
 │   └── (concept, agenda, intervenants, 404 — same pattern)
 ├── components/
-│   ├── Nav.tsx Footer.tsx Reveal.tsx ScrollProgress.tsx   # site-wide components
+│   ├── Nav.tsx Footer.tsx Reveal.tsx   # site-wide components
 │   ├── shared/            # cross-page sections: CTASection.tsx, Faq.tsx
 │   └── <page>/            # per-page section components: index/ concept/ agenda/ intervenants/
 ├── lib/
@@ -38,7 +38,7 @@ src/
 ├── data/                  # all copy/content lives here (no logic, no hardcoding in components)
 │   ├── edition.ts         # core facts: year, monthNumber, dates, ticket URLs, agenda days, dominantColor*, SOCIAL_LINKS (fill in), VENUE (fill in address)
 │   ├── edition_*.ts       # per-section edition content: complices, partners, pricing, schedule, speakers (Speaker interface: name/roles/img + optional slug/bio/talk/company/links)
-│   ├── site.ts            # SITE_URL (single source — astro.config imports it), canonicalFor(), PAGE_META (per-page SEO), DEFAULT_META_DESCRIPTION
+│   ├── site.ts            # SITE_URL (single source — astro.config imports it), canonicalFor(), PAGE_META (per-page SEO), DEFAULT_META_DESCRIPTION, CTA_LABELS (wording unique des boutons « Je suis chaud »)
 │   ├── team.ts            # ORGA_TEAM (organising team)
 │   ├── testimonials.ts faq.ts videos.ts   # TESTIMONIALS, FAQ_ITEMS, video embeds
 └── styles/                # hand-written CSS (see Styling)
@@ -54,14 +54,16 @@ public/assets/images/      # organized by type (named files, not Framer hashes):
 
 ### Key patterns
 
-- Pages are `.astro` only (file-based routing). Each page imports its section components and
-  renders them inside `<main>` as `client:load` islands — there is no wrapper `Body` component.
+- Pages are `.astro` only (file-based routing). Each page imports its section components into
+  `<main>` — there is no wrapper `Body` component. The hero hydrates with `client:load`; sections
+  below the fold use `client:visible` to defer their React + `motion` JS until scrolled into view.
 - `Layout.astro` owns the shared `<head>` and renders `<Nav client:load />` before the page
-  `<slot />` and `<Footer client:load />` after. **Do not add Nav/Footer per page** — they come
-  only from the layout.
+  `<slot />` and a static `<Footer />` after (the Footer is stateless — a `mailto:` link, no form —
+  so it ships no JS). **Do not add Nav/Footer per page** — they come only from the layout.
 - Section components are real React (`.tsx`) with inline styles and `motion`/`Reveal` animations.
-  They need a client directive to hydrate (`client:load`); without it `Reveal`'s
-  `initial={{ opacity: 0 }}` never animates and the content stays invisible.
+  They need a client directive to hydrate; `Reveal`'s `initial={{ opacity: 0 }}` only animates once
+  hydrated, and `client:visible` preserves that on scroll while deferring the JS. Animations are
+  gated by `useReducedMotion()` so they freeze when the user prefers reduced motion.
 - A section reused on more than one page goes in `components/shared/` (e.g. `Faq`, `CTASection`);
   page-specific sections live in `components/<page>/`.
 - Copy/content lives in `src/data/` modules, never inline in components. Years derive from
@@ -89,13 +91,14 @@ no utility classes were ever used). Do not reintroduce it; add styles to the app
 CSS lives in `src/styles/`, all imported via `layouts/Layout.astro` — which imports `fonts.css`
 then `global.css` (`global.css` `@import`s the rest):
 
-- `fonts.css`    — Google Fonts / `@font-face` (imported directly in `Layout.astro`, before `global.css`)
+- `fonts.css`    — local `@font-face` (Agrandir), imported in `Layout.astro` before `global.css`. Google Fonts (Oxanium/Dela/Barlow) load via a `<link>` in `Layout.astro`'s `<head>`, not an `@import`.
 - `global.css`   — `@import`s `tokens.css` / `hero.css` / `intro.css` / `sections.css` + a **basic reset** (replaces the former Tailwind Preflight)
 - `tokens.css`   — CSS variables (brand colors, fonts) + reusable classes (`.container`, `.section-title`, `.cta-primary`). `--color-lime` / `--color-lime-shadow` (the edition's dominant color) are **not** hardcoded here — they're injected at runtime on `<html>` by `Layout.astro` from `EDITION.dominantColor` / `EDITION.dominantColorShadow`, so the dominant color has a single source (`data/edition.ts`).
 - `hero.css` / `intro.css` / `sections.css` — per-section layout & styling
 
-Many components also use inline `style={{}}` objects (`Nav.tsx`, `Footer.tsx`, `ScrollProgress.tsx`,
-and most section components) — the two styling approaches coexist.
+Many components also use inline `style={{}}` objects (`Nav.tsx`, `Footer.tsx`, and most section
+components) — the two styling approaches coexist. `global.css` also exposes a `.visually-hidden`
+utility for accessible-but-offscreen section headings and a global `:focus-visible` ring.
 
 ## Linting & Formatting
 

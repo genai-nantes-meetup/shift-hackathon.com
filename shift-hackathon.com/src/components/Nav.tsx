@@ -1,5 +1,6 @@
 import { motion, useReducedMotion } from 'motion/react';
 import { EDITION, JE_SUIS_CHAUD_URL } from '../data/edition';
+import { CTA_LABELS } from '../data/site';
 
 const NAV_LINKS = [
   { label: 'Concept', href: '/concept' },
@@ -105,7 +106,7 @@ export default function Nav() {
             boxShadow: `${EDITION.dominantColorShadow} 0px 5px 0px 0px`,
           }}
         >
-          Je suis chaud
+          {CTA_LABELS.primary}
         </a>
       </div>
     </motion.nav>

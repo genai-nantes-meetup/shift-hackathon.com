@@ -1,5 +1,6 @@
 import Reveal from '../Reveal';
 import { JE_SUIS_CHAUD_URL } from '../../data/edition';
+import { CTA_LABELS } from '../../data/site';
 
 export default function Banner() {
   return (
@@ -30,7 +31,7 @@ export default function Banner() {
               rel="noopener noreferrer"
               className="cta-primary"
             >
-              Je suis chaud
+              {CTA_LABELS.primary}
             </a>
           </Reveal>
         </div>
