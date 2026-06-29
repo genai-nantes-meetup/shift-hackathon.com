@@ -69,6 +69,7 @@ export default function IndexHero() {
               src={'/assets/images/hero/hero-arrow-decoration.svg'}
               alt=""
               aria-hidden
+              className="hero-deco"
               style={{
                 position: 'absolute',
                 bottom: '-20px',
@@ -82,6 +83,7 @@ export default function IndexHero() {
               src={'/assets/images/hero/hero-circle-decoration.svg'}
               alt=""
               aria-hidden
+              className="hero-deco"
               style={{
                 position: 'absolute',
                 top: '60px',

@@ -12,8 +12,8 @@
 
 .intro__title {
   font-family: var(--font-display);
-  font-size: 50px;
-  line-height: 50px;
+  font-size: clamp(30px, 6vw, 50px);
+  line-height: 1.05;
   font-weight: 800;
   color: var(--color-white);
   margin: 0 0 30px;
@@ -63,4 +63,15 @@
   object-fit: cover;
   border-radius: var(--radius-md);
   display: block;
+}
+
+@media (max-width: 768px) {
+  .intro {
+    padding: 56px 20px;
+  }
+  .intro__mosaic {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 40px;
+  }
 }

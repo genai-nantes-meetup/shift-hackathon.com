@@ -13,7 +13,7 @@ const practicalInfos = [
 
 export default function Footer() {
   return (
-    <footer style={{ background: '#000', padding: '0 32px 64px' }}>
+    <footer className="footer">
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <p
           style={{
@@ -70,14 +70,7 @@ export default function Footer() {
           ))}
         </dl>
 
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: '4rem',
-            alignItems: 'start',
-          }}
-        >
+        <div className="footer__grid">
           <div>
             <img
               src="/assets/images/hero/logo-shift.png"

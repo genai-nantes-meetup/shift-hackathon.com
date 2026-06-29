@@ -30,8 +30,8 @@
 
   /* ---- Type scale ---- */
   /* Hero */
-  --fs-hero-title: 64px;
-  --lh-hero-title: 70.4px;
+  --fs-hero-title: clamp(40px, 8vw, 64px);
+  --lh-hero-title: 1.1;
   --fs-hero-sub: 22px;
   --lh-hero-sub: 24.2px;
   --fs-hero-italic: 20px;
@@ -43,12 +43,12 @@
   --ls-cta: 1.6px;
 
   /* Section titles (h2) */
-  --fs-h2: 50px;
-  --lh-h2: 50px;
+  --fs-h2: clamp(32px, 6vw, 50px);
+  --lh-h2: 1;
 
   /* Topic cards */
-  --fs-topic-title: 40px;
-  --lh-topic-title: 44px;
+  --fs-topic-title: clamp(28px, 5vw, 40px);
+  --lh-topic-title: 1.1;
   --fs-topic-body: 18px;
   --lh-topic-body: 27px;
 
@@ -68,8 +68,8 @@
   --lh-pricing-tag: 20.8px;
 
   /* Lieu / Past glimpse badge */
-  --fs-lieu-badge: 36px;
-  --lh-lieu-badge: 43.2px;
+  --fs-lieu-badge: clamp(24px, 5vw, 36px);
+  --lh-lieu-badge: 1.2;
 
   /* Banner subtitle */
   --fs-banner-sub: 20px;

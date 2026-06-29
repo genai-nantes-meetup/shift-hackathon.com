@@ -206,17 +206,25 @@
 }
 
 /* ---- Responsive (tablet/mobile fallback) ---- */
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
   .hero__container {
     grid-template-columns: 1fr;
-    padding: 40px 24px;
+    padding: 48px 24px;
   }
   .hero__text {
     width: 100%;
     padding-right: 0;
   }
-  .hero__title-main {
-    font-size: 48px;
-    line-height: 1.1;
+}
+@media (max-width: 600px) {
+  .hero__container {
+    padding: 32px 20px;
+    gap: 28px;
+  }
+  .hero__text {
+    gap: 24px;
+  }
+  .marquee__inner {
+    padding: 0 20px;
   }
 }
