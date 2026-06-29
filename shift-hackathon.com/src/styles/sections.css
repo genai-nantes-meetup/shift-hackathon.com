@@ -479,65 +479,6 @@
 }
 
 /* ===========================================================================
-   FAQ
-   =========================================================================== */
-.faq {
-  background: var(--color-black);
-  padding: 80px 30px;
-}
-
-.faq__inner {
-  max-width: 1240px;
-  margin: 0 auto;
-}
-
-.faq__title {
-  font-family: var(--font-display);
-  font-size: 80px;
-  line-height: 1;
-  font-weight: 800;
-  color: var(--color-white);
-  margin: 0 0 40px;
-  text-transform: uppercase;
-}
-
-.faq__item {
-  border-top: 1px solid var(--color-white-15);
-  padding: 24px 0;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-}
-
-.faq__item:last-child {
-  border-bottom: 1px solid var(--color-white-15);
-}
-
-.faq__q {
-  font-family: var(--font-display);
-  font-size: 20px;
-  font-weight: 800;
-  color: var(--color-white);
-  margin: 0;
-  text-transform: uppercase;
-}
-
-.faq__a {
-  font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--color-white-70);
-  margin: 16px 0 0;
-  display: none;
-}
-
-.faq__item--open .faq__a {
-  display: block;
-}
-
-/* ===========================================================================
    Orga team
    =========================================================================== */
 .orga {

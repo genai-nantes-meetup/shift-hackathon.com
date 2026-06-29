@@ -1,5 +1,3 @@
-'use client';
-
 import { useState } from 'react';
 import Reveal from '../Reveal';
 import { FAQ_ITEMS, type FaqItem } from '../../data/faq';
@@ -49,6 +47,8 @@ export default function Faq({
                 <div style={{ height: '1px', background: 'rgb(77, 66, 76)' }} />
                 <button
                   onClick={() => toggle(i)}
+                  aria-expanded={open.has(i)}
+                  aria-controls={`faq-answer-${i}`}
                   style={{
                     width: '100%',
                     background: 'none',
@@ -80,23 +80,24 @@ export default function Faq({
                       lineHeight: 1,
                       fontWeight: 300,
                     }}
+                    aria-hidden="true"
                   >
                     {open.has(i) ? '−' : '+'}
                   </span>
                 </button>
-                {open.has(i) && (
-                  <p
-                    style={{
-                      fontFamily: OXANIUM,
-                      fontSize: '16px',
-                      color: 'rgba(255,255,255,0.7)',
-                      lineHeight: 1.6,
-                      margin: '0 0 20px',
-                    }}
-                  >
-                    {item.answer}
-                  </p>
-                )}
+                <p
+                  id={`faq-answer-${i}`}
+                  hidden={!open.has(i)}
+                  style={{
+                    fontFamily: OXANIUM,
+                    fontSize: '16px',
+                    color: 'rgba(255,255,255,0.7)',
+                    lineHeight: 1.6,
+                    margin: '0 0 20px',
+                  }}
+                >
+                  {item.answer}
+                </p>
               </div>
             </Reveal>
           ))}
