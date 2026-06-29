@@ -37,7 +37,7 @@ src/
 │   └── seo.ts             # JSON-LD builders (Organization, WebSite, Event, BreadcrumbList, Person, ItemList, FAQPage) + slugify()/speakerSlug() — logic lives here, NOT in data/
 ├── data/                  # all copy/content lives here (no logic, no hardcoding in components)
 │   ├── edition.ts         # core facts: year, monthNumber, dates, ticket URLs, agenda days, dominantColor*, SOCIAL_LINKS (fill in), VENUE (fill in address)
-│   ├── edition_*.ts       # per-section edition content: complices, partners, pricing, schedule, speakers (Speaker interface: name/roles/img + optional slug/bio/talk/company/links)
+│   ├── edition_*.ts       # per-section edition content: complices, partners, pricing, schedule, speakers (Speaker type: name/roles/img + optional slug/bio/talk/company/links)
 │   ├── site.ts            # SITE_URL (single source — astro.config imports it), canonicalFor(), PAGE_META (per-page SEO), DEFAULT_META_DESCRIPTION, CTA_LABELS (wording unique des boutons « Je suis chaud »)
 │   ├── team.ts            # ORGA_TEAM (organising team)
 │   ├── testimonials.ts faq.ts videos.ts   # TESTIMONIALS, FAQ_ITEMS, video embeds
