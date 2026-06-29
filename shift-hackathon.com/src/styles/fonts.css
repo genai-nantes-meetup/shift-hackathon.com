@@ -1,5 +1,5 @@
-/* Google Fonts (Oxanium, Dela Gothic One, Barlow) sont chargées via <link> dans Layout.astro
-   plutôt qu'un @import ici, pour éviter une chaîne de requêtes bloquante. */
+/* Google Fonts (Oxanium, Dela Gothic One, Barlow) are loaded via <link> in Layout.astro
+   rather than an @import here, to avoid a blocking request chain. */
 
 /* Agrandir Grand Heavy — local (not available on CDN) */
 @font-face {

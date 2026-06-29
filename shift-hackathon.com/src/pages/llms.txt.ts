@@ -1,6 +1,6 @@
-// Endpoint dynamique → /llms.txt (format llmstxt.org).
-// Tout le contenu est dérivé des données (`edition.ts`, `site.ts`, pricing, speakers, faq)
-// pour rester synchronisé avec le site — ne rien y coder en dur.
+// Dynamic endpoint → /llms.txt (llmstxt.org format).
+// All content is derived from the data (`edition.ts`, `site.ts`, pricing, speakers, faq)
+// to stay in sync with the site — never hardcode anything here.
 import type { APIRoute } from 'astro';
 import { canonicalFor, PAGE_META, DEFAULT_META_DESCRIPTION } from '../data/site';
 import { EDITION, JE_SUIS_CHAUD_URL, VENUE } from '../data/edition';

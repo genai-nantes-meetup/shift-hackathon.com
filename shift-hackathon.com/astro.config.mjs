@@ -12,7 +12,7 @@ export default defineConfig({
       changefreq: 'weekly',
       priority: 0.7,
       serialize(item) {
-        // La home porte la priorité maximale.
+        // The home page carries the maximum priority.
         if (item.url === `${SITE_URL}/`) item.priority = 1.0;
         return item;
       },

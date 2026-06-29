@@ -7,13 +7,13 @@ export const canonicalFor = (path: string) => `${SITE_URL}${path}`;
 export const DEFAULT_META_DESCRIPTION =
   'Crée des produits Gen AI game-changer en 48 heures. Édition "Time to Custom" → Hack ton outil préféré.';
 
-// Image Open Graph par défaut (chemin relatif — résolu en URL absolue par les consommateurs).
+// Default Open Graph image (relative path — resolved to an absolute URL by consumers).
 export const DEFAULT_OG_IMAGE = '/assets/images/og-image.jpg';
 
-// Wording centralisé des CTA billetterie — source unique consommée par tous les boutons
-// « Je suis chaud » (Nav, Banner, héros de page, grille tarifaire…).
-// `primary` : libellé unique de tous les boutons d'inscription.
-// `contact` : palier ANGELS de la grille tarifaire (mise en relation, pas d'achat direct).
+// Centralized ticketing CTA wording — single source consumed by all the
+// « Je suis chaud » buttons (Nav, Banner, page heroes, pricing grid…).
+// `primary`: single label for all registration buttons.
+// `contact`: ANGELS tier of the pricing grid (introduction, not a direct purchase).
 export const CTA_LABELS = {
   // primary: 'Je suis chaud',
   // primary: 'Take my money',
@@ -21,7 +21,7 @@ export const CTA_LABELS = {
   contact: 'Nous contacter',
 } as const;
 
-// Méta SEO par page — source unique consommée par les pages `.astro` (title/description/canonical).
+// Per-page SEO meta — single source consumed by the `.astro` pages (title/description/canonical).
 export const PAGE_META = {
   index: {
     title: `Shift — Le Hackathon Gen AI ${EDITION.year} à Nantes`,

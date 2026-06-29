@@ -1,7 +1,7 @@
-// Builders de données structurées (schema.org / JSON-LD) — fonctions pures.
-// Placé dans `src/lib/` (et non `src/data/`) car contient de la logique.
-// Consommé par `Layout.astro` (Organization + WebSite site-wide) et par les pages
-// (Event, FAQPage, BreadcrumbList, Person, ItemList) via la prop `jsonLd`.
+// Structured data builders (schema.org / JSON-LD) — pure functions.
+// Placed in `src/lib/` (not `src/data/`) because it holds logic.
+// Consumed by `Layout.astro` (site-wide Organization + WebSite) and by the pages
+// (Event, FAQPage, BreadcrumbList, Person, ItemList) via the `jsonLd` prop.
 
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/site';
 import {
@@ -20,11 +20,11 @@ import type { FaqItem } from '../data/faq';
 
 export type JsonLd = Record<string, unknown>;
 
-/** URL absolue à partir d'un chemin racine ou d'une URL déjà absolue. */
+/** Absolute URL from a root-relative path or an already-absolute URL. */
 const abs = (path: string): string =>
   path.startsWith('http') ? path : `${SITE_URL}${path.startsWith('/') ? path : `/${path}`}`;
 
-/** Slug stable et sans accents à partir d'un nom (ex: « Céline Haentzler » → « celine-haentzler »). */
+/** Stable, accent-free slug from a name (e.g. « Céline Haentzler » → « celine-haentzler »). */
 export const slugify = (name: string): string =>
   name
     .normalize('NFD')
@@ -35,7 +35,7 @@ export const slugify = (name: string): string =>
 
 export const speakerSlug = (s: Speaker): string => s.slug ?? slugify(s.name);
 
-// Identifiants stables pour référencer les entités entre elles dans le @graph.
+// Stable identifiers used to cross-reference entities within the @graph.
 const ORGANIZATION_ID = `${SITE_URL}/#organization`;
 const WEBSITE_ID = `${SITE_URL}/#website`;
 const EVENT_ID = `${SITE_URL}/#event`;
@@ -106,14 +106,14 @@ function placeSchema(): JsonLd {
   };
 }
 
-/** Prix numérique à partir d'un libellé (« 79€ » → 79, « Custom » → null). */
+/** Numeric price from a label (« 79€ » → 79, « Custom » → null). */
 const parsePrice = (price: string): number | null => {
   const match = price.replace(',', '.').match(/[\d.]+/);
   return match ? Number(match[0]) : null;
 };
 
-// Disponibilité des billets dérivée du mode d'inscription, pour des données structurées
-// honnêtes : on ne déclare InStock que si la billetterie est réellement ouverte.
+// Ticket availability derived from the registration mode, for honest structured
+// data: we only declare InStock when ticketing is actually open.
 const TICKET_AVAILABILITY: Record<JeSuisChaudTicketMode, string> = {
   'waiting-list-this-year': 'https://schema.org/PreOrder',
   'open-registration': 'https://schema.org/InStock',
@@ -124,7 +124,7 @@ function ticketOffers(): JsonLd[] {
   const availability = TICKET_AVAILABILITY[JE_SUIS_CHAUD_TICKET_MODE];
   return PRICING_TIERS.map((tier): JsonLd | null => {
     const price = parsePrice(tier.price);
-    if (price == null) return null; // ANGELS (sur mesure) : pas une billetterie attendee
+    if (price == null) return null; // ANGELS (custom) : not an attendee ticket
     return {
       '@type': 'Offer',
       name: tier.name,
@@ -141,14 +141,14 @@ function ticketOffers(): JsonLd[] {
 const isoDay = (day: number): string =>
   `${EDITION.year}-${String(EDITION.monthNumber).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
 
-// Description factuelle (≠ accroche marketing) — meilleure extraction par les moteurs IA.
+// Factual description (≠ marketing tagline) — better extraction by AI engines.
 const EVENT_DESCRIPTION =
   'Hackathon Gen AI de 48 heures à Nantes (édition « Time to Custom »). En équipe, les ' +
   "participant·es prennent un outil existant et lui ajoutent une vraie fonctionnalité d'IA " +
   'générative, accompagné·es par des experts tech, product et design, puis la testent et la ' +
   'pitchent devant un jury.';
 
-// Un sous-événement par jour d'agenda (Google valorise subEvent pour les events multi-jours).
+// One sub-event per agenda day (Google values subEvent for multi-day events).
 function subEvents(): JsonLd[] {
   return SCHEDULE.map((day, index) => ({
     '@type': 'Event',
@@ -167,8 +167,8 @@ export function eventSchema(): JsonLd {
     '@id': EVENT_ID,
     name: `Shift — Le Hackathon Gen AI ${EDITION.year}`,
     description: EVENT_DESCRIPTION,
-    // Kickoff vendredi 18h (CET, +01:00) → clôture dimanche soir.
-    // NB : passage à l'heure d'été le 29/03/2026 ⇒ le dimanche est en +02:00.
+    // Kickoff Friday 6pm (CET, +01:00) → closing Sunday evening.
+    // NB: daylight saving time starts on 2026-03-29 ⇒ Sunday is in +02:00.
     startDate: `${isoDay(EDITION.startDay)}T18:00:00+01:00`,
     endDate: `${isoDay(EDITION.endDay)}T23:00:00+02:00`,
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
@@ -201,7 +201,7 @@ export function breadcrumbSchema(items: { name: string; path: string }[]): JsonL
   };
 }
 
-/** Entreprise déduite du premier rôle de la forme « … @ Entreprise ». */
+/** Company inferred from the first role of the form « … @ Company ». */
 const companyFromRoles = (roles: string[]): string | undefined => {
   for (const role of roles) {
     const match = role.match(/@\s*(.+)$/);
@@ -273,7 +273,7 @@ export function videoSchema(video: Video): JsonLd {
     thumbnailUrl: `https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`,
     embedUrl: `https://www.youtube.com/embed/${video.id}`,
     contentUrl: `https://www.youtube.com/watch?v=${video.id}`,
-    // uploadDate optionnel : à renseigner dans data/videos.ts pour l'éligibilité rich results.
+    // uploadDate optional: set it in data/videos.ts for rich-results eligibility.
     ...(video.uploadDate ? { uploadDate: video.uploadDate } : {}),
   };
 }

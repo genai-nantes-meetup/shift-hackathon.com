@@ -21,14 +21,14 @@ const title = `${speaker.name} — Intervenant·e Shift Hackathon Gen AI ${EDITI
 const rawDescription = speaker.bio
   ? `${speaker.name}, ${roleLine}. ${speaker.bio}`
   : `${speaker.name} (${roleLine}) intervient au Shift Hackathon Gen AI ${EDITION.year}, le hackathon Gen AI de 48h à Nantes.`;
-// Troncature au mot près (≤160 chars) pour éviter de couper en plein milieu d'un mot dans le SERP.
+// Word-boundary truncation (≤160 chars) to avoid cutting mid-word in the SERP.
 const description =
   rawDescription.length <= 160
     ? rawDescription
     : `${rawDescription.slice(0, 157).replace(/\s+\S*$/, '')}…`;
 
-// Anti-thin-content : on n'indexe une fiche que si elle a une bio (contenu unique réel).
-// Sans bio, la page reste accessible et maillée (noindex, follow) jusqu'à enrichissement.
+// Anti-thin-content: we only index a profile if it has a bio (real unique content).
+// Without a bio, the page stays accessible and linked (noindex, follow) until enriched.
 const indexable = Boolean(speaker.bio);
 
 const externalLinks = speaker.links

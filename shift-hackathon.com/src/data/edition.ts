@@ -4,11 +4,11 @@ export const EDITION = {
   startDay: 27,
   endDay: 29,
   month: 'Mars',
-  monthNumber: 3, // mois (1-12) — utilisé pour construire les dates ISO du schema Event
+  monthNumber: 3, // month (1-12) — used to build the ISO dates of the Event schema
   dateRangeShort: '27-29/03/2026',
   dateRangeLong: `Du 27 au 29 mars 2026`,
 
-  // Résumé des tarifs affiché dans le footer (ligne « Tarifs »).
+  // Pricing summary shown in the footer (« Tarifs » line).
   tarifsSummary: '79€',
   agendaDays: [
     {
@@ -35,15 +35,15 @@ export const EDITION = {
 } as const;
 
 export type JeSuisChaudTicketMode =
-  | 'waiting-list-this-year' // avant que la billeterie ne soit ouverte
-  | 'open-registration' // billeterie ouverte
-  | 'waiting-list-next-year'; // waiting list pour l'année prochaine
+  | 'waiting-list-this-year' // before ticketing opens
+  | 'open-registration' // ticketing open
+  | 'waiting-list-next-year'; // waiting list for next year
 
-// changer à l'ouverture de la billeterie et avant la cérémonie de clôture
+// change when ticketing opens and before the closing ceremony
 export const JE_SUIS_CHAUD_TICKET_MODE: JeSuisChaudTicketMode = 'waiting-list-next-year';
 
-// URL du bouton « Je suis chaud », choisie automatiquement selon JE_SUIS_CHAUD_TICKET_MODE.
-// Le Record exhaustif force à couvrir les 3 modes.
+// URL of the « Je suis chaud » button, chosen automatically based on JE_SUIS_CHAUD_TICKET_MODE.
+// The exhaustive Record forces all 3 modes to be covered.
 const JE_SUIS_CHAUD_URL_BY_MODE: Record<JeSuisChaudTicketMode, string> = {
   'waiting-list-this-year': '???',
   'open-registration': `https://www.billetweb.fr/shift-hackathon-2026`,
@@ -52,9 +52,9 @@ const JE_SUIS_CHAUD_URL_BY_MODE: Record<JeSuisChaudTicketMode, string> = {
 
 export const JE_SUIS_CHAUD_URL = JE_SUIS_CHAUD_URL_BY_MODE[JE_SUIS_CHAUD_TICKET_MODE];
 
-// Comptes sociaux officiels — à compléter avec les URLs réelles.
-// Consommé par Layout (twitter:site/creator) et le schema Organization (`sameAs`).
-// Laisser une chaîne vide pour omettre proprement le champ.
+// Official social accounts — fill in with the real URLs.
+// Consumed by Layout (twitter:site/creator) and the Organization schema (`sameAs`).
+// Leave an empty string to cleanly omit the field.
 export const SOCIAL_LINKS: {
   twitterHandle: string;
   twitter: string;
@@ -62,15 +62,15 @@ export const SOCIAL_LINKS: {
   instagram: string;
   youtube: string;
 } = {
-  twitterHandle: '', // ex: '@shifthackathon' (pour <meta name="twitter:site">)
-  twitter: '', // ex: 'https://twitter.com/shifthackathon'
+  twitterHandle: '', // e.g. '@shifthackathon' (for <meta name="twitter:site">)
+  twitter: '', // e.g. 'https://twitter.com/shifthackathon'
   linkedin: 'https://www.linkedin.com/company/shift-hackathon/',
-  instagram: '', // ex: 'https://www.instagram.com/shifthackathon'
+  instagram: '', // e.g. 'https://www.instagram.com/shifthackathon'
   youtube: '',
 };
 
-// Lieu de l'événement — compléter l'adresse postale (SEO local + schema Place/Event).
-// `streetAddress`/`postalCode` vides ⇒ champs omis du JSON-LD. `latitude`/`longitude` null ⇒ pas de `geo`.
+// Event venue — fill in the postal address (local SEO + Place/Event schema).
+// Empty `streetAddress`/`postalCode` ⇒ fields omitted from the JSON-LD. `latitude`/`longitude` null ⇒ no `geo`.
 export const VENUE: {
   name: string;
   streetAddress: string;

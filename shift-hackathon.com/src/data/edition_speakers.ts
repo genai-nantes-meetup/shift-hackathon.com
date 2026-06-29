@@ -2,11 +2,11 @@ export type Speaker = {
   name: string;
   roles: string[];
   img: string;
-  // Champs optionnels — enrichir pour des pages /intervenants/[slug] riches (évite le thin content).
-  slug?: string; // sinon dérivé du nom via slugify()
-  bio?: string; // 1-2 phrases de présentation
-  talk?: string; // titre/sujet d'intervention si applicable
-  company?: string; // entreprise (sinon dérivable des `roles`)
+  // Optional fields — enrich for rich /intervenants/[slug] pages (avoids thin content).
+  slug?: string; // otherwise derived from the name via slugify()
+  bio?: string; // 1-2 sentences of introduction
+  talk?: string; // talk title/topic if applicable
+  company?: string; // company (otherwise derivable from `roles`)
   companyUrl?: string;
   links?: { linkedin?: string; twitter?: string; website?: string; github?: string };
 }

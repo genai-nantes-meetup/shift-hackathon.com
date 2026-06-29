@@ -26,8 +26,8 @@ const {
   jsonLd = [],
 } = Astro.props;
 
-// Organization + WebSite sont injectés site-wide ; chaque page ajoute ses propres entités
-// (Event, BreadcrumbList, Person, ItemList…) via `jsonLd`, et son FAQ via `faqItems`.
+// Organization + WebSite are injected site-wide; each page adds its own entities
+// (Event, BreadcrumbList, Person, ItemList…) via `jsonLd`, and its FAQ via `faqItems`.
 const graph: JsonLd[] = [
   organizationSchema(),
   websiteSchema(),

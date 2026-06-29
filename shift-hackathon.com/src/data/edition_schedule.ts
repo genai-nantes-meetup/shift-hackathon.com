@@ -20,8 +20,8 @@ export type ScheduleDay = {
   slots: Slot[];
 }
 
-// Créneaux par jour (index aligné sur EDITION.agendaDays). Les métadonnées date/label/weekday
-// ne sont PAS redéclarées ici : elles proviennent d'EDITION.agendaDays (source unique).
+// Slots per day (index aligned with EDITION.agendaDays). The date/label/weekday metadata
+// is NOT redeclared here: it comes from EDITION.agendaDays (single source).
 const SLOTS_BY_DAY: Slot[][] = [
   [
     { time: '18h', title: 'Accueil' },

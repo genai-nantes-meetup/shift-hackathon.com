@@ -1,8 +1,8 @@
 import { ALL_COMPLICES } from './edition_complices';
 
-// Partenaires mis en avant (avec lien), dans l'ordre d'affichage de la section « Partenaires ».
-// Le logo n'est PAS redéclaré ici : il provient de `ALL_COMPLICES` (source unique), retrouvé par
-// nom — un nom inconnu lève une erreur au build, garantissant que les deux listes restent cohérentes.
+// Featured partners (with link), in the display order of the « Partenaires » section.
+// The logo is NOT redeclared here: it comes from `ALL_COMPLICES` (single source), looked up by
+// name — an unknown name throws a build error, guaranteeing the two lists stay consistent.
 const PARTNER_LINKS: { name: string; url: string }[] = [
   { name: 'OpenAI', url: 'https://openai.com/' },
   { name: 'ElevenLabs', url: 'https://elevenlabs.io/' },
