@@ -73,3 +73,23 @@ button {
   padding: 0;
   cursor: pointer;
 }
+
+/* Visible keyboard focus for all interactive elements (replaces removed outlines) */
+:focus-visible {
+  outline: 2px solid var(--color-lime);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Respect the user's reduced-motion preference: neutralise CSS animations/transitions.
+   JS-driven `motion` animations are gated separately via useReducedMotion(). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,8 +1,9 @@
-import { motion } from 'motion/react';
+import { motion, useReducedMotion } from 'motion/react';
 import { EDITION, JE_SUIS_CHAUD_URL } from '../../data/edition';
 import { ALL_COMPLICES } from '../../data/edition_complices';
 
 export default function IndexHero() {
+  const reduce = useReducedMotion();
   return (
     <>
       <section className="hero">
@@ -21,9 +22,9 @@ export default function IndexHero() {
         <div className="hero__container">
           <motion.div
             className="hero__text"
-            initial={{ opacity: 0, y: 24 }}
+            initial={reduce ? false : { opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={reduce ? { duration: 0 } : { duration: 0.5 }}
           >
             <h1 className="hero__title">
               <span className="hero__title-main">Shift</span>
@@ -52,9 +53,9 @@ export default function IndexHero() {
 
           <motion.div
             className="hero__image-wrap"
-            initial={{ opacity: 0, x: 20 }}
+            initial={reduce ? false : { opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
+            transition={reduce ? { duration: 0 } : { duration: 0.7, delay: 0.1 }}
           >
             <img
               src={'/assets/images/hero/home-hero.webp'}
@@ -74,8 +75,8 @@ export default function IndexHero() {
           <div className="marquee__track-wrap">
             <motion.div
               className="marquee__track"
-              animate={{ x: ['0%', '-50%'] }}
-              transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
+              animate={reduce ? undefined : { x: ['0%', '-50%'] }}
+              transition={reduce ? undefined : { duration: 30, repeat: Infinity, ease: 'linear' }}
             >
               {[...ALL_COMPLICES, ...ALL_COMPLICES].map((p, i) => (
                 <img

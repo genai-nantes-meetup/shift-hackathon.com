@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+import { motion, useReducedMotion } from 'motion/react';
 import { EDITION, JE_SUIS_CHAUD_URL } from '../data/edition';
 
 const NAV_LINKS = [
@@ -53,11 +53,12 @@ function NavLink({ label, href }: { label: string; href: string }) {
 }
 
 export default function Nav() {
+  const reduce = useReducedMotion();
   return (
     <motion.nav
-      initial={{ y: -60, opacity: 0 }}
+      initial={reduce ? false : { y: -60, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.4, ease: 'easeOut' }}
+      transition={reduce ? { duration: 0 } : { duration: 0.4, ease: 'easeOut' }}
       style={{
         position: 'fixed',
         top: 0,
