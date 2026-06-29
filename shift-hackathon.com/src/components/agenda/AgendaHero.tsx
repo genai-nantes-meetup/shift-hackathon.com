@@ -158,6 +158,19 @@ export default function AgendaHero() {
             }}
           />
           <img
+            src={'/assets/images/hero/hero-arrow-decoration.svg'}
+            alt=""
+            aria-hidden
+            style={{
+              position: 'absolute',
+              bottom: '-20px',
+              left: '-20px',
+              width: 112,
+              height: 120,
+              pointerEvents: 'none',
+            }}
+          />
+          <img
             src={'/assets/images/hero/hero-circle-decoration.svg'}
             alt=""
             aria-hidden
