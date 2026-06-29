@@ -1,4 +1,5 @@
 import Reveal from '../Reveal';
+import { VENUE } from '../../data/edition';
 
 const IMAGES = [
   { src: '/assets/images/gallery/venue-speaker-1.webp', alt: 'Speaker', flex: '0 0 22%' },
@@ -35,7 +36,9 @@ export default function Lieu() {
         </div>
 
         <div className="lieu__badge">
-          <h2>Le Lieu - Le Palace, Nantes</h2>
+          <h2>
+            Le Lieu - {VENUE.name}, {VENUE.addressLocality}
+          </h2>
         </div>
       </Reveal>
     </section>
