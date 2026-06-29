@@ -149,6 +149,9 @@ export default function AgendaHero() {
           <img
             src={'/assets/images/hero/agenda-hero.webp'}
             alt="Shift Hackathon Agenda"
+            width={2912}
+            height={1632}
+            decoding="async"
             style={{
               width: '100%',
               borderRadius: '6px',

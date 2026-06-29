@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import IndexHero from '../components/index/IndexHero';
 import IntroSection from '../components/index/IntroSection';
+import PracticalInfos from '../components/index/PracticalInfos.astro';
 import SpeakersPreview from '../components/index/SpeakersPreview';
 import AuProgramme from '../components/index/AuProgramme';
 import Testimonials from '../components/index/Testimonials';
@@ -27,6 +28,7 @@ import { eventSchema, videoSchemas } from '../lib/seo';
   <main style="padding-top: 60px; background: #000; min-height: 100vh; color: #fff;">
     <IndexHero client:load />
     <IntroSection client:load />
+    <PracticalInfos />
     <SpeakersPreview client:load />
     <AuProgramme client:load />
     <Testimonials client:load />

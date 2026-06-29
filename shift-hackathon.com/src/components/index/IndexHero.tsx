@@ -60,6 +60,9 @@ export default function IndexHero() {
               src={'/assets/images/hero/home-hero.webp'}
               alt="Shift Hackathon"
               className="hero__image"
+              width={1770}
+              height={1073}
+              decoding="async"
             />
           </motion.div>
         </div>
@@ -76,7 +79,14 @@ export default function IndexHero() {
               transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
             >
               {[...ALL_COMPLICES, ...ALL_COMPLICES].map((p, i) => (
-                <img key={`${p.name}-${i}`} src={p.logo} alt={p.name} className="marquee__logo" />
+                <img
+                  key={`${p.name}-${i}`}
+                  src={p.logo}
+                  alt={p.name}
+                  className="marquee__logo"
+                  loading="lazy"
+                  decoding="async"
+                />
               ))}
             </motion.div>
           </div>

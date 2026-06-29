@@ -9,6 +9,8 @@ export default function Banner() {
         src="/assets/images/banner/banner-shift.webp"
         alt=""
         aria-hidden="true"
+        loading="lazy"
+        decoding="async"
       />
 
       <div className="banner__inner">

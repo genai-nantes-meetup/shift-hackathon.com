@@ -5,7 +5,7 @@ export default function Testimonials() {
   return (
     <section className="past">
       <div className="past__inner">
-        <h4 className="past__title">Revivez les éditions précédentes</h4>
+        <h2 className="past__title">Revivez les éditions précédentes</h2>
         <div className="past__grid">
           {VIDEOS.map((v) => (
             <div key={v.id} className="past__card">
@@ -17,7 +17,7 @@ export default function Testimonials() {
                   allowFullScreen
                 />
               </div>
-              <h5>{v.title}</h5>
+              <h3>{v.title}</h3>
               <p>{v.description}</p>
             </div>
           ))}

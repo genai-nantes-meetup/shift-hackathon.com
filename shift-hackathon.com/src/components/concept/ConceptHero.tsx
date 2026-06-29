@@ -144,6 +144,7 @@ export default function ConceptHero() {
           <img
             src={'/assets/images/hero/concept-hero.webp'}
             alt="Shift Hackathon"
+            decoding="async"
             style={{
               width: '100%',
               aspectRatio: '1 / 1',

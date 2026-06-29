@@ -47,7 +47,7 @@
   display: block;
 }
 
-.speakers__card h6 {
+.speakers__card .speakers__name {
   font-family: var(--font-dela);
   font-weight: 400;
   color: var(--color-white);
@@ -167,7 +167,7 @@
   border-radius: var(--radius-md);
 }
 
-.past__card h5 {
+.past__card h3 {
   font-family: var(--font-display);
   font-size: 24px;
   font-weight: 800;
@@ -579,7 +579,7 @@
   display: block;
 }
 
-.orga__card h6 {
+.orga__card .orga__name {
   font-family: var(--font-dela);
   font-weight: 400;
   color: var(--color-white);

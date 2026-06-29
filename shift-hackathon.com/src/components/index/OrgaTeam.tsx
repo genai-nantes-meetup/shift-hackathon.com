@@ -29,7 +29,7 @@ export default function OrgaTeam() {
             >
               <img src={m.img} alt={m.name} loading="lazy" />
               <div>
-                <h6>{m.name}</h6>
+                <p className="orga__name">{m.name}</p>
                 {m.roles.map((r) => (
                   <p key={r}>{r}</p>
                 ))}

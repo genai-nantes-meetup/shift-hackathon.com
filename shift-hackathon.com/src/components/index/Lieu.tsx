@@ -21,14 +21,14 @@ export default function Lieu() {
           <div className="lieu__row">
             {row1.map((img) => (
               <div key={img.src} className="lieu__cell" style={{ flex: img.flex }}>
-                <img src={img.src} alt={img.alt} loading="lazy" />
+                <img src={img.src} alt={img.alt} loading="lazy" decoding="async" />
               </div>
             ))}
           </div>
           <div className="lieu__row">
             {row2.map((img) => (
               <div key={img.src} className="lieu__cell" style={{ flex: img.flex }}>
-                <img src={img.src} alt={img.alt} loading="lazy" />
+                <img src={img.src} alt={img.alt} loading="lazy" decoding="async" />
               </div>
             ))}
           </div>

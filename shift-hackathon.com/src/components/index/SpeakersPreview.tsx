@@ -22,7 +22,7 @@ export default function SpeakersPreview() {
               >
                 <img src={s.img} alt={`${s.name}, ${s.roles.join(' · ')}`} loading="lazy" />
                 <div>
-                  <h6>{s.name}</h6>
+                  <p className="speakers__name">{s.name}</p>
                   {s.roles.map((r) => (
                     <p key={r}>{r}</p>
                   ))}

@@ -161,6 +161,7 @@ export default function SpeakersHero() {
           <img
             src={'/assets/images/hero/speakers-hero.webp'}
             alt="Shift Hackathon"
+            decoding="async"
             style={{
               width: '100%',
               aspectRatio: '1 / 1',

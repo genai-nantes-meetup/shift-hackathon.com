@@ -92,6 +92,8 @@ export default function Features() {
                   <img
                     src={f.img}
                     alt={f.alt}
+                    loading="lazy"
+                    decoding="async"
                     style={{
                       width: '544px',
                       maxWidth: '100%',
@@ -113,7 +115,7 @@ export default function Features() {
                     justifyContent: 'center',
                   }}
                 >
-                  <h4
+                  <h2
                     style={{
                       fontFamily: "'Agrandir Grand Heavy', sans-serif",
                       fontWeight: 800,
@@ -125,7 +127,7 @@ export default function Features() {
                     }}
                   >
                     {f.title}
-                  </h4>
+                  </h2>
                   <p
                     style={{
                       color: 'rgb(255, 255, 255)',

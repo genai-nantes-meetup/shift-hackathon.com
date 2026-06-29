@@ -1,0 +1,88 @@
+---
+// Bloc "Infos pratiques" — HTML server-rendered (pas d'îlot React) pour une extraction
+// maximale par les moteurs IA + clarté UX. Données issues de edition/pricing (single source).
+import { EDITION, VENUE } from '../../data/edition';
+import { PRICING_TIERS } from '../../data/edition_pricing';
+
+const venue = [VENUE.name, VENUE.streetAddress, `${VENUE.postalCode} ${VENUE.addressLocality}`.trim()]
+  .filter(Boolean)
+  .join(', ');
+const tarifs = PRICING_TIERS.map(
+  (t) => `${t.name} ${t.price === 'Custom' ? 'sur mesure' : t.price}`
+).join(' · ');
+
+const infos = [
+  { label: 'Dates', value: `${EDITION.dateRangeLong} (48 h)` },
+  { label: 'Lieu', value: venue },
+  { label: 'Public', value: 'Développeurs, designers & product lovers' },
+  { label: 'Format', value: 'Hackathon Gen AI en présentiel, en équipe' },
+  { label: 'Tarifs', value: tarifs },
+];
+---
+
+<section class="infos" aria-labelledby="infos-title">
+  <div class="infos__inner">
+    <h2 id="infos-title" class="infos__title">Infos pratiques</h2>
+    <dl class="infos__grid">
+      {
+        infos.map((i) => (
+          <div class="infos__item">
+            <dt>{i.label}</dt>
+            <dd>{i.value}</dd>
+          </div>
+        ))
+      }
+      <div class="infos__item">
+        <dt>Contact</dt>
+        <dd><a href={`mailto:${EDITION.contactEmail}`}>{EDITION.contactEmail}</a></dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<style>
+  .infos {
+    background: #000;
+    padding: 80px 20px;
+  }
+  .infos__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .infos__title {
+    font-family: 'Agrandir Grand Heavy', sans-serif;
+    font-size: 40px;
+    color: #fff;
+    margin: 0 0 2.5rem;
+    line-height: 1.1;
+  }
+  .infos__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin: 0;
+  }
+  .infos__item {
+    border-left: 3px solid var(--color-lime);
+    padding: 0.25rem 0 0.25rem 1rem;
+  }
+  .infos__item dt {
+    font-family: Oxanium, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-lime);
+    margin: 0 0 0.35rem;
+  }
+  .infos__item dd {
+    font-family: Oxanium, sans-serif;
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0;
+  }
+  .infos__item dd a {
+    color: var(--color-lime);
+    text-decoration: none;
+  }
+</style>

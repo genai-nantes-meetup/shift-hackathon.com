@@ -136,6 +136,8 @@ export default function ProjectExamples() {
                   <img
                     src={p.img}
                     alt={p.name}
+                    loading="lazy"
+                    decoding="async"
                     style={{
                       width: '100%',
                       aspectRatio: '16 / 9',
