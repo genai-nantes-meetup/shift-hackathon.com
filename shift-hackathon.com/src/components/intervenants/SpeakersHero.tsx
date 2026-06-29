@@ -37,7 +37,7 @@ export default function SpeakersHero() {
       {/* Background image (faint) */}
       <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
         <img
-          src={'/assets/images/hero/hero-background.png'}
+          src={'/assets/images/hero/hero-background.webp'}
           alt=""
           style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.1 }}
         />
@@ -159,7 +159,7 @@ export default function SpeakersHero() {
           style={{ position: 'relative' }}
         >
           <img
-            src={'/assets/images/hero/speakers-hero.png'}
+            src={'/assets/images/hero/speakers-hero.webp'}
             alt="Shift Hackathon"
             style={{
               width: '100%',

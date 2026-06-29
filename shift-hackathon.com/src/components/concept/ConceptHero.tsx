@@ -19,7 +19,7 @@ export default function ConceptHero() {
     >
       {/* Background image (faint, full section) */}
       <img
-        src={'/assets/images/hero/hero-background.png'}
+        src={'/assets/images/hero/hero-background.webp'}
         alt=""
         style={{
           display: 'block',
@@ -142,7 +142,7 @@ export default function ConceptHero() {
           style={{ position: 'relative' }}
         >
           <img
-            src={'/assets/images/hero/concept-hero.png'}
+            src={'/assets/images/hero/concept-hero.webp'}
             alt="Shift Hackathon"
             style={{
               width: '100%',

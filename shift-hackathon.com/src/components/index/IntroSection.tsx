@@ -2,10 +2,10 @@ import Reveal from '../Reveal';
 import { EDITION } from '../../data/edition';
 
 const MOSAIC = [
-  { src: '/assets/images/gallery/gallery-speaker-session.jpg', alt: 'Speaker session' },
-  { src: '/assets/images/gallery/gallery-group-discussion.jpg', alt: 'Group discussion' },
-  { src: '/assets/images/gallery/gallery-speaker.jpg', alt: 'Speaker' },
-  { src: '/assets/images/gallery/gallery-meeting.jpg', alt: 'Meeting' },
+  { src: '/assets/images/gallery/gallery-speaker-session.webp', alt: 'Speaker session' },
+  { src: '/assets/images/gallery/gallery-group-discussion.webp', alt: 'Group discussion' },
+  { src: '/assets/images/gallery/gallery-speaker.webp', alt: 'Speaker' },
+  { src: '/assets/images/gallery/gallery-meeting.webp', alt: 'Meeting' },
 ];
 
 export default function IntroSection() {

@@ -8,7 +8,7 @@ export const DEFAULT_META_DESCRIPTION =
   'Créé des produits Gen AI game-changer en 48 heures. Édition "Time to Custom" → Hack ton outil préféré.';
 
 // Image Open Graph par défaut (chemin relatif — résolu en URL absolue par les consommateurs).
-export const DEFAULT_OG_IMAGE = '/assets/images/og-image.png';
+export const DEFAULT_OG_IMAGE = '/assets/images/og-image.jpg';
 
 // Méta SEO par page — source unique consommée par les pages `.astro` (title/description/canonical).
 export const PAGE_META = {

@@ -6,7 +6,7 @@ export default function Banner() {
     <section className="banner">
       <img
         className="banner__bg"
-        src="/assets/images/banner/banner-shift.jpg"
+        src="/assets/images/banner/banner-shift.webp"
         alt=""
         aria-hidden="true"
       />

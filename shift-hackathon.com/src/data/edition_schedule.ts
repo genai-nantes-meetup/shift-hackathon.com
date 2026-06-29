@@ -13,8 +13,8 @@ export const SCHEDULE = [
         title: 'Démarrage de Shift',
         desc: 'Lancement du hackathon.',
         speakers: [
-          { name: 'Maxime Thoonsen', img: '/assets/images/speakers/maxime-thoonsen.jpeg' },
-          { name: 'Samuel Berthe', img: '/assets/images/team/samuel-berthe.jpg' },
+          { name: 'Maxime Thoonsen', img: '/assets/images/speakers/maxime-thoonsen.webp' },
+          { name: 'Samuel Berthe', img: '/assets/images/team/samuel-berthe.webp' },
         ],
       },
       { time: '20h', title: 'Pitch fire', desc: 'Présentation en 1min des idées.' },
@@ -28,7 +28,7 @@ export const SCHEDULE = [
         title: 'REX Pierre Renaudin',
         desc: "Retour d'expérience d'un entrepreneur dans la Gen AI",
         speakers: [
-          { name: 'Pierre Renaudin', img: '/assets/images/speakers/pierre-renaudin.jpeg' },
+          { name: 'Pierre Renaudin', img: '/assets/images/speakers/pierre-renaudin.webp' },
         ],
       },
       {
@@ -71,7 +71,7 @@ export const SCHEDULE = [
         title: "Conf' User Test",
         desc: 'Une masterclass par Pauline Corriou activable pour bien préparer son premier User Test.',
         speakers: [
-          { name: 'Pauline Corriou', img: '/assets/images/speakers/pauline-corriou.jpeg' },
+          { name: 'Pauline Corriou', img: '/assets/images/speakers/pauline-corriou.webp' },
         ],
       },
       {
@@ -79,7 +79,7 @@ export const SCHEDULE = [
         title: "Conf' Pitch/Demo",
         desc: "Une masterclass sur l'art du pitch par Florian Hervéou dédiée aux pitcheurs/ses de votre team pour tout déchirer sur scène.",
         speakers: [
-          { name: 'Florian Hervéou', img: '/assets/images/speakers/baptiste-rongier.jpeg' },
+          { name: 'Florian Hervéou', img: '/assets/images/speakers/baptiste-rongier.webp' },
         ],
       },
       { time: '18h', title: 'Premier User Tests', desc: "C'est le moment des tests !" },

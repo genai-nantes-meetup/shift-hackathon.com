@@ -9,7 +9,7 @@ export default function IndexHero() {
         {/* Background image, faded */}
         <img
           className="hero__bg"
-          src={'/assets/images/hero/hero-background.png'}
+          src={'/assets/images/hero/hero-background.webp'}
           alt=""
           aria-hidden="true"
         />
@@ -57,7 +57,7 @@ export default function IndexHero() {
             transition={{ duration: 0.7, delay: 0.1 }}
           >
             <img
-              src={'/assets/images/hero/home-hero.png'}
+              src={'/assets/images/hero/home-hero.webp'}
               alt="Shift Hackathon"
               className="hero__image"
             />
