@@ -8,6 +8,7 @@ export default defineConfig({
   workers: 1,
   reporter: [['html', { outputFolder: 'playwright-report' }]],
   use: {
+    baseURL: 'http://localhost:4324',
     trace: 'on-first-retry',
   },
   projects: [
@@ -22,7 +23,7 @@ export default defineConfig({
   ],
   webServer: {
     command: 'npm run dev',
-    url: 'http://localhost:4325',
+    url: 'http://localhost:4324',
     reuseExistingServer: true,
     timeout: 30_000,
   },
