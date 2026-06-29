@@ -33,7 +33,7 @@ export default function Schedule() {
             display: 'flex',
             flexDirection: 'column',
             gap: '0',
-            paddingBottom: '100px',
+            paddingBottom: '60px',
           }}
         >
           {/* Day header: date + label + weekday */}
