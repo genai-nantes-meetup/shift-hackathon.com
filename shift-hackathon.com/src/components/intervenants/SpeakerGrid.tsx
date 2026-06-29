@@ -44,6 +44,8 @@ export default function SpeakerGrid() {
               <img
                 src={s.img}
                 alt={`${s.name}, ${s.roles.join(' · ')}`}
+                loading="lazy"
+                decoding="async"
                 style={{
                   display: 'block',
                   width: '100%',
