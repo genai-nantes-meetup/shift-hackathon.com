@@ -237,12 +237,12 @@ export function faqSchema(items: FaqItem[]): JsonLd {
   };
 }
 
-interface Video {
+type Video = {
   id: string;
   title: string;
   description: string;
   uploadDate?: string;
-}
+};
 
 export function videoSchema(video: Video): JsonLd {
   return {
