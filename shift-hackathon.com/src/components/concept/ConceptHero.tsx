@@ -168,6 +168,19 @@ export default function ConceptHero() {
               pointerEvents: 'none',
             }}
           />
+          <img
+            src={'/assets/images/hero/hero-circle-decoration.svg'}
+            alt=""
+            aria-hidden
+            style={{
+              position: 'absolute',
+              top: '60px',
+              right: '-65px',
+              width: 90,
+              height: 90,
+              pointerEvents: 'none',
+            }}
+          />
         </motion.div>
       </div>
     </section>

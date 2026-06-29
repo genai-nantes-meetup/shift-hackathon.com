@@ -157,6 +157,19 @@ export default function AgendaHero() {
               boxShadow: '0 0 60px rgba(0,180,0,0.12), 0 20px 60px rgba(0,0,0,0.5)',
             }}
           />
+          <img
+            src={'/assets/images/hero/hero-circle-decoration.svg'}
+            alt=""
+            aria-hidden
+            style={{
+              position: 'absolute',
+              top: '60px',
+              right: '-65px',
+              width: 90,
+              height: 90,
+              pointerEvents: 'none',
+            }}
+          />
         </motion.div>
       </div>
     </section>

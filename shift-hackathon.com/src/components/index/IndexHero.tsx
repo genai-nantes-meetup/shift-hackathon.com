@@ -83,9 +83,8 @@ export default function IndexHero() {
               aria-hidden
               style={{
                 position: 'absolute',
-                top: '50%',
-                right: '-45px',
-                transform: 'translateY(-50%)',
+                top: '60px',
+                right: '-65px',
                 width: 90,
                 height: 90,
                 pointerEvents: 'none',
