@@ -4,6 +4,7 @@ The active site: hand-written Astro + React. The old Framer-export approach (`La
 `lib/framer.ts`, `src/framer/`, per-page `.tsx` routes, `<Page>Body.tsx` wrappers) has been
 fully removed.
 
+
 ## Development
 
 ```bash
