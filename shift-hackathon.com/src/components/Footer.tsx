@@ -1,9 +1,6 @@
-import { useState } from 'react';
 import { EDITION } from '../data/edition';
 
 export default function Footer() {
-  const [values, setValues] = useState({ name: '', email: '', message: '' });
-
   return (
     <footer style={{ background: '#000', padding: '0 32px 64px' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
@@ -72,68 +69,27 @@ export default function Footer() {
                 marginBottom: '1rem',
               }}
             >
-              Une question ? N’hésite pas à nous contacter
+              Une question ? Écris-nous directement, on te répond vite.
             </p>
-            <form
-              onSubmit={(e) => e.preventDefault()}
-              style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}
+            <a
+              href={`mailto:${EDITION.contactEmail}`}
+              style={{
+                display: 'inline-block',
+                background: '#222',
+                color: '#fff',
+                textDecoration: 'none',
+                padding: '0.85rem 1.5rem',
+                fontFamily: 'Barlow, sans-serif',
+                fontWeight: 700,
+                fontSize: '0.95rem',
+                borderRadius: '6px',
+              }}
             >
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
-                <input
-                  placeholder="Nom"
-                  type="text"
-                  value={values.name}
-                  onChange={(e) => setValues({ ...values, name: e.target.value })}
-                  style={inputStyle}
-                />
-                <input
-                  placeholder="Email"
-                  type="email"
-                  value={values.email}
-                  onChange={(e) => setValues({ ...values, email: e.target.value })}
-                  style={inputStyle}
-                />
-              </div>
-              <textarea
-                placeholder="Message"
-                rows={4}
-                value={values.message}
-                onChange={(e) => setValues({ ...values, message: e.target.value })}
-                style={{ ...inputStyle, resize: 'vertical', minHeight: 120 }}
-              />
-              <button
-                type="submit"
-                style={{
-                  background: '#222',
-                  color: '#fff',
-                  border: 'none',
-                  padding: '0.85rem 1.5rem',
-                  fontFamily: 'Barlow, sans-serif',
-                  fontWeight: 700,
-                  fontSize: '0.95rem',
-                  cursor: 'pointer',
-                  borderRadius: '6px',
-                  width: '100%',
-                }}
-              >
-                Envoyer
-              </button>
-            </form>
+              {EDITION.contactEmail}
+            </a>
           </div>
         </div>
       </div>
     </footer>
   );
 }
-
-const inputStyle: React.CSSProperties = {
-  background: '#f0f0f0',
-  border: 'none',
-  padding: '0.85rem 1rem',
-  color: '#111',
-  fontFamily: 'Barlow, sans-serif',
-  fontSize: '0.95rem',
-  borderRadius: '6px',
-  outline: 'none',
-  width: '100%',
-};
