@@ -1,17 +1,5 @@
 import { SCHEDULE } from '../../data/edition_schedule';
 
-interface Speaker {
-  name: string;
-  img: string;
-}
-
-interface Slot {
-  time: string;
-  title: string;
-  desc?: string;
-  speakers?: Speaker[];
-}
-
 export default function Schedule() {
   return (
     <div
@@ -136,7 +124,7 @@ export default function Schedule() {
           </div>
 
           {/* Slots */}
-          {(day.slots as Slot[]).map((slot, i) => (
+          {day.slots.map((slot, i) => (
             <div
               key={i}
               style={{
