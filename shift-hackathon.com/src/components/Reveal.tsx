@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { motion, useInView, useReducedMotion } from 'motion/react';
 
-interface Props {
+type Props = {
   children: React.ReactNode;
   delay?: number;
   style?: React.CSSProperties;

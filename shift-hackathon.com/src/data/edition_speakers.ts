@@ -1,4 +1,4 @@
-export interface Speaker {
+export type Speaker = {
   name: string;
   roles: string[];
   img: string;

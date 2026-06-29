@@ -1,18 +1,18 @@
 import { EDITION } from './edition';
 
-export interface ScheduleSpeaker {
+export type ScheduleSpeaker = {
   name: string;
   img: string;
 }
 
-export interface Slot {
+export type Slot = {
   time: string;
   title: string;
   desc?: string;
   speakers?: ScheduleSpeaker[];
 }
 
-export interface ScheduleDay {
+export type ScheduleDay = {
   day: string;
   label: string;
   weekday: string;
