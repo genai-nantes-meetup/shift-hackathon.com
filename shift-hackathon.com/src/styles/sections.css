@@ -544,6 +544,11 @@
   width: 1200px;
   max-width: 100%;
 }
+.schedule__head,
+.schedule__row {
+  display: flex;
+  flex-direction: row;
+}
 .schedule__col--time {
   width: 210px;
   flex-shrink: 0;

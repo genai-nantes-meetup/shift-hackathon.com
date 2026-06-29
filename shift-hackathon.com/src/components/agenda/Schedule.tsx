@@ -78,8 +78,6 @@ export default function Schedule() {
           <div
             className="schedule__head"
             style={{
-              display: 'flex',
-              flexDirection: 'row',
               gap: '10px',
               padding: '20px 15px',
               background: day.headerColor,
@@ -129,8 +127,6 @@ export default function Schedule() {
               key={i}
               className="schedule__row"
               style={{
-                display: 'flex',
-                flexDirection: 'row',
                 gap: '10px',
                 padding: '20px 15px',
                 borderBottom: '1px solid rgba(255,255,255,0.1)',
