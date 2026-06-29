@@ -4,9 +4,9 @@ import { PRICING_TIERS } from '../data/edition_pricing';
 const venue = [VENUE.name, `${VENUE.postalCode} ${VENUE.addressLocality}`.trim()]
   .filter(Boolean)
   .join(', ');
-const tarifs = PRICING_TIERS.map(
-  (t) => `${t.name} ${t.price === 'Custom' ? 'sur mesure' : t.price}`
-).join(' · ');
+const tarifs = PRICING_TIERS.filter((t) => !['FRIENDS', 'ANGELS'].includes(t.name))
+  .map((t) => (t.price === 'Custom' ? 'sur mesure' : t.price))
+  .join(' · ');
 
 const practicalInfos = [
   { label: 'Dates', value: `${EDITION.dateRangeLong} (48 h)` },
@@ -39,6 +39,7 @@ export default function Footer() {
           style={{
             display: 'flex',
             flexWrap: 'wrap',
+            justifyContent: 'center',
             gap: '0.5rem 2rem',
             margin: '0 0 64px',
             paddingBottom: '40px',
@@ -49,7 +50,7 @@ export default function Footer() {
             <div key={i.label} style={{ display: 'flex', gap: '0.5rem', alignItems: 'baseline' }}>
               <dt
                 style={{
-                  fontFamily: 'Oxanium, sans-serif',
+                  fontFamily: "'Agrandir Grand Heavy', sans-serif",
                   fontSize: '11px',
                   textTransform: 'uppercase',
                   letterSpacing: '0.08em',
