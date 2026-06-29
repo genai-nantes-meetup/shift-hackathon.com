@@ -62,6 +62,11 @@ export function organizationSchema(): JsonLd {
       height: 153,
     },
     email: EDITION.contactEmail,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: VENUE.addressLocality,
+      addressCountry: VENUE.addressCountry,
+    },
     ...(links.length ? { sameAs: links } : {}),
   };
 }

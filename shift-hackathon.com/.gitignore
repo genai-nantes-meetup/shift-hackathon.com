@@ -4,3 +4,6 @@ dist/
 test-results/
 tests/screenshots/*.png
 playwright-report/
+.env*
+.vercel
+.DS_Store

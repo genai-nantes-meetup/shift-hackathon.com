@@ -1,5 +1,5 @@
-/* Google Fonts — Oxanium (body), Dela Gothic One (speakers/sections), Barlow (pricing) */
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;0,900;1,400&family=Dela+Gothic+One&family=Oxanium:wght@400;500;700&display=swap');
+/* Google Fonts (Oxanium, Dela Gothic One, Barlow) sont chargées via <link> dans Layout.astro
+   plutôt qu'un @import ici, pour éviter une chaîne de requêtes bloquante. */
 
 /* Agrandir Grand Heavy — local (not available on CDN) */
 @font-face {
