@@ -31,13 +31,13 @@ export const EDITION = {
   contactEmail: 'nantes@shift-hackathon.com',
 } as const;
 
-type JeSuisChaudTicketMode =
+export type JeSuisChaudTicketMode =
   | 'waiting-list-this-year' // avant que la billeterie ne soit ouverte
   | 'open-registration' // billeterie ouverte
   | 'waiting-list-next-year'; // waiting list pour l'année prochaine
 
 // changer à l'ouverture de la billeterie et avant la cérémonie de clôture
-const JE_SUIS_CHAUD_TICKET_MODE: JeSuisChaudTicketMode = 'waiting-list-next-year';
+export const JE_SUIS_CHAUD_TICKET_MODE: JeSuisChaudTicketMode = 'waiting-list-next-year';
 
 // URL du bouton « Je suis chaud », choisie automatiquement selon JE_SUIS_CHAUD_TICKET_MODE.
 // Le Record exhaustif force à couvrir les 3 modes.

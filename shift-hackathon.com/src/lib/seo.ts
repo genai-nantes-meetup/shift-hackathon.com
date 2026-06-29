@@ -4,7 +4,14 @@
 // (Event, FAQPage, BreadcrumbList, Person, ItemList) via la prop `jsonLd`.
 
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/site';
-import { EDITION, JE_SUIS_CHAUD_URL, SOCIAL_LINKS, VENUE } from '../data/edition';
+import {
+  EDITION,
+  JE_SUIS_CHAUD_URL,
+  JE_SUIS_CHAUD_TICKET_MODE,
+  type JeSuisChaudTicketMode,
+  SOCIAL_LINKS,
+  VENUE,
+} from '../data/edition';
 import { PRICING_TIERS } from '../data/edition_pricing';
 import { SPEAKERS, type Speaker } from '../data/edition_speakers';
 import { SCHEDULE } from '../data/edition_schedule';
@@ -100,7 +107,16 @@ const parsePrice = (price: string): number | null => {
   return match ? Number(match[0]) : null;
 };
 
+// Disponibilité des billets dérivée du mode d'inscription, pour des données structurées
+// honnêtes : on ne déclare InStock que si la billetterie est réellement ouverte.
+const TICKET_AVAILABILITY: Record<JeSuisChaudTicketMode, string> = {
+  'waiting-list-this-year': 'https://schema.org/PreOrder',
+  'open-registration': 'https://schema.org/InStock',
+  'waiting-list-next-year': 'https://schema.org/SoldOut',
+};
+
 function ticketOffers(): JsonLd[] {
+  const availability = TICKET_AVAILABILITY[JE_SUIS_CHAUD_TICKET_MODE];
   return PRICING_TIERS.map((tier): JsonLd | null => {
     const price = parsePrice(tier.price);
     if (price == null) return null; // ANGELS (sur mesure) : pas une billetterie attendee
@@ -109,7 +125,7 @@ function ticketOffers(): JsonLd[] {
       name: tier.name,
       price,
       priceCurrency: 'EUR',
-      availability: 'https://schema.org/InStock',
+      availability,
       url: JE_SUIS_CHAUD_URL,
       category: tier.period,
       validThrough: `${isoDay(EDITION.endDay)}T23:59:59+02:00`,
