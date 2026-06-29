@@ -21,7 +21,7 @@ export default function Schedule() {
         flexDirection: 'column',
         alignItems: 'center',
         gap: '10px',
-        padding: '0px 20px 124px',
+        padding: '0px 20px 0px',
       }}
     >
       {SCHEDULE.map((day) => (
