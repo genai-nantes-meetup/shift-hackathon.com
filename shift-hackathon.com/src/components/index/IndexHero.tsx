@@ -77,6 +77,20 @@ export default function IndexHero() {
                 pointerEvents: 'none',
               }}
             />
+            <img
+              src={'/assets/images/hero/hero-circle-decoration.svg'}
+              alt=""
+              aria-hidden
+              style={{
+                position: 'absolute',
+                top: '50%',
+                right: '-45px',
+                transform: 'translateY(-50%)',
+                width: 90,
+                height: 90,
+                pointerEvents: 'none',
+              }}
+            />
           </motion.div>
         </div>
       </section>
