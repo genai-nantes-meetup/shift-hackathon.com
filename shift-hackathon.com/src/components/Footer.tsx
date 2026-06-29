@@ -1,18 +1,14 @@
 import { EDITION, VENUE } from '../data/edition';
-import { PRICING_TIERS } from '../data/edition_pricing';
 
 const venue = [VENUE.name, `${VENUE.postalCode} ${VENUE.addressLocality}`.trim()]
   .filter(Boolean)
   .join(', ');
-const tarifs = PRICING_TIERS.filter((t) => !['FRIENDS', 'ANGELS'].includes(t.name))
-  .map((t) => (t.price === 'Custom' ? 'sur mesure' : t.price))
-  .join(' · ');
 
 const practicalInfos = [
   { label: 'Dates', value: `${EDITION.dateRangeLong} (48 h)` },
   { label: 'Lieu', value: venue },
   { label: 'Format', value: 'Hackathon Gen AI en présentiel, en équipe' },
-  { label: 'Tarifs', value: tarifs },
+  { label: 'Tarifs', value: EDITION.tarifsSummary },
 ];
 
 export default function Footer() {

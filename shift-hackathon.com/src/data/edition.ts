@@ -7,6 +7,9 @@ export const EDITION = {
   monthNumber: 3, // mois (1-12) — utilisé pour construire les dates ISO du schema Event
   dateRangeShort: '27-29/03/2026',
   dateRangeLong: `Du 27 au 29 mars 2026`,
+
+  // Résumé des tarifs affiché dans le footer (ligne « Tarifs »).
+  tarifsSummary: '79€',
   agendaDays: [
     {
       date: '27 Mars 2026',
