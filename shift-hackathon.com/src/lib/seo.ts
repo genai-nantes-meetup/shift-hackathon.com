@@ -117,7 +117,7 @@ const parsePrice = (price: string): number | null => {
 const TICKET_AVAILABILITY: Record<JeSuisChaudTicketMode, string> = {
   'waiting-list-this-year': 'https://schema.org/PreOrder',
   'open-registration': 'https://schema.org/InStock',
-  'waiting-list-next-year': 'https://schema.org/SoldOut',
+  'waiting-list-next-year': 'https://schema.org/PreOrder',
 };
 
 function ticketOffers(): JsonLd[] {
