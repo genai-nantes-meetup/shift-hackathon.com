@@ -1,4 +1,19 @@
-import { EDITION } from '../data/edition';
+import { EDITION, VENUE } from '../data/edition';
+import { PRICING_TIERS } from '../data/edition_pricing';
+
+const venue = [VENUE.name, `${VENUE.postalCode} ${VENUE.addressLocality}`.trim()]
+  .filter(Boolean)
+  .join(', ');
+const tarifs = PRICING_TIERS.map(
+  (t) => `${t.name} ${t.price === 'Custom' ? 'sur mesure' : t.price}`
+).join(' · ');
+
+const practicalInfos = [
+  { label: 'Dates', value: `${EDITION.dateRangeLong} (48 h)` },
+  { label: 'Lieu', value: venue },
+  { label: 'Format', value: 'Hackathon Gen AI en présentiel, en équipe' },
+  { label: 'Tarifs', value: tarifs },
+];
 
 export default function Footer() {
   return (
@@ -19,6 +34,44 @@ export default function Footer() {
           sexuelle ou d’identité. En vous inscrivant, vous vous engagez à faire preuve de respect et
           de tolérance, afin que chacun·e se sente accueilli·e et en sécurité.
         </p>
+
+        <dl
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '0.5rem 2rem',
+            margin: '0 0 64px',
+            paddingBottom: '40px',
+            borderBottom: '1px solid rgba(255,255,255,0.12)',
+          }}
+        >
+          {practicalInfos.map((i) => (
+            <div key={i.label} style={{ display: 'flex', gap: '0.5rem', alignItems: 'baseline' }}>
+              <dt
+                style={{
+                  fontFamily: 'Oxanium, sans-serif',
+                  fontSize: '11px',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.08em',
+                  color: 'var(--color-lime)',
+                  margin: 0,
+                }}
+              >
+                {i.label}
+              </dt>
+              <dd
+                style={{
+                  fontFamily: 'Oxanium, sans-serif',
+                  fontSize: '13px',
+                  color: 'rgba(255,255,255,0.75)',
+                  margin: 0,
+                }}
+              >
+                {i.value}
+              </dd>
+            </div>
+          ))}
+        </dl>
 
         <div
           style={{

@@ -19,7 +19,7 @@ export default function ConceptHero() {
     >
       {/* Background image (faint, full section) */}
       <img
-        src={'/assets/images/hero/hero-background.webp'}
+        src={'/assets/images/hero/hero-background.png'}
         alt=""
         style={{
           display: 'block',
@@ -149,7 +149,7 @@ export default function ConceptHero() {
               width: '100%',
               aspectRatio: '1 / 1',
               objectFit: 'cover',
-              objectPosition: 'right center',
+              objectPosition: 'center center',
               borderRadius: '6px',
               display: 'block',
               boxShadow: '0 0 60px rgba(0,180,0,0.12), 0 20px 60px rgba(0,0,0,0.5)',

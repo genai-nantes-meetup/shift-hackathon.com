@@ -9,7 +9,7 @@ export default function IndexHero() {
         {/* Background image, faded */}
         <img
           className="hero__bg"
-          src={'/assets/images/hero/hero-background.webp'}
+          src={'/assets/images/hero/hero-background.png'}
           alt=""
           aria-hidden="true"
         />
@@ -60,8 +60,7 @@ export default function IndexHero() {
               src={'/assets/images/hero/home-hero.webp'}
               alt="Shift Hackathon"
               className="hero__image"
-              width={1770}
-              height={1073}
+              fetchPriority="high"
               decoding="async"
             />
           </motion.div>
