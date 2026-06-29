@@ -75,6 +75,7 @@ export default function Features() {
   return (
     <section style={{ padding: '100px 0', background: 'rgb(0, 0, 0)' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+        <h2 className="visually-hidden">Pourquoi participer à Shift ?</h2>
         {FEATURES.map((f, i) => {
           const isEven = i % 2 === 0;
           return (
@@ -115,7 +116,7 @@ export default function Features() {
                     justifyContent: 'center',
                   }}
                 >
-                  <h2
+                  <h3
                     style={{
                       fontFamily: "'Agrandir Grand Heavy', sans-serif",
                       fontWeight: 800,
@@ -127,7 +128,7 @@ export default function Features() {
                     }}
                   >
                     {f.title}
-                  </h2>
+                  </h3>
                   <p
                     style={{
                       color: 'rgb(255, 255, 255)',

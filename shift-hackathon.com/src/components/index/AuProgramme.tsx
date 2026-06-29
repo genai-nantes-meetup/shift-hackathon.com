@@ -30,6 +30,7 @@ const CARDS = [
 export default function AuProgramme() {
   return (
     <section className="topics">
+      <h2 className="visually-hidden">Au programme</h2>
       <div className="topics__inner">
         {CARDS.map((card, i) => (
           <Reveal key={card.title} delay={i * 0.08}>
@@ -40,7 +41,7 @@ export default function AuProgramme() {
                 color: card.color,
               }}
             >
-              <h4>{card.title}</h4>
+              <h3>{card.title}</h3>
               <p>{card.description}</p>
             </div>
           </Reveal>
