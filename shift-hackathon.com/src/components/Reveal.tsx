@@ -6,7 +6,7 @@ type Props = {
   delay?: number;
   style?: React.CSSProperties;
   className?: string;
-}
+};
 
 export default function Reveal({ children, delay = 0, style, className }: Props) {
   const ref = useRef<HTMLDivElement>(null);

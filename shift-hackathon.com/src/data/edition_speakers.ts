@@ -9,7 +9,7 @@ export type Speaker = {
   company?: string; // company (otherwise derivable from `roles`)
   companyUrl?: string;
   links?: { linkedin?: string; twitter?: string; website?: string; github?: string };
-}
+};
 
 export const SPEAKERS: Speaker[] = [
   {

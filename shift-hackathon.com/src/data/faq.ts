@@ -1,7 +1,7 @@
 export type FaqItem = {
   question: string;
   answer: string;
-}
+};
 
 export const FAQ_ITEMS: FaqItem[] = [
   {

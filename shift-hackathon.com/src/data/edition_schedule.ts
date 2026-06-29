@@ -3,14 +3,14 @@ import { EDITION } from './edition';
 export type ScheduleSpeaker = {
   name: string;
   img: string;
-}
+};
 
 export type Slot = {
   time: string;
   title: string;
   desc?: string;
   speakers?: ScheduleSpeaker[];
-}
+};
 
 export type ScheduleDay = {
   day: string;
@@ -18,7 +18,7 @@ export type ScheduleDay = {
   weekday: string;
   headerColor: string;
   slots: Slot[];
-}
+};
 
 // Slots per day (index aligned with EDITION.agendaDays). The date/label/weekday metadata
 // is NOT redeclared here: it comes from EDITION.agendaDays (single source).
