@@ -12,35 +12,11 @@ export default function SpeakerGrid() {
         gap: '10px',
       }}
     >
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 375px)',
-          gridAutoRows: '570px',
-          gap: '20px',
-          width: '100%',
-          maxWidth: '1240px',
-          padding: '0 20px 80px',
-          justifyContent: 'center',
-        }}
-      >
+      <div className="speaker-grid">
         {SPEAKERS.map((s) => (
-          <a
-            key={s.name}
-            href={`/intervenants/${speakerSlug(s)}`}
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'flex-start',
-              gap: '10px',
-              width: '100%',
-              height: '100%',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-          >
+          <a key={s.name} href={`/intervenants/${speakerSlug(s)}`} className="speaker-grid__card">
             {/* Image */}
-            <div style={{ flex: '1 0 0', width: '100%', overflow: 'hidden', position: 'relative' }}>
+            <div className="speaker-grid__media">
               <img
                 src={s.img}
                 alt={`${s.name}, ${s.roles.join(' · ')}`}
