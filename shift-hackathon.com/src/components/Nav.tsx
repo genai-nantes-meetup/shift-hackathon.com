@@ -164,6 +164,7 @@ export default function Nav() {
                 className="site-nav__close"
                 aria-label="Fermer le menu"
                 onClick={() => setOpen(false)}
+                autoFocus
               >
                 <svg
                   viewBox="0 0 24 24"
