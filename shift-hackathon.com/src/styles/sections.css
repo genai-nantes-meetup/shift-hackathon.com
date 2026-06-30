@@ -592,10 +592,12 @@
 /* ===========================================================================
    Concept hero — moved from inline styles for responsive stacking
    =========================================================================== */
-.concept-hero {
+.concept-hero,
+.speakers-hero {
   min-height: 843px;
 }
-.concept-hero__grid {
+.concept-hero__grid,
+.speakers-hero__grid {
   position: relative;
   z-index: 1;
   width: 100%;
@@ -606,6 +608,12 @@
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   align-items: center;
+}
+/* Prevent grid-track blowout: a long unbreakable title word would otherwise
+   force the 1fr column (and the section) wider than the viewport. */
+.concept-hero__grid > *,
+.speakers-hero__grid > * {
+  min-width: 0;
 }
 
 /* Decorative hero accents (arrow + circle) — hidden on small screens */
@@ -708,6 +716,10 @@
   .banner__inner {
     padding: 56px 24px;
     gap: 40px;
+    align-items: stretch;
+  }
+  .banner__sub {
+    width: 100%;
   }
 
   /* Lieu */
@@ -747,11 +759,13 @@
     padding: 2rem 1.25rem;
   }
 
-  /* Concept hero → single column */
-  .concept-hero {
+  /* Split heroes (concept + speakers) → single column */
+  .concept-hero,
+  .speakers-hero {
     min-height: auto;
   }
-  .concept-hero__grid {
+  .concept-hero__grid,
+  .speakers-hero__grid {
     grid-template-columns: 1fr;
     gap: 2rem;
     padding: 3rem 1.25rem;

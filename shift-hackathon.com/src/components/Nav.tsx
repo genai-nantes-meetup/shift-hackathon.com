@@ -192,7 +192,7 @@ export default function Nav() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="site-nav__drawer-cta"
-                style={ctaStyle}
+                style={{ ...ctaStyle, whiteSpace: 'normal', textAlign: 'center' }}
                 onClick={() => setOpen(false)}
               >
                 {CTA_LABELS.primary}
