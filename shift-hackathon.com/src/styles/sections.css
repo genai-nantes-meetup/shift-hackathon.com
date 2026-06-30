@@ -536,3 +536,313 @@
   line-height: 1.4;
   margin: 0;
 }
+
+/* ===========================================================================
+   Schedule (agenda) — moved from inline styles so layout can collapse on mobile
+   =========================================================================== */
+.schedule__day {
+  width: 1200px;
+  max-width: 100%;
+}
+.schedule__head,
+.schedule__row {
+  display: flex;
+  flex-direction: row;
+}
+.schedule__col--time {
+  width: 210px;
+  flex-shrink: 0;
+}
+.schedule__col--prog {
+  flex: 1;
+}
+.schedule__col--speakers {
+  width: 250px;
+  flex-shrink: 0;
+}
+
+/* ===========================================================================
+   Features (concept) — moved from inline styles for responsive stacking
+   =========================================================================== */
+.feature-row {
+  display: flex;
+  flex-direction: row;
+  min-height: 383px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.feature-row--reverse {
+  flex-direction: row-reverse;
+}
+.feature-row__media {
+  flex-shrink: 0;
+  width: 544px;
+  overflow: hidden;
+}
+.feature-row__text {
+  flex: 1;
+  padding: 3rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.feature-row__title {
+  width: 544px;
+}
+
+/* ===========================================================================
+   Concept hero — moved from inline styles for responsive stacking
+   =========================================================================== */
+.concept-hero,
+.speakers-hero {
+  min-height: 843px;
+}
+.concept-hero__grid,
+.speakers-hero__grid {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+/* Prevent grid-track blowout: a long unbreakable title word would otherwise
+   force the 1fr column (and the section) wider than the viewport. */
+.concept-hero__grid > *,
+.speakers-hero__grid > * {
+  min-width: 0;
+}
+
+/* Decorative hero accents (arrow + circle) — hidden on small screens */
+.hero-deco {
+  pointer-events: none;
+}
+
+/* ===========================================================================
+   Pricing / Footer grids — moved from inline styles so they collapse on mobile
+   =========================================================================== */
+.pricing__card--featured {
+  margin-top: -1.5rem;
+}
+.footer {
+  background: var(--color-black);
+  padding: 0 32px 64px;
+}
+
+/* ===========================================================================
+   Intervenants speaker grid — fluid 3 → 2 → 1 columns
+   (was a fixed repeat(3, 375px) / 570px-row grid that overflowed on mobile)
+   =========================================================================== */
+.speaker-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1240px;
+  padding: 0 20px 80px;
+}
+.speaker-grid__card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+.speaker-grid__media {
+  width: 100%;
+  aspect-ratio: 375 / 480;
+  overflow: hidden;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .speaker-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .speaker-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* ===========================================================================
+   Responsive breakpoints
+   =========================================================================== */
+@media (max-width: 1024px) {
+  .speakers__inner {
+    padding: 56px 32px 72px;
+  }
+  .speakers__grid,
+  .orga__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .partners__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .topics__inner {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Speakers / Orga */
+  .speakers__inner {
+    padding: 48px 20px 56px;
+    gap: 40px;
+  }
+  .speakers__grid,
+  .orga__grid {
+    grid-template-columns: 1fr;
+  }
+  .orga {
+    padding: 56px 20px;
+  }
+
+  /* Topics */
+  .topics {
+    padding: 56px 20px;
+  }
+  .topics__inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .topics__card {
+    padding: 40px 28px;
+    min-height: 0;
+    gap: 24px;
+  }
+  .topics__card--offset {
+    margin-top: 0;
+  }
+
+  /* Past / Testimonials */
+  .past__inner {
+    padding: 32px 20px;
+    gap: 40px;
+  }
+  .past__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .testimonials {
+    padding: 56px 20px;
+  }
+  .testimonials__masonry {
+    column-count: 1;
+  }
+
+  /* Partners */
+  .partners {
+    padding: 56px 20px;
+  }
+
+  /* Banner */
+  .banner {
+    min-height: 0;
+  }
+  .banner__inner {
+    padding: 56px 24px;
+    gap: 40px;
+    align-items: stretch;
+  }
+  .banner__sub {
+    width: 100%;
+  }
+
+  /* Lieu */
+  .lieu {
+    padding: 56px 0;
+  }
+  .lieu__badge {
+    padding: 16px 28px;
+    white-space: normal;
+    max-width: 84%;
+  }
+
+  /* Schedule → stacked cards */
+  .schedule__head {
+    display: none;
+  }
+  .schedule__row {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .schedule__col--time,
+  .schedule__col--speakers {
+    width: 100%;
+  }
+
+  /* Features → stacked */
+  .feature-row,
+  .feature-row--reverse {
+    flex-direction: column;
+    min-height: 0;
+  }
+  .feature-row__media,
+  .feature-row__title {
+    width: 100%;
+  }
+  .feature-row__text {
+    padding: 2rem 1.25rem;
+  }
+
+  /* Split heroes (concept + speakers) → single column */
+  .concept-hero,
+  .speakers-hero {
+    min-height: auto;
+  }
+  .concept-hero__grid,
+  .speakers-hero__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 1.25rem;
+  }
+
+  /* Hide decorative accents that overflow on mobile */
+  .hero-deco {
+    display: none;
+  }
+
+  /* Pricing → single column */
+  .pricing {
+    padding: 56px 20px;
+  }
+  .pricing__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .pricing__card--featured {
+    margin-top: 0;
+  }
+
+  /* Footer → single column */
+  .footer {
+    padding: 0 20px 48px;
+  }
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .lieu__cell {
+    height: clamp(150px, 40vw, 240px);
+  }
+}
+
+@media (max-width: 480px) {
+  .partners__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

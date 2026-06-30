@@ -8,6 +8,7 @@ const OXANIUM = 'Oxanium, sans-serif';
 export default function ConceptHero() {
   return (
     <section
+      className="concept-hero"
       style={{
         position: 'relative',
         display: 'flex',
@@ -15,7 +16,6 @@ export default function ConceptHero() {
         backgroundColor: 'rgb(0, 0, 0)',
         color: 'rgb(255, 255, 255)',
         overflow: 'hidden',
-        minHeight: '843px',
       }}
     >
       {/* Background image (faint, full section) */}
@@ -36,20 +36,7 @@ export default function ConceptHero() {
       />
 
       {/* Content layout */}
-      <div
-        style={{
-          position: 'relative',
-          zIndex: 1,
-          maxWidth: 1200,
-          margin: '0 auto',
-          padding: '4rem 2rem',
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          gap: '3rem',
-          alignItems: 'center',
-          width: '100%',
-        }}
-      >
+      <div className="concept-hero__grid">
         {/* Left: Text */}
         <div>
           <motion.div
@@ -60,10 +47,10 @@ export default function ConceptHero() {
             <h1
               style={{
                 fontFamily: AGRANDIR,
-                fontSize: '64px',
+                fontSize: 'clamp(40px, 8vw, 64px)',
                 fontWeight: 800,
                 color: '#fff',
-                lineHeight: '57.6px',
+                lineHeight: 0.9,
                 margin: '0 0 4px',
                 textTransform: 'uppercase',
               }}
@@ -73,10 +60,10 @@ export default function ConceptHero() {
             <p
               style={{
                 fontFamily: AGRANDIR,
-                fontSize: '36px',
+                fontSize: 'clamp(26px, 5vw, 36px)',
                 fontWeight: 800,
                 color: EDITION.dominantColor,
-                lineHeight: '38px',
+                lineHeight: 1.05,
                 margin: '0 0 4px',
                 textTransform: 'uppercase',
               }}
@@ -160,6 +147,7 @@ export default function ConceptHero() {
             src={'/assets/images/hero/hero-arrow-decoration.svg'}
             alt=""
             aria-hidden
+            className="hero-deco"
             style={{
               position: 'absolute',
               bottom: '-20px',
@@ -173,6 +161,7 @@ export default function ConceptHero() {
             src={'/assets/images/hero/hero-circle-decoration.svg'}
             alt=""
             aria-hidden
+            className="hero-deco"
             style={{
               position: 'absolute',
               top: '60px',

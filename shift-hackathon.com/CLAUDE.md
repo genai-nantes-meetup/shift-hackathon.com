@@ -93,13 +93,25 @@ CSS lives in `src/styles/`, all imported via `layouts/Layout.astro` — which im
 then `global.css` (`global.css` `@import`s the rest):
 
 - `fonts.css`    — local `@font-face` (Agrandir), imported in `Layout.astro` before `global.css`. Google Fonts (Oxanium/Dela/Barlow) load via a `<link>` in `Layout.astro`'s `<head>`, not an `@import`.
-- `global.css`   — `@import`s `tokens.css` / `hero.css` / `intro.css` / `sections.css` + a **basic reset** (replaces the former Tailwind Preflight)
-- `tokens.css`   — CSS variables (brand colors, fonts) + reusable classes (`.container`, `.section-title`, `.cta-primary`). `--color-lime` / `--color-lime-shadow` (the edition's dominant color) are **not** hardcoded here — they're injected at runtime on `<html>` by `Layout.astro` from `EDITION.dominantColor` / `EDITION.dominantColorShadow`, so the dominant color has a single source (`data/edition.ts`).
+- `global.css`   — `@import`s `tokens.css` / `hero.css` / `intro.css` / `sections.css` / `nav.css` + a **basic reset** (replaces the former Tailwind Preflight). `html, body` use `overflow-x: clip` as an anti-horizontal-scroll guard; full-height uses `100dvh` (not `100vh`).
+- `tokens.css`   — CSS variables (brand colors, fonts) + reusable classes (`.container`, `.section-title`, `.cta-primary`). `--color-lime` / `--color-lime-shadow` (the edition's dominant color) are **not** hardcoded here — they're injected at runtime on `<html>` by `Layout.astro` from `EDITION.dominantColor` / `EDITION.dominantColorShadow`, so the dominant color has a single source (`data/edition.ts`). Display/heading font-size tokens (`--fs-hero-title`, `--fs-h2`, `--fs-topic-title`, `--fs-lieu-badge`) use `clamp()` for fluid scaling; their `--lh-*` line-heights are unitless ratios so they scale with the font.
 - `hero.css` / `intro.css` / `sections.css` — per-section layout & styling
+- `nav.css`      — site nav bar + mobile burger drawer (`.site-nav`, `.site-nav__links`, `.site-nav__burger`, `.site-nav__drawer`).
 
 Many components also use inline `style={{}}` objects (`Nav.tsx`, `Footer.tsx`, and most section
 components) — the two styling approaches coexist. `global.css` also exposes a `.visually-hidden`
 utility for accessible-but-offscreen section headings and a global `:focus-visible` ring.
+
+**Responsive** — the site is desktop-first with `max-width` media-query breakpoints at **1024px**
+(tablet: grids 5→3, 3→2 cols), **768px** (mobile: single column, burger nav appears, paddings
+shrink) and **480px/600px** (small-phone tweaks). Because inline `style` objects beat stylesheet
+rules, layout-critical inline props (fixed widths, `gridTemplateColumns`, large paddings) were moved
+into BEM classes that reproduce the desktop values, so media queries can override them without
+`!important` and the desktop render is unchanged. Notable responsive classes: `.schedule__row`
+(agenda table → stacked cards), `.feature-row(--reverse)` (concept rows stack), `.concept-hero__grid`,
+`.pricing__grid` / `.pricing__card--featured`, `.footer__grid`, `.hero-deco` (decorations hidden on
+mobile). `Nav.tsx` renders a `useState`-driven burger drawer (`motion` + `AnimatePresence`, gated by
+`useReducedMotion`, Esc-to-close, body-scroll lock) shown below 768px.
 
 ## Linting & Formatting
 

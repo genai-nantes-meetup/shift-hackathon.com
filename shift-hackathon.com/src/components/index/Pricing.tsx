@@ -14,7 +14,7 @@ const arrowSvg = (color: string) =>
 
 export default function Pricing() {
   return (
-    <section style={{ padding: '79px 30px', background: '#e8e8e8' }}>
+    <section className="pricing">
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <Reveal>
           <h2
@@ -43,17 +43,11 @@ export default function Pricing() {
           </p>
         </Reveal>
 
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '1.5rem',
-            alignItems: 'start',
-          }}
-        >
+        <div className="pricing__grid">
           {PRICING_TIERS.map((t, i) => (
             <Reveal key={t.name} delay={i * 0.1}>
               <div
+                className={`pricing__card${t.featured ? ' pricing__card--featured' : ''}`}
                 style={{
                   background: t.card.bg,
                   border: `2px solid ${t.card.border}`,
@@ -61,7 +55,6 @@ export default function Pricing() {
                   padding: '0 0 2rem',
                   overflow: 'hidden',
                   position: 'relative',
-                  ...(t.featured ? { marginTop: '-1.5rem' } : {}),
                 }}
               >
                 {/* Tier tag badge */}

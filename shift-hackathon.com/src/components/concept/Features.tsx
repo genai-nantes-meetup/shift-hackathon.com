@@ -80,23 +80,16 @@ export default function Features() {
           const isEven = i % 2 === 0;
           return (
             <Reveal key={i} delay={0.05}>
-              <div
-                style={{
-                  display: 'flex',
-                  flexDirection: isEven ? 'row' : 'row-reverse',
-                  minHeight: 383,
-                  borderBottom: '1px solid rgba(255,255,255,0.06)',
-                }}
-              >
+              <div className={`feature-row${isEven ? '' : ' feature-row--reverse'}`}>
                 {/* Image */}
-                <div style={{ flexShrink: 0, width: 544, overflow: 'hidden' }}>
+                <div className="feature-row__media">
                   <img
                     src={f.img}
                     alt={f.alt}
                     loading="lazy"
                     decoding="async"
                     style={{
-                      width: '544px',
+                      width: '100%',
                       maxWidth: '100%',
                       display: 'block',
                       objectFit: 'cover',
@@ -107,24 +100,16 @@ export default function Features() {
                   />
                 </div>
                 {/* Text */}
-                <div
-                  style={{
-                    flex: 1,
-                    padding: '3rem 3.5rem',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                  }}
-                >
+                <div className="feature-row__text">
                   <h3
+                    className="feature-row__title"
                     style={{
                       fontFamily: "'Agrandir Grand Heavy', sans-serif",
                       fontWeight: 800,
                       color: '#fff',
-                      fontSize: '40px',
-                      width: '544px',
+                      fontSize: 'clamp(28px, 6vw, 40px)',
                       margin: '0 0 1rem',
-                      lineHeight: '44px',
+                      lineHeight: 1.1,
                     }}
                   >
                     {f.title}

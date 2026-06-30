@@ -15,9 +15,8 @@ export default function Schedule() {
       {SCHEDULE.map((day) => (
         <div
           key={day.day}
+          className="schedule__day"
           style={{
-            width: '1200px',
-            maxWidth: '100%',
             display: 'flex',
             flexDirection: 'column',
             gap: '0',
@@ -77,15 +76,14 @@ export default function Schedule() {
 
           {/* Column header bar */}
           <div
+            className="schedule__head"
             style={{
-              display: 'flex',
-              flexDirection: 'row',
               gap: '10px',
               padding: '20px 15px',
               background: day.headerColor,
             }}
           >
-            <div style={{ width: '210px', flexShrink: 0 }}>
+            <div className="schedule__col--time">
               <span
                 style={{
                   fontFamily: '"Agrandir Grand Heavy", sans-serif',
@@ -97,7 +95,7 @@ export default function Schedule() {
                 Heure
               </span>
             </div>
-            <div style={{ flex: 1 }}>
+            <div className="schedule__col--prog">
               <span
                 style={{
                   fontFamily: '"Agrandir Grand Heavy", sans-serif',
@@ -109,7 +107,7 @@ export default function Schedule() {
                 Programme
               </span>
             </div>
-            <div style={{ width: '250px', flexShrink: 0 }}>
+            <div className="schedule__col--speakers">
               <span
                 style={{
                   fontFamily: '"Agrandir Grand Heavy", sans-serif',
@@ -127,16 +125,15 @@ export default function Schedule() {
           {day.slots.map((slot, i) => (
             <div
               key={i}
+              className="schedule__row"
               style={{
-                display: 'flex',
-                flexDirection: 'row',
                 gap: '10px',
                 padding: '20px 15px',
                 borderBottom: '1px solid rgba(255,255,255,0.1)',
                 alignItems: 'flex-start',
               }}
             >
-              <div style={{ width: '210px', flexShrink: 0 }}>
+              <div className="schedule__col--time">
                 <span
                   style={{
                     fontFamily: 'Oxanium, sans-serif',
@@ -149,7 +146,7 @@ export default function Schedule() {
                   {slot.time}
                 </span>
               </div>
-              <div style={{ flex: 1 }}>
+              <div className="schedule__col--prog">
                 <p
                   style={{
                     fontFamily: '"Agrandir Grand Heavy", sans-serif',
@@ -178,9 +175,8 @@ export default function Schedule() {
                 )}
               </div>
               <div
+                className="schedule__col--speakers"
                 style={{
-                  width: '250px',
-                  flexShrink: 0,
                   display: 'flex',
                   flexDirection: 'row',
                   gap: '8px',

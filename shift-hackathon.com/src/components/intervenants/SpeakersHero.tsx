@@ -8,9 +8,9 @@ const OXANIUM = 'Oxanium, sans-serif';
 export default function SpeakersHero() {
   return (
     <section
+      className="speakers-hero"
       style={{
         position: 'relative',
-        minHeight: '90vh',
         display: 'flex',
         alignItems: 'center',
         overflow: 'hidden',
@@ -61,20 +61,7 @@ export default function SpeakersHero() {
         />
       </div>
 
-      <div
-        style={{
-          position: 'relative',
-          zIndex: 1,
-          maxWidth: 1200,
-          margin: '0 auto',
-          padding: '4rem 2rem',
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          gap: '3rem',
-          alignItems: 'center',
-          width: '100%',
-        }}
-      >
+      <div className="speakers-hero__grid">
         {/* Left: Text */}
         <div>
           <motion.div
@@ -85,12 +72,13 @@ export default function SpeakersHero() {
             <h1
               style={{
                 fontFamily: AGRANDIR,
-                fontSize: '64px',
+                fontSize: 'clamp(26px, 7vw, 64px)',
                 fontWeight: 800,
                 color: '#fff',
-                lineHeight: '57.6px',
+                lineHeight: 0.9,
                 textTransform: 'uppercase',
                 margin: '0 0 28px',
+                overflowWrap: 'break-word',
               }}
             >
               Les <span style={{ color: EDITION.dominantColor }}>Intervenants</span>
@@ -177,6 +165,7 @@ export default function SpeakersHero() {
             src={'/assets/images/hero/hero-arrow-decoration.svg'}
             alt=""
             aria-hidden
+            className="hero-deco"
             style={{
               position: 'absolute',
               bottom: '-20px',
@@ -190,6 +179,7 @@ export default function SpeakersHero() {
             src={'/assets/images/hero/hero-circle-decoration.svg'}
             alt=""
             aria-hidden
+            className="hero-deco"
             style={{
               position: 'absolute',
               top: '60px',

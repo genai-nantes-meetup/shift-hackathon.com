@@ -2,6 +2,7 @@
 @import './hero.css';
 @import './intro.css';
 @import './sections.css';
+@import './nav.css';
 
 /* Basic reset (replaces Tailwind Preflight) */
 *,
@@ -13,9 +14,10 @@ html,
 body {
   margin: 0;
   padding: 0;
+  overflow-x: clip;
 }
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
