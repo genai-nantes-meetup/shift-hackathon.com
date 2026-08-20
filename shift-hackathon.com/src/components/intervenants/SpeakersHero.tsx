@@ -85,8 +85,7 @@ export default function SpeakersHero() {
                 lineHeight: '27.9px',
               }}
             >
-              Attache ta ceinture et jette un œil au line-up de speakers IA de ce hackathon
-              d’anthologie !
+              Attache ta ceinture et jette un œil au line-up de ce hackathon d’anthologie !
             </p>
           </motion.div>
 
@@ -135,7 +134,7 @@ export default function SpeakersHero() {
         >
           <img
             src={'/assets/images/hero/speakers-hero.webp'}
-            alt="Intervenants du hackathon IA Shift 2026 à Nantes"
+            alt="Intervenants du Shift Hackathon Gen AI 2026 à Nantes"
             decoding="async"
             fetchPriority="high"
             width={1600}

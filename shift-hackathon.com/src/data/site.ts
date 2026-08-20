@@ -5,7 +5,7 @@ export const SITE_URL = 'https://shift-hackathon.com';
 export const canonicalFor = (path: string) => `${SITE_URL}${path}`;
 
 export const DEFAULT_META_DESCRIPTION =
-  'Shift, le hackathon IA de Nantes : crée un produit Gen AI qui déchire en 48 heures. Édition "Time to Custom" → hacke ton outil préféré.';
+  'Shift, le Hackathon Gen AI (intelligence artificielle) de Nantes. Crée des produits Gen AI game-changer en 48 heures. Édition "Time to Custom" → Hack ton outil préféré.';
 
 // Default Open Graph image (relative path — resolved to an absolute URL by consumers).
 export const DEFAULT_OG_IMAGE = '/assets/images/og-image.jpg';
@@ -24,28 +24,28 @@ export const CTA_LABELS = {
 // Per-page SEO meta — single source consumed by the `.astro` pages (title/description/canonical).
 export const PAGE_META = {
   index: {
-    title: `Hackathon IA Nantes ${EDITION.year} — Shift, 48h de Gen AI`,
+    title: `Shift — Le Hackathon Gen AI ${EDITION.year} à Nantes`,
     description: DEFAULT_META_DESCRIPTION,
     path: '/',
   },
   concept: {
-    title: `C'est quoi Shift ? Le hackathon IA de 48h — Concept`,
+    title: `Concept — Shift, le Hackathon Gen AI ${EDITION.year}`,
     description:
-      'Shift Time To Custom : le hackathon intelligence artificielle de 48 heures à Nantes. Hacke ton outil préféré et crée une vraie feature Gen AI.',
+      'Shift Time To Custom : le Hackathon Gen AI (intelligence artificielle) de Nantes. 48 heures pour hacker ton outil préféré et créer une vraie feature Gen AI.',
     path: '/concept',
   },
   agenda: {
-    title: `Agenda ${EDITION.year} — Programme du hackathon IA à Nantes`,
-    description: `Le programme complet du hackathon IA Shift ${EDITION.year} : 3 jours à Nantes, du vendredi au dimanche, pour créer un produit Gen AI en équipe.`,
+    title: `Agenda — Shift, le Hackathon Gen AI ${EDITION.year} à Nantes`,
+    description: `L'agenda du Shift Hackathon ${EDITION.year} : 3 jours de hackathon Gen AI à Nantes.`,
     path: '/agenda',
   },
   intervenants: {
-    title: `Intervenants — Speakers du hackathon IA Shift ${EDITION.year}`,
-    description: `Découvre les intervenants et speakers IA du Shift Hackathon ${EDITION.year} à Nantes : experts tech, product et design venus coacher les équipes.`,
+    title: `Intervenants — Shift, le Hackathon Gen AI ${EDITION.year} à Nantes`,
+    description: `Découvrez les intervenants du Shift Hackathon Gen AI ${EDITION.year} à Nantes.`,
     path: '/intervenants',
   },
   notFound: {
     title: '404 — Cette page a pivoté · Shift Hackathon',
-    description: "Page introuvable. Retournez à l'accueil du hackathon IA Shift à Nantes.",
+    description: "Page introuvable. Retournez à l'accueil du Shift Hackathon Gen AI à Nantes.",
   },
 } as const;

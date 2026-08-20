@@ -49,7 +49,7 @@ export default function ConceptHero() {
                   lineHeight: 1.05,
                 }}
               >
-                c’est quoi un hackathon IA ?
+                C’est quoi ?
               </span>
             </h1>
           </motion.div>
@@ -69,9 +69,8 @@ export default function ConceptHero() {
                 lineHeight: '27.9px',
               }}
             >
-              Shift - Time To Custom, c’est 48 heures de hackathon IA générative pour hacker ton
-              outil préféré, créer une vraie feature Gen AI utile pour ton usage, et produire aux
-              côtés des meilleurs experts tech.
+              Shift - Time To Custom, c’est 48 heures pour hacker ton outil préféré, créer une vraie
+              feature Gen AI utile pour ton usage, et produire aux côtés des meilleurs experts tech.
             </p>
           </motion.div>
 
@@ -114,7 +113,7 @@ export default function ConceptHero() {
         >
           <img
             src={'/assets/images/hero/concept-hero.webp'}
-            alt="Hackathon IA à Nantes : hacke ton outil préféré avec Shift"
+            alt="Shift, le Hackathon Gen AI à Nantes : hacke ton outil préféré"
             decoding="async"
             fetchPriority="high"
             width={1456}

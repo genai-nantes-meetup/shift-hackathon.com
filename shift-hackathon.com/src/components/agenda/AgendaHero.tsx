@@ -95,7 +95,7 @@ export default function AgendaHero() {
                 lineHeight: 1.55,
               }}
             >
-              Check le programme de ce hackathon IA qui s’annonce épique !
+              Check l’agenda de ce hackathon qui s’annonce épique !
             </p>
           </motion.div>
 
@@ -145,7 +145,7 @@ export default function AgendaHero() {
         >
           <img
             src={'/assets/images/hero/agenda-hero.webp'}
-            alt="Agenda du hackathon IA Shift 2026 à Nantes"
+            alt="Agenda du Shift Hackathon Gen AI 2026 à Nantes"
             decoding="async"
             fetchPriority="high"
             width={1600}

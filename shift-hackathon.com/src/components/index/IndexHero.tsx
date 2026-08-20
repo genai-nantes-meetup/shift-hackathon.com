@@ -29,7 +29,6 @@ export default function IndexHero() {
             </h1>
 
             <div className="hero__body">
-              <p>Le hackathon intelligence artificielle de Nantes.</p>
               <p>Crée des produits Gen AI game-changer en 48 heures.</p>
               <p>Édition “Time to Custom” → Hack ton outil préféré.</p>
               <p>🔥 Event all-inclusive - coaching, food & fun.</p>
@@ -56,7 +55,7 @@ export default function IndexHero() {
           >
             <img
               src={'/assets/images/hero/home-hero.webp'}
-              alt="Hackathon IA à Nantes : équipe Shift en pleine session de code"
+              alt="Shift, le Hackathon Gen AI à Nantes : équipe en pleine session de code"
               className="hero__image"
               fetchPriority="high"
               decoding="async"
