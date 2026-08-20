@@ -8,13 +8,8 @@ export default function IndexHero() {
   return (
     <>
       <section className="hero">
-        {/* Background image, faded */}
-        <img
-          className="hero__bg"
-          src={'/assets/images/hero/hero-background.png'}
-          alt=""
-          aria-hidden="true"
-        />
+        {/* Background image, faded — CSS background so it's never picked as LCP element */}
+        <div className="hero__bg" aria-hidden="true" />
         {/* Dot-grid texture — upper-right */}
         <div className="hero__dots" aria-hidden="true" />
         {/* Green glow — bottom-left */}
@@ -23,8 +18,8 @@ export default function IndexHero() {
         <div className="hero__container">
           <motion.div
             className="hero__text"
-            initial={reduce ? false : { opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={reduce ? false : { y: 24 }}
+            animate={{ y: 0 }}
             transition={reduce ? { duration: 0 } : { duration: 0.5 }}
           >
             <h1 className="hero__title">
@@ -34,6 +29,7 @@ export default function IndexHero() {
             </h1>
 
             <div className="hero__body">
+              <p>Le hackathon intelligence artificielle de Nantes.</p>
               <p>Crée des produits Gen AI game-changer en 48 heures.</p>
               <p>Édition “Time to Custom” → Hack ton outil préféré.</p>
               <p>🔥 Event all-inclusive - coaching, food & fun.</p>
@@ -54,16 +50,18 @@ export default function IndexHero() {
 
           <motion.div
             className="hero__image-wrap"
-            initial={reduce ? false : { opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={reduce ? false : { x: 20 }}
+            animate={{ x: 0 }}
             transition={reduce ? { duration: 0 } : { duration: 0.7, delay: 0.1 }}
           >
             <img
               src={'/assets/images/hero/home-hero.webp'}
-              alt="Shift Hackathon"
+              alt="Hackathon IA à Nantes : équipe Shift en pleine session de code"
               className="hero__image"
               fetchPriority="high"
               decoding="async"
+              width={1600}
+              height={970}
             />
             <img
               src={'/assets/images/hero/hero-arrow-decoration.svg'}

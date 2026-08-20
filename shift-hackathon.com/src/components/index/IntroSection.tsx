@@ -2,10 +2,22 @@ import Reveal from '../Reveal';
 import { EDITION } from '../../data/edition';
 
 const MOSAIC = [
-  { src: '/assets/images/gallery/gallery-speaker-session.webp', alt: 'Speaker session' },
-  { src: '/assets/images/gallery/gallery-group-discussion.webp', alt: 'Group discussion' },
-  { src: '/assets/images/gallery/gallery-speaker.webp', alt: 'Speaker' },
-  { src: '/assets/images/gallery/gallery-meeting.webp', alt: 'Meeting' },
+  {
+    src: '/assets/images/gallery/gallery-speaker-session.webp',
+    alt: 'Session animée par un speaker au hackathon IA Shift',
+  },
+  {
+    src: '/assets/images/gallery/gallery-group-discussion.webp',
+    alt: 'Échange en équipe pendant le hackathon Shift',
+  },
+  {
+    src: '/assets/images/gallery/gallery-speaker.webp',
+    alt: 'Intervenant du hackathon IA Shift à Nantes',
+  },
+  {
+    src: '/assets/images/gallery/gallery-meeting.webp',
+    alt: 'Réunion d’équipe pendant le hackathon Shift',
+  },
 ];
 
 export default function IntroSection() {
@@ -19,10 +31,10 @@ export default function IntroSection() {
         <Reveal delay={0.05}>
           <div className="intro__body">
             <p>
-              Shift, c’est LE hackathon Gen AI de la place nantaise. Après 2 éditions hautes en
-              couleur, nous revenons sous le pavillon noir : toi, l’iconoclastic hacker, toi le
-              designer alchemist, ou toi le product shaper, à cette édition {EDITION.year}, tu vas
-              te RÉ-GA-LER.
+              Shift, c’est LE hackathon intelligence artificielle de la place nantaise. Après 2
+              éditions hautes en couleur, nous revenons sous le pavillon noir : toi, l’iconoclastic
+              hacker, toi le designer alchemist, ou toi le product shaper, à cette édition{' '}
+              {EDITION.year}, tu vas te RÉ-GA-LER.
             </p>
             <p>
               Le concept de cette année, ça va être de hacker ton outil préféré. Tu le trouves cool

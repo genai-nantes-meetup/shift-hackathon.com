@@ -11,10 +11,14 @@ export default function Testimonials() {
             <div key={v.id} className="past__card">
               <div className="past__video">
                 <iframe
-                  src={`https://www.youtube.com/embed/${v.id}?iv_load_policy=3&rel=0&modestbranding=1&playsinline=1&autoplay=${v.autoplay ? 1 : 0}${v.autoplay ? '&mute=1' : ''}`}
+                  src={`https://www.youtube-nocookie.com/embed/${v.id}?iv_load_policy=3&rel=0&modestbranding=1&playsinline=1&autoplay=${v.autoplay ? 1 : 0}${v.autoplay ? '&mute=1' : ''}`}
                   title={v.title}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  width={560}
+                  height={315}
                 />
               </div>
               <h3>{v.title}</h3>

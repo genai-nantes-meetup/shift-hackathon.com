@@ -29,7 +29,7 @@ const pages = [PAGE_META.index, PAGE_META.concept, PAGE_META.agenda, PAGE_META.i
 export const GET: APIRoute = () => {
   const body = `# Shift — Le Hackathon Gen AI
 
-> ${DEFAULT_META_DESCRIPTION} ${EDITION.dateRangeLong}, à ${venueLine}.
+> ${DEFAULT_META_DESCRIPTION} ${EDITION.dateRangeLong}. Lieu : ${venueLine}.
 
 ## Infos pratiques
 - Dates : ${EDITION.dateRangeLong}

@@ -35,40 +35,25 @@ export default function SpeakersHero() {
         }}
       />
 
-      {/* Background image (faint) */}
-      <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
-        <img
-          src={'/assets/images/hero/hero-background.webp'}
-          alt=""
-          style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.1 }}
-        />
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            background: 'transparent',
-          }}
-        />
-        <div
-          style={{
-            position: 'absolute',
-            bottom: 0,
-            left: 0,
-            right: 0,
-            height: '35%',
-            background: 'linear-gradient(to top, #000, transparent)',
-          }}
-        />
-      </div>
+      {/* Background image (faint) — CSS background so it's never picked as LCP element.
+          NB: previously an <img src="hero-background.webp"> that 404'd (only the .png exists). */}
+      <div className="hero__bg" aria-hidden="true" />
+      <div
+        style={{
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: '35%',
+          background: 'linear-gradient(to top, #000, transparent)',
+          zIndex: 0,
+        }}
+      />
 
       <div className="speakers-hero__grid">
         {/* Left: Text */}
         <div>
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
+          <motion.div initial={{ y: 24 }} animate={{ y: 0 }} transition={{ duration: 0.5 }}>
             <h1
               style={{
                 fontFamily: AGRANDIR,
@@ -100,7 +85,8 @@ export default function SpeakersHero() {
                 lineHeight: '27.9px',
               }}
             >
-              Attache ta ceinture et jette un œil au line-up de ce hackathon d’anthologie !
+              Attache ta ceinture et jette un œil au line-up de speakers IA de ce hackathon
+              d’anthologie !
             </p>
           </motion.div>
 
@@ -142,15 +128,18 @@ export default function SpeakersHero() {
 
         {/* Right: Hero image */}
         <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ x: 20 }}
+          animate={{ x: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
           style={{ position: 'relative' }}
         >
           <img
             src={'/assets/images/hero/speakers-hero.webp'}
-            alt="Shift Hackathon"
+            alt="Intervenants du hackathon IA Shift 2026 à Nantes"
             decoding="async"
+            fetchPriority="high"
+            width={1600}
+            height={900}
             style={{
               width: '100%',
               aspectRatio: '1 / 1',

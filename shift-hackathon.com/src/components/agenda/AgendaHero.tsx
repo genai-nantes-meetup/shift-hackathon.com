@@ -51,11 +51,7 @@ export default function AgendaHero() {
       >
         {/* Left: Text */}
         <div>
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
+          <motion.div initial={{ y: 24 }} animate={{ y: 0 }} transition={{ duration: 0.5 }}>
             <h1
               style={{
                 fontFamily: AGRANDIR,
@@ -99,7 +95,7 @@ export default function AgendaHero() {
                 lineHeight: 1.55,
               }}
             >
-              Check l’agenda de ce hackathon qui s’annonce épique !
+              Check le programme de ce hackathon IA qui s’annonce épique !
             </p>
           </motion.div>
 
@@ -142,15 +138,18 @@ export default function AgendaHero() {
 
         {/* Right: Hero image (3D sphere from live site) */}
         <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ x: 20 }}
+          animate={{ x: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
           style={{ position: 'relative' }}
         >
           <img
             src={'/assets/images/hero/agenda-hero.webp'}
-            alt="Shift Hackathon Agenda"
+            alt="Agenda du hackathon IA Shift 2026 à Nantes"
             decoding="async"
+            fetchPriority="high"
+            width={1600}
+            height={897}
             style={{
               width: '100%',
               borderRadius: '6px',

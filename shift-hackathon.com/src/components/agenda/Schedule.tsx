@@ -46,7 +46,7 @@ export default function Schedule() {
               >
                 {day.day}
               </p>
-              <p
+              <h2
                 style={{
                   fontFamily: '"Agrandir Grand Heavy", sans-serif',
                   fontSize: '40px',
@@ -57,7 +57,7 @@ export default function Schedule() {
                 }}
               >
                 {day.label}
-              </p>
+              </h2>
             </div>
             <p
               style={{
@@ -147,7 +147,7 @@ export default function Schedule() {
                 </span>
               </div>
               <div className="schedule__col--prog">
-                <p
+                <h3
                   style={{
                     fontFamily: '"Agrandir Grand Heavy", sans-serif',
                     fontSize: '15px',
@@ -158,7 +158,7 @@ export default function Schedule() {
                   }}
                 >
                   {slot.title}
-                </p>
+                </h3>
                 {slot.desc && (
                   <p
                     style={{

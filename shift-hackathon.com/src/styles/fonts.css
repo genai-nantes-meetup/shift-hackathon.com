@@ -1,5 +1,6 @@
-/* Google Fonts (Oxanium, Dela Gothic One, Barlow) are loaded via <link> in Layout.astro
-   rather than an @import here, to avoid a blocking request chain. */
+/* Oxanium, Dela Gothic One and Barlow — self-hosted, latin subset only (U+0000-00FF).
+   Only the weights actually referenced in src/ are included: Barlow ships 400/700 only
+   (600/900/italic are requested nowhere in the codebase). */
 
 /* Agrandir Grand Heavy — local (not available on CDN) */
 @font-face {
@@ -17,4 +18,52 @@
   font-display: swap;
   font-style: italic;
   font-weight: 100;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('/fonts/barlow-regular.woff2') format('woff2');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('/fonts/barlow-bold.woff2') format('woff2');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Dela Gothic One';
+  src: url('/fonts/dela-gothic-one-regular.woff2') format('woff2');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Oxanium';
+  src: url('/fonts/oxanium-regular.woff2') format('woff2');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Oxanium';
+  src: url('/fonts/oxanium-medium.woff2') format('woff2');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Oxanium';
+  src: url('/fonts/oxanium-bold.woff2') format('woff2');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
 }

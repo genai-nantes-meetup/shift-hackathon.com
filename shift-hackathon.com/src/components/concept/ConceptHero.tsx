@@ -18,58 +18,40 @@ export default function ConceptHero() {
         overflow: 'hidden',
       }}
     >
-      {/* Background image (faint, full section) */}
-      <img
-        src={'/assets/images/hero/hero-background.png'}
-        alt=""
-        style={{
-          display: 'block',
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-          opacity: 0.1,
-          zIndex: 0,
-        }}
-      />
+      {/* Background image (faint, full section) — CSS background so it's never picked as LCP element */}
+      <div className="hero__bg" aria-hidden="true" />
 
       {/* Content layout */}
       <div className="concept-hero__grid">
         {/* Left: Text */}
         <div>
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <h1
-              style={{
-                fontFamily: AGRANDIR,
-                fontSize: 'clamp(40px, 8vw, 64px)',
-                fontWeight: 800,
-                color: '#fff',
-                lineHeight: 0.9,
-                margin: '0 0 4px',
-                textTransform: 'uppercase',
-              }}
-            >
-              Shift,
+          <motion.div initial={{ y: 24 }} animate={{ y: 0 }} transition={{ duration: 0.5 }}>
+            <h1 style={{ margin: '0 0 4px', textTransform: 'uppercase' }}>
+              <span
+                style={{
+                  display: 'block',
+                  fontFamily: AGRANDIR,
+                  fontSize: 'clamp(40px, 8vw, 64px)',
+                  fontWeight: 800,
+                  color: '#fff',
+                  lineHeight: 0.9,
+                }}
+              >
+                Shift,
+              </span>
+              <span
+                style={{
+                  display: 'block',
+                  fontFamily: AGRANDIR,
+                  fontSize: 'clamp(26px, 5vw, 36px)',
+                  fontWeight: 800,
+                  color: EDITION.dominantColor,
+                  lineHeight: 1.05,
+                }}
+              >
+                c’est quoi un hackathon IA ?
+              </span>
             </h1>
-            <p
-              style={{
-                fontFamily: AGRANDIR,
-                fontSize: 'clamp(26px, 5vw, 36px)',
-                fontWeight: 800,
-                color: EDITION.dominantColor,
-                lineHeight: 1.05,
-                margin: '0 0 4px',
-                textTransform: 'uppercase',
-              }}
-            >
-              C’est quoi ?
-            </p>
           </motion.div>
 
           <motion.div
@@ -87,8 +69,9 @@ export default function ConceptHero() {
                 lineHeight: '27.9px',
               }}
             >
-              Shift - Time To Custom, c’est 48 heures pour hacker ton outil préféré, créer une vraie
-              feature Gen AI utile pour ton usage, et produire aux côtés des meilleurs experts tech.
+              Shift - Time To Custom, c’est 48 heures de hackathon IA générative pour hacker ton
+              outil préféré, créer une vraie feature Gen AI utile pour ton usage, et produire aux
+              côtés des meilleurs experts tech.
             </p>
           </motion.div>
 
@@ -124,15 +107,18 @@ export default function ConceptHero() {
 
         {/* Right: Hero image */}
         <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ x: 20 }}
+          animate={{ x: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
           style={{ position: 'relative' }}
         >
           <img
             src={'/assets/images/hero/concept-hero.webp'}
-            alt="Shift Hackathon"
+            alt="Hackathon IA à Nantes : hacke ton outil préféré avec Shift"
             decoding="async"
+            fetchPriority="high"
+            width={1456}
+            height={816}
             style={{
               width: '100%',
               aspectRatio: '1 / 1',

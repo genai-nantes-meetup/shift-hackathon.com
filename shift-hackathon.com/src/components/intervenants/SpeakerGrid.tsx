@@ -32,7 +32,7 @@ export default function SpeakerGrid() {
               />
             </div>
             {/* Name */}
-            <p
+            <h3
               style={{
                 fontFamily: '"Dela Gothic One", sans-serif',
                 fontSize: '24px',
@@ -43,7 +43,7 @@ export default function SpeakerGrid() {
               }}
             >
               {s.name}
-            </p>
+            </h3>
             {/* Roles */}
             <div>
               {s.roles.map((r) => (

@@ -9,12 +9,15 @@
   align-items: center;
 }
 
+/* Faint full-bleed background, shared by every page hero (index/concept/intervenants).
+   Rendered as a CSS background-image (not <img>) so it's never picked as the LCP element. */
 .hero__bg {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  z-index: 0;
+  background-image: url('/assets/images/hero/hero-background.webp');
+  background-size: cover;
+  background-position: center;
   opacity: 0.1;
   pointer-events: none;
 }

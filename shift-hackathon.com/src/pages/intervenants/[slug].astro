@@ -51,6 +51,7 @@ const jsonLd = [
   title={title}
   description={description}
   canonical={canonicalFor(path)}
+  preloadImage={speaker.img}
   noindex={!indexable}
   jsonLd={jsonLd}
 >
@@ -62,6 +63,8 @@ const jsonLd = [
           alt={`${speaker.name} — ${roleLine}`}
           width="280"
           height="280"
+          fetchpriority="high"
+          decoding="async"
           style="width: 280px; height: 280px; object-fit: cover; border-radius: 8px; flex-shrink: 0;"
         />
         <div style="flex: 1; min-width: 260px;">
