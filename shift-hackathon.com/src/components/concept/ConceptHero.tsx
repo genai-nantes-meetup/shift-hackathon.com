@@ -116,8 +116,6 @@ export default function ConceptHero() {
             alt="Shift, le Hackathon Gen AI à Nantes : hacke ton outil préféré"
             decoding="async"
             fetchPriority="high"
-            width={1456}
-            height={816}
             style={{
               width: '100%',
               aspectRatio: '1 / 1',
