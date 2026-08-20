@@ -137,8 +137,6 @@ export default function SpeakersHero() {
             alt="Intervenants du Shift Hackathon Gen AI 2026 à Nantes"
             decoding="async"
             fetchPriority="high"
-            width={1600}
-            height={900}
             style={{
               width: '100%',
               aspectRatio: '1 / 1',

@@ -59,8 +59,6 @@ export default function IndexHero() {
               className="hero__image"
               fetchPriority="high"
               decoding="async"
-              width={1600}
-              height={970}
             />
             <img
               src={'/assets/images/hero/hero-arrow-decoration.svg'}
