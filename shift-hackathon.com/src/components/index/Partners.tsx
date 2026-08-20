@@ -19,7 +19,14 @@ export default function Partners() {
                 rel="noopener noreferrer"
                 className="partners__logo"
               >
-                <img src={p.logo} alt={p.name} loading="lazy" />
+                <img
+                  src={p.logo}
+                  alt={p.name}
+                  width={p.width}
+                  height={p.height}
+                  loading="lazy"
+                  decoding="async"
+                />
               </a>
             ))}
           </div>

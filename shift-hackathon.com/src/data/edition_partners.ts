@@ -20,15 +20,14 @@ const PARTNER_LINKS: { name: string; url: string }[] = [
   { name: 'dev.events', url: 'https://dev.events/' },
 ];
 
-const logoOf = (name: string): string => {
+const complicesByName = (name: string) => {
   const complice = ALL_COMPLICES.find((c) => c.name === name);
   if (!complice)
     throw new Error(`Partenaire « ${name} » absent de ALL_COMPLICES (edition_complices.ts)`);
-  return complice.logo;
+  return complice;
 };
 
-export const PARTNERS = PARTNER_LINKS.map(({ name, url }) => ({
-  name,
-  logo: logoOf(name),
-  url,
-}));
+export const PARTNERS = PARTNER_LINKS.map(({ name, url }) => {
+  const { logo, width, height } = complicesByName(name);
+  return { name, logo, width, height, url };
+});

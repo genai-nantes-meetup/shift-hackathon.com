@@ -6,6 +6,9 @@ import { SITE_URL } from './src/data/site.ts';
 export default defineConfig({
   site: SITE_URL,
   server: { port: 4324 },
+  // Inline all page CSS instead of a separate <link> — the site ships only a few KB of CSS per
+  // page, so inlining removes a render-blocking request entirely (was costing ~300ms of LCP).
+  build: { inlineStylesheets: 'always' },
   integrations: [
     react(),
     sitemap({

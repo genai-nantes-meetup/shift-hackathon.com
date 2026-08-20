@@ -67,7 +67,15 @@ export default function IntroSection() {
       <Reveal delay={0.15}>
         <div className="intro__mosaic">
           {MOSAIC.map((m) => (
-            <img key={m.src} src={m.src} alt={m.alt} loading="lazy" decoding="async" />
+            <img
+              key={m.src}
+              src={m.src}
+              alt={m.alt}
+              width={1300}
+              height={865}
+              loading="lazy"
+              decoding="async"
+            />
           ))}
         </div>
       </Reveal>
