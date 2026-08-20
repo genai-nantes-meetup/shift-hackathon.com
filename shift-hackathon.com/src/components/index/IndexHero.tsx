@@ -2,6 +2,7 @@ import { motion, useReducedMotion } from 'motion/react';
 import { JE_SUIS_CHAUD_URL } from '../../data/edition';
 import { CTA_LABELS } from '../../data/site';
 import { ALL_COMPLICES } from '../../data/edition_complices';
+import { capture } from '../../lib/analytics';
 
 export default function IndexHero() {
   const reduce = useReducedMotion();
@@ -40,6 +41,7 @@ export default function IndexHero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cta-primary"
+                onClick={() => capture('cta_clicked', { cta_location: 'index_hero' })}
               >
                 {CTA_LABELS.primary}
               </a>

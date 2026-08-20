@@ -2,6 +2,7 @@ import Reveal from '../Reveal';
 import { EDITION, JE_SUIS_CHAUD_URL } from '../../data/edition';
 import { PRICING_TIERS } from '../../data/edition_pricing';
 import { CTA_LABELS } from '../../data/site';
+import { capture } from '../../lib/analytics';
 
 const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
 const OXANIUM = 'Oxanium, sans-serif';
@@ -167,6 +168,9 @@ export default function Pricing() {
                     href={JE_SUIS_CHAUD_URL}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() =>
+                      capture('cta_clicked', { cta_location: 'pricing', pricing_tier: t.name })
+                    }
                     style={{
                       display: 'block',
                       textAlign: 'center',

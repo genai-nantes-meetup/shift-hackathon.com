@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Reveal from '../Reveal';
 import { FAQ_ITEMS, type FaqItem } from '../../data/faq';
+import { capture } from '../../lib/analytics';
 
 const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
 const DELA = "'Dela Gothic One', sans-serif";
@@ -15,13 +16,16 @@ export default function Faq({
 }) {
   const [open, setOpen] = useState<Set<number>>(new Set());
 
-  const toggle = (i: number) =>
+  const toggle = (i: number) => {
+    // Only capture on open — closing a question isn't a signal of interest.
+    if (!open.has(i)) capture('faq_opened', { faq_index: i, faq_question: items[i].question });
     setOpen((prev) => {
       const next = new Set(prev);
       if (next.has(i)) next.delete(i);
       else next.add(i);
       return next;
     });
+  };
 
   return (
     <section style={{ background: '#000', padding: '100px 120px' }}>
