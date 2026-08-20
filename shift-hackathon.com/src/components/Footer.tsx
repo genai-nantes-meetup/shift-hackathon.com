@@ -93,7 +93,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3
+            <h2
               style={{
                 color: '#fff',
                 fontFamily: "'Agrandir Grand Heavy', sans-serif",
@@ -103,7 +103,7 @@ export default function Footer() {
               }}
             >
               Nous contacter
-            </h3>
+            </h2>
             <p
               style={{
                 color: 'rgba(255,255,255,0.6)',

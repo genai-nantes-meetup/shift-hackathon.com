@@ -66,6 +66,8 @@ export function organizationSchema(): JsonLd {
       '@type': 'PostalAddress',
       addressLocality: VENUE.addressLocality,
       addressCountry: VENUE.addressCountry,
+      ...(VENUE.streetAddress ? { streetAddress: VENUE.streetAddress } : {}),
+      ...(VENUE.postalCode ? { postalCode: VENUE.postalCode } : {}),
     },
     ...(links.length ? { sameAs: links } : {}),
   };
@@ -161,7 +163,13 @@ function subEvents(): JsonLd[] {
   }));
 }
 
-export function eventSchema(): JsonLd {
+// `includePerformers`: the homepage is the canonical Event page and inlines the full
+// 15-speaker `performer` list; other pages that also need a valid standalone Event node
+// (e.g. /agenda) pass `false` to avoid re-shipping ~3KB of duplicated Person data with the
+// same @id on every page.
+export function eventSchema({
+  includePerformers = true,
+}: { includePerformers?: boolean } = {}): JsonLd {
   return {
     '@type': 'Event',
     '@id': EVENT_ID,
@@ -177,7 +185,7 @@ export function eventSchema(): JsonLd {
     location: placeSchema(),
     image: [abs(DEFAULT_OG_IMAGE)],
     organizer: { '@id': ORGANIZATION_ID },
-    performer: SPEAKERS.map((s) => personSchema(s)),
+    ...(includePerformers ? { performer: SPEAKERS.map((s) => personSchema(s)) } : {}),
     audience: {
       '@type': 'Audience',
       audienceType: 'Développeurs, designers et product lovers',

@@ -2,10 +2,22 @@ import Reveal from '../Reveal';
 import { EDITION } from '../../data/edition';
 
 const MOSAIC = [
-  { src: '/assets/images/gallery/gallery-speaker-session.webp', alt: 'Speaker session' },
-  { src: '/assets/images/gallery/gallery-group-discussion.webp', alt: 'Group discussion' },
-  { src: '/assets/images/gallery/gallery-speaker.webp', alt: 'Speaker' },
-  { src: '/assets/images/gallery/gallery-meeting.webp', alt: 'Meeting' },
+  {
+    src: '/assets/images/gallery/gallery-speaker-session.webp',
+    alt: 'Session animée par un speaker au hackathon IA Shift',
+  },
+  {
+    src: '/assets/images/gallery/gallery-group-discussion.webp',
+    alt: 'Échange en équipe pendant le hackathon Shift',
+  },
+  {
+    src: '/assets/images/gallery/gallery-speaker.webp',
+    alt: 'Intervenant du hackathon IA Shift à Nantes',
+  },
+  {
+    src: '/assets/images/gallery/gallery-meeting.webp',
+    alt: 'Réunion d’équipe pendant le hackathon Shift',
+  },
 ];
 
 export default function IntroSection() {

@@ -13,6 +13,7 @@ import Lieu from '../components/index/Lieu';
 import Faq from '../components/shared/Faq';
 import OrgaTeam from '../components/index/OrgaTeam';
 import { PAGE_META, canonicalFor } from '../data/site';
+import { FAQ_ITEMS } from '../data/faq';
 import { eventSchema, videoSchemas } from '../lib/seo';
 ---
 
@@ -20,14 +21,16 @@ import { eventSchema, videoSchemas } from '../lib/seo';
   title={PAGE_META.index.title}
   description={PAGE_META.index.description}
   canonical={canonicalFor(PAGE_META.index.path)}
+  preloadImage="/assets/images/hero/home-hero.webp"
   jsonLd={[eventSchema(), ...videoSchemas()]}
+  faqItems={FAQ_ITEMS}
 >
   <main style="padding-top: 60px; background: #000; min-height: 100vh; color: #fff;">
     <IndexHero client:load />
     <IntroSection client:visible />
     <SpeakersPreview client:visible />
     <AuProgramme client:visible />
-    <Testimonials client:visible />
+    <Testimonials />
     <TestimonialsList client:visible />
     <Partners client:visible />
     <Pricing client:visible />

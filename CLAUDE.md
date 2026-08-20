@@ -12,6 +12,8 @@ Static site for Shift Hackathon Nantes. Three versions live side-by-side:
 
 Before creating a new website for a new event, please backup the legacy directory in a new `202x/` directory.
 
+Only the current version (`shift-hackathon.com/`) should be updated. Other directories are backup.
+
 ## `2026-framer/`
 
 Pure HTML/CSS/JS exported from Framer. No build step.

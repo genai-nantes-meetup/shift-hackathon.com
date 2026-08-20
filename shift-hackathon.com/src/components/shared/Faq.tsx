@@ -45,46 +45,54 @@ export default function Faq({
             <Reveal key={i} delay={i * 0.04}>
               <div>
                 <div style={{ height: '1px', background: 'rgb(77, 66, 76)' }} />
-                <button
-                  onClick={() => toggle(i)}
-                  aria-expanded={open.has(i)}
-                  aria-controls={`faq-answer-${i}`}
-                  style={{
-                    width: '100%',
-                    background: 'none',
-                    border: 'none',
-                    cursor: 'pointer',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    padding: '20px 0',
-                    gap: '16px',
-                    textAlign: 'left',
-                  }}
-                >
-                  <span
-                    style={{ fontFamily: DELA, fontSize: '20px', color: '#fff', lineHeight: 1.3 }}
-                  >
-                    {item.question}
-                  </span>
-                  <span
+                <h3 style={{ margin: 0 }}>
+                  <button
+                    onClick={() => toggle(i)}
+                    aria-expanded={open.has(i)}
+                    aria-controls={`faq-answer-${i}`}
                     style={{
-                      flexShrink: 0,
-                      width: '28px',
-                      height: '28px',
+                      width: '100%',
+                      background: 'none',
+                      border: 'none',
+                      cursor: 'pointer',
                       display: 'flex',
+                      justifyContent: 'space-between',
                       alignItems: 'center',
-                      justifyContent: 'center',
-                      color: '#fff',
-                      fontSize: '30px',
-                      lineHeight: 1,
-                      fontWeight: 300,
+                      padding: '20px 0',
+                      gap: '16px',
+                      textAlign: 'left',
                     }}
-                    aria-hidden="true"
                   >
-                    {open.has(i) ? '−' : '+'}
-                  </span>
-                </button>
+                    <span
+                      style={{
+                        fontFamily: DELA,
+                        fontSize: '20px',
+                        fontWeight: 400,
+                        color: '#fff',
+                        lineHeight: 1.3,
+                      }}
+                    >
+                      {item.question}
+                    </span>
+                    <span
+                      style={{
+                        flexShrink: 0,
+                        width: '28px',
+                        height: '28px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        color: '#fff',
+                        fontSize: '30px',
+                        lineHeight: 1,
+                        fontWeight: 300,
+                      }}
+                      aria-hidden="true"
+                    >
+                      {open.has(i) ? '−' : '+'}
+                    </span>
+                  </button>
+                </h3>
                 <p
                   id={`faq-answer-${i}`}
                   hidden={!open.has(i)}

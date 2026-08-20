@@ -11,8 +11,9 @@ import { eventSchema, breadcrumbSchema } from '../lib/seo';
   title={PAGE_META.agenda.title}
   description={PAGE_META.agenda.description}
   canonical={canonicalFor(PAGE_META.agenda.path)}
+  preloadImage="/assets/images/hero/agenda-hero.webp"
   jsonLd={[
-    eventSchema(),
+    eventSchema({ includePerformers: false }),
     breadcrumbSchema([
       { name: 'Accueil', path: '/' },
       { name: 'Agenda', path: PAGE_META.agenda.path },

@@ -2,4 +2,6 @@
 User-agent: *
 Allow: /
 
+# Structured, agent-readable summary of the site (llmstxt.org format).
+# See: https://shift-hackathon.com/llms.txt
 Sitemap: https://shift-hackathon.com/sitemap-index.xml

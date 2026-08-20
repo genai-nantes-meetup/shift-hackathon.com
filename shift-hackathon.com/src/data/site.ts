@@ -5,7 +5,7 @@ export const SITE_URL = 'https://shift-hackathon.com';
 export const canonicalFor = (path: string) => `${SITE_URL}${path}`;
 
 export const DEFAULT_META_DESCRIPTION =
-  'Crée des produits Gen AI game-changer en 48 heures. Édition "Time to Custom" → Hack ton outil préféré.';
+  'Shift, le Hackathon Gen AI (intelligence artificielle) de Nantes. Crée des produits Gen AI game-changer en 48 heures. Édition "Time to Custom" → Hack ton outil préféré.';
 
 // Default Open Graph image (relative path — resolved to an absolute URL by consumers).
 export const DEFAULT_OG_IMAGE = '/assets/images/og-image.jpg';
@@ -31,7 +31,7 @@ export const PAGE_META = {
   concept: {
     title: `Concept — Shift, le Hackathon Gen AI ${EDITION.year}`,
     description:
-      'Shift Time To Custom: 48 heures pour hacker ton outil préféré et créer une vraie feature Gen AI.',
+      'Shift Time To Custom : le Hackathon Gen AI (intelligence artificielle) de Nantes. 48 heures pour hacker ton outil préféré et créer une vraie feature Gen AI.',
     path: '/concept',
   },
   agenda: {

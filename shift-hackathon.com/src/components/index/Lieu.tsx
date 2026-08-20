@@ -2,13 +2,41 @@ import Reveal from '../Reveal';
 import { VENUE } from '../../data/edition';
 
 const IMAGES = [
-  { src: '/assets/images/gallery/venue-speaker-1.webp', alt: 'Speaker', flex: '0 0 22%' },
-  { src: '/assets/images/gallery/venue-conference.webp', alt: 'Conférence', flex: '1' },
-  { src: '/assets/images/gallery/venue-speaker-2.webp', alt: 'Speaker', flex: '0 0 22%' },
-  { src: '/assets/images/gallery/venue-stage.webp', alt: 'Stage', flex: '0 0 22%' },
-  { src: '/assets/images/gallery/venue-speaker-3.webp', alt: 'Speaker', flex: '0 0 22%' },
-  { src: '/assets/images/gallery/venue-live-session.webp', alt: 'Live session', flex: '0 0 22%' },
-  { src: '/assets/images/gallery/venue-group-photo.webp', alt: 'Group photo', flex: '1' },
+  {
+    src: '/assets/images/gallery/venue-speaker-1.webp',
+    alt: 'Speaker du hackathon IA Shift au Palace, Nantes',
+    flex: '0 0 22%',
+  },
+  {
+    src: '/assets/images/gallery/venue-conference.webp',
+    alt: 'Conférence au Palace pendant le hackathon Shift',
+    flex: '1',
+  },
+  {
+    src: '/assets/images/gallery/venue-speaker-2.webp',
+    alt: 'Intervenant sur scène au hackathon IA Shift',
+    flex: '0 0 22%',
+  },
+  {
+    src: '/assets/images/gallery/venue-stage.webp',
+    alt: 'Scène du Palace pendant le hackathon Shift',
+    flex: '0 0 22%',
+  },
+  {
+    src: '/assets/images/gallery/venue-speaker-3.webp',
+    alt: 'Speaker face au public du hackathon IA Shift',
+    flex: '0 0 22%',
+  },
+  {
+    src: '/assets/images/gallery/venue-live-session.webp',
+    alt: 'Session en direct au hackathon Shift, Nantes',
+    flex: '0 0 22%',
+  },
+  {
+    src: '/assets/images/gallery/venue-group-photo.webp',
+    alt: 'Photo de groupe des participants au hackathon Shift',
+    flex: '1',
+  },
 ];
 
 export default function Lieu() {
