@@ -107,6 +107,8 @@ export default function IndexHero() {
                   key={`${p.name}-${i}`}
                   src={p.logo}
                   alt={p.name}
+                  width={p.width}
+                  height={p.height}
                   className="marquee__logo"
                   loading="lazy"
                   decoding="async"
