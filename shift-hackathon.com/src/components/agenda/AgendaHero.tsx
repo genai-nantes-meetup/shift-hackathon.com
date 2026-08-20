@@ -148,10 +148,9 @@ export default function AgendaHero() {
             alt="Agenda du Shift Hackathon Gen AI 2026 à Nantes"
             decoding="async"
             fetchPriority="high"
-            width={1600}
-            height={897}
             style={{
               width: '100%',
+              aspectRatio: '1600 / 897',
               borderRadius: '6px',
               display: 'block',
               boxShadow: '0 0 60px rgba(0,180,0,0.12), 0 20px 60px rgba(0,0,0,0.5)',
