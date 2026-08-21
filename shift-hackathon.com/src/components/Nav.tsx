@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { EDITION, JE_SUIS_CHAUD_URL } from '../data/edition';
 import { CTA_LABELS } from '../data/site';
+import { capture } from '../lib/analytics';
 
 const NAV_LINKS = [
   { label: 'Concept', href: '/concept' },
@@ -108,7 +109,13 @@ export default function Nav() {
           {NAV_LINKS.map((l) => (
             <NavLink key={l.href} label={l.label} href={l.href} />
           ))}
-          <a href={JE_SUIS_CHAUD_URL} target="_blank" rel="noopener noreferrer" style={ctaStyle}>
+          <a
+            href={JE_SUIS_CHAUD_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={ctaStyle}
+            onClick={() => capture('cta_clicked', { cta_location: 'nav_desktop' })}
+          >
             {CTA_LABELS.primary}
           </a>
         </div>
@@ -194,7 +201,10 @@ export default function Nav() {
                 rel="noopener noreferrer"
                 className="site-nav__drawer-cta"
                 style={{ ...ctaStyle, whiteSpace: 'normal', textAlign: 'center' }}
-                onClick={() => setOpen(false)}
+                onClick={() => {
+                  capture('cta_clicked', { cta_location: 'nav_drawer' });
+                  setOpen(false);
+                }}
               >
                 {CTA_LABELS.primary}
               </a>

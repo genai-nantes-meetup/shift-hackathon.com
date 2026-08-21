@@ -22,7 +22,7 @@ npm run test:visual  # Playwright visual tests (tests/visual.spec.ts)
 ```
 src/
 ├── layouts/
-│   └── Layout.astro       # shared <head> (GTM, og/twitter, JSON-LD @graph); renders <Nav> / <slot> / <Footer>
+│   └── Layout.astro       # shared <head> (GTM, gtag, PostHog, og/twitter, JSON-LD @graph); renders <Nav> / <slot> / <Footer>
 │                          # props: title, description (defaults to site.ts), canonical, ogImage,
 │                          #        faqItems (→ FAQPage), noindex (→ robots noindex), jsonLd (extra schema nodes),
 │                          #        preloadImage (root-relative path to the page's LCP image, → <link rel=preload fetchpriority=high>)
@@ -36,7 +36,8 @@ src/
 │   ├── shared/            # cross-page sections: CTASection.tsx, Faq.tsx
 │   └── <page>/            # per-page section components: index/ concept/ agenda/ intervenants/
 ├── lib/
-│   └── seo.ts             # JSON-LD builders (Organization, WebSite, Event, BreadcrumbList, Person, ItemList, FAQPage) + slugify()/speakerSlug() — logic lives here, NOT in data/
+│   ├── seo.ts             # JSON-LD builders (Organization, WebSite, Event, BreadcrumbList, Person, ItemList, FAQPage) + slugify()/speakerSlug() — logic lives here, NOT in data/
+│   └── analytics.ts       # capture() — thin, safe-no-op wrapper around window.posthog.capture(); components call this, never window.posthog directly (see Tracking)
 ├── data/                  # all copy/content lives here (no logic, no hardcoding in components)
 │   ├── edition.ts         # core facts: year, monthNumber, dates, ticket URLs, agenda days, dominantColor*, SOCIAL_LINKS (fill in), VENUE (fill in address)
 │   ├── edition_*.ts       # per-section edition content: complices, partners, pricing, schedule, speakers (Speaker type: name/roles/img + optional slug/bio/talk/company/links)
@@ -158,4 +159,33 @@ also keeps 301 redirects from the old `/<page>-2026` URLs (`/agenda-2026`, `/con
 
 ## Tracking
 
-GTM (`GTM-NQ2DKKPD`) and gtag (`G-377KFTGYHV`) — both in `Layout.astro`.
+Three tools, all wired in `Layout.astro`:
+
+- **GTM** (`GTM-NQ2DKKPD`) and **gtag/GA4** (`G-377KFTGYHV`) — hardcoded IDs, always on.
+- **PostHog** — array-loader snippet (not the `posthog-js` npm package, so it adds no weight to the
+  Astro/Vite bundle). Loads only when `import.meta.env.PROD` is true **and** `PUBLIC_POSTHOG_KEY` is
+  set — i.e. never in `astro dev`, and only in Vercel deploys where that env var is defined. Both
+  `api_host` and `ui_host` point at the `hogpost.naomakers.com` reverse proxy in front of PostHog
+  Cloud (avoids ad-blockers); the proxy must relay `/e/`, `/i/*`, `/static/*`, `/decide` and
+  `/flags`, not just event ingestion, or the loader itself fails to fetch.
+  - **Token**: `PUBLIC_POSTHOG_KEY`, a Vercel env var set on the **Production** environment only
+    (not Preview — `import.meta.env.PROD` is also true for preview deploys, so this is the actual
+    guard against preview traffic polluting the PostHog project). No `.env.example` exists in this
+    repo (blocked by a local `.env*` permission rule) — set the var directly in the Vercel
+    dashboard.
+  - **Init options**: `autocapture: true`, `capture_pageview: true`, `capture_pageleave: true`,
+    `persistence: 'cookie'`.
+  - **Super properties** (via `posthog.register`, re-applied on every page load): `site:
+    'shift-hackathon.com'`, `edition_year: EDITION.year`.
+  - **Custom events** — `object_verb` snake_case, sent through `capture()` in `lib/analytics.ts`
+    (never call `window.posthog` directly from a component):
+
+    | Event | Properties | Fired from |
+    |---|---|---|
+    | `cta_clicked` | `cta_location` (`nav_desktop`, `nav_drawer`, `cta_section`, `concept_hero`, `pricing` + `pricing_tier`, `banner`, `index_hero`, `speakers_hero`, `agenda_hero`) | the 8 anchors reading `JE_SUIS_CHAUD_URL` |
+    | `sponsor_link_clicked` | `sponsor`, `sponsor_url` | `components/index/Partners.tsx` |
+    | `faq_opened` | `faq_index`, `faq_question` | `components/shared/Faq.tsx` (on open only, not on close) |
+
+  - **Privacy note**: cookie persistence + autocapture doesn't meet CNIL's consent-exemption
+    criteria — same posture GTM/GA4 already have today, unchanged by this addition. No consent
+    banner has been added (it would also break the Playwright visual baselines).

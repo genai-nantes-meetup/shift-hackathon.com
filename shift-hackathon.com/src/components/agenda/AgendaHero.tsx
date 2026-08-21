@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 
 import { EDITION, JE_SUIS_CHAUD_URL } from '../../data/edition';
 import { CTA_LABELS } from '../../data/site';
+import { capture } from '../../lib/analytics';
 const AGRANDIR = "'Agrandir Grand Heavy', sans-serif";
 const OXANIUM = 'Oxanium, sans-serif';
 
@@ -114,6 +115,7 @@ export default function AgendaHero() {
               href={JE_SUIS_CHAUD_URL}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => capture('cta_clicked', { cta_location: 'agenda_hero' })}
               style={{
                 display: 'block',
                 background: EDITION.dominantColor,

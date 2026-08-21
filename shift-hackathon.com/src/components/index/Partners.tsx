@@ -1,6 +1,7 @@
 import Reveal from '../Reveal';
 import { PARTNERS } from '../../data/edition_partners';
 import { EDITION } from '../../data/edition';
+import { capture } from '../../lib/analytics';
 
 export default function Partners() {
   return (
@@ -18,6 +19,9 @@ export default function Partners() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="partners__logo"
+                onClick={() =>
+                  capture('sponsor_link_clicked', { sponsor: p.name, sponsor_url: p.url })
+                }
               >
                 <img
                   src={p.logo}
