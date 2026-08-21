@@ -151,8 +151,9 @@ const POSTHOG_SUPER_PROPS = { site: 'shift-hackathon.com', edition_year: EDITION
           posthog.init(POSTHOG_KEY, {
             api_host: POSTHOG_API_HOST,
             ui_host: POSTHOG_UI_HOST,
-            defaults: '2026-05-30',
             autocapture: true,
+            capture_pageview: true,
+            capture_pageleave: true,
             persistence: 'cookie',
           });
           posthog.register(POSTHOG_SUPER_PROPS);

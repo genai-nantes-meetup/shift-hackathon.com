@@ -173,7 +173,8 @@ Three tools, all wired in `Layout.astro`:
     guard against preview traffic polluting the PostHog project). No `.env.example` exists in this
     repo (blocked by a local `.env*` permission rule) — set the var directly in the Vercel
     dashboard.
-  - **Init options**: `autocapture: true`, `persistence: 'cookie'`, `defaults: '2026-05-30'`.
+  - **Init options**: `autocapture: true`, `capture_pageview: true`, `capture_pageleave: true`,
+    `persistence: 'cookie'`.
   - **Super properties** (via `posthog.register`, re-applied on every page load): `site:
     'shift-hackathon.com'`, `edition_year: EDITION.year`.
   - **Custom events** — `object_verb` snake_case, sent through `capture()` in `lib/analytics.ts`
