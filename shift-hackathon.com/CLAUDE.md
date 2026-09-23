@@ -161,7 +161,7 @@ also keeps 301 redirects from the old `/<page>-2026` URLs (`/agenda-2026`, `/con
 
 Three tools, all wired in `Layout.astro`:
 
-- **GTM** (`GTM-NQ2DKKPD`) and **gtag/GA4** (`G-377KFTGYHV`) — hardcoded IDs, always on.
+- **GTM** (`GTM-NQ2DKKPD`) and **gtag/GA4** (`G-8YSXEY6Y5W`) — hardcoded IDs, always on.
 - **PostHog** — array-loader snippet (not the `posthog-js` npm package, so it adds no weight to the
   Astro/Vite bundle). Loads only when `import.meta.env.PROD` is true **and** `PUBLIC_POSTHOG_KEY` is
   set — i.e. never in `astro dev`, and only in Vercel deploys where that env var is defined. Both
