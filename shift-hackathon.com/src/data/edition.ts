@@ -69,6 +69,12 @@ export const SOCIAL_LINKS: {
   youtube: '',
 };
 
+// Organisations behind the event, credited in the footer.
+export const ORGANISATIONS = {
+  naomakers: { name: 'Naomakers', url: 'https://naomakers.com' },
+  genaiFrance: { name: 'GenAI France', url: 'https://genai-france.org' },
+};
+
 // Event venue — fill in the postal address (local SEO + Place/Event schema).
 // Empty `streetAddress`/`postalCode` ⇒ fields omitted from the JSON-LD. `latitude`/`longitude` null ⇒ no `geo`.
 export const VENUE: {
