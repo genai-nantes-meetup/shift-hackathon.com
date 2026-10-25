@@ -1,11 +1,18 @@
 export const VIDEOS = [
   {
-    id: '5WpRugDrfvY',
-    title: 'Aftermovie 2025',
+    id: 'OrxnalgEYlw',
+    title: 'Aftermovie 2026',
     description:
       "Plongez dans l'ambiance de la dernière édition pour avoir un aperçu de l'expérience !",
-    uploadDate: '2025-05-30',
+    uploadDate: '2026-10-25',
     autoplay: true,
+  },
+  {
+    id: '5WpRugDrfvY',
+    title: 'Aftermovie 2025',
+    description: "Plongez dans l'ambiance de l'édition 2025 pour avoir un aperçu de l'expérience !",
+    uploadDate: '2025-05-30',
+    autoplay: false,
   },
   {
     id: '9hKVPRiJh98',
