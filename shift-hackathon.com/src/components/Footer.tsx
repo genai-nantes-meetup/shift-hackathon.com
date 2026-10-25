@@ -1,4 +1,4 @@
-import { EDITION, SOCIAL_LINKS, VENUE } from '../data/edition';
+import { EDITION, ORGANISATIONS, SOCIAL_LINKS, VENUE } from '../data/edition';
 
 const venue = [VENUE.name, `${VENUE.postalCode} ${VENUE.addressLocality}`.trim()]
   .filter(Boolean)
@@ -89,6 +89,35 @@ export default function Footer() {
               © {EDITION.year} Shift
               <br />
               Tous droits réservés
+            </p>
+            <p
+              style={{
+                color: 'rgba(255,255,255,0.55)',
+                fontFamily: 'Oxanium, sans-serif',
+                fontSize: '14px',
+                lineHeight: 1.6,
+                margin: '1rem 0 0',
+              }}
+            >
+              Shift est produit par l’association{' '}
+              <a
+                href={ORGANISATIONS.naomakers.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: 'rgba(255,255,255,0.85)' }}
+              >
+                {ORGANISATIONS.naomakers.name}
+              </a>{' '}
+              et fait partie du réseau{' '}
+              <a
+                href={ORGANISATIONS.genaiFrance.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: 'rgba(255,255,255,0.85)' }}
+              >
+                {ORGANISATIONS.genaiFrance.name}
+              </a>
+              .
             </p>
           </div>
 
