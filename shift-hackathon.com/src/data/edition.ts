@@ -72,7 +72,7 @@ export const SOCIAL_LINKS: {
 // Organisations behind the event, credited in the footer.
 export const ORGANISATIONS = {
   naomakers: { name: 'Naomakers', url: 'https://naomakers.com' },
-  genaiFrance: { name: 'GenAI France', url: 'https://genai-france.org' },
+  genaiFrance: { name: 'GenAI France', url: 'https://genai-france.com' },
 };
 
 // Event venue — fill in the postal address (local SEO + Place/Event schema).
